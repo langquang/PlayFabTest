@@ -1,4 +1,6 @@
 using System;
+using IAHNetCoreServer.NetData;
+using IAHNetCoreServer.NetData.Header;
 using IAHNetCoreServer.Server;
 using LiteNetLib;
 
@@ -38,6 +40,16 @@ namespace IAHNetCoreServer.Client
             {
 //                Console.WriteLine("We got: {0}", dataReader.GetString(100));
                 dataReader.Recycle();
+            };
+
+            _listener.PeerConnectedEvent += peer =>
+            {
+                LoginRequest request = new LoginRequest(new RequestHeader());
+                request._playerId = "Butin";
+                request._sessionTicket = "TicketNe";
+                
+                NetPlayer player = new NetPlayer(peer, null);
+                player.Request(request);
             };
         }
 
