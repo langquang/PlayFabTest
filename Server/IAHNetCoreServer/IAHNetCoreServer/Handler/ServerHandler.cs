@@ -1,8 +1,11 @@
+using System;
 using System.IO;
 using IAHNetCoreServer.NetData;
 using IAHNetCoreServer.NetData.Header;
 using LiteNetLib;
 using MessagePack;
+using PlayFab;
+using PlayFab.ServerModels;
 
 namespace IAHNetCoreServer.Server
 {
@@ -24,7 +27,7 @@ namespace IAHNetCoreServer.Server
         /// <param name="peer"></param>
         /// <param name="reader"></param>
         /// <param name="deliveryMethod"></param>
-        public void Login(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
+        public async void Login(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
             var header = new RequestHeader();
             header.Deserialize(reader);
@@ -44,6 +47,10 @@ namespace IAHNetCoreServer.Server
             }
             
             // login success
+            PlayFabSettings.staticSettings.TitleId = "20443";
+            PlayFabSettings.staticSettings.DeveloperSecretKey = "U7XWD3YGJFIOD3HX7F74J75RYOOGE4UHO75KGMK7APBBQUPBUJ";
+            var result = await PlayFabServerAPI.GetTimeAsync(new GetTimeRequest());
+            Console.WriteLine($"Current PlayFab Time: {result.Result.Time}");
         }
 
         public void Perform(NetServer netServer, NetPlayer player, NetPacketReader reader, DeliveryMethod deliveryMethod)
