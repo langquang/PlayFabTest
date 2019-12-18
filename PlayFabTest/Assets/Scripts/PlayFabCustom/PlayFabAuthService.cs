@@ -16,25 +16,13 @@ namespace PlayFabCustom
         private const string DIC_CURRENT_SERVER_ID = "currentServer"; // key in _tokens, present current server name
 
         private readonly Dictionary<string, string> _tickets = new Dictionary<string, string>();
-
-        private delegate void RequestSuccessEvent(PlayFabResultCommon result);
-
-        private delegate void LoginSuccessEvent(LoginResult result, CreateParams createParams);
-
-        private delegate void RequestFailureEvent(PlayFabError error);
-
-        private delegate void CreateNodeAccountEvent(LoginResult result);
-
-        private delegate void CreateMasterAccountEvent(LoginResult result);
-
-        private delegate void FatalErrorEvent(LoginResult result);
-
-        private event RequestSuccessEvent OnRequestSuccess;
-        private event RequestFailureEvent OnRequestFailure;
-        private event LoginSuccessEvent OnLoginSuccess;
-        private event CreateNodeAccountEvent OnCreateNodeAccount;
-        private event CreateMasterAccountEvent OnCreateMasterAccount;
-        private event FatalErrorEvent OnFatalError;
+        
+        public Action<PlayFabResultCommon>       OnRequestSuccess;
+        public Action<PlayFabError>              OnRequestFailure;
+        public Action<LoginResult, CreateParams> OnLoginSuccess;
+        public Action<LoginResult>               OnCreateNodeAccount;
+        public Action<LoginResult>               OnCreateMasterAccount;
+        public Action<LoginResult>               OnFatalError;
 
         private string _masterPlayFabId;
 
@@ -135,7 +123,7 @@ namespace PlayFabCustom
             var isSuccessful = true;
             if (loginResult.NewlyCreated) // Create new account
             {
-                if (createParams.isCreateMaster)
+                if (createParams != null && createParams.isCreateMaster)
                 {
                     // service master account
                     _tickets[DIC_MASTER_SERVER_ID] = createParams.server;
@@ -165,9 +153,9 @@ namespace PlayFabCustom
             if (isSuccessful)
             {
                 SaveToLocal();
+                OnLoginSuccess?.Invoke(loginResult, createParams);
                 // Todo: Butin change current Session Ticket of PlayFab Sdk
             }
-
         }
 
         #endregion
@@ -224,6 +212,21 @@ namespace PlayFabCustom
             else // create new node account
             {
                 LoginWithCustomID($"{serverId}-{Guid.NewGuid().ToString()}", null, result => { }, error => { });
+            }
+        }
+
+        public string MasterPlayFabID
+        {
+            get
+            {
+                if (_tickets.ContainsKey(DIC_MASTER_SERVER_ID))
+                {
+                    return _tickets[DIC_MASTER_SERVER_ID];
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
     }

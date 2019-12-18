@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAHNetCoreServer", "IAHNetCoreServer\IAHNetCoreServer.csproj", "{D020BD88-A008-4CF4-9BC7-C0D9993FBE0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D020BD88-A008-4CF4-9BC7-C0D9993FBE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D020BD88-A008-4CF4-9BC7-C0D9993FBE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D020BD88-A008-4CF4-9BC7-C0D9993FBE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D020BD88-A008-4CF4-9BC7-C0D9993FBE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

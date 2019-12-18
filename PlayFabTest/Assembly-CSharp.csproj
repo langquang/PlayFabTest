@@ -57,6 +57,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LiteNetLib\BaseChannel.cs" />
+    <Compile Include="Assets\LiteNetLib\ConnectionRequest.cs" />
+    <Compile Include="Assets\LiteNetLib\INetEventListener.cs" />
+    <Compile Include="Assets\LiteNetLib\NatPunchModule.cs" />
+    <Compile Include="Assets\LiteNetLib\NetConstants.cs" />
+    <Compile Include="Assets\LiteNetLib\NetDebug.cs" />
+    <Compile Include="Assets\LiteNetLib\NetExceptions.cs" />
+    <Compile Include="Assets\LiteNetLib\NetManager.cs" />
+    <Compile Include="Assets\LiteNetLib\NetPacket.cs" />
+    <Compile Include="Assets\LiteNetLib\NetPacketPool.cs" />
+    <Compile Include="Assets\LiteNetLib\NetPeer.cs" />
+    <Compile Include="Assets\LiteNetLib\NetSocket.cs" />
+    <Compile Include="Assets\LiteNetLib\NetStatistics.cs" />
+    <Compile Include="Assets\LiteNetLib\NetUtils.cs" />
+    <Compile Include="Assets\LiteNetLib\Ntp\NtpPacket.cs" />
+    <Compile Include="Assets\LiteNetLib\Ntp\NtpRequest.cs" />
+    <Compile Include="Assets\LiteNetLib\Properties\AssemblyInfo.cs" />
+    <Compile Include="Assets\LiteNetLib\ReliableChannel.cs" />
+    <Compile Include="Assets\LiteNetLib\SequencedChannel.cs" />
+    <Compile Include="Assets\LiteNetLib\SimpleChannel.cs" />
+    <Compile Include="Assets\LiteNetLib\Utils\FastBitConverter.cs" />
+    <Compile Include="Assets\LiteNetLib\Utils\INetSerializable.cs" />
+    <Compile Include="Assets\LiteNetLib\Utils\NetDataReader.cs" />
+    <Compile Include="Assets\LiteNetLib\Utils\NetDataWriter.cs" />
+    <Compile Include="Assets\LiteNetLib\Utils\NetPacketProcessor.cs" />
+    <Compile Include="Assets\LiteNetLib\Utils\NetSerializer.cs" />
+    <Compile Include="Assets\LiteNetLib\Utils\NetSerializerExceptions.cs" />
     <Compile Include="Assets\PlayFabSdk\Admin\PlayFabAdminAPI.cs" />
     <Compile Include="Assets\PlayFabSdk\Admin\PlayFabAdminInstanceAPI.cs" />
     <Compile Include="Assets\PlayFabSdk\Admin\PlayFabAdminModels.cs" />
@@ -151,12 +178,20 @@
     <Compile Include="Assets\PlayFabSdk\Shared\Public\PluginContract.cs" />
     <Compile Include="Assets\PlayFabSdk\Shared\Public\PluginContractKey.cs" />
     <Compile Include="Assets\PlayFabSdk\Shared\Public\PluginManager.cs" />
+    <Compile Include="Assets\Scripts\Client\NetClient.cs" />
     <Compile Include="Assets\Scripts\PlayFabCustom\Models\NodeAccount.cs" />
     <Compile Include="Assets\Scripts\PlayFabCustom\Models\Player.cs" />
     <Compile Include="Assets\Scripts\PlayFabCustom\Models\PlayerProfile.cs" />
     <Compile Include="Assets\Scripts\PlayFabCustom\Models\PlayerStatistic.cs" />
     <Compile Include="Assets\Scripts\PlayFabCustom\PFHelper.cs" />
     <Compile Include="Assets\Scripts\PlayFabCustom\PlayFabAuthService.cs" />
+    <Compile Include="Assets\Scripts\Server\INetData.cs" />
+    <Compile Include="Assets\Scripts\Server\NetHeader.cs" />
+    <Compile Include="Assets\Scripts\Server\NetPlayer.cs" />
+    <Compile Include="Assets\Scripts\Server\NetServer.cs" />
+    <Compile Include="Assets\Scripts\Server\Request.cs" />
+    <Compile Include="Assets\Scripts\Server\SimplePoolWriter.cs" />
+    <Compile Include="Assets\Scripts\Server\ThreadHelper.cs" />
     <Compile Include="Assets\Scripts\StartUp.cs" />
     <None Include="Assets\PlayFabSdk\link.xml" />
     <None Include="Assets\JsonDotNet\link.xml" />
@@ -376,6 +411,21 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/apps/Unity/2018.4.10f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Assets/Plugins/System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Assets/Plugins/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Assets/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Assets/Plugins/System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -384,21 +434,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Assets/Plugins/System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Buffers">
-      <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Assets/Plugins/System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Assets/Plugins/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Memory">
-      <HintPath>D:/projects/suga_iah/PlayFabTest/PlayFabTest/Assets/Plugins/System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/apps/Unity/2018.4.10f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
