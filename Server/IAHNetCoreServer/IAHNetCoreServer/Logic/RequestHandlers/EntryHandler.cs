@@ -79,13 +79,13 @@ namespace IAHNetCoreServer.Logic.RequestHandlers
             var player = new NetPlayer(peer, GenToken());
             if (!loginRequest.IsValid())
             {
-                return ResponseError(player, header, 1);
+                return ResponseError(player, loginRequest, 1);
             }
 
             var curOnlinePlayer = OnlinePlayers.Instance.Players.FindPlayer(loginRequest.playerId);
             if (curOnlinePlayer != null)
             {
-                return ResponseError(player, header, 2);
+                return ResponseError(player, loginRequest, 2);
             }
 
             // todo: check parallel login
@@ -116,17 +116,17 @@ namespace IAHNetCoreServer.Logic.RequestHandlers
             _netRouter.ReadAllPackets(reader, player);
         }
 
-        public static Response ResponseError(NetPlayer player, RequestHeader requestHeader, int errorCode)
+        public static Response ResponseError(NetPlayer player, Request request, int errorCode)
         {
-            var response = new CommonErrorResponse(new ResponseHeader(requestHeader, errorCode));
+            var response = new CommonErrorResponse(request, errorCode);
             player.Response(response);
             return response;
         }
 
-        private static void OnTestHandler(RequestHeader header, TestRequest request, NetPlayer player)
+        private static void OnTestHandler(TestRequest request, NetPlayer player)
         {
             Console.WriteLine($"Server receive a Test Command with content={request.msg}");
-            var response = new TestResponse(new ResponseHeader(request.Header)) {msg = "A response of test command from server"};
+            var response = new TestResponse(request) {msg = "A response of test command from server"};
             player.Response(response);
         }
     }

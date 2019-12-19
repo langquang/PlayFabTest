@@ -52,6 +52,10 @@ namespace IAHNetCoreServer.Share.TransportData
         {
         }
 
+        public LoginResponse(Request request, int errorCode) : base(request, errorCode)
+        {
+        }
+
         public override void Serialize(NetDataWriter writer)
         {
             base.Serialize(writer);
@@ -66,7 +70,7 @@ namespace IAHNetCoreServer.Share.TransportData
         {
         }
 
-        public CommonErrorResponse(ResponseHeader header) : base(header)
+        public CommonErrorResponse(Request request, int errorCode) : base(request, errorCode)
         {
         }
     }

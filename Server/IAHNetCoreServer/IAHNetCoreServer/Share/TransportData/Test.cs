@@ -40,12 +40,8 @@ namespace IAHNetCoreServer.Share.TransportData
     public class TestResponse : Response
     {
         [Key(0)] public string msg;
-
-        public TestResponse()
-        {
-        }
-
-        public TestResponse(ResponseHeader header) : base(header)
+        
+        public TestResponse(Request request, int errorCode = 0) : base(request, errorCode)
         {
         }
 

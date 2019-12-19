@@ -1,12 +1,10 @@
 using IAHNetCoreServer.Share.TransportData.Header;
 using LiteNetLib.Utils;
-using MessagePack;
 
 namespace IAHNetCoreServer.Share.TransportData.Base
 {
-    public abstract class Request : INetData
+    public abstract class Request : INetData<RequestHeader>
     {
-        [IgnoreMember]
         public RequestHeader Header { get; set; }
 
         protected Request()
