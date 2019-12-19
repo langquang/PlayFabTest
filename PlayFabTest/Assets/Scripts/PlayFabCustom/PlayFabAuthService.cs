@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using PlayFab;
 using PlayFab.ClientModels;
 using PlayFab.SharedModels;
+using PlayFabCustom.Models;
 using UnityEngine;
 
 namespace PlayFabCustom
@@ -12,19 +13,14 @@ namespace PlayFabCustom
     {
         private const string PREFS_TOKEN_KEY = "tokens"; // key in PlayerPrefs
 
-        private const string DIC_MASTER_SERVER_ID  = "masterId";      // key in _tokens, present id of Master Account
-        private const string DIC_CURRENT_SERVER_ID = "currentServer"; // key in _tokens, present current server name
-
-        private readonly Dictionary<string, string> _tickets = new Dictionary<string, string>();
-        
         public Action<PlayFabResultCommon>       OnRequestSuccess;
         public Action<PlayFabError>              OnRequestFailure;
         public Action<LoginResult, CreateParams> OnLoginSuccess;
-        public Action<LoginResult>               OnCreateNodeAccount;
-        public Action<LoginResult>               OnCreateMasterAccount;
+        public Action<LoginResult, CreateParams> OnCreateNodeAccount;
+        public Action<LoginResult, CreateParams> OnCreateMasterAccount;
         public Action<LoginResult>               OnFatalError;
 
-        private string _masterPlayFabId;
+        private ClusterAccount _clusterAccount;
 
         #region SINGLETON
 
@@ -46,11 +42,12 @@ namespace PlayFabCustom
         public PlayFabAuthService()
         {
             _instance = this;
+            _clusterAccount = new ClusterAccount();
         }
 
         #endregion
 
-        #region CONTROL FUNTIONS 
+        #region CONTROL FUNTIONS
 
         public void Start()
         {
@@ -73,7 +70,7 @@ namespace PlayFabCustom
 
         private void SaveToLocal()
         {
-            var rawData = JsonConvert.SerializeObject(_tickets);
+            var rawData = JsonConvert.SerializeObject(_clusterAccount);
             PlayerPrefs.SetString(PREFS_TOKEN_KEY, rawData);
         }
 
@@ -83,23 +80,13 @@ namespace PlayFabCustom
             if (!string.IsNullOrEmpty(rawData))
             {
                 // try to parse raw data to dictionary
-                Dictionary<string, string> deserializeObj = null;
                 try
                 {
-                    deserializeObj = JsonConvert.DeserializeObject<Dictionary<string, string>>(rawData);
+                    _clusterAccount = JsonConvert.DeserializeObject<ClusterAccount>(rawData);
                 }
                 catch (Exception)
                 {
                     Debug.LogError("Can not Deserialize Tokens");
-                }
-
-                if (deserializeObj != null)
-                {
-                    // deserialize success
-                    foreach (var kvp in deserializeObj)
-                    {
-                        _tickets[kvp.Key] = kvp.Value;
-                    }
                 }
             }
         }
@@ -117,21 +104,38 @@ namespace PlayFabCustom
             Debug.LogError(error.ToString());
         }
 
-        private void OnLoginSuccessHandler(LoginResult loginResult, CreateParams createParams)
+        private void OnLoginSuccessHandler(LoginResult loginResult, string customId, CreateParams createParams)
         {
             Debug.Log("PlayFab login successful!");
             var isSuccessful = true;
             if (loginResult.NewlyCreated) // Create new account
             {
-                if (createParams != null && createParams.isCreateMaster)
+                if (createParams == null)
                 {
-                    // service master account
-                    _tickets[DIC_MASTER_SERVER_ID] = createParams.server;
-                    OnCreateMasterAccount?.Invoke(loginResult);
+                    Debug.LogError("Create new account with no info");
+                    OnFatalError?.Invoke(loginResult);
+                    isSuccessful = false;
                 }
                 else
                 {
-                    OnCreateNodeAccount?.Invoke(loginResult);
+                    var account = new NodeAccount();
+                    account.playFabId = loginResult.PlayFabId;
+                    account.sessionTicket = loginResult.SessionTicket;
+                    account.customId = customId;
+                    account.serverID = createParams.server;
+                    _clusterAccount.accounts.Add(account);
+
+                    if (createParams.isCreateMaster)
+                    {
+                        // service master account
+                        _clusterAccount.MasterId = loginResult.PlayFabId;
+                        _clusterAccount.isMaster = true;
+                        OnCreateMasterAccount?.Invoke(loginResult, createParams);
+                    }
+                    else
+                    {
+                        OnCreateNodeAccount?.Invoke(loginResult, createParams);
+                    }
                 }
             }
             else // Login to exist account
@@ -139,8 +143,17 @@ namespace PlayFabCustom
                 var curServerID = PFHelper.FindServerFromStatistic(loginResult.InfoResultPayload.PlayerStatistics);
                 if (!string.IsNullOrEmpty(curServerID))
                 {
-                    _tickets[DIC_CURRENT_SERVER_ID] = curServerID;     // set current server
-                    _tickets[curServerID] = loginResult.SessionTicket; // Store current ticket
+                    var account = _clusterAccount.accounts.Find(a => a.playFabId.Equals(loginResult.PlayFabId));
+                    if (account == null)
+                    {
+                        account = new NodeAccount();
+                        _clusterAccount.accounts.Add(account);
+                    }
+
+                    account.playFabId = loginResult.PlayFabId;
+                    account.sessionTicket = loginResult.SessionTicket;
+                    account.customId = customId;
+                    account.serverID = curServerID;
                 }
                 else
                 {
@@ -152,6 +165,7 @@ namespace PlayFabCustom
 
             if (isSuccessful)
             {
+                _clusterAccount.startUpPlayFabId = loginResult.PlayFabId;
                 SaveToLocal();
                 OnLoginSuccess?.Invoke(loginResult, createParams);
                 // Todo: Butin change current Session Ticket of PlayFab Sdk
@@ -165,19 +179,21 @@ namespace PlayFabCustom
         /// </summary>
         private void LoginFromCacheOrAutoSignUp()
         {
-            string customId;
-            if (_tickets.ContainsKey(DIC_CURRENT_SERVER_ID)) // login from cache
+            if (_clusterAccount.accounts.Count > 0)
             {
-                var server = _tickets[DIC_CURRENT_SERVER_ID];
-                customId = _tickets[server];
-                LoginWithCustomID(customId);
+                var startUpAcc = _clusterAccount.GetStartUpAccount();
+                if (startUpAcc != null && !string.IsNullOrEmpty(startUpAcc.customId))
+                {
+                    // login to exist account
+                    LoginWithCustomID(startUpAcc.customId);
+                    return;
+                }
             }
-            else // sign-up new account
-            {
-                customId = Guid.NewGuid().ToString();
-                var suggestServer = "0"; // todo: set suggestServer
-                LoginWithCustomID(customId, new CreateParams {isCreateMaster = true, server = suggestServer});
-            }
+
+            // sign-up new account
+            var customId = Guid.NewGuid().ToString();
+            var suggestServer = "0"; // todo: set suggest Server
+            LoginWithCustomID(customId, new CreateParams {isCreateMaster = true, server = suggestServer});
         }
 
         public void LoginWithCustomID(string customId, CreateParams createParams = null, Action<LoginResult> resultCallback = null, Action<PlayFabError> errorCallback = null)
@@ -194,7 +210,7 @@ namespace PlayFabCustom
                 {
                     resultCallback?.Invoke(res);
                     OnRequestSuccess?.Invoke(res);
-                    OnLoginSuccessHandler(res, createParams);
+                    OnLoginSuccessHandler(res, customId, createParams);
                 },
                 err =>
                 {
@@ -205,28 +221,14 @@ namespace PlayFabCustom
 
         public void SwitchServer(string serverId)
         {
-            if (_tickets.ContainsKey(serverId)) // already create account
+            var acc = _clusterAccount.FindAccountByServerId(serverId);
+            if (acc != null)
             {
-                LoginWithCustomID(_tickets[serverId], null, result => { }, error => { });
+                LoginWithCustomID(acc.customId, null, result => { }, error => { });
             }
-            else // create new node account
+            else
             {
                 LoginWithCustomID($"{serverId}-{Guid.NewGuid().ToString()}", null, result => { }, error => { });
-            }
-        }
-
-        public string MasterPlayFabID
-        {
-            get
-            {
-                if (_tickets.ContainsKey(DIC_MASTER_SERVER_ID))
-                {
-                    return _tickets[DIC_MASTER_SERVER_ID];
-                }
-                else
-                {
-                    return null;
-                }
             }
         }
     }

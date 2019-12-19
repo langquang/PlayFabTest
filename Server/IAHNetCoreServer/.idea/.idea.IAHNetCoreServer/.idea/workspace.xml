@@ -2,274 +2,161 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba6c7bc-5434-46d7-b785-75c4638eaff9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Client/NetClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/INetDataHeader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/RequestHeader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetData/LoginRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/INetData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/IReceiveNetDataHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/NetDataHeaderMaker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/NetDataRequestHeaderInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/NetHeader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/NetPlayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/NetServer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/OnlinePlayers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/Request.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/ServerHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/SimplePoolWriter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Server/ThreadHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Gen.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_CommonErrorResponseFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_LoginRequestFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_LoginResponseFormatter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Gen/MessagePack_Resolvers_GeneratedResolver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2/NetClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2/NetPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/Router.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/Router/NetRouter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/Router/NetRouter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/INetData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/Request.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/Response.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/Response.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Define.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Define/NetHeader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Header.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Header/INetDataHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Header/INetDataHeader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Header/RequestHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Header/RequestHeader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Header/ResponseHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Header/ResponseHeader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Login.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Test.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Test.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/IAHNetCoreServer/Share/TransportData/Base/Request.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/IAHNetCoreServer/Share/TransportData/Base/Response.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/IAHNetCoreServer/Share/TransportData/Header/RequestHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/IAHNetCoreServer/Share/TransportData/Login.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Request.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Response.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../copy_source_share_to_client.cmd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Client.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Client/NetClient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Client/NetClient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2/NetClient.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/PlayFabCustom/Models/NodeAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/PlayFabCustom/Models/NodeAccount.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/PlayFabCustom/PlayFabAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/PlayFabCustom/PlayFabAuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/PlayFabCustom/PlayFabAuthService.cs___jb_tmp___.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/INetData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/INetData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/NetHeader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/NetHeader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/NetPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/NetPlayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/NetServer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/NetServer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/Request.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/Request.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/SimplePoolWriter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/SimplePoolWriter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/ThreadHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Server/ThreadHelper.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/StartUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/StartUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/CrashedAssetImports.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/CurrentLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/EditorInstance.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/EditorUserBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/ProtocolInstance.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/StateCache/Hierarchy/f2bca1-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/StateCache/Hierarchy/f2bca1-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/assetDatabase3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/1d/1d0e6d23ec74a2d4daf628ed1fbfa4fd" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/1d/1d0e6d23ec74a2d4daf628ed1fbfa4fd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/de/de2ec500ba7a4da09cd003f2a3bdf011" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/de/de2ec500ba7a4da09cd003f2a3bdf011" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/2f/2ff8425f6eb0d324383fa72322a017f9" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/2f/2ff8425f6eb0d324383fa72322a017f9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/2f/2ff8425f6eb0d324383fa72322a017f9.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/2f/2ff8425f6eb0d324383fa72322a017f9.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/52/52f343e5c2b64f5a989d4471cb85ab7f" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/52/52f343e5c2b64f5a989d4471cb85ab7f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/e1/e102474bbe350de44a2c6c1cbaa9871e" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/e1/e102474bbe350de44a2c6c1cbaa9871e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/MessagePack.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/MessagePack.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/PlayFabTest.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/PlayFabTest.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/UniRx.Examples.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/UniRx.Examples.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/UniRx.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/UniRx.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Client/NetClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Handler/ServerHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/RequestHandlers/EntryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/INetDataHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/RequestHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/RequestHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/ResponseHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetData/LoginRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Server/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/INetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Server/IReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Server/NetDataRequestHeaderInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Server/NetHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Define/NetHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Server/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Server/NetServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Server/OnlinePlayers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Server/Request.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/Request.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Server/SimplePoolWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Server/ThreadHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ThreadHelper.cs" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/NetServer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <marker date="1576668557056" expanded="false" signature="6:105" ph="..." />
-                <marker date="1576668557056" expanded="true" signature="140:4611" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="169:4609" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="640:718" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="746:1767" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="1432:1596" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="1613:1757" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="1807:2094" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="2149:2757" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="2192:2285" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="2463:2712" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="2497:2624" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="2785:2835" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="2887:3280" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="3139:3270" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="3366:3504" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="3591:3680" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="3788:3872" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="4009:4377" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="4449:4469" ph="{...}" />
-                <marker date="1576668557056" expanded="true" signature="4538:4603" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
-              <folding>
-                <marker date="1576668557069" expanded="true" signature="6:68" ph="..." />
-                <marker date="1576668557069" expanded="true" signature="96:609" ph="{...}" />
-                <marker date="1576668557069" expanded="true" signature="116:607" ph="{...}" />
-                <marker date="1576668557069" expanded="true" signature="255:601" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/ServerHandler.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-              <folding>
-                <marker date="1576668661748" expanded="true" signature="6:124" ph="..." />
-                <marker date="1576668661748" expanded="true" signature="159:1764" ph="{...}" />
-                <marker date="1576668661748" expanded="true" signature="217:1762" ph="{...}" />
-                <marker date="1576668661748" expanded="true" signature="232:333" ph="/// Gen a session ticket ... " />
-                <marker date="1576668661748" expanded="true" signature="374:439" ph="{...}" />
-                <marker date="1576668661748" expanded="true" signature="449:697" ph="///  Handler Login Request ... " />
-                <marker date="1576668661748" expanded="true" signature="813:1557" ph="{...}" />
-                <marker date="1576668661748" expanded="true" signature="1011:1098" ph="{...}" />
-                <marker date="1576668661748" expanded="true" signature="1319:1505" ph="{...}" />
-                <marker date="1576668661748" expanded="true" signature="1680:1756" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/Request.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-              <folding>
-                <marker date="1576668303542" expanded="true" signature="6:62" ph="..." />
-                <marker date="1576668303542" expanded="true" signature="97:789" ph="{...}" />
-                <marker date="1576668303542" expanded="true" signature="144:463" ph="{...}" />
-                <marker date="1576668303542" expanded="true" signature="238:288" ph="{...}" />
-                <marker date="1576668303542" expanded="true" signature="398:457" ph="{...}" />
-                <marker date="1576668303542" expanded="true" signature="514:787" ph="{...}" />
-                <marker date="1576668303542" expanded="true" signature="611:661" ph="{...}" />
-                <marker date="1576668303542" expanded="true" signature="722:781" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/INetData.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-              <folding>
-                <marker date="1576667466010" expanded="true" signature="33:79" ph="{...}" />
-                <marker date="1576667466010" expanded="true" signature="65:77" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/NetPlayer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-              <folding>
-                <marker date="1576668397954" expanded="true" signature="6:41" ph="..." />
-                <marker date="1576668397954" expanded="true" signature="76:983" ph="{...}" />
-                <marker date="1576668397954" expanded="true" signature="105:981" ph="{...}" />
-                <marker date="1576668397954" expanded="true" signature="297:458" ph="{...}" />
-                <marker date="1576668397954" expanded="true" signature="668:975" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/LoginRequest.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-              <folding>
-                <marker date="1576668303532" expanded="true" signature="6:112" ph="..." />
-                <marker date="1576668303532" expanded="true" signature="148:1211" ph="{...}" />
-                <marker date="1576668303532" expanded="true" signature="214:751" ph="{...}" />
-                <marker date="1576668303532" expanded="true" signature="377:397" ph="{...}" />
-                <marker date="1576668303532" expanded="true" signature="437:549" ph="{...}" />
-                <marker date="1576668303532" expanded="true" signature="611:745" ph="{...}" />
-                <marker date="1576668303532" expanded="true" signature="822:1209" ph="{...}" />
-                <marker date="1576668303532" expanded="true" signature="987:1007" ph="{...}" />
-                <marker date="1576668303532" expanded="true" signature="1069:1203" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/INetDataHeader.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-              <folding>
-                <marker date="1576667112098" expanded="true" signature="6:54" ph="..." />
-                <marker date="1576667112098" expanded="true" signature="97:490" ph="{...}" />
-                <marker date="1576667112098" expanded="true" signature="135:488" ph="{...}" />
-                <marker date="1576667112098" expanded="true" signature="150:228" ph="/// Request - Response or Message ... " />
-                <marker date="1576667112098" expanded="true" signature="277:342" ph="///  Login, Chat ... ... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/RequestHeader.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-              <folding>
-                <marker date="1576667112086" expanded="true" signature="6:54" ph="..." />
-                <marker date="1576667112086" expanded="true" signature="97:826" ph="{...}" />
-                <marker date="1576667112086" expanded="true" signature="147:824" ph="{...}" />
-                <marker date="1576667112086" expanded="true" signature="391:598" ph="{...}" />
-                <marker date="1576667112086" expanded="true" signature="651:818" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/ResponseHeader.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-              <folding>
-                <marker date="1576668303502" expanded="false" signature="6:54" ph="..." />
-                <marker date="1576668303502" expanded="true" signature="97:1088" ph="{...}" />
-                <marker date="1576668303502" expanded="true" signature="148:1086" ph="{...}" />
-                <marker date="1576668303502" expanded="true" signature="409:601" ph="{...}" />
-                <marker date="1576668303502" expanded="true" signature="656:860" ph="{...}" />
-                <marker date="1576668303502" expanded="true" signature="913:1080" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="FavoritesManager">
+    <favorites_list name="IAHNetCoreServer" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/32/d2dba418/NetDataReader.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/02/6a6fcc80/NetManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/OnlinePlayers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/ServerHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/eb/336add4f/NetPeer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/LoginRequest.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4156DEFD-3D50-4A5F-A099-C2B49343A450/94/866746a7/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/NetHeader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4156DEFD-3D50-4A5F-A099-C2B49343A450/6f/e8e4e511/Path.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/Request.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/NetServer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/IReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/SimplePoolWriter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Client/NetClient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/NetPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/INetData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/d5/2b7db9bc/ConnectionRequest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/78/e91622ff/EventBasedNetListener.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files (x86)/NuGet/Config/Microsoft.VisualStudio.Offline.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/84/446e6390/NetPacketPool.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/ThreadHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/ResponseHeader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/NetDataRequestHeaderInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/INetDataHeader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/RequestHeader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/ba/874d0519/NetPeer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4156DEFD-3D50-4A5F-A099-C2B49343A450/94/866746a7/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/eb/336add4f/NetPeer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56C02F65-7F8E-4DE0-B35F-CD26C3C2693D/134/Interlocked.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/78/e91622ff/EventBasedNetListener.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/d5/2b7db9bc/ConnectionRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/94/ffb2af1e/EventBasedNetListener.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/02/6a6fcc80/NetManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/ef/14030283/NetManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/fe/352c5c89/PlayFabServerAPI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/32/d2dba418/NetDataReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4156DEFD-3D50-4A5F-A099-C2B49343A450/6f/e8e4e511/Path.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ThreadHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/495A521E-A74C-4032-A4A7-F683AF9CAB7B/6/Shims.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Request.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/RequestHandlers/EntryHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/RequestHeader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Response.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9E1F3F01-F466-4923-9083-D9637D00C952/7/MessagePackSerializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -292,13 +179,33 @@
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/RequestHeader.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/INetDataHeader.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/INetData.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/Request.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/ResponseHeader.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetData/LoginRequest.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/NetPlayer.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/NetServer.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/ServerHandler.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/rider64.exe.vmoptions" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/Request.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Handler/ServerHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/NetServer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Response.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/LoginRequest.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/NetPlayer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/RequestHeader.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Request.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/RequestHandlers/EntryHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" />
       </list>
     </option>
   </component>
@@ -310,74 +217,22 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="62" />
-    <option name="width" value="1224" />
-    <option name="height" value="1080" />
+  <component name="ProjectId" id="1VBO7xzktaHM0DIJNbSMrt0yMFt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="SolutionExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="IAHNetCoreServer" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="IAHNetCoreServer" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="IAHNetCoreServer" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="IAHNetCoreServer" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="IAHNetCoreServer" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NetData" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="IAHNetCoreServer" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="IAHNetCoreServer" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NetData" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Header" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="IAHNetCoreServer" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="IAHNetCoreServer" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Server" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="TWShift.4" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="settings.editor.selected.configurable" value="RiderNuGetOptionsPageId" />
   </component>
   <component name="RunManager">
     <configuration name="Server" type="DotNetProject" factoryName=".NET Project">
@@ -399,6 +254,18 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4ba6c7bc-5434-46d7-b785-75c4638eaff9" name="Default Changelist" comment="" />
@@ -409,51 +276,142 @@
       <workItem from="1576641010598" duration="14983000" />
       <workItem from="1576659736964" duration="2631000" />
       <workItem from="1576662726337" duration="5710000" />
+      <workItem from="1576722882175" duration="46000" />
+      <workItem from="1576722985808" duration="82000" />
+      <workItem from="1576723497422" duration="984000" />
+      <workItem from="1576725229970" duration="18366000" />
+      <workItem from="1576746363001" duration="3161000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23324000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="2514" height="1096" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30753565" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32914045" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3259958" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32914045" />
-      <window_info anchor="bottom" id="Performance Profiler" order="8" />
-      <window_info anchor="bottom" id="Unit Tests" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Build" order="13" weight="0.3301887" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="right" id="Unit Tests Coverage" order="4" />
-    </layout>
-  </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="903" y="197" key="#Plugins" timestamp="1576723040574">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="903" y="197" key="#Plugins/62.0.2498.1080@62.0.2498.1080" timestamp="1576723040574" />
+    <state x="995" y="199" key="#Server" timestamp="1576728494069">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="995" y="199" key="#Server/62.0.2498.1080@62.0.2498.1080" timestamp="1576728494069" />
+    <state x="421" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1576731553310">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="421" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/62.0.2498.1080@62.0.2498.1080" timestamp="1576731553310" />
+    <state width="532" height="466" key="DebuggerActiveHint" timestamp="1576747579432">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="532" height="466" key="DebuggerActiveHint/62.0.2498.1080@62.0.2498.1080" timestamp="1576747579432" />
+    <state width="1485" height="278" key="GridCell.Tab.0.bottom" timestamp="1576752711702">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="278" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1576752711702" />
+    <state width="1485" height="278" key="GridCell.Tab.0.center" timestamp="1576752711702">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="278" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1576752711702" />
+    <state width="1485" height="278" key="GridCell.Tab.0.left" timestamp="1576752711702">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="278" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1576752711702" />
+    <state width="1485" height="278" key="GridCell.Tab.0.right" timestamp="1576752711702">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="278" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576752711702" />
+    <state width="1485" height="344" key="GridCell.Tab.1.bottom" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.1.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.1.center" timestamp="1576747709050">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.1.center/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709050" />
+    <state width="1485" height="344" key="GridCell.Tab.1.left" timestamp="1576747709050">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.1.left/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709050" />
+    <state width="1485" height="344" key="GridCell.Tab.1.right" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.1.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.2.bottom" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.2.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.2.center" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.2.center/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.2.left" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.2.left/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.2.right" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.2.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.3.bottom" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.3.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.3.center" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.3.center/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.3.left" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.3.left/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.3.right" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.3.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.4.bottom" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.4.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.4.center" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.4.center/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.4.left" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.4.left/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state width="1485" height="344" key="GridCell.Tab.4.right" timestamp="1576747709051">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state width="1485" height="344" key="GridCell.Tab.4.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576747709051" />
+    <state x="1021" y="219" key="RiderGenerateDialog" timestamp="1576745465787">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="1021" y="219" key="RiderGenerateDialog/62.0.2498.1080@62.0.2498.1080" timestamp="1576745465787" />
+    <state x="812" y="181" key="SettingsEditor" timestamp="1576728068529">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="812" y="181" key="SettingsEditor/62.0.2498.1080@62.0.2498.1080" timestamp="1576728068529" />
+    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1576746939032">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1576746939032" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -463,342 +421,5 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/84/446e6390/NetPacketPool.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/SimplePoolWriter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-          <folding>
-            <marker date="1576645096272" expanded="true" signature="6:57" ph="..." />
-            <marker date="1576645096272" expanded="true" signature="92:1183" ph="{...}" />
-            <marker date="1576645096272" expanded="true" signature="128:1181" ph="{...}" />
-            <marker date="1576645096272" expanded="true" signature="276:483" ph="{...}" />
-            <marker date="1576645096272" expanded="true" signature="396:473" ph="{...}" />
-            <marker date="1576645096272" expanded="true" signature="524:584" ph="{...}" />
-            <marker date="1576645096272" expanded="true" signature="622:970" ph="{...}" />
-            <marker date="1576645096272" expanded="true" signature="722:851" ph="{...}" />
-            <marker date="1576645096272" expanded="true" signature="872:946" ph="{...}" />
-            <marker date="1576645096272" expanded="true" signature="1021:1175" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4156DEFD-3D50-4A5F-A099-C2B49343A450/94/866746a7/Object.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/eb/336add4f/NetPeer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="93" column="27" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Client/NetClient.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <marker date="1576656274219" expanded="true" signature="6:62" ph="..." />
-            <marker date="1576656274219" expanded="true" signature="97:1854" ph="{...}" />
-            <marker date="1576656274219" expanded="true" signature="126:1852" ph="{...}" />
-            <marker date="1576656274219" expanded="true" signature="494:1294" ph="{...}" />
-            <marker date="1576656274219" expanded="true" signature="650:805" ph="{...}" />
-            <marker date="1576656274219" expanded="true" signature="822:957" ph="{...}" />
-            <marker date="1576656274219" expanded="true" signature="1151:1283" ph="{...}" />
-            <marker date="1576656274219" expanded="true" signature="1334:1617" ph="{...}" />
-            <marker date="1576656274219" expanded="true" signature="1645:1693" ph="{...}" />
-            <marker date="1576656274219" expanded="true" signature="1723:1846" ph="{...}" />
-            <marker date="1576656274219" expanded="true" signature="1770:1836" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/78/e91622ff/EventBasedNetListener.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/ThreadHelper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding>
-            <marker date="1576653840947" expanded="true" signature="58:385" ph="{...}" />
-            <marker date="1576653840947" expanded="true" signature="90:383" ph="{...}" />
-            <marker date="1576653840947" expanded="true" signature="163:377" ph="{...}" />
-            <marker date="1576653840947" expanded="true" signature="238:320" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/d5/2b7db9bc/ConnectionRequest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/OnlinePlayers.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding>
-            <marker date="1576657941795" expanded="true" signature="6:50" ph="..." />
-            <marker date="1576657941795" expanded="true" signature="85:1316" ph="{...}" />
-            <marker date="1576657941795" expanded="true" signature="125:1314" ph="{...}" />
-            <marker date="1576657941795" expanded="true" signature="140:453" ph="SINGLETON" />
-            <marker date="1576657941795" expanded="true" signature="167:261" ph="/// Requires .NET 4 and C## 6.0 (VS2015) or newer. ... " />
-            <marker date="1576657941795" expanded="true" signature="564:691" ph="{...}" />
-            <marker date="1576657941795" expanded="true" signature="745:850" ph="{...}" />
-            <marker date="1576657941795" expanded="true" signature="916:1149" ph="{...}" />
-            <marker date="1576657941795" expanded="true" signature="976:1064" ph="{...}" />
-            <marker date="1576657941795" expanded="true" signature="1081:1139" ph="{...}" />
-            <marker date="1576657941795" expanded="true" signature="1205:1308" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/02/6a6fcc80/NetManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23088">
-          <caret line="969" column="37" selection-start-line="969" selection-start-column="37" selection-end-line="969" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/NetHeader.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <marker date="1576658368321" expanded="true" signature="33:283" ph="{...}" />
-            <marker date="1576658368321" expanded="true" signature="60:113" ph="{...}" />
-            <marker date="1576658368321" expanded="true" signature="142:281" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/32/d2dba418/NetDataReader.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="373" column="18" selection-start-line="373" selection-start-column="18" selection-end-line="373" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4156DEFD-3D50-4A5F-A099-C2B49343A450/6f/e8e4e511/Path.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="177" column="32" selection-start-line="177" selection-start-column="32" selection-end-line="177" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/IReceiveNetDataHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-          <folding>
-            <marker date="1576661398319" expanded="true" signature="52:338" ph="{...}" />
-            <marker date="1576661398319" expanded="true" signature="98:336" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/NetDataRequestHeaderInfo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding>
-            <marker date="1576666075683" expanded="true" signature="33:427" ph="{...}" />
-            <marker date="1576666075683" expanded="true" signature="77:425" ph="{...}" />
-            <marker date="1576666075683" expanded="true" signature="289:419" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/INetDataHeader.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding>
-            <marker date="1576667112098" expanded="true" signature="6:54" ph="..." />
-            <marker date="1576667112098" expanded="true" signature="97:490" ph="{...}" />
-            <marker date="1576667112098" expanded="true" signature="135:488" ph="{...}" />
-            <marker date="1576667112098" expanded="true" signature="150:228" ph="/// Request - Response or Message ... " />
-            <marker date="1576667112098" expanded="true" signature="277:342" ph="///  Login, Chat ... ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/INetData.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <marker date="1576667466010" expanded="true" signature="33:79" ph="{...}" />
-            <marker date="1576667466010" expanded="true" signature="65:77" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/Request.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding>
-            <marker date="1576668303542" expanded="true" signature="6:62" ph="..." />
-            <marker date="1576668303542" expanded="true" signature="97:789" ph="{...}" />
-            <marker date="1576668303542" expanded="true" signature="144:463" ph="{...}" />
-            <marker date="1576668303542" expanded="true" signature="238:288" ph="{...}" />
-            <marker date="1576668303542" expanded="true" signature="398:457" ph="{...}" />
-            <marker date="1576668303542" expanded="true" signature="514:787" ph="{...}" />
-            <marker date="1576668303542" expanded="true" signature="611:661" ph="{...}" />
-            <marker date="1576668303542" expanded="true" signature="722:781" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/ResponseHeader.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-          <folding>
-            <marker date="1576668303502" expanded="false" signature="6:54" ph="..." />
-            <marker date="1576668303502" expanded="true" signature="97:1088" ph="{...}" />
-            <marker date="1576668303502" expanded="true" signature="148:1086" ph="{...}" />
-            <marker date="1576668303502" expanded="true" signature="409:601" ph="{...}" />
-            <marker date="1576668303502" expanded="true" signature="656:860" ph="{...}" />
-            <marker date="1576668303502" expanded="true" signature="913:1080" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/RequestHeader.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding>
-            <marker date="1576667112086" expanded="true" signature="6:54" ph="..." />
-            <marker date="1576667112086" expanded="true" signature="97:826" ph="{...}" />
-            <marker date="1576667112086" expanded="true" signature="147:824" ph="{...}" />
-            <marker date="1576667112086" expanded="true" signature="391:598" ph="{...}" />
-            <marker date="1576667112086" expanded="true" signature="651:818" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/NetDataHeaderMaker.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/NetData/LoginRequest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <marker date="1576668303532" expanded="true" signature="6:112" ph="..." />
-            <marker date="1576668303532" expanded="true" signature="148:1211" ph="{...}" />
-            <marker date="1576668303532" expanded="true" signature="214:751" ph="{...}" />
-            <marker date="1576668303532" expanded="true" signature="377:397" ph="{...}" />
-            <marker date="1576668303532" expanded="true" signature="437:549" ph="{...}" />
-            <marker date="1576668303532" expanded="true" signature="611:745" ph="{...}" />
-            <marker date="1576668303532" expanded="true" signature="822:1209" ph="{...}" />
-            <marker date="1576668303532" expanded="true" signature="987:1007" ph="{...}" />
-            <marker date="1576668303532" expanded="true" signature="1069:1203" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/NetPlayer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <marker date="1576668397954" expanded="true" signature="6:41" ph="..." />
-            <marker date="1576668397954" expanded="true" signature="76:983" ph="{...}" />
-            <marker date="1576668397954" expanded="true" signature="105:981" ph="{...}" />
-            <marker date="1576668397954" expanded="true" signature="297:458" ph="{...}" />
-            <marker date="1576668397954" expanded="true" signature="668:975" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/NetServer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <marker date="1576668557056" expanded="false" signature="6:105" ph="..." />
-            <marker date="1576668557056" expanded="true" signature="140:4611" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="169:4609" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="640:718" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="746:1767" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="1432:1596" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="1613:1757" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="1807:2094" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="2149:2757" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="2192:2285" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="2463:2712" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="2497:2624" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="2785:2835" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="2887:3280" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="3139:3270" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="3366:3504" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="3591:3680" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="3788:3872" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="4009:4377" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="4449:4469" ph="{...}" />
-            <marker date="1576668557056" expanded="true" signature="4538:4603" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="67" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
-          <folding>
-            <marker date="1576668557069" expanded="true" signature="6:68" ph="..." />
-            <marker date="1576668557069" expanded="true" signature="96:609" ph="{...}" />
-            <marker date="1576668557069" expanded="true" signature="116:607" ph="{...}" />
-            <marker date="1576668557069" expanded="true" signature="255:601" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IAHNetCoreServer/Server/ServerHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding>
-            <marker date="1576668661748" expanded="true" signature="6:124" ph="..." />
-            <marker date="1576668661748" expanded="true" signature="159:1764" ph="{...}" />
-            <marker date="1576668661748" expanded="true" signature="217:1762" ph="{...}" />
-            <marker date="1576668661748" expanded="true" signature="232:333" ph="/// Gen a session ticket ... " />
-            <marker date="1576668661748" expanded="true" signature="374:439" ph="{...}" />
-            <marker date="1576668661748" expanded="true" signature="449:697" ph="///  Handler Login Request ... " />
-            <marker date="1576668661748" expanded="true" signature="813:1557" ph="{...}" />
-            <marker date="1576668661748" expanded="true" signature="1011:1098" ph="{...}" />
-            <marker date="1576668661748" expanded="true" signature="1319:1505" ph="{...}" />
-            <marker date="1576668661748" expanded="true" signature="1680:1756" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

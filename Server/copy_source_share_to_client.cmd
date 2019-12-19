@@ -1,0 +1,1 @@
+Xcopy /E /I /Y .\IAHNetCoreServer\IAHNetCoreServer\Share d:\projects\suga_iah\PlayFabTest\PlayFabTest\Assets\Scripts\Share

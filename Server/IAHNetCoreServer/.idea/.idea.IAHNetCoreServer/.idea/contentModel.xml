@@ -1,43 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\abutin\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\abutin\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_IAHNetCoreServer.-1248965471.00" t="ExcludeRecursive" />
+    <e p="C:\Users\abutin\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\abutin\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_IAHNetCoreServer.-1248965471.00" t="ExcludeRecursive" />
     <e p="D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer" t="IncludeFlat">
       <e p="IAHNetCoreServer" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Client" t="Include">
-          <e p="NetClient.cs" t="Include" />
-        </e>
         <e p="IAHNetCoreServer.csproj" t="IncludeRecursive" />
-        <e p="NetData" t="Include">
-          <e p="Header" t="Include">
-            <e p="INetDataHeader.cs" t="Include" />
-            <e p="RequestHeader.cs" t="Include" />
-            <e p="ResponseHeader.cs" t="Include" />
+        <e p="Logic" t="Include">
+          <e p="RequestHandlers" t="Include">
+            <e p="EntryHandler.cs" t="Include" />
           </e>
-          <e p="LoginRequest.cs" t="Include" />
+        </e>
+        <e p="NetworkV2" t="Include">
+          <e p="Base" t="Include">
+            <e p="NetServer.cs" t="Include" />
+          </e>
+          <e p="Client" t="Include" />
+          <e p="Server" t="Include">
+            <e p="GroupPlayers.cs" t="Include" />
+            <e p="IReceiveNetDataHandler.cs" t="Include" />
+            <e p="NetDataRequestHeaderInfo.cs" t="Include" />
+            <e p="OnlinePlayers.cs" t="Include" />
+            <e p="SimplePoolWriter.cs" t="Include" />
+            <e p="ThreadHelper.cs" t="Include" />
+          </e>
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
+            <e p="netcoreapp3.1" t="Include">
               <e p="IAHNetCoreServer.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
         <e p="Program.cs" t="Include" />
-        <e p="Server" t="Include">
-          <e p="INetData.cs" t="Include" />
-          <e p="IReceiveNetDataHandler.cs" t="Include" />
-          <e p="NetDataRequestHeaderInfo.cs" t="Include" />
-          <e p="NetHeader.cs" t="Include" />
-          <e p="NetPlayer.cs" t="Include" />
-          <e p="NetServer.cs" t="Include" />
-          <e p="OnlinePlayers.cs" t="Include" />
-          <e p="Request.cs" t="Include" />
-          <e p="ServerHandler.cs" t="Include" />
-          <e p="SimplePoolWriter.cs" t="Include" />
-          <e p="ThreadHelper.cs" t="Include" />
+        <e p="Share" t="Include">
+          <e p="NetworkV2" t="Include">
+            <e p="NetClient.cs" t="Include" />
+            <e p="NetPlayer.cs" t="Include" />
+          </e>
+          <e p="Router" t="Include">
+            <e p="NetRouter.cs" t="Include" />
+          </e>
+          <e p="TransportData" t="Include">
+            <e p="Base" t="Include">
+              <e p="INetData.cs" t="Include" />
+              <e p="Request.cs" t="Include" />
+              <e p="Response.cs" t="Include" />
+            </e>
+            <e p="Define" t="Include">
+              <e p="NetHeader.cs" t="Include" />
+            </e>
+            <e p="Header" t="Include">
+              <e p="INetDataHeader.cs" t="Include" />
+              <e p="RequestHeader.cs" t="Include" />
+              <e p="ResponseHeader.cs" t="Include" />
+            </e>
+            <e p="Login.cs" t="Include" />
+            <e p="Test.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="IAHNetCoreServer.sln" t="IncludeFlat" />
