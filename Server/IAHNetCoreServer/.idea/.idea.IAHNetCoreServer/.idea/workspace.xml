@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ba6c7bc-5434-46d7-b785-75c4638eaff9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/ClientResponseHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/ClientNetRouter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/HashName.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="4ba6c7bc-5434-46d7-b785-75c4638eaff9" name="Default Changelist" comment="Request - response">
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.deps.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.runtimeconfig.dev.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.runtimeconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/RequestHandlers/EntryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/ClientResponseHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/ClientResponseHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/ClientNetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/ClientNetRouter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Request.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Request.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Response.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Response.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,15 +102,11 @@
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/Request.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Handler/ServerHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/NetServer.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Response.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/LoginRequest.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/NetPlayer.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/RequestHeader.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" />
@@ -115,13 +116,18 @@
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/HeaderNameHash.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/HashName.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/ClientResponseHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Request.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Response.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/ClientNetRouter.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/ClientResponseHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/ClientNetRouter.cs" />
       </list>
     </option>
   </component>
@@ -197,7 +203,7 @@
       <workItem from="1576723497422" duration="984000" />
       <workItem from="1576725229970" duration="18366000" />
       <workItem from="1576746363001" duration="3358000" />
-      <workItem from="1576813606767" duration="10251000" />
+      <workItem from="1576813606767" duration="11709000" />
     </task>
     <task id="LOCAL-00001" summary="Request - response">
       <created>1576752828936</created>
@@ -206,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576752828936</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Request - response">
+      <created>1576825586598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576825586598</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
@@ -326,10 +339,10 @@
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1485" height="344" key="GridCell.Tab.4.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576752934173" />
-    <state x="1021" y="219" key="RiderGenerateDialog" timestamp="1576816847900">
+    <state x="1021" y="219" key="RiderGenerateDialog" timestamp="1576826647631">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state x="1021" y="219" key="RiderGenerateDialog/62.0.2498.1080@62.0.2498.1080" timestamp="1576816847900" />
+    <state x="1021" y="219" key="RiderGenerateDialog/62.0.2498.1080@62.0.2498.1080" timestamp="1576826647631" />
     <state x="812" y="181" key="SettingsEditor" timestamp="1576728068529">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
@@ -342,10 +355,10 @@
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="989" y="277" width="644" height="526" key="find.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1576824740820" />
-    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1576825333630">
+    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1576825928758">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1576825333630" />
+    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1576825928758" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

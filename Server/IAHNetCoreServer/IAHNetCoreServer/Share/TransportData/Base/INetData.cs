@@ -4,10 +4,28 @@ using MessagePack;
 
 namespace IAHNetCoreServer.Share.TransportData.Base
 {
-    public interface INetData<T> where T : INetDataHeader
+    public abstract class INetData
     {
-        T Header { get; set; }
+        [IgnoreMember]
+        public INetDataHeader Header { get; set; }
 
-        void Serialize(NetDataWriter writer);
+        protected INetData()
+        {
+        }
+
+        protected INetData(INetDataHeader header)
+        {
+            Header = header;
+        }
+
+        public virtual void Serialize(NetDataWriter writer)
+        {
+            Header.Serialize(writer);
+        }
+
+        public virtual bool IsValid()
+        {
+            return true;
+        }
     }
 }

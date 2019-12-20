@@ -26,7 +26,7 @@ namespace IAHNetCoreServer.Share.Router
 
         private readonly Dictionary<ulong, Func<INetDataHeader>> _headerConstructors = new Dictionary<ulong, Func<INetDataHeader>>();
 
-        public Action<Request> OnWaitingTimeOutEvent;
+        public Action<INetData> OnWaitingTimeOutEvent;
 
         public void RegisterHeader<T>(Func<T> headerConstructor) where T : INetDataHeader, new()
         {
@@ -116,7 +116,7 @@ namespace IAHNetCoreServer.Share.Router
         /// </summary>
         /// <param name="command">command id</param>
         /// <param name="onReceive">event that will be called when packet deserialized with ReadPacket method</param>
-        public void SubscribeIncomeRequest<TNetRequest>(ENetCommand command, Action<TNetRequest, NetPlayer> onReceive) where TNetRequest : Request
+        public void SubscribeIncomeRequest<TNetRequest>(ENetCommand command, Action<TNetRequest, NetPlayer> onReceive) where TNetRequest : INetData
         {
             _incomeRequestCallbacks[command] = (header, reader, player) =>
             {
@@ -131,7 +131,7 @@ namespace IAHNetCoreServer.Share.Router
         /// </summary>
         /// <param name="command">command id</param>
         /// <param name="onReceive">event that will be called when packet deserialized with ReadPacket method</param>
-        public void SubscribeIncomeResponse<TNetResponse>(ENetCommand command, Action<TNetResponse, NetPlayer> onReceive) where TNetResponse : Response
+        public void SubscribeIncomeResponse<TNetResponse>(ENetCommand command, Action<TNetResponse, NetPlayer> onReceive) where TNetResponse : INetData
         {
             _incomeResponseCallbacks[command] = (header, reader, player) =>
             {
@@ -141,7 +141,7 @@ namespace IAHNetCoreServer.Share.Router
             };
         }
 
-        public void SubscribeRequest<TNetResponse>(Request request, Action<Request, TNetResponse, NetPlayer> onSuccess, Action<int> onError, Action<Request, TNetResponse, NetPlayer> onFinally) where TNetResponse : Response
+        public void SubscribeRequest<TNetResponse>(INetData request, Action<INetData, TNetResponse, NetPlayer> onSuccess, Action<int> onError, Action<INetData, TNetResponse, NetPlayer> onFinally) where TNetResponse : INetData
         {
             _waitingForResponseCallbacks[request.Header.RequestId] = (header, reader, player) =>
             {
@@ -159,13 +159,8 @@ namespace IAHNetCoreServer.Share.Router
                 onFinally?.Invoke(request, response, player);
             };
         }
-        
-        public void WriteHash(INetDataHeader header, NetDataWriter writer)
-        {
-            writer.Put(HashName.GetHash(header.GetType()));
-        }
-        
-        public void WritePack<T>(INetData<T> packet, NetDataWriter writer) where T : INetDataHeader
+
+        public void WritePack(INetData packet, NetDataWriter writer)
         {
             writer.Put(HashName.GetHash(packet.Header.GetType()));
             packet.Serialize(writer);

@@ -13,7 +13,7 @@ using MessagePack;
 using PlayFab;
 using PlayFab.ServerModels;
 
-namespace IAHNetCoreServer.Logic.RequestHandlers
+namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
     public class EntryHandler : IReceiveNetDataHandler
     {
@@ -44,7 +44,7 @@ namespace IAHNetCoreServer.Logic.RequestHandlers
         /// <param name="peer"></param>
         /// <param name="reader"></param>
         /// <param name="deliveryMethod"></param>
-        public Task<Response> Perform(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
+        public Task<INetData> Perform(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
             var player = _groupPlayers.FindPlayer(peer.Id);
             if (player == null)
@@ -65,7 +65,7 @@ namespace IAHNetCoreServer.Logic.RequestHandlers
         /// <param name="peer"></param>
         /// <param name="reader"></param>
         /// <param name="deliveryMethod"></param>
-        public async Task<Response> BeginLogin(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
+        public async Task<INetData> BeginLogin(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
             var header = new RequestHeader();
             header.Deserialize(reader);
@@ -116,7 +116,7 @@ namespace IAHNetCoreServer.Logic.RequestHandlers
             _netRouter.ReadAllPackets(reader, player);
         }
 
-        public static Response ResponseError(NetPlayer player, Request request, int errorCode)
+        public static INetData ResponseError(NetPlayer player, INetData request, int errorCode)
         {
             var response = new CommonErrorResponse(request, errorCode);
             player.Send(response);

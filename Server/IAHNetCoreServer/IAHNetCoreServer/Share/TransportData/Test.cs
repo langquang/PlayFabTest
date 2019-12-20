@@ -7,7 +7,7 @@ using MessagePack;
 namespace IAHNetCoreServer.Share.TransportData
 {
     [MessagePackObject]
-    public class TestRequest : Request
+    public class TestRequest : INetData
     {
         [Key(0)] public string msg;
 
@@ -19,10 +19,6 @@ namespace IAHNetCoreServer.Share.TransportData
         {
             this.msg = msg;
         }
-
-        // public LoginRequest(RequestHeader header) : base(header)
-        // {
-        // }
 
         public override bool IsValid()
         {
@@ -37,11 +33,11 @@ namespace IAHNetCoreServer.Share.TransportData
     }
 
     [MessagePackObject]
-    public class TestResponse : Response
+    public class TestResponse : INetData
     {
         [Key(0)] public string msg;
         
-        public TestResponse(Request request, int errorCode = 0) : base(request, errorCode)
+        public TestResponse(INetData request, int errorCode = 0)
         {
         }
 

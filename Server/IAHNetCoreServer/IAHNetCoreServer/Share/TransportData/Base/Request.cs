@@ -3,15 +3,15 @@ using LiteNetLib.Utils;
 
 namespace IAHNetCoreServer.Share.TransportData.Base
 {
-    public abstract class Request : INetData<RequestHeader>
+    public abstract class Request<THeader> : INetData where THeader : INetDataHeader
     {
-        public RequestHeader Header { get; set; }
+        public THeader Header { get; set; }
 
         protected Request()
         {
         }
 
-        protected Request(RequestHeader header)
+        protected Request(THeader header)
         {
             Header = header;
         }

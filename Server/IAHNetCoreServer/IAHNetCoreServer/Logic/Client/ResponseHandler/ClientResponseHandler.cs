@@ -35,7 +35,7 @@ namespace IAHNetCoreServer.Logic.Client.ResponseHandler
         {
         }
 
-        public void OnSendTestSuccess(Request request, TestResponse response, NetPlayer player)
+        public void OnSendTestSuccess(INetData request, TestResponse response, NetPlayer player)
         {
         }
 
@@ -43,7 +43,7 @@ namespace IAHNetCoreServer.Logic.Client.ResponseHandler
         {
         }
 
-        public void OnSendTestFinally(Request request, TestResponse response, NetPlayer player)
+        public void OnSendTestFinally(INetData request, TestResponse response, NetPlayer player)
         {
         }
     }

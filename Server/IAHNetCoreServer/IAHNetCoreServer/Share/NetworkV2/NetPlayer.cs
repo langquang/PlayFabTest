@@ -30,7 +30,7 @@ namespace IAHNetCoreServer.Share.NetworkV2
             }
         }
 
-        public virtual void Send(INetData<INetDataHeader> netData)
+        public virtual void Send(INetData netData)
         {
             // clear already data in writer
             _writer.Reset();

@@ -1,5 +1,5 @@
 ﻿using System;
-using IAHNetCoreServer.Logic.RequestHandlers;
+using IAHNetCoreServer.Logic.Server.RequestHandlers;
 using IAHNetCoreServer.Server;
 using MessagePack;
 using MessagePack.Resolvers;

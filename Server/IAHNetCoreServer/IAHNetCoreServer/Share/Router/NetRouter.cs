@@ -52,7 +52,7 @@ namespace IAHNetCoreServer.Share.Router
         /// <param name="command">command id</param>
         /// <param name="onReceive">event that will be called when packet deserialized with ReadPacket method</param>
         /// <exception cref="InvalidTypeException"><typeparamref name="TNetHeader"/>'s fields are not supported, or it has no fields</exception>
-        public void Subscribe<TNetData>(ENetCommand command, Action<TNetData, NetPlayer> onReceive) where TNetData : INetData<TNetHeader>
+        public void Subscribe<TNetData>(ENetCommand command, Action<TNetData, NetPlayer> onReceive) where TNetData : INetData
         {
             _callbacks[command] = (header, reader, player) =>
             {
