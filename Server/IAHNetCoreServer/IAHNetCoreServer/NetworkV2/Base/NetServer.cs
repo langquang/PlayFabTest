@@ -14,7 +14,7 @@ namespace IAHNetCoreServer.Server
     {
         // Read only props
         private readonly string                 _name;
-        private readonly IReceiveNetDataHandler _handler;
+        private readonly ServerReceiveNetDataHandler _handler;
 
         private EventBasedNetListener _listener;
         private NetManager            _server;
@@ -26,7 +26,7 @@ namespace IAHNetCoreServer.Server
         // Events
         public Action<NetServer, NetManager> CustomParamsEvent;
         
-        public NetServer(string name, IReceiveNetDataHandler handler)
+        public NetServer(string name, ServerReceiveNetDataHandler handler)
         {
             _name = name;
             _handler = handler;

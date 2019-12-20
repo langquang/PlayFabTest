@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAHNetCoreServer", "IAHNetCoreServer\IAHNetCoreServer.csproj", "{D020BD88-A008-4CF4-9BC7-C0D9993FBE0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityClientLib", "UnityClientLib\UnityClientLib.csproj", "{9BECCA18-C676-4CB9-B114-046F86EB1A0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceShare", "SourceShare\SourceShare.csproj", "{D6FFDC40-9948-47AC-9F97-BF1B2FD7256F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{D020BD88-A008-4CF4-9BC7-C0D9993FBE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D020BD88-A008-4CF4-9BC7-C0D9993FBE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D020BD88-A008-4CF4-9BC7-C0D9993FBE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BECCA18-C676-4CB9-B114-046F86EB1A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BECCA18-C676-4CB9-B114-046F86EB1A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BECCA18-C676-4CB9-B114-046F86EB1A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BECCA18-C676-4CB9-B114-046F86EB1A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FFDC40-9948-47AC-9F97-BF1B2FD7256F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FFDC40-9948-47AC-9F97-BF1B2FD7256F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FFDC40-9948-47AC-9F97-BF1B2FD7256F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FFDC40-9948-47AC-9F97-BF1B2FD7256F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

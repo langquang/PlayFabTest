@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
         <OutputType>Exe</OutputType>
         <LangVersion>7</LangVersion>
     </PropertyGroup>
@@ -16,8 +16,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Logic\Client\RequestHandler" />
       <Folder Include="Logic\Server" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SourceShare\SourceShare.csproj" />
     </ItemGroup>
 
 </Project>

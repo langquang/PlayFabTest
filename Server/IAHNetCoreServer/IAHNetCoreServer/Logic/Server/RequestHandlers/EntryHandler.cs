@@ -3,19 +3,20 @@ using System.IO;
 using System.Threading.Tasks;
 using IAHNetCoreServer.Server;
 using IAHNetCoreServer.Share.NetworkV2;
-using IAHNetCoreServer.Share.Router;
-using IAHNetCoreServer.Share.TransportData;
-using IAHNetCoreServer.Share.TransportData.Base;
-using IAHNetCoreServer.Share.TransportData.Define;
-using IAHNetCoreServer.Share.TransportData.Header;
 using LiteNetLib;
 using MessagePack;
 using PlayFab;
 using PlayFab.ServerModels;
+using SourceShare.Share.Router;
+using SourceShare.Share.TransportData;
+using SourceShare.Share.TransportData.Base;
+using SourceShare.Share.TransportData.Define;
+using SourceShare.Share.TransportData.Header;
+using SourceShare.Share.TransportData.Misc;
 
 namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
-    public class EntryHandler : IReceiveNetDataHandler
+    public class EntryHandler : ServerReceiveNetDataHandler
     {
         private readonly GroupPlayers<NetPeer>     _groupPlayers; // store active Players, peer id -> Player 
         private readonly NetRouter<ResponseHeader> _router;
@@ -23,7 +24,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
         public EntryHandler()
         {
             _groupPlayers = new GroupPlayers<NetPeer>();
-            _router = new NetRouter<ResponseHeader>();
+            _router = new NetRouter<ResponseHeader>(new TimeOutChecker(this));
             // Register headers
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());
@@ -48,7 +49,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
         /// <param name="peer"></param>
         /// <param name="reader"></param>
         /// <param name="deliveryMethod"></param>
-        public Task<INetData> Perform(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
+        public override Task<INetData> Perform(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
             Console.WriteLine($"Receive from peer: {peer.Id}");
             var player = peer.Tag;
@@ -70,7 +71,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
         /// <param name="peer"></param>
         /// <param name="reader"></param>
         /// <param name="deliveryMethod"></param>
-        public async Task<INetData> BeginLogin(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
+        public override async Task<INetData> BeginLogin(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
             var header = _router.ReadHeader(reader);
             if (header.NetType != ENetType.REQUEST || header.NetCommand != ENetCommand.LOGIN_REQUEST)
@@ -118,9 +119,14 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             return response;
         }
 
-        public void RequestAfterLogin(NetServer netServer, NetPlayer player, NetPacketReader reader, DeliveryMethod deliveryMethod)
+        public override void RequestAfterLogin(NetServer netServer, NetPlayer player, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
             _router.ReadAllPackets(reader, player);
+        }
+
+        public override void OnTimeRequestTimeOut(RequestTimeOut requestTimeOut)
+        {
+            Console.WriteLine($"RequestTimeOut {requestTimeOut.command}");
         }
 
         public static INetData ResponseError(NetPlayer player, INetData request, int errorCode)

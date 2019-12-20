@@ -2,116 +2,386 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba6c7bc-5434-46d7-b785-75c4638eaff9" name="Default Changelist" comment="bo generic">
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Logic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Logic/Client.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Logic/Client/RequestHandler.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Logic/Client/ResponseHandler.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Logic/Client/ResponseHandler/APINetworkHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Logic/Client/ResponseHandler/APINetworkHandler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2/Client.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2/Client/IReceiveNetDataHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2/Client/IReceiveNetDataHandler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/Router/HashName.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/Router/HashName.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/Router/TempNetRouter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/Router/TempNetRouter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/ProtocolInstance.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/09/0905947592fed6846a2f831cbfa42a5e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/09/0905947592fed6846a2f831cbfa42a5e.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/31/3174033451a17974485d02fd93d98f21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/31/3174033451a17974485d02fd93d98f21.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/3c/3c3c4135f6815294c941af0d6395b4d7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/3c/3c3c4135f6815294c941af0d6395b4d7.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/48/48e0bf631d8ca1d49a0cf5c99e76fcb4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/48/48e0bf631d8ca1d49a0cf5c99e76fcb4.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/8f/8f8b355a776a742428981aeb9d95c32c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/8f/8f8b355a776a742428981aeb9d95c32c.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/a6/a69632d6f5a09b245b81c312e7f8fb2f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/a6/a69632d6f5a09b245b81c312e7f8fb2f.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/aa/aa1cf8b63ae2b094c8ee7cd6a01f60eb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/aa/aa1cf8b63ae2b094c8ee7cd6a01f60eb.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/d6/d60e9323b24292c4886210eeb4662b3e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/d6/d60e9323b24292c4886210eeb4662b3e.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-034eb3326a26a0948a87cca7ae17d645" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-04bd9e16d4cea6b4f84361ca59b3c73a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-0866537c9a6145e459d356e7eb4fe59a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-0d78083d8279989439271ecb40373717" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-2a6445d637e1a924cb7d2714fd54f74a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-3f2fc462d0e888249a2f7dc7bda86cf1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-4ccbfe0f60bbb2d4f833119b884fc4a0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-4d9df5b5e6f3d7e4ab7afbae12b82c2b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-62ac50c679d985745add8d87ebb4a39f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-671f48aa5493f844aaf5d4a6f3822274" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-7bce5060abce75e41953f7b444230823" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-8f610399f35fb2d43aaf0dbc988c4767" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-a05d49c410d0af74db88cfcc67d13c28" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-ae441402a7a5ef2459f51f1c2a55e5f4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-b99fdc06b29564b4aae18110b2d3c419" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-c913d85637dfe0f49aee581cfb4953d8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-d049f319f5e5e8b4fbf5da81b011d1e1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-e8a0ae69bf7179847bababbe44626e16" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-eb5beb6feaf83c54ba209cab7deb20de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-ec7d7c181f1854b4d98249edd04a6d9b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/UnityTempFile-fab863d22b4d9b245a22372a69625445" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PlayFabTest/Temp/__Backupscenes/0.backup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/Client/IReceiveNetDataHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/TempNetRouter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/PlayFabCustom/PlayFabAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/PlayFabCustom/PlayFabAuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2/NetClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2/NetClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/Router/NetRouter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/INetData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/Request.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/Request.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/Response.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Base/Response.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Define/NetHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Define/NetHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Header/INetDataHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Header/INetDataHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Header/ResponseHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Header/ResponseHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Share/TransportData/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/StartUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/StartUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/StateCache/Hierarchy/f2bca1-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/StateCache/Hierarchy/f2bca1-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/0e/0e2f0f209e019d845869175107c1d1cd" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/0e/0e2f0f209e019d845869175107c1d1cd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/14/14e02ee091f636240a219ca4be3aac0f" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/14/14e02ee091f636240a219ca4be3aac0f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/1d/1d0e6d23ec74a2d4daf628ed1fbfa4fd" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/1d/1d0e6d23ec74a2d4daf628ed1fbfa4fd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/2a/2a48e22f0c1f1d34998bba63cddee8ab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/2a/2a48e22f0c1f1d34998bba63cddee8ab.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/2e/2e3aa666d30f7364498a010b0a9cfdc2" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/2e/2e3aa666d30f7364498a010b0a9cfdc2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/2e/2e731e149f988a441b18aab2277265d2" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/2e/2e731e149f988a441b18aab2277265d2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/47/479e296b503ee5b48971afece8c67bf0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/47/479e296b503ee5b48971afece8c67bf0.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/70/70529d57f759f1743bf4905714408dc3" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/70/70529d57f759f1743bf4905714408dc3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/b6/b6754a2c700a9d94191dcd42b9ece471" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/b6/b6754a2c700a9d94191dcd42b9ece471" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/d3/d388f0f1931fe10418ccd9e1cb089a01" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/d3/d388f0f1931fe10418ccd9e1cb089a01" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/d6/d6c882840162efb4c96d69a42f0534dc" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/d6/d6c882840162efb4c96d69a42f0534dc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/e1/e102474bbe350de44a2c6c1cbaa9871e" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/e1/e102474bbe350de44a2c6c1cbaa9871e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/f3/f386baa71d8f550458429e5cc13ecb91" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/f3/f386baa71d8f550458429e5cc13ecb91" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/f3/f386baa71d8f550458429e5cc13ecb91.info" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/Library/metadata/f3/f386baa71d8f550458429e5cc13ecb91.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/LiteNetLib.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/MessagePack.Annotations.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/MessagePack.UnityShims.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/MessagePack.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/PlayFabAllSDK.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Share/Class1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Share/Share.projitems" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Share/Share.shproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Base/IReceiveNetDataHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/Share/TransportData/Base/ITimeOutChecker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/Share/TransportData/Misc/RequestTimeOut.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/Share/Utils/Timer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/SourceShare.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/LiteNetLib.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/MessagePack.Annotations.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/MessagePack.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/SourceShare.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/SourceShare.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/System.Buffers.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/System.Memory.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/System.Threading.Tasks.Extensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.deps.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.CopyComplete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/NetworkV2/TimeOutChecker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/UnityClientLib.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/LiteNetLib.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/LiteNetLib.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/LiteNetLib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.Annotations.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.Annotations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/SourceShare.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/SourceShare.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Buffers.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Buffers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Memory.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Memory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Numerics.Vectors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Threading.Tasks.Extensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Threading.Tasks.Extensions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityClientLib.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityClientLib.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityEngine.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityEngine.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.csproj.CopyComplete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/LiteNetLib.0.8.3.1.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/net35/LiteNetLib.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/net35/LiteNetLib.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/net35/LiteNetLib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netcoreapp2.0/LiteNetLib.deps.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netcoreapp2.0/LiteNetLib.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netcoreapp2.0/LiteNetLib.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netcoreapp2.0/LiteNetLib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netstandard2.0/LiteNetLib.deps.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netstandard2.0/LiteNetLib.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netstandard2.0/LiteNetLib.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netstandard2.0/LiteNetLib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.2.0.323/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.2.0.323/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.2.0.323/MessagePack.2.0.323.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.2.0.323/lib/netcoreapp2.1/MessagePack.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.2.0.323/lib/netcoreapp2.1/MessagePack.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.2.0.323/lib/netstandard2.0/MessagePack.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.2.0.323/lib/netstandard2.0/MessagePack.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.Annotations.2.0.323/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.Annotations.2.0.323/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.Annotations.2.0.323/MessagePack.Annotations.2.0.323.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.Annotations.2.0.323/lib/netstandard2.0/MessagePack.Annotations.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/MessagePack.Annotations.2.0.323/lib/netstandard2.0/MessagePack.Annotations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/LICENSE.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/System.Buffers.4.4.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/THIRD-PARTY-NOTICES.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/lib/netcoreapp2.0/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/lib/netstandard1.1/System.Buffers.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/lib/netstandard1.1/System.Buffers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/lib/netstandard2.0/System.Buffers.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/lib/netstandard2.0/System.Buffers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/ref/netcoreapp2.0/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/ref/netstandard1.1/System.Buffers.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/ref/netstandard1.1/System.Buffers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/ref/netstandard2.0/System.Buffers.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/ref/netstandard2.0/System.Buffers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/useSharedDesignerContext.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Buffers.4.4.0/version.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/LICENSE.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/System.Memory.4.5.3.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/THIRD-PARTY-NOTICES.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/lib/netcoreapp2.1/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/lib/netstandard1.1/System.Memory.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/lib/netstandard1.1/System.Memory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/lib/netstandard2.0/System.Memory.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/lib/netstandard2.0/System.Memory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/ref/netcoreapp2.1/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/useSharedDesignerContext.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Memory.4.5.3/version.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/LICENSE.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/System.Numerics.Vectors.4.4.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/THIRD-PARTY-NOTICES.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/MonoAndroid10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/MonoTouch10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/net46/System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/net46/System.Numerics.Vectors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/netcoreapp2.0/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/netstandard1.0/System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/netstandard1.0/System.Numerics.Vectors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/netstandard2.0/System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/netstandard2.0/System.Numerics.Vectors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/xamarinios10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/xamarinmac20/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/xamarintvos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/lib/xamarinwatchos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/MonoAndroid10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/MonoTouch10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/net46/System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/net46/System.Numerics.Vectors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/netcoreapp2.0/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/netstandard1.0/System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/netstandard1.0/System.Numerics.Vectors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/netstandard2.0/System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/netstandard2.0/System.Numerics.Vectors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/xamarinios10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/xamarinmac20/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/xamarintvos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/ref/xamarinwatchos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/useSharedDesignerContext.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Numerics.Vectors.4.4.0/version.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/LICENSE.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/System.Reflection.Emit.4.6.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/THIRD-PARTY-NOTICES.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/lib/monoandroid10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/lib/net45/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/lib/netcore50/System.Reflection.Emit.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/lib/netcoreapp2.0/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/lib/netstandard1.1/System.Reflection.Emit.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/lib/netstandard1.1/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/lib/netstandard1.3/System.Reflection.Emit.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/lib/netstandard2.0/System.Reflection.Emit.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/lib/netstandard2.0/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/lib/netstandard2.1/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/lib/xamarinmac20/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/monoandroid10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/net45/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netcoreapp2.0/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard1.1/System.Reflection.Emit.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard1.1/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard1.1/de/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard1.1/es/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard1.1/fr/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard1.1/it/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard1.1/ja/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard1.1/ko/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard1.1/ru/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard1.1/zh-hans/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard1.1/zh-hant/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard2.0/System.Reflection.Emit.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard2.0/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/netstandard2.1/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/ref/xamarinmac20/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/runtimes/aot/lib/netcore50/System.Reflection.Emit.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/runtimes/aot/lib/netcore50/System.Reflection.Emit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/useSharedDesignerContext.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.4.6.0/version.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/LICENSE.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/System.Reflection.Emit.Lightweight.4.6.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/THIRD-PARTY-NOTICES.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/MonoAndroid10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/MonoTouch10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/net45/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/netcore50/System.Reflection.Emit.Lightweight.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/netcoreapp2.0/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/netstandard1.0/System.Reflection.Emit.Lightweight.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/netstandard1.0/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/netstandard2.0/System.Reflection.Emit.Lightweight.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/netstandard2.0/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/netstandard2.1/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/portable-net45+wp8/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/wp80/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/xamarinios10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/xamarinmac20/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/xamarintvos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/lib/xamarinwatchos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/MonoAndroid10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/MonoTouch10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/net45/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netcoreapp2.0/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard1.0/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard1.0/de/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard1.0/es/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard1.0/fr/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard1.0/it/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard1.0/ja/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard1.0/ko/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard1.0/ru/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard1.0/zh-hans/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard1.0/zh-hant/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard2.0/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/netstandard2.1/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/portable-net45+wp8/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/wp80/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/xamarinios10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/xamarinmac20/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/xamarintvos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/ref/xamarinwatchos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/useSharedDesignerContext.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Reflection.Emit.Lightweight.4.6.0/version.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/LICENSE.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/System.Runtime.CompilerServices.Unsafe.4.5.2.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/THIRD-PARTY-NOTICES.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/useSharedDesignerContext.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.4.5.2/version.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/System.Runtime.Serialization.Primitives.4.3.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ThirdPartyNotices.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/dotnet_library_license.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/MonoAndroid10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/MonoTouch10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/net45/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/net46/System.Runtime.Serialization.Primitives.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/netcore50/System.Runtime.Serialization.Primitives.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/portable-net45+win8+wp8+wpa81/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/win8/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/wp80/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/wpa81/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/xamarinios10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/xamarinmac20/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/xamarintvos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/lib/xamarinwatchos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/MonoAndroid10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/MonoTouch10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/net45/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/net46/System.Runtime.Serialization.Primitives.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netcore50/System.Runtime.Serialization.Primitives.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netcore50/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netcore50/de/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netcore50/es/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netcore50/fr/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netcore50/it/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netcore50/ja/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netcore50/ko/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netcore50/ru/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netcore50/zh-hans/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netcore50/zh-hant/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.0/System.Runtime.Serialization.Primitives.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.0/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.0/de/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.0/es/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.0/fr/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.0/it/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.0/ja/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.0/ko/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.0/ru/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.0/zh-hans/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.0/zh-hant/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.3/System.Runtime.Serialization.Primitives.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.3/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.3/de/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.3/es/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.3/fr/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.3/it/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.3/ja/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.3/ko/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.3/ru/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.3/zh-hans/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/netstandard1.3/zh-hant/System.Runtime.Serialization.Primitives.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/portable-net45+win8+wp8+wpa81/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/win8/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/wp80/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/wpa81/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/xamarinios10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/xamarinmac20/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/xamarintvos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/ref/xamarinwatchos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Runtime.Serialization.Primitives.4.3.0/runtimes/aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/LICENSE.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/System.Threading.Tasks.Extensions.4.5.3.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/THIRD-PARTY-NOTICES.TXT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/MonoAndroid10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/MonoTouch10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/netcoreapp2.1/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/netstandard1.0/System.Threading.Tasks.Extensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/netstandard1.0/System.Threading.Tasks.Extensions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/netstandard2.0/System.Threading.Tasks.Extensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/netstandard2.0/System.Threading.Tasks.Extensions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/xamarinios10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/xamarinmac20/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/xamarintvos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/lib/xamarinwatchos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/ref/MonoAndroid10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/ref/MonoTouch10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/ref/netcoreapp2.1/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/ref/xamarinios10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/ref/xamarinmac20/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/ref/xamarintvos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/ref/xamarinwatchos10/_._" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/useSharedDesignerContext.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.3/version.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer.sln" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/ClientResponseHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/APINetworkHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/APINetworkHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UnityClientLib/Logic/Client/ResponseHandler/APINetworkHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/ClientNetRouter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Request.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Response.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../copy_source_share_to_client.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../copy_source_share_to_client.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/Client/IReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/HashName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/Router/HashName.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/Router/NetRouter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/TempNetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/Router/TempNetRouter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/TransportData/Base/INetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/TransportData/Define/NetHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/INetDataHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/RequestHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/RequestHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/ResponseHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/TransportData/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/TransportData/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.runtimeconfig.dev.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,88 +395,48 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files (x86)/NuGet/Config/Microsoft.VisualStudio.Offline.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/84/446e6390/NetPacketPool.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/ba/874d0519/NetPeer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4156DEFD-3D50-4A5F-A099-C2B49343A450/94/866746a7/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/eb/336add4f/NetPeer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/fc/32fd55cd/NetPacketReader.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56C02F65-7F8E-4DE0-B35F-CD26C3C2693D/134/Interlocked.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/78/e91622ff/EventBasedNetListener.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/Client/IReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/d5/2b7db9bc/ConnectionRequest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/94/ffb2af1e/EventBasedNetListener.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/02/6a6fcc80/NetManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/ef/14030283/NetManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/fe/352c5c89/PlayFabServerAPI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/32/d2dba418/NetDataReader.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4156DEFD-3D50-4A5F-A099-C2B49343A450/6f/e8e4e511/Path.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ThreadHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56C02F65-7F8E-4DE0-B35F-CD26C3C2693D/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/495A521E-A74C-4032-A4A7-F683AF9CAB7B/6/Shims.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/Router/HashName.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56C02F65-7F8E-4DE0-B35F-CD26C3C2693D/14E/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/APINetworkHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56C02F65-7F8E-4DE0-B35F-CD26C3C2693D/13A/Thread.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/RequestHeader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/Router/TempNetRouter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9E1F3F01-F466-4923-9083-D9637D00C952/7/MessagePackSerializer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Header/ResponseHeader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Header/RequestHeader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Base/ITimeOutChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Header/INetDataHeader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Define/NetHeader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Base/INetData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Login.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/Router/HashName.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/Router/TempNetRouter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnityClientLib/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/Router/NetRouter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/Utils/Timer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Misc/RequestTimeOut.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/Base/IReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/AB02CD16-F2D4-4F63-9852-C9C0CE73B943/E/Timer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_CommonErrorResponseFormatter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnityClientLib/NetworkV2/TimeOutChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Share/Class1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnityClientLib/Logic/Client/ResponseHandler/APINetworkHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/fe/352c5c89/PlayFabServerAPI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/02/6a6fcc80/NetManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ThreadHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/ServerNet.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Client/ClientNet.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/ThreadHelper.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Client/NetClient.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/OnlinePlayers.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/NetHeader.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/ReceiveNetDataHandler.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/IReceiveNetDataHandler.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/NetDataHeaderInfo.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/NetDataHeaderMaker.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/RequestHeader.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/INetDataHeader.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/INetData.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetData/Header/ResponseHeader.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetData/LoginRequest.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/ServerHandler.cs" />
-        <option value="$APPLICATION_CONFIG_DIR$/rider64.exe.vmoptions" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/Request.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Handler/ServerHandler.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/NetServer.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/LoginRequest.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Server/NetPlayer.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/RequestHeader.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/RequestHandlers/EntryHandler.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetActiveRouter.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/HeaderNameHash.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/HashName.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Request.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Response.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/ClientResponseHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" />
@@ -216,14 +446,45 @@
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Client/IReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/Router.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/APINetworkHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Utils/Timer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/ITimeOutChecker.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Misc/RequestTimeOut.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" />
+        <option value="$PROJECT_DIR$/UnityClientLib/MonoBehaviour1.cs" />
+        <option value="$PROJECT_DIR$/UnityClientLib/Logic/Client/ResponseHandler/Test.cs" />
+        <option value="$PROJECT_DIR$/Share/Class1.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Class1.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetClient.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/UnityClient/IReceiveNetDataHandler.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/Router/HashName.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/Router/NetRouter.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/Router/TempNetRouter.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Base/INetData.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Base/ITimeOutChecker.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Define/NetHeader.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/INetDataHeader.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/RequestHeader.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/ResponseHeader.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Login.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Test.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Base/IReceiveNetDataHandler.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/Utils/Timer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/IReceiveNetDataHandler.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Misc/RequestTimeOut.cs" />
+        <option value="$PROJECT_DIR$/UnityClientLib/NetworkV2/TimeOutChecker.cs" />
+        <option value="$PROJECT_DIR$/UnityClientLib/Logic/Client/ResponseHandler/APINetworkHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
       </list>
     </option>
@@ -246,14 +507,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="TWShift.4" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="RiderNuGetOptionsPageId" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Server">
     <configuration name="Server" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -272,6 +535,18 @@
         <option name="Build" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -284,6 +559,9 @@
         </serviceView>
       </list>
     </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -301,6 +579,7 @@
       <workItem from="1576725229970" duration="18366000" />
       <workItem from="1576746363001" duration="3358000" />
       <workItem from="1576813606767" duration="26837000" />
+      <workItem from="1576856838151" duration="5532000" />
     </task>
     <task id="LOCAL-00001" summary="Request - response">
       <created>1576752828936</created>
@@ -356,29 +635,34 @@
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="995" y="199" key="#Server/62.0.2498.1080@62.0.2498.1080" timestamp="1576728494069" />
-    <state x="421" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1576731553310">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state x="329" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1576861033217">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state x="329" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/62.0.1858.1080@62.0.1858.1080" timestamp="1576861033217" />
     <state x="421" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/62.0.2498.1080@62.0.2498.1080" timestamp="1576731553310" />
     <state width="532" height="466" key="DebuggerActiveHint" timestamp="1576841792992">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="532" height="466" key="DebuggerActiveHint/62.0.2498.1080@62.0.2498.1080" timestamp="1576841792992" />
-    <state width="1488" height="343" key="GridCell.Tab.0.bottom" timestamp="1576841950365">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="287" key="GridCell.Tab.0.bottom" timestamp="1576856981266">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="287" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1576856981266" />
     <state width="1488" height="343" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1576841950365" />
-    <state width="1488" height="343" key="GridCell.Tab.0.center" timestamp="1576841950365">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="287" key="GridCell.Tab.0.center" timestamp="1576856981266">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="287" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1576856981266" />
     <state width="1488" height="343" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1576841950365" />
-    <state width="1488" height="343" key="GridCell.Tab.0.left" timestamp="1576841950364">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="287" key="GridCell.Tab.0.left" timestamp="1576856981265">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="287" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1576856981265" />
     <state width="1488" height="343" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1576841950364" />
-    <state width="1488" height="343" key="GridCell.Tab.0.right" timestamp="1576841950365">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="287" key="GridCell.Tab.0.right" timestamp="1576856981266">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="287" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1576856981266" />
     <state width="1488" height="343" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576841950365" />
     <state width="1488" height="343" key="GridCell.Tab.1.bottom" timestamp="1576841946873">
       <screen x="62" y="0" width="2498" height="1080" />
@@ -444,9 +728,14 @@
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1488" height="343" key="GridCell.Tab.4.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state x="1021" y="219" key="RiderGenerateDialog" timestamp="1576831179533">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state x="583" y="271" key="Rider.ProjectTemplateDialog.Size" timestamp="1576860288409">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state x="583" y="271" key="Rider.ProjectTemplateDialog.Size/62.0.1858.1080@62.0.1858.1080" timestamp="1576860288409" />
+    <state x="775" y="219" key="RiderGenerateDialog" timestamp="1576861643780">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="775" y="219" key="RiderGenerateDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1576861643780" />
     <state x="1021" y="219" key="RiderGenerateDialog/62.0.2498.1080@62.0.2498.1080" timestamp="1576831179533" />
     <state x="812" y="181" key="SettingsEditor" timestamp="1576728068529">
       <screen x="62" y="0" width="2498" height="1080" />
@@ -460,9 +749,10 @@
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="989" y="277" width="644" height="526" key="find.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1576833081238" />
-    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1576838517494">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state x="740" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1576857109661">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state x="740" y="235" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1576857109661" />
     <state x="974" y="235" width="672" height="678" key="search.everywhere.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1576838517494" />
   </component>
   <component name="XDebuggerManager">
@@ -472,19 +762,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs</url>
-          <line>60</line>
-          <properties documentPath="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" initialLine="60">
-            <startOffsets>
-              <option value="2370" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2380" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

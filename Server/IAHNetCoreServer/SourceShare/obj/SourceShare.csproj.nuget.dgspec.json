@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\projects\\suga_iah\\PlayFabTest\\Server\\IAHNetCoreServer\\SourceShare\\SourceShare.csproj": {}
+  },
+  "projects": {
+    "D:\\projects\\suga_iah\\PlayFabTest\\Server\\IAHNetCoreServer\\SourceShare\\SourceShare.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\suga_iah\\PlayFabTest\\Server\\IAHNetCoreServer\\SourceShare\\SourceShare.csproj",
+        "projectName": "SourceShare",
+        "projectPath": "D:\\projects\\suga_iah\\PlayFabTest\\Server\\IAHNetCoreServer\\SourceShare\\SourceShare.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\suga_iah\\PlayFabTest\\Server\\IAHNetCoreServer\\SourceShare\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472",
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          },
+          "net472": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "LiteNetLib": {
+              "target": "Package",
+              "version": "[0.8.3.1, )"
+            },
+            "MessagePack": {
+              "target": "Package",
+              "version": "[2.0.323, )"
+            },
+            "MessagePackAnalyzer": {
+              "target": "Package",
+              "version": "[2.0.323, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        },
+        "net472": {
+          "dependencies": {
+            "LiteNetLib": {
+              "target": "Package",
+              "version": "[0.8.3.1, )"
+            },
+            "MessagePack": {
+              "target": "Package",
+              "version": "[2.0.323, )"
+            },
+            "MessagePackAnalyzer": {
+              "target": "Package",
+              "version": "[2.0.323, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

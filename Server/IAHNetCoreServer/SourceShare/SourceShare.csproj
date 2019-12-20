@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net472;netcoreapp2.2</TargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LiteNetLib" Version="0.8.3.1" />
+      <PackageReference Include="MessagePack" Version="2.0.323" />
+      <PackageReference Include="MessagePackAnalyzer" Version="2.0.323" />
+    </ItemGroup>
+
+</Project>
