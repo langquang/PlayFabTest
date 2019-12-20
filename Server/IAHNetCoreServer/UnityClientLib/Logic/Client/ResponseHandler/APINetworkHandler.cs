@@ -33,7 +33,7 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
 
         #endregion
 
-        private readonly NetRouter<ResponseHeader> _router;
+        private readonly NetRouter _router;
 
         private NetClient _netClient;
         private NetPlayer _player;
@@ -51,7 +51,7 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
             _netClient.Listener.PeerConnectedEvent += OnConnected;                               // start login after connected
 
             // ===================== Config Router =====================================================================
-            _router = new NetRouter<ResponseHeader>(new TimeOutChecker(this));
+            _router = new NetRouter(new TimeOutChecker(this));
             // Register headers
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());

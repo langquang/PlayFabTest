@@ -19,12 +19,12 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
     public class EntryHandler : ServerReceiveNetDataHandler
     {
         private readonly GroupPlayers<NetPeer>     _groupPlayers; // store active Players, peer id -> Player 
-        private readonly NetRouter<ResponseHeader> _router;
+        private readonly NetRouter _router;
 
         public EntryHandler()
         {
             _groupPlayers = new GroupPlayers<NetPeer>();
-            _router = new NetRouter<ResponseHeader>(new TimeOutChecker(this));
+            _router = new NetRouter(new TimeOutChecker(this));
             // Register headers
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());

@@ -9,12 +9,12 @@ namespace IAHNetCoreServer.Share.NetworkV2
 {
     public class NetPlayer
     {
-        private readonly NetPeer                   _connection;
-        private readonly bool                      _isClient;
-        private readonly NetRouter<ResponseHeader> _router;
-        private readonly NetDataWriter             _writer;
+        private readonly NetPeer       _connection;
+        private readonly bool          _isClient;
+        private readonly NetRouter     _router;
+        private readonly NetDataWriter _writer;
 
-        public NetPlayer(NetPeer peer, NetRouter<ResponseHeader> router, bool isClient, string token)
+        public NetPlayer(NetPeer peer, NetRouter router, bool isClient, string token)
         {
             _connection = peer;
             _router = router;

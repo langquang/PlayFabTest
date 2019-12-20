@@ -9,7 +9,7 @@ using SourceShare.Share.TransportData.Header;
 
 namespace SourceShare.Share.Router
 {
-    public class NetRouter<TWaitingResponseHeader> where TWaitingResponseHeader : ResponseHeader
+    public class NetRouter
     {
         private readonly Dictionary<ulong, Func<INetDataHeader>> _headerConstructors = new Dictionary<ulong, Func<INetDataHeader>>();
 
@@ -71,7 +71,7 @@ namespace SourceShare.Share.Router
         public void ReadPacket(NetDataReader reader, NetPlayer player)
         {
             var header = ReadHeader(reader);
-            if (header.NetType == ENetType.REQUEST || header.NetType == ENetType.RESPONSE)
+            if (header.NetType == ENetType.REQUEST || header.NetType == ENetType.MESSAGE)
             {
                 var action = GetIncomeRequestCallback(header.NetCommand);
                 action?.Invoke(header, reader, player);
@@ -87,7 +87,7 @@ namespace SourceShare.Share.Router
                 else // round trip data
                 {
                     var waitingCallback = GetWaitingCallback(header.RequestId);
-                    waitingCallback?.Invoke((TWaitingResponseHeader) header, reader, player);
+                    waitingCallback?.Invoke((ResponseHeader) header, reader, player);
                 }
             }
         }
@@ -137,6 +137,6 @@ namespace SourceShare.Share.Router
 
         private delegate void SubscribeIncomeDelegate(INetDataHeader header, NetDataReader reader, NetPlayer player);
 
-        private delegate void SubscribeWaitingResponseDelegate(TWaitingResponseHeader header, NetDataReader reader, NetPlayer player);
+        private delegate void SubscribeWaitingResponseDelegate(ResponseHeader header, NetDataReader reader, NetPlayer player);
     }
 }
