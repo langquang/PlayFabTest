@@ -526,6 +526,13 @@
             <e p="MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_TestResponseFormatter.cs" t="Include" />
             <e p="MessagePack_Resolvers_GeneratedResolver.cs" t="Include" />
           </e>
+          <e p="Logic" t="Include">
+            <e p="Client" t="Include">
+              <e p="ResponseHandler" t="Include">
+                <e p="APINetworkHandler.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="MessagePack" t="Include">
             <e p="Annotations" t="Include">
               <e p="Attributes.cs" t="Include" />
@@ -648,17 +655,20 @@
           </e>
           <e p="Share" t="Include">
             <e p="NetworkV2" t="Include">
+              <e p="Client" t="Include">
+                <e p="IReceiveNetDataHandler.cs" t="Include" />
+              </e>
               <e p="NetClient.cs" t="Include" />
               <e p="NetPlayer.cs" t="Include" />
             </e>
             <e p="Router" t="Include">
+              <e p="HashName.cs" t="Include" />
               <e p="NetRouter.cs" t="Include" />
+              <e p="TempNetRouter.cs" t="Include" />
             </e>
             <e p="TransportData" t="Include">
               <e p="Base" t="Include">
                 <e p="INetData.cs" t="Include" />
-                <e p="Request.cs" t="Include" />
-                <e p="Response.cs" t="Include" />
               </e>
               <e p="Define" t="Include">
                 <e p="NetHeader.cs" t="Include" />

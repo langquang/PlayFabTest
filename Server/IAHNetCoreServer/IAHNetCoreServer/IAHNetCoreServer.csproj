@@ -18,7 +18,6 @@
     <ItemGroup>
       <Folder Include="Logic\Client\RequestHandler" />
       <Folder Include="Logic\Server" />
-      <Folder Include="NetworkV2\Client" />
     </ItemGroup>
 
 </Project>

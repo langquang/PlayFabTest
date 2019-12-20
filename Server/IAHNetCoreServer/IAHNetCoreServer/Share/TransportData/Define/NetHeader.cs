@@ -2,8 +2,9 @@ namespace IAHNetCoreServer.Share.TransportData.Define
 {
     public enum ENetType
     {
-        REQUEST = 1,
-        MESSAGE = 2
+        REQUEST  = 1,
+        RESPONSE = 2,
+        MESSAGE  = 3
     }
 
     public enum ENetCommand

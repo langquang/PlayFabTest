@@ -22,10 +22,6 @@ namespace IAHNetCoreServer.Share.TransportData
             this.sessionTicket = sessionTicket;
         }
 
-        // public LoginRequest(RequestHeader header) : base(header)
-        // {
-        // }
-
         public override bool IsValid()
         {
             return !string.IsNullOrEmpty(playerId) && !string.IsNullOrEmpty(sessionTicket);

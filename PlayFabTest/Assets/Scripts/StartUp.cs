@@ -1,4 +1,5 @@
-﻿using IAHNetCoreServer.Share.NetworkV2;
+﻿using IAHNetCoreServer.Logic.Client.ResponseHandler;
+using IAHNetCoreServer.Share.NetworkV2;
 using IAHNetCoreServer.Share.TransportData;
 using MessagePack;
 using MessagePack.Resolvers;
@@ -9,11 +10,8 @@ using UnityEngine;
 
 public class StartUp : MonoBehaviour
 {
-    private NetClient _netClient;
-
-    private NetPlayer _player;
-
     private LoginResult _playFabLoginResult;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,21 +24,13 @@ public class StartUp : MonoBehaviour
     {
         Debug.Log("Try to connect to Game Server...");
         _playFabLoginResult = arg1;
-        _netClient = new NetClient();
-        _netClient.Listener.PeerConnectedEvent += peer =>
-        {
-            Debug.Log("Try to Login to server");
-            var loginRequest = new LoginRequest(_playFabLoginResult.PlayFabId, _playFabLoginResult.SessionTicket);
-            _player = new NetPlayer(peer);
-            _player.Request(loginRequest);
-        };
-        _netClient.Start("127.0.0.1", 8000, "ButinABC");
+        APINetworkHandler.Instance.StartConnect(_playFabLoginResult.PlayFabId, _playFabLoginResult.SessionTicket);
     }
 
     // Update is called once per frame
     void Update()
     {
-        _netClient?.Update();
+        APINetworkHandler.Instance?.Update();
     }
 
     static bool serializerRegistered = false;
@@ -77,6 +67,9 @@ public class StartUp : MonoBehaviour
     {
         Debug.Log("Try to send TestRequest");
         var testRequest = new TestRequest("TestRequest from client");
-        _player.Request(testRequest);
+        APINetworkHandler.Instance.Player.SendRequest<TestResponse>(testRequest, (response, player) =>
+        {
+            Debug.Log($"TestResponse from server: {response.msg}");
+        }, null, null);
     }
 }

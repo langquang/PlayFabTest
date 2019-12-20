@@ -36,9 +36,14 @@ namespace IAHNetCoreServer.Share.TransportData
     public class TestResponse : INetData
     {
         [Key(0)] public string msg;
-        
+
+        public TestResponse()
+        {
+        }
+
         public TestResponse(INetData request, int errorCode = 0)
         {
+            Header = new ResponseHeader(request.Header, 0);
         }
 
         public override void Serialize(NetDataWriter writer)

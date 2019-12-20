@@ -1,3 +1,4 @@
+using IAHNetCoreServer.Share.Router;
 using IAHNetCoreServer.Share.TransportData.Header;
 using LiteNetLib.Utils;
 using MessagePack;
@@ -20,6 +21,7 @@ namespace IAHNetCoreServer.Share.TransportData.Base
 
         public virtual void Serialize(NetDataWriter writer)
         {
+            writer.Put(HashName.GetHash(Header.GetType()));
             Header.Serialize(writer);
         }
 

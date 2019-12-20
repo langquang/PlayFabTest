@@ -7,7 +7,7 @@ using MessagePack;
 namespace IAHNetCoreServer.Share.TransportData
 {
     [MessagePackObject]
-    public class LoginRequest : Request
+    public class LoginRequest : INetData
     {
         [Key(0)] public string playerId;
         [Key(1)] public string sessionTicket;
@@ -22,10 +22,6 @@ namespace IAHNetCoreServer.Share.TransportData
             this.sessionTicket = sessionTicket;
         }
 
-        // public LoginRequest(RequestHeader header) : base(header)
-        // {
-        // }
-
         public override bool IsValid()
         {
             return !string.IsNullOrEmpty(playerId) && !string.IsNullOrEmpty(sessionTicket);
@@ -39,7 +35,7 @@ namespace IAHNetCoreServer.Share.TransportData
     }
 
     [MessagePackObject]
-    public class LoginResponse : Response
+    public class LoginResponse : INetData
     {
         [Key(0)] public string playerId;
         [Key(1)] public string sessionTicket;
@@ -48,7 +44,7 @@ namespace IAHNetCoreServer.Share.TransportData
         {
         }
 
-        public LoginResponse(ResponseHeader header) : base(header)
+        public LoginResponse(INetDataHeader header) : base(header)
         {
         }
 
@@ -60,14 +56,15 @@ namespace IAHNetCoreServer.Share.TransportData
     }
 
     [MessagePackObject]
-    public class CommonErrorResponse : Response
+    public class CommonErrorResponse : INetData
     {
         public CommonErrorResponse()
         {
         }
 
-        public CommonErrorResponse(ResponseHeader header) : base(header)
+        public CommonErrorResponse(INetData request, int errorCode)
         {
+            
         }
     }
 }

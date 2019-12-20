@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading;
 using System.Threading.Tasks;
 using IAHNetCoreServer.Share.NetworkV2;
 using LiteNetLib;
@@ -78,17 +79,20 @@ namespace IAHNetCoreServer.Server
             _acceptKey = acceptKey;
             _server.Start(port);
             _running = true;
-            Task.Factory.StartNew(async () =>
-            {
-                while (_running)
-                {
-                    _server.PollEvents();
-                    await Task.Delay(1000 / 60);
-                }
+            
+            var thread = new Thread(Loop);
+            thread.Start();
+        }
 
-                _server.DisconnectAll();
-                _server.Stop();
-            }, TaskCreationOptions.LongRunning);
+        public void Loop()
+        {
+            while (_running)
+            {
+                _server.PollEvents();
+                Thread.Sleep(1000 / 60);
+            }
+            _server.DisconnectAll();
+            _server.Stop();
         }
 
         public void Stop()
@@ -119,6 +123,7 @@ namespace IAHNetCoreServer.Server
         private void OnNetworkReceive(NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
             _handler.Perform(this, peer, reader, deliveryMethod);
+            reader.Recycle();
         }
 
         private void OnNetworkReceiveUnconnected(IPEndPoint remoteEndPoint, NetPacketReader reader, UnconnectedMessageType messageType)

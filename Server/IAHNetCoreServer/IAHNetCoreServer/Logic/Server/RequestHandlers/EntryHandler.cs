@@ -17,14 +17,18 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
     public class EntryHandler : IReceiveNetDataHandler
     {
-        private readonly GroupPlayers<int>        _groupPlayers; // store active Players, peer id -> Player 
-        private readonly NetRouter<RequestHeader> _netRouter;
+        private readonly GroupPlayers<int> _groupPlayers; // store active Players, peer id -> Player 
+        private readonly NetRouter<ResponseHeader>   _router;
 
         public EntryHandler()
         {
             _groupPlayers = new GroupPlayers<int>();
-            _netRouter = new NetRouter<RequestHeader>();
-            _netRouter.Subscribe<TestRequest>(ENetCommand.TEST_REQUEST, OnTestHandler);
+            _router = new NetRouter<ResponseHeader>();
+            // Register headers
+            _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
+            _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());
+            
+            _router.Subscribe<TestRequest>(ENetCommand.TEST_REQUEST, OnTestHandler);
         }
 
 
@@ -46,6 +50,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
         /// <param name="deliveryMethod"></param>
         public Task<INetData> Perform(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
+            Console.WriteLine($"Receive from peer: {peer.Id}");
             var player = _groupPlayers.FindPlayer(peer.Id);
             if (player == null)
             {
@@ -67,8 +72,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
         /// <param name="deliveryMethod"></param>
         public async Task<INetData> BeginLogin(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
-            var header = new RequestHeader();
-            header.Deserialize(reader);
+            var header = _router.ReadHeader(reader);
             if (header.NetType != ENetType.REQUEST || header.NetCommand != ENetCommand.LOGIN_REQUEST)
             {
                 peer.Disconnect();
@@ -76,7 +80,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             }
 
             var loginRequest = MessagePackSerializer.Deserialize<LoginRequest>(reader.GetBytesWithLength());
-            var player = new NetPlayer(peer, GenToken());
+            var player = new NetPlayer(peer, _router, false, GenToken());
             if (!loginRequest.IsValid())
             {
                 return ResponseError(player, loginRequest, 1);
@@ -113,7 +117,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
         public void RequestAfterLogin(NetServer netServer, NetPlayer player, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
-            _netRouter.ReadAllPackets(reader, player);
+            _router.ReadAllPackets(reader, player);
         }
 
         public static INetData ResponseError(NetPlayer player, INetData request, int errorCode)

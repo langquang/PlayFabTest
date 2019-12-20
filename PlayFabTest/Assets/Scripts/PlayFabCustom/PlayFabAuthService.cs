@@ -163,7 +163,7 @@ namespace PlayFabCustom
                 }
             }
 
-            if (isSuccessful)
+            // if (isSuccessful)
             {
                 _clusterAccount.startUpPlayFabId = loginResult.PlayFabId;
                 SaveToLocal();

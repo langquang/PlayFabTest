@@ -5,7 +5,16 @@ namespace IAHNetCoreServer.Share.TransportData.Header
 {
     public class ResponseHeader : INetDataHeader
     {
-        public ResponseHeader(RequestHeader requestHeader, int error = 0)
+        public int RequestId { get; set; }
+        public int Error { get; set; }
+        public ENetType NetType { get; set; }
+        public ENetCommand NetCommand { get; set; }
+
+        public ResponseHeader()
+        {
+        }
+
+        public ResponseHeader(INetDataHeader requestHeader, int error = 0)
         {
             NetType = requestHeader.NetType;
             NetCommand = requestHeader.NetCommand;
@@ -13,11 +22,14 @@ namespace IAHNetCoreServer.Share.TransportData.Header
             Error = error;
         }
 
-        public int RequestId { get; set; }
-        public int Error { get; set; }
-        public ENetType NetType { get; set; }
-        public ENetCommand NetCommand { get; set; }
-
+        // Solve as a Message
+        public ResponseHeader(ENetType netType, ENetCommand netCommand, int error)
+        {
+            NetType = netType;
+            NetCommand = netCommand;
+            Error = error;
+        }
+        
         public void Deserialize(NetDataReader reader)
         {
             NetType = (ENetType) reader.GetInt();

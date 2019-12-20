@@ -14,9 +14,9 @@ namespace IAHNetCoreServer.Share.TransportData.Header
         {
         }
 
-        public ResponseHeader(RequestHeader requestHeader, int error = 0)
+        public ResponseHeader(INetDataHeader requestHeader, int error = 0)
         {
-            NetType = requestHeader.NetType;
+            NetType = ENetType.RESPONSE;
             NetCommand = requestHeader.NetCommand;
             RequestId = requestHeader.RequestId;
             Error = error;

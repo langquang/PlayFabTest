@@ -9,27 +9,80 @@ using MessagePack;
 
 namespace IAHNetCoreServer.Share.Router
 {
-    public class NetRouter<THeader> where THeader : RequestHeader, new()
+    public class NetRouter<TWaitingResponseHeader> where TWaitingResponseHeader : ResponseHeader
     {
-        private delegate void SubscribeDelegate(THeader header, NetDataReader reader, NetPlayer player);
+        private delegate void SubscribeIncomeDelegate(INetDataHeader header, NetDataReader reader, NetPlayer player);
 
-        private readonly Dictionary<ENetCommand, SubscribeDelegate> _callbacks = new Dictionary<ENetCommand, SubscribeDelegate>();
+        private delegate void SubscribeWaitingResponseDelegate(TWaitingResponseHeader header, NetDataReader reader, NetPlayer player);
 
-        private SubscribeDelegate GetCallback(ENetCommand netCommand)
+        // subscribe with ENetCommand
+        private readonly Dictionary<ENetCommand, SubscribeIncomeDelegate> _incomeRequestCallbacks = new Dictionary<ENetCommand, SubscribeIncomeDelegate>();
+
+        // subscribe with Request Id
+        private readonly Dictionary<int, SubscribeWaitingResponseDelegate> _waitingForResponseCallbacks = new Dictionary<int, SubscribeWaitingResponseDelegate>();
+
+        private readonly Dictionary<ulong, Func<INetDataHeader>> _headerConstructors = new Dictionary<ulong, Func<INetDataHeader>>();
+
+        public Action<INetData> OnWaitingTimeOutEvent;
+
+        public void RegisterHeader<T>(Func<T> headerConstructor) where T : INetDataHeader, new()
         {
-            if (!_callbacks.TryGetValue(netCommand, out var action))
+            var t = typeof(T);
+            var hash = HashName.GetHash(t);
+            _headerConstructors[hash] = () => headerConstructor.Invoke();
+        }
+
+        private SubscribeIncomeDelegate GetIncomeRequestCallback(ENetCommand netCommand)
+        {
+            if (!_incomeRequestCallbacks.TryGetValue(netCommand, out var action))
             {
-                throw new ParseException($"Network Error: Not implemented {netCommand} yet!");
+                return null;
             }
 
             return action;
         }
 
+        private SubscribeWaitingResponseDelegate GetWaitingCallback(int requestId)
+        {
+            if (!_waitingForResponseCallbacks.TryGetValue(requestId, out var action))
+            {
+                return null;
+            }
+
+            _waitingForResponseCallbacks.Remove(requestId);
+            return action;
+        }
+
+        public INetDataHeader ReadHeader(NetDataReader reader)
+        {
+            var hashOfHeaderName = reader.GetULong();
+            var header = _headerConstructors[hashOfHeaderName].Invoke();
+            header.Deserialize(reader);
+            return header;
+        }
+
         public void ReadPacket(NetDataReader reader, NetPlayer player)
         {
-            var header = new THeader();
-            header.Deserialize(reader);
-            GetCallback(header.NetCommand).Invoke(header, reader, player);
+            var header = ReadHeader(reader);
+            if (header.NetType == ENetType.REQUEST || header.NetType == ENetType.RESPONSE)
+            {
+                var action = GetIncomeRequestCallback(header.NetCommand);
+                action?.Invoke(header, reader, player);
+            }
+            else
+            {
+                // one way data
+                if (header.RequestId == 0)
+                {
+                    var action = GetIncomeRequestCallback(header.NetCommand);
+                    action?.Invoke(header, reader, player);
+                }
+                else // round trip data
+                {
+                    var waitingCallback = GetWaitingCallback(header.RequestId);
+                    waitingCallback?.Invoke((TWaitingResponseHeader) header, reader, player);
+                }
+            }
         }
 
         /// <summary>
@@ -51,14 +104,39 @@ namespace IAHNetCoreServer.Share.Router
         /// </summary>
         /// <param name="command">command id</param>
         /// <param name="onReceive">event that will be called when packet deserialized with ReadPacket method</param>
-        /// <exception cref="InvalidTypeException"><typeparamref name="THeader"/>'s fields are not supported, or it has no fields</exception>
-        public void Subscribe<TRequest>(ENetCommand command, Action<THeader, TRequest, NetPlayer> onReceive) where TRequest : Request
+        public void Subscribe<TNetRequest>(ENetCommand command, Action<TNetRequest, NetPlayer> onReceive) where TNetRequest : INetData
         {
-            _callbacks[command] = (header, reader, player) =>
+            _incomeRequestCallbacks[command] = (header, reader, player) =>
             {
-                var request = MessagePackSerializer.Deserialize<TRequest>(reader.GetBytesWithLength());
-                onReceive.Invoke(header, request, player);
+                var request = MessagePackSerializer.Deserialize<TNetRequest>(reader.GetBytesWithLength());
+                request.Header = header;
+                onReceive.Invoke(request, player);
             };
+        }
+
+        public void SubscribeWaitingRequest<TNetResponse>(INetData request, Action<TNetResponse, NetPlayer> onSuccess, Action<int> onError, Action<TNetResponse, NetPlayer> onFinally) where TNetResponse : INetData
+        {
+            _waitingForResponseCallbacks[request.Header.RequestId] = (header, reader, player) =>
+            {
+                var response = MessagePackSerializer.Deserialize<TNetResponse>(reader.GetBytesWithLength());
+                response.Header = header;
+                if (header.Error == 0)
+                {
+                    onSuccess?.Invoke(response, player);
+                }
+                else
+                {
+                    onError?.Invoke(header.Error);
+                }
+
+                onFinally?.Invoke(response, player);
+            };
+        }
+
+        public void WritePack(INetData packet, NetDataWriter writer)
+        {
+            writer.Put(HashName.GetHash(packet.Header.GetType()));
+            packet.Serialize(writer);
         }
     }
 }
