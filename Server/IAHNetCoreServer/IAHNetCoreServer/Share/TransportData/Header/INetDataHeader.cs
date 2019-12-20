@@ -14,6 +14,11 @@ namespace IAHNetCoreServer.Share.TransportData.Header
         ///     Login, Chat ...
         /// </summary>
         ENetCommand NetCommand { get; set; }
+        
+        /// <summary>
+        ///   id of packet
+        /// </summary>
+        int RequestId { get; set; }
 
         void Deserialize(NetDataReader reader);
         void Serialize(NetDataWriter writer);

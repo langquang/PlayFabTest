@@ -10,6 +10,10 @@ namespace IAHNetCoreServer.Share.TransportData.Header
         public ENetType NetType { get; set; }
         public ENetCommand NetCommand { get; set; }
 
+        public ResponseHeader()
+        {
+        }
+
         public ResponseHeader(RequestHeader requestHeader, int error = 0)
         {
             NetType = requestHeader.NetType;

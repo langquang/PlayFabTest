@@ -8,8 +8,16 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="IAHNetCoreServer.csproj" t="IncludeRecursive" />
         <e p="Logic" t="Include">
-          <e p="RequestHandlers" t="Include">
-            <e p="EntryHandler.cs" t="Include" />
+          <e p="Client" t="Include">
+            <e p="RequestHandler" t="Include" />
+            <e p="ResponseHandler" t="Include">
+              <e p="ClientResponseHandler.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Server" t="Include">
+            <e p="RequestHandlers" t="Include">
+              <e p="EntryHandler.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="NetworkV2" t="Include">
@@ -40,6 +48,8 @@
             <e p="NetPlayer.cs" t="Include" />
           </e>
           <e p="Router" t="Include">
+            <e p="ClientNetRouter.cs" t="Include" />
+            <e p="HashName.cs" t="Include" />
             <e p="NetRouter.cs" t="Include" />
           </e>
           <e p="TransportData" t="Include">

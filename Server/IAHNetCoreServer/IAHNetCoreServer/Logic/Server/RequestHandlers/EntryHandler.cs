@@ -107,7 +107,7 @@ namespace IAHNetCoreServer.Logic.RequestHandlers
             OnlinePlayers.Instance.Players.AddPlayer(loginRequest.playerId, player);
             // response to client
             var response = new LoginResponse(new ResponseHeader(header)) {playerId = "PlayerId from server", sessionTicket = "Ticket from server"};
-            player.Response(response);
+            player.Send(response);
             return response;
         }
 
@@ -119,7 +119,7 @@ namespace IAHNetCoreServer.Logic.RequestHandlers
         public static Response ResponseError(NetPlayer player, Request request, int errorCode)
         {
             var response = new CommonErrorResponse(request, errorCode);
-            player.Response(response);
+            player.Send(response);
             return response;
         }
 
@@ -127,7 +127,7 @@ namespace IAHNetCoreServer.Logic.RequestHandlers
         {
             Console.WriteLine($"Server receive a Test Command with content={request.msg}");
             var response = new TestResponse(request) {msg = "A response of test command from server"};
-            player.Response(response);
+            player.Send(response);
         }
     }
 }
