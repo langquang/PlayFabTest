@@ -17,17 +17,17 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
     public class EntryHandler : IReceiveNetDataHandler
     {
-        private readonly GroupPlayers<int> _groupPlayers; // store active Players, peer id -> Player 
-        private readonly NetRouter<ResponseHeader>   _router;
+        private readonly GroupPlayers<NetPeer>     _groupPlayers; // store active Players, peer id -> Player 
+        private readonly NetRouter<ResponseHeader> _router;
 
         public EntryHandler()
         {
-            _groupPlayers = new GroupPlayers<int>();
+            _groupPlayers = new GroupPlayers<NetPeer>();
             _router = new NetRouter<ResponseHeader>();
             // Register headers
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());
-            
+
             _router.Subscribe<TestRequest>(ENetCommand.TEST_REQUEST, OnTestHandler);
         }
 
@@ -51,14 +51,14 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
         public Task<INetData> Perform(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
             Console.WriteLine($"Receive from peer: {peer.Id}");
-            var player = _groupPlayers.FindPlayer(peer.Id);
+            var player = peer.Tag;
             if (player == null)
             {
                 return BeginLogin(netServer, peer, reader, deliveryMethod);
             }
             else
             {
-                RequestAfterLogin(netServer, player, reader, deliveryMethod);
+                RequestAfterLogin(netServer, (NetPlayer) player, reader, deliveryMethod);
                 return null;
             }
         }
@@ -75,6 +75,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             var header = _router.ReadHeader(reader);
             if (header.NetType != ENetType.REQUEST || header.NetCommand != ENetCommand.LOGIN_REQUEST)
             {
+                Console.WriteLine($"invalid login header");
                 peer.Disconnect();
                 return null;
             }
@@ -83,12 +84,14 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             var player = new NetPlayer(peer, _router, false, GenToken());
             if (!loginRequest.IsValid())
             {
+                Console.WriteLine($"invalid login request");
                 return ResponseError(player, loginRequest, 1);
             }
 
             var curOnlinePlayer = OnlinePlayers.Instance.Players.FindPlayer(loginRequest.playerId);
             if (curOnlinePlayer != null)
             {
+                Console.WriteLine($"OnReady online");
                 return ResponseError(player, loginRequest, 2);
             }
 
@@ -107,7 +110,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
                 Console.WriteLine("Invalid Session Ticket");
             }
 
-            _groupPlayers.AddPlayer(peer.Id, player);
+            peer.Tag = player;
             OnlinePlayers.Instance.Players.AddPlayer(loginRequest.playerId, player);
             // response to client
             var response = new LoginResponse(new ResponseHeader(header)) {playerId = "PlayerId from server", sessionTicket = "Ticket from server"};
