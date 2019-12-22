@@ -13,17 +13,16 @@ using SourceShare.Share.TransportData.Base;
 using SourceShare.Share.TransportData.Define;
 using SourceShare.Share.TransportData.Header;
 using SourceShare.Share.TransportData.Misc;
+using SourceShare.Share.Utils;
 
 namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
-    public class EntryHandler : ServerReceiveNetDataHandler
+    public class EntryHandler : ServerReceiveNetDataHandler<NetPlayer>
     {
-        private readonly GroupPlayers<NetPeer>     _groupPlayers; // store active Players, peer id -> Player 
         private readonly NetRouter _router;
 
         public EntryHandler()
         {
-            _groupPlayers = new GroupPlayers<NetPeer>();
             _router = new NetRouter(new TimeOutChecker(this));
             // Register headers
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
@@ -42,91 +41,75 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             return Path.GetRandomFileName();
         }
 
-        /// <summary>
-        ///  Handler Login Request
-        /// </summary>
-        /// <param name="netServer"></param>
-        /// <param name="peer"></param>
-        /// <param name="reader"></param>
-        /// <param name="deliveryMethod"></param>
-        public override Task<INetData> Perform(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
-        {
-            Console.WriteLine($"Receive from peer: {peer.Id}");
-            var player = peer.Tag;
-            if (player == null)
-            {
-                return BeginLogin(netServer, peer, reader, deliveryMethod);
-            }
-            else
-            {
-                RequestAfterLogin(netServer, (NetPlayer) player, reader, deliveryMethod);
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///  Handler Login Request
-        /// </summary>
-        /// <param name="netServer"></param>
-        /// <param name="peer"></param>
-        /// <param name="reader"></param>
-        /// <param name="deliveryMethod"></param>
-        public override async Task<INetData> BeginLogin(NetServer netServer, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
+        public override (NetPlayer, INetData) BeginLogin(NetPeer peer, NetPacketReader reader)
         {
             var header = _router.ReadHeader(reader);
             if (header.NetType != ENetType.REQUEST || header.NetCommand != ENetCommand.LOGIN_REQUEST)
             {
-                Console.WriteLine($"invalid login header");
+                Debugger.Write("invalid login header");
                 peer.Disconnect();
-                return null;
+                return (null, null);
             }
 
             var loginRequest = MessagePackSerializer.Deserialize<LoginRequest>(reader.GetBytesWithLength());
-            var player = new NetPlayer(peer, _router, false, GenToken());
+            loginRequest.Header = header;
+            var player = new NetPlayer(loginRequest.playerId ,peer, _router, false, GenToken());
             if (!loginRequest.IsValid())
             {
-                Console.WriteLine($"invalid login request");
-                return ResponseError(player, loginRequest, 1);
+                Debugger.Write("invalid login request");
+                ResponseError(player, loginRequest, 1);
+                return (null, null);
             }
 
             var curOnlinePlayer = OnlinePlayers.Instance.Players.FindPlayer(loginRequest.playerId);
             if (curOnlinePlayer != null)
             {
-                Console.WriteLine($"OnReady online");
-                return ResponseError(player, loginRequest, 2);
+                Debugger.Write($"OnReady online");
+                ResponseError(player, loginRequest, 2);
+                return (null, null);
             }
 
             // todo: check parallel login
+            return (player, loginRequest);
+        }
 
-            // login success
+        public override async Task<NetPlayer> VerifyLogin(NetPlayer player, INetData request)
+        {
             PlayFabSettings.staticSettings.TitleId = "20443";
             PlayFabSettings.staticSettings.DeveloperSecretKey = "U7XWD3YGJFIOD3HX7F74J75RYOOGE4UHO75KGMK7APBBQUPBUJ";
+
+            var loginRequest = (LoginRequest) request;
             var result = await PlayFabServerAPI.AuthenticateSessionTicketAsync(new AuthenticateSessionTicketRequest() {SessionTicket = loginRequest.sessionTicket}); // asynchronous here, make a sub task, calling thread is free and comeback to next line of code when sub task is done
             if (result.Error == null)
             {
-                Console.WriteLine($"UserName: {result.Result.UserInfo.Username}");
+                Debugger.Write($"UserName: {result.Result.UserInfo.Username}");
             }
             else
             {
-                Console.WriteLine("Invalid Session Ticket");
+                Debugger.Write("Invalid Session Ticket");
             }
 
-            peer.Tag = player;
+            player.IsLogined = true;
             OnlinePlayers.Instance.Players.AddPlayer(loginRequest.playerId, player);
             // response to client
-            var response = new LoginResponse(new ResponseHeader(header)) {playerId = "PlayerId from server", sessionTicket = "Ticket from server"};
+            var response = new LoginResponse(new ResponseHeader(loginRequest.Header)) {token = player.Token};
             player.Send(response);
-            return response;
+            return player;
         }
 
-        public override void RequestAfterLogin(NetServer netServer, NetPlayer player, NetPacketReader reader, DeliveryMethod deliveryMethod)
+        public override void Perform(NetPlayer player, NetPacketReader reader)
         {
             _router.ReadAllPackets(reader, player);
         }
 
+        public override void OnDisconnect(NetPlayer player)
+        {
+            OnlinePlayers.Instance.Players.RemovePlayer(player.PlayerId);
+        }
+
         public override void OnTimeRequestTimeOut(RequestTimeOut requestTimeOut)
         {
-            Console.WriteLine($"RequestTimeOut {requestTimeOut.command}");
+            Debugger.Write($"RequestTimeOut {requestTimeOut.command}");
         }
 
         public static INetData ResponseError(NetPlayer player, INetData request, int errorCode)
@@ -138,7 +121,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
         private static void OnTestHandler(TestRequest request, NetPlayer player)
         {
-            Console.WriteLine($"Server receive a Test Command with content={request.msg}");
+            Debugger.Write($"Server receive a Test Command with content={request.msg}");
             var response = new TestResponse(request) {msg = "A response of test command from server"};
             player.Send(response);
         }

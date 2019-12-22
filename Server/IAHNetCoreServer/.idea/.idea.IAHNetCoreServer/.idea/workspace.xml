@@ -2,73 +2,141 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba6c7bc-5434-46d7-b785-75c4638eaff9" name="Default Changelist" comment="bo generic">
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp-Editor.csproj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp.csproj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/LiteNetLib/Ntp.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/LiteNetLib/Ntp/NtpPacket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/LiteNetLib/Ntp/NtpPacket.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/LiteNetLib/Ntp/NtpRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/LiteNetLib/Ntp/NtpRequest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/LiteNetLib/Properties.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/LiteNetLib/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/LiteNetLib/Properties/AssemblyInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/LiteNetLib/Utils/NetSerializerExceptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/LiteNetLib/Utils/NetSerializerExceptions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Utils/Debuger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Utils/Debuger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/MessagePack.csproj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/PlayFab.csproj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/PlayFabSDKEditor.csproj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/PlayFabTestingEditor.csproj.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/SourceShare.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/SourceShare.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/BaseChannel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/ConnectionRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/INetEventListener.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/LiteNetLib.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NatPunchModule.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetConstants.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetDebug.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetExceptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetPacket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetPacketPool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetPeer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetSocket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetStatistics.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/Ntp/NtpPacket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/Ntp/NtpRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/ReliableChannel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/SequencedChannel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/SimpleChannel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/Utils/FastBitConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/Utils/INetSerializable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/Utils/NetDataReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/Utils/NetDataWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/Utils/NetPacketProcessor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/Utils/NetSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/LiteNetLib/Utils/NetSerializerExceptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/Share/Utils/Debuger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/SourceShare.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/SourceShare.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.Annotations.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.Annotations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/SourceShare.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/SourceShare.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Buffers.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Buffers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Memory.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Memory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Numerics.Vectors.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Numerics.Vectors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Threading.Tasks.Extensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Threading.Tasks.Extensions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityClientLib.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityClientLib.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityEngine.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityEngine.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../copy_source_share_to_server.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/PlayFabEditorExtensions/Editor/Resources/PlayFabEditorPrefsSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/PlayFabEditorExtensions/Editor/Resources/PlayFabEditorPrefsSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scenes/Startup.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scenes/Startup.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.runtimeconfig.dev.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/SourceShare.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/SourceShare.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Share/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Share/Share.projitems" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Share/Share.shproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/Router/NetRouter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/RequestHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/RequestHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/TransportData/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/TransportData/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/SourceShare.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/SourceShare.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/LiteNetLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/MessagePack.Annotations.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/MessagePack.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/SourceShare.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/SourceShare.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/System.Buffers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/System.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/System.Numerics.Vectors.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.AssemblyInfo.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.AssemblyInfo.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/LiteNetLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/LiteNetLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/LiteNetLib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.Annotations.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.Annotations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/SourceShare.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/SourceShare.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Buffers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Buffers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Memory.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Numerics.Vectors.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Numerics.Vectors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Threading.Tasks.Extensions.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityClientLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityClientLib.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityEngine.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/bin/Debug/UnityEngine.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/obj/Debug/UnityClientLib.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnityClientLib/Logic/Client/ResponseHandler/APINetworkHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnityClientLib/UnityClientLib.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UnityClientLib/UnityClientLib.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnityClientLib/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/UnityClientLib/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/LiteNetLib.0.8.3.1.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/net35/LiteNetLib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/net35/LiteNetLib.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/net35/LiteNetLib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netcoreapp2.0/LiteNetLib.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netcoreapp2.0/LiteNetLib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netcoreapp2.0/LiteNetLib.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netcoreapp2.0/LiteNetLib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netstandard2.0/LiteNetLib.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netstandard2.0/LiteNetLib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netstandard2.0/LiteNetLib.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/LiteNetLib.0.8.3.1/lib/netstandard2.0/LiteNetLib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../copy_source_share_to_client.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../copy_source_share_to_client.cmd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +151,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Header/ResponseHeader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///C# Console" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Header/RequestHeader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Base/ITimeOutChecker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Header/INetDataHeader.cs" root0="FORCE_HIGHLIGHTING" />
@@ -93,24 +162,33 @@
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Login.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SourceShare/Share/Router/HashName.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SourceShare/Share/Router/TempNetRouter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnityClientLib/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/Router/NetRouter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SourceShare/Share/Utils/Timer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Misc/RequestTimeOut.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/ef/14030283/NetManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/Base/IReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/AB02CD16-F2D4-4F63-9852-C9C0CE73B943/E/Timer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_CommonErrorResponseFormatter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnityClientLib/NetworkV2/TimeOutChecker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Share/Class1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/UnityClientLib/Logic/Client/ResponseHandler/APINetworkHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/LiteNetLib/INetEventListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/fe/352c5c89/PlayFabServerAPI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/LiteNetLib/BaseChannel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/LiteNetLib/NetDebug.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FC7C73A1-B1D4-4035-B4E5-FADC40DEAB92/29B/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/LiteNetLib/NetManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa10272.20322/GameServer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/LiteNetLib/NetPeer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/Router/HashName.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/Router/TempNetRouter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/Utils/Timer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/TransportData/Misc/RequestTimeOut.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SourceShare/Share/Utils/Debuger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/AB02CD16-F2D4-4F63-9852-C9C0CE73B943/E/Timer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_CommonErrorResponseFormatter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/02/6a6fcc80/NetManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ThreadHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" root0="FORCE_HIGHLIGHTING" />
@@ -122,19 +200,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/Response.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/ClientResponseHandler.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/ClientNetRouter.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/ClientAPINetworkHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/TempNetRouter.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Client/IReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/Router.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Client/ResponseHandler/APINetworkHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Test.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" />
@@ -156,22 +228,28 @@
         <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Base/ITimeOutChecker.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Define/NetHeader.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/INetDataHeader.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/RequestHeader.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/ResponseHeader.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Login.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Test.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/IReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Base/IReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/Utils/Timer.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/IReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Misc/RequestTimeOut.cs" />
         <option value="$PROJECT_DIR$/UnityClientLib/NetworkV2/TimeOutChecker.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/Router/NetRouter.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
         <option value="$PROJECT_DIR$/UnityClientLib/Logic/Client/ResponseHandler/APINetworkHandler.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/Utils/Log.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Login.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.AssemblyInfo.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.AssemblyInfo.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/Utils/Debuger.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/RequestHeader.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/Router/NetRouter.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" />
       </list>
     </option>
@@ -267,6 +345,7 @@
       <workItem from="1576746363001" duration="3358000" />
       <workItem from="1576813606767" duration="26837000" />
       <workItem from="1576856838151" duration="6547000" />
+      <workItem from="1577016928924" duration="14784000" />
     </task>
     <task id="LOCAL-00001" summary="Request - response">
       <created>1576752828936</created>
@@ -322,107 +401,128 @@
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="995" y="199" key="#Server/62.0.2498.1080@62.0.2498.1080" timestamp="1576728494069" />
+    <state x="868" y="242" width="800" height="596" key="#xdebugger.evaluate" timestamp="1577025213642">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="868" y="242" width="800" height="596" key="#xdebugger.evaluate/62.0.1858.1080@62.0.1858.1080" timestamp="1577025213642" />
     <state x="329" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1576861033217">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="329" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/62.0.1858.1080@62.0.1858.1080" timestamp="1576861033217" />
     <state x="421" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/62.0.2498.1080@62.0.2498.1080" timestamp="1576731553310" />
-    <state width="532" height="466" key="DebuggerActiveHint" timestamp="1576841792992">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="483" height="466" key="DebuggerActiveHint" timestamp="1577033119772">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="483" height="466" key="DebuggerActiveHint/62.0.1858.1080@62.0.1858.1080" timestamp="1577033119772" />
     <state width="532" height="466" key="DebuggerActiveHint/62.0.2498.1080@62.0.2498.1080" timestamp="1576841792992" />
-    <state width="907" height="287" key="GridCell.Tab.0.bottom" timestamp="1576863399416">
+    <state width="869" height="288" key="GridCell.Tab.0.bottom" timestamp="1577033518092">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="907" height="287" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1576863399416" />
+    <state width="869" height="288" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
     <state width="1488" height="343" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1576841950365" />
-    <state width="907" height="287" key="GridCell.Tab.0.center" timestamp="1576863399416">
+    <state width="869" height="288" key="GridCell.Tab.0.center" timestamp="1577033518092">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="907" height="287" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1576863399416" />
+    <state width="869" height="288" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
     <state width="1488" height="343" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1576841950365" />
-    <state width="907" height="287" key="GridCell.Tab.0.left" timestamp="1576863399416">
+    <state width="869" height="288" key="GridCell.Tab.0.left" timestamp="1577033518092">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="907" height="287" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1576863399416" />
+    <state width="869" height="288" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
     <state width="1488" height="343" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1576841950364" />
-    <state width="907" height="287" key="GridCell.Tab.0.right" timestamp="1576863399416">
+    <state width="869" height="288" key="GridCell.Tab.0.right" timestamp="1577033518092">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="907" height="287" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1576863399416" />
+    <state width="869" height="288" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
     <state width="1488" height="343" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576841950365" />
-    <state width="1488" height="343" key="GridCell.Tab.1.bottom" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.1.bottom" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.1.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.1.center" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.1.center" timestamp="1577033166686">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166686" />
     <state width="1488" height="343" key="GridCell.Tab.1.center/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.1.left" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.1.left" timestamp="1577033166686">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166686" />
     <state width="1488" height="343" key="GridCell.Tab.1.left/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.1.right" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.1.right" timestamp="1577033166686">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166686" />
     <state width="1488" height="343" key="GridCell.Tab.1.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.2.bottom" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.2.bottom" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.2.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.2.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.2.center" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.2.center" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.2.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.2.center/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.2.left" timestamp="1576841946872">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.2.left" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.2.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.2.left/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946872" />
-    <state width="1488" height="343" key="GridCell.Tab.2.right" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.2.right" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.2.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.2.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.3.bottom" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.3.bottom" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.3.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.3.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.3.center" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.3.center" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.3.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.3.center/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.3.left" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.3.left" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.3.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.3.left/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.3.right" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.3.right" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.3.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.3.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.4.bottom" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.4.bottom" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.4.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.4.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.4.center" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.4.center" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.4.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.4.center/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.4.left" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.4.left" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.4.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.4.left/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
-    <state width="1488" height="343" key="GridCell.Tab.4.right" timestamp="1576841946873">
-      <screen x="62" y="0" width="2498" height="1080" />
+    <state width="1815" height="338" key="GridCell.Tab.4.right" timestamp="1577033166687">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
+    <state width="1815" height="338" key="GridCell.Tab.4.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
     <state width="1488" height="343" key="GridCell.Tab.4.right/62.0.2498.1080@62.0.2498.1080" timestamp="1576841946873" />
     <state x="583" y="271" key="Rider.ProjectTemplateDialog.Size" timestamp="1576860288409">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="583" y="271" key="Rider.ProjectTemplateDialog.Size/62.0.1858.1080@62.0.1858.1080" timestamp="1576860288409" />
-    <state x="775" y="219" key="RiderGenerateDialog" timestamp="1576861643780">
+    <state x="775" y="219" key="RiderGenerateDialog" timestamp="1577028825938">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="775" y="219" key="RiderGenerateDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1576861643780" />
+    <state x="775" y="219" key="RiderGenerateDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1577028825938" />
     <state x="1021" y="219" key="RiderGenerateDialog/62.0.2498.1080@62.0.2498.1080" timestamp="1576831179533" />
     <state x="812" y="181" key="SettingsEditor" timestamp="1576728068529">
       <screen x="62" y="0" width="2498" height="1080" />
@@ -432,14 +532,15 @@
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="903" y="272" key="Vcs.Push.Dialog.v2/62.0.2498.1080@62.0.2498.1080" timestamp="1576752832186" />
-    <state x="989" y="277" width="644" height="526" key="find.popup" timestamp="1576833081238">
-      <screen x="62" y="0" width="2498" height="1080" />
-    </state>
-    <state x="989" y="277" width="644" height="526" key="find.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1576833081238" />
-    <state x="740" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1576857109661">
+    <state x="751" y="277" width="632" height="526" key="find.popup" timestamp="1577017091341">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="740" y="235" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1576857109661" />
+    <state x="751" y="277" width="632" height="526" key="find.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1577017091341" />
+    <state x="989" y="277" width="644" height="526" key="find.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1576833081238" />
+    <state x="740" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1577033214645">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="740" y="235" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1577033214645" />
     <state x="974" y="235" width="672" height="678" key="search.everywhere.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1576838517494" />
   </component>
   <component name="XDebuggerManager">
@@ -449,6 +550,32 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SourceShare/LiteNetLib/NetPeer.cs</url>
+          <line>266</line>
+          <properties documentPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetPeer.cs" initialLine="266">
+            <startOffsets>
+              <option value="9197" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9222" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SourceShare/LiteNetLib/NetPeer.cs</url>
+          <line>502</line>
+          <properties documentPath="$PROJECT_DIR$/SourceShare/LiteNetLib/NetPeer.cs" initialLine="502">
+            <startOffsets>
+              <option value="18844" />
+            </startOffsets>
+            <endOffsets>
+              <option value="18869" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

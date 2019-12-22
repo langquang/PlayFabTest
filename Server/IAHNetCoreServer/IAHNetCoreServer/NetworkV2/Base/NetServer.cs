@@ -1,20 +1,18 @@
 using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-using System.Threading.Tasks;
 using IAHNetCoreServer.Share.NetworkV2;
 using LiteNetLib;
+using SourceShare.Share.Utils;
 
 namespace IAHNetCoreServer.Server
 {
     public class NetServer
     {
         // Read only props
-        private readonly string                 _name;
-        private readonly ServerReceiveNetDataHandler _handler;
+        private readonly string                                 _name;
+        private readonly ServerReceiveNetDataHandler<NetPlayer> _handler;
 
         private EventBasedNetListener _listener;
         private NetManager            _server;
@@ -25,8 +23,8 @@ namespace IAHNetCoreServer.Server
 
         // Events
         public Action<NetServer, NetManager> CustomParamsEvent;
-        
-        public NetServer(string name, ServerReceiveNetDataHandler handler)
+
+        public NetServer(string name, ServerReceiveNetDataHandler<NetPlayer> handler)
         {
             _name = name;
             _handler = handler;
@@ -63,7 +61,7 @@ namespace IAHNetCoreServer.Server
             _server.DiscoveryEnabled = false;
             _server.UnconnectedMessagesEnabled = true;
             _server.UpdateTime = 15;
-            _server.DisconnectTimeout = 10000;
+            _server.DisconnectTimeout = 5000;
             _server.PingInterval = 1000;
             _server.ReuseAddress = true;
         }
@@ -79,7 +77,7 @@ namespace IAHNetCoreServer.Server
             _acceptKey = acceptKey;
             _server.Start(port);
             _running = true;
-            
+
             var thread = new Thread(Loop);
             thread.Start();
         }
@@ -89,8 +87,9 @@ namespace IAHNetCoreServer.Server
             while (_running)
             {
                 _server.PollEvents();
-                Thread.Sleep(1000 / 60);
+                Thread.Sleep(15);
             }
+
             _server.DisconnectAll();
             _server.Stop();
         }
@@ -112,7 +111,10 @@ namespace IAHNetCoreServer.Server
 
         private void OnPeerDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
         {
-            Console.WriteLine("[Server] Peer disconnected: " + peer.EndPoint + ", reason: " + disconnectInfo.Reason);
+            Debugger.Write("[Server] Peer disconnected: " + peer.EndPoint + ", reason: " + disconnectInfo.Reason);
+            var player = (NetPlayer) peer.Tag;
+            if (player != null && player.IsLogined)
+                _handler.OnDisconnect(player);
         }
 
         private void OnNetworkError(IPEndPoint endPoint, SocketError socketErrorCode)
@@ -120,9 +122,30 @@ namespace IAHNetCoreServer.Server
             Console.WriteLine("[Server] error: " + socketErrorCode);
         }
 
-        private void OnNetworkReceive(NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
+        private async void OnNetworkReceive(NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
-            _handler.Perform(this, peer, reader, deliveryMethod);
+            var existPlayer = (NetPlayer) peer.Tag;
+            if (existPlayer == null)
+            {
+                var (newPlayer, request) = _handler.BeginLogin(peer, reader);
+                if (newPlayer != null)
+                {
+                    peer.Tag = newPlayer;
+                    var result = await _handler.VerifyLogin(newPlayer, request);
+                }
+            }
+            else
+            {
+                if (existPlayer.IsLogined)
+                {
+                    _handler.Perform(existPlayer, reader);
+                }
+                else
+                {
+                    Debugger.Write("[Error] Receive data from unlogged player");
+                }
+            }
+
             reader.Recycle();
         }
 

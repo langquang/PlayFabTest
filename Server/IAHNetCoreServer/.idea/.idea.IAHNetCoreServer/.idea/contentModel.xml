@@ -41,16 +41,42 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="SourceShare" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="net472" t="Include">
-              <e p="SourceShare.AssemblyInfo.cs" t="Include" />
-            </e>
-            <e p="netcoreapp2.2" t="Include">
-              <e p="SourceShare.AssemblyInfo.cs" t="Include" />
-            </e>
+        <e p="LiteNetLib" t="Include">
+          <e p="BaseChannel.cs" t="Include" />
+          <e p="ConnectionRequest.cs" t="Include" />
+          <e p="INetEventListener.cs" t="Include" />
+          <e p="NatPunchModule.cs" t="Include" />
+          <e p="NetConstants.cs" t="Include" />
+          <e p="NetDebug.cs" t="Include" />
+          <e p="NetExceptions.cs" t="Include" />
+          <e p="NetManager.cs" t="Include" />
+          <e p="NetPacket.cs" t="Include" />
+          <e p="NetPacketPool.cs" t="Include" />
+          <e p="NetPeer.cs" t="Include" />
+          <e p="NetSocket.cs" t="Include" />
+          <e p="NetStatistics.cs" t="Include" />
+          <e p="NetUtils.cs" t="Include" />
+          <e p="Ntp" t="Include">
+            <e p="NtpPacket.cs" t="Include" />
+            <e p="NtpRequest.cs" t="Include" />
+          </e>
+          <e p="Properties" t="Include">
+            <e p="AssemblyInfo.cs" t="Include" />
+          </e>
+          <e p="ReliableChannel.cs" t="Include" />
+          <e p="SequencedChannel.cs" t="Include" />
+          <e p="SimpleChannel.cs" t="Include" />
+          <e p="Utils" t="Include">
+            <e p="FastBitConverter.cs" t="Include" />
+            <e p="INetSerializable.cs" t="Include" />
+            <e p="NetDataReader.cs" t="Include" />
+            <e p="NetDataWriter.cs" t="Include" />
+            <e p="NetPacketProcessor.cs" t="Include" />
+            <e p="NetSerializer.cs" t="Include" />
+            <e p="NetSerializerExceptions.cs" t="Include" />
           </e>
         </e>
+        <e p="obj" t="ExcludeRecursive" />
         <e p="Share" t="Include">
           <e p="NetworkV2" t="Include">
             <e p="Base" t="Include">
@@ -87,6 +113,7 @@
             <e p="Test.cs" t="Include" />
           </e>
           <e p="Utils" t="Include">
+            <e p="Debuger.cs" t="Include" />
             <e p="Timer.cs" t="Include" />
           </e>
         </e>
@@ -94,13 +121,6 @@
       </e>
       <e p="UnityClientLib" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Logic" t="Include">
-          <e p="Client" t="Include">
-            <e p="ResponseHandler" t="Include">
-              <e p="APINetworkHandler.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="NetworkV2" t="Include">
           <e p="TimeOutChecker.cs" t="Include" />
         </e>

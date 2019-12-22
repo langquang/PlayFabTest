@@ -2,6 +2,7 @@
 using System.Threading;
 using IAHNetCoreServer.Logic.Server.RequestHandlers;
 using IAHNetCoreServer.Server;
+using IAHNetCoreServer.Share.NetworkV2;
 using MessagePack;
 using MessagePack.Resolvers;
 using UnityEngine;

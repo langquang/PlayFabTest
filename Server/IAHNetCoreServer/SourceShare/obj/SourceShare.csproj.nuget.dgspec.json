@@ -44,10 +44,6 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
-            "LiteNetLib": {
-              "target": "Package",
-              "version": "[0.8.3.1, )"
-            },
             "MessagePack": {
               "target": "Package",
               "version": "[2.0.323, )"
@@ -71,10 +67,6 @@
         },
         "net472": {
           "dependencies": {
-            "LiteNetLib": {
-              "target": "Package",
-              "version": "[0.8.3.1, )"
-            },
             "MessagePack": {
               "target": "Package",
               "version": "[2.0.323, )"

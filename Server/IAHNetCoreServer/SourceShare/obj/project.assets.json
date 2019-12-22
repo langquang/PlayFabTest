@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "LiteNetLib/0.8.3.1": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp2.0/LiteNetLib.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.0/LiteNetLib.dll": {}
-        }
-      },
       "MessagePack/2.0.323": {
         "type": "package",
         "dependencies": {
@@ -400,15 +391,6 @@
       }
     },
     ".NETFramework,Version=v4.7.2": {
-      "LiteNetLib/0.8.3.1": {
-        "type": "package",
-        "compile": {
-          "lib/net35/LiteNetLib.dll": {}
-        },
-        "runtime": {
-          "lib/net35/LiteNetLib.dll": {}
-        }
-      },
       "MessagePack/2.0.323": {
         "type": "package",
         "dependencies": {
@@ -530,29 +512,6 @@
     }
   },
   "libraries": {
-    "LiteNetLib/0.8.3.1": {
-      "sha512": "1mAdoQU2tuQ5RBY0sUiioWC0Fhf29yuwfabnPxD/PJAr8LeKjyT6GTpL5idKXkMTy6f+9ITpLm8chAk/Kezdgg==",
-      "type": "package",
-      "path": "litenetlib/0.8.3.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "lib/net35/LiteNetLib.dll",
-        "lib/net35/LiteNetLib.pdb",
-        "lib/net35/LiteNetLib.xml",
-        "lib/netcoreapp2.0/LiteNetLib.deps.json",
-        "lib/netcoreapp2.0/LiteNetLib.dll",
-        "lib/netcoreapp2.0/LiteNetLib.pdb",
-        "lib/netcoreapp2.0/LiteNetLib.xml",
-        "lib/netstandard2.0/LiteNetLib.deps.json",
-        "lib/netstandard2.0/LiteNetLib.dll",
-        "lib/netstandard2.0/LiteNetLib.pdb",
-        "lib/netstandard2.0/LiteNetLib.xml",
-        "litenetlib.0.8.3.1.nupkg.sha512",
-        "litenetlib.nuspec"
-      ]
-    },
     "MessagePack/2.0.323": {
       "sha512": "OCPA/+ChajOXmxmGCchFKP8hcglauuEX71E8xoQrjjpu2S/Kzjd+OxNW+2sfdTxx2d+AIrvYIqdp8FFnPSN2yg==",
       "type": "package",
@@ -1961,13 +1920,11 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "LiteNetLib >= 0.8.3.1",
       "MessagePack >= 2.0.323",
       "MessagePackAnalyzer >= 2.0.323",
       "Microsoft.NETCore.App >= 2.2.0"
     ],
     ".NETFramework,Version=v4.7.2": [
-      "LiteNetLib >= 0.8.3.1",
       "MessagePack >= 2.0.323",
       "MessagePackAnalyzer >= 2.0.323"
     ]
@@ -2016,10 +1973,6 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
-          "LiteNetLib": {
-            "target": "Package",
-            "version": "[0.8.3.1, )"
-          },
           "MessagePack": {
             "target": "Package",
             "version": "[2.0.323, )"
@@ -2043,10 +1996,6 @@
       },
       "net472": {
         "dependencies": {
-          "LiteNetLib": {
-            "target": "Package",
-            "version": "[0.8.3.1, )"
-          },
           "MessagePack": {
             "target": "Package",
             "version": "[2.0.323, )"

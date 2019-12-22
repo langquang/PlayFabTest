@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\admin\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\admin\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ChatClient.815567169.00" t="ExcludeRecursive" />
+    <e p="D:\projects\suga_iah\PlayFabTest\ChatClient\ChatClient" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="PlayFabEditorExtensions" t="Include">
+          <e p="Editor" t="Include">
+            <e p="PlayFabEditor.cs" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Components" t="Include">
+                <e p="ProgressBar.cs" t="Include" />
+                <e p="SubMenuComponent.cs" t="Include" />
+                <e p="TitleDataEditor.cs" t="Include" />
+                <e p="TitleDataViewer.cs" t="Include" />
+                <e p="TitleInternalDataEditor.cs" t="Include" />
+                <e p="TitleInternalDataViewer.cs" t="Include" />
+              </e>
+              <e p="Panels" t="Include">
+                <e p="PlayFabEditorAuthenticate.cs" t="Include" />
+                <e p="PlayFabEditorDataMenu.cs" t="Include" />
+                <e p="PlayFabEditorHeader.cs" t="Include" />
+                <e p="PlayFabEditorHelpMenu.cs" t="Include" />
+                <e p="PlayFabEditorMenu.cs" t="Include" />
+                <e p="PlayFabEditorPackages.cs" t="Include" />
+                <e p="PlayFabEditorSDKTools.cs" t="Include" />
+                <e p="PlayFabEditorSettings.cs" t="Include" />
+                <e p="PlayFabEditorToolsMenu.cs" t="Include" />
+              </e>
+              <e p="PlayFabEditorSDK" t="Include">
+                <e p="ISerializer.cs" t="Include" />
+                <e p="PlayFabEditorApi.cs" t="Include" />
+                <e p="PlayFabEditorHttp.cs" t="Include" />
+                <e p="PlayFabEditorModels.cs" t="Include" />
+                <e p="SimpleJson.cs" t="Include" />
+              </e>
+              <e p="Utils" t="Include">
+                <e p="EditorCoroutine.cs" t="Include" />
+                <e p="PlayFabEditorDataService.cs" t="Include" />
+                <e p="PlayFabEditorHelper.cs" t="Include" />
+                <e p="PlayFabEditorPrefsSO.cs" t="Include" />
+                <e p="PlayFabEditorUtils.cs" t="Include" />
+                <e p="PlayFabEditorVersion.cs" t="Include" />
+                <e p="PlayFabGuiFieldHelper.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="PlayFabSdk" t="Include">
+          <e p="PlayFabSdk" t="Include">
+            <e p="admin" t="Include">
+              <e p="PlayFabAdminAPI.cs" t="Include" />
+              <e p="PlayFabAdminInstanceAPI.cs" t="Include" />
+              <e p="PlayFabAdminModels.cs" t="Include" />
+              <e p="PlayFabEvents.cs" t="Include" />
+            </e>
+            <e p="Authentication" t="Include">
+              <e p="PlayFabAuthenticationAPI.cs" t="Include" />
+              <e p="PlayFabAuthenticationInstanceAPI.cs" t="Include" />
+              <e p="PlayFabAuthenticationModels.cs" t="Include" />
+              <e p="PlayFabEvents.cs" t="Include" />
+            </e>
+            <e p="Client" t="Include">
+              <e p="PlayFabClientAPI.cs" t="Include" />
+              <e p="PlayFabClientInstanceAPI.cs" t="Include" />
+              <e p="PlayFabClientModels.cs" t="Include" />
+              <e p="PlayFabDeviceUtil.cs" t="Include" />
+              <e p="PlayFabEvents.cs" t="Include" />
+            </e>
+            <e p="CloudScript" t="Include">
+              <e p="PlayFabCloudScriptAPI.cs" t="Include" />
+              <e p="PlayFabCloudScriptInstanceAPI.cs" t="Include" />
+              <e p="PlayFabCloudScriptModels.cs" t="Include" />
+              <e p="PlayFabEvents.cs" t="Include" />
+            </e>
+            <e p="Data" t="Include">
+              <e p="PlayFabDataAPI.cs" t="Include" />
+              <e p="PlayFabDataInstanceAPI.cs" t="Include" />
+              <e p="PlayFabDataModels.cs" t="Include" />
+              <e p="PlayFabEvents.cs" t="Include" />
+            </e>
+            <e p="Entity" t="Include">
+              <e p="ScreenTimeTracker.cs" t="Include" />
+            </e>
+            <e p="Events" t="Include">
+              <e p="PlayFabEvents.cs" t="Include" />
+              <e p="PlayFabEventsAPI.cs" t="Include" />
+              <e p="PlayFabEventsInstanceAPI.cs" t="Include" />
+              <e p="PlayFabEventsModels.cs" t="Include" />
+            </e>
+            <e p="Groups" t="Include">
+              <e p="PlayFabEvents.cs" t="Include" />
+              <e p="PlayFabGroupsAPI.cs" t="Include" />
+              <e p="PlayFabGroupsInstanceAPI.cs" t="Include" />
+              <e p="PlayFabGroupsModels.cs" t="Include" />
+            </e>
+            <e p="link.xml" t="Include" />
+            <e p="Localization" t="Include">
+              <e p="PlayFabEvents.cs" t="Include" />
+              <e p="PlayFabLocalizationAPI.cs" t="Include" />
+              <e p="PlayFabLocalizationInstanceAPI.cs" t="Include" />
+              <e p="PlayFabLocalizationModels.cs" t="Include" />
+            </e>
+            <e p="Matchmaker" t="Include">
+              <e p="PlayFabEvents.cs" t="Include" />
+              <e p="PlayFabMatchmakerAPI.cs" t="Include" />
+              <e p="PlayFabMatchmakerInstanceAPI.cs" t="Include" />
+              <e p="PlayFabMatchmakerModels.cs" t="Include" />
+            </e>
+            <e p="Multiplayer" t="Include">
+              <e p="PlayFabEvents.cs" t="Include" />
+              <e p="PlayFabMultiplayerAPI.cs" t="Include" />
+              <e p="PlayFabMultiplayerInstanceAPI.cs" t="Include" />
+              <e p="PlayFabMultiplayerModels.cs" t="Include" />
+            </e>
+            <e p="PlayFab.asmdef" t="Include" />
+            <e p="Profiles" t="Include">
+              <e p="PlayFabEvents.cs" t="Include" />
+              <e p="PlayFabProfilesAPI.cs" t="Include" />
+              <e p="PlayFabProfilesInstanceAPI.cs" t="Include" />
+              <e p="PlayFabProfilesModels.cs" t="Include" />
+            </e>
+            <e p="Server" t="Include">
+              <e p="PlayFabEvents.cs" t="Include" />
+              <e p="PlayFabServerAPI.cs" t="Include" />
+              <e p="PlayFabServerInstanceAPI.cs" t="Include" />
+              <e p="PlayFabServerModels.cs" t="Include" />
+            </e>
+            <e p="Shared" t="Include">
+              <e p="Editor" t="Include">
+                <e p="MakeSharedSettingsObj.cs" t="Include" />
+                <e p="PlayFabHelp.cs" t="Include" />
+                <e p="PlayFabSdkEditor.asmdef" t="Include" />
+              </e>
+              <e p="External" t="Include">
+                <e p="aria" t="Include">
+                  <e p="BondHelper.cs" t="Include" />
+                  <e p="CompactBinaryProtocolWriter.cs" t="Include" />
+                  <e p="MiniBondSerializer.cs" t="Include" />
+                  <e p="Schema3_types.cs" t="Include" />
+                  <e p="Utils.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Internal" t="Include">
+                <e p="ISerializer.cs" t="Include" />
+                <e p="Log.cs" t="Include" />
+                <e p="PlayFabErrors.cs" t="Include" />
+                <e p="PlayFabHttp" t="Include">
+                  <e p="IPlayFabHttp.cs" t="Include" />
+                  <e p="PlayFabHTTP.cs" t="Include" />
+                  <e p="PlayFabUnityHttp.cs" t="Include" />
+                  <e p="PlayFabWebRequest.cs" t="Include" />
+                  <e p="PlayFabWWW.cs" t="Include" />
+                </e>
+                <e p="SimpleJson.cs" t="Include" />
+                <e p="SingletonMonoBehaviour.cs" t="Include" />
+                <e p="Util.cs" t="Include" />
+                <e p="wsaReflectionExtensions.cs" t="Include" />
+              </e>
+              <e p="Ionic.Zlib" t="Include">
+                <e p="CRC32.cs" t="Include" />
+                <e p="Deflate.cs" t="Include" />
+                <e p="DeflateStream.cs" t="Include" />
+                <e p="GZipStream.cs" t="Include" />
+                <e p="Inflate.cs" t="Include" />
+                <e p="InfTree.cs" t="Include" />
+                <e p="ParallelDeflateOutputStream.cs" t="Include" />
+                <e p="Zlib.cs" t="Include" />
+                <e p="ZlibBaseStream.cs" t="Include" />
+                <e p="ZlibCodec.cs" t="Include" />
+                <e p="ZlibConstants.cs" t="Include" />
+                <e p="ZlibStream.cs" t="Include" />
+                <e p="ZTree.cs" t="Include" />
+              </e>
+              <e p="Models" t="Include">
+                <e p="PlayFabSharedSettings.cs" t="Include" />
+                <e p="SharedModels.cs" t="Include" />
+              </e>
+              <e p="Public" t="Include">
+                <e p="IPlayFabPlugin.cs" t="Include" />
+                <e p="ISerializerPlugin.cs" t="Include" />
+                <e p="ITransportPlugin.cs" t="Include" />
+                <e p="PlayFabApiSettings.cs" t="Include" />
+                <e p="PlayFabAuthenticationContext.cs" t="Include" />
+                <e p="PlayFabDataGatherer.cs" t="Include" />
+                <e p="PlayFabEvents.cs" t="Include" />
+                <e p="PlayFabLogger.cs" t="Include" />
+                <e p="PlayFabSettings.cs" t="Include" />
+                <e p="PluginContract.cs" t="Include" />
+                <e p="PluginContractKey.cs" t="Include" />
+                <e p="PluginManager.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Testing" t="Include">
+              <e p="Editor" t="Include">
+                <e p="PlayFabPackager.cs" t="Include" />
+                <e p="PlayFabTestingEditor.asmdef" t="Include" />
+                <e p="UUnitTestRunner.cs" t="Include" />
+              </e>
+              <e p="Tests" t="Include">
+                <e p="Client" t="Include">
+                  <e p="ClientApiTests.cs" t="Include" />
+                  <e p="ClientEventTests.cs" t="Include" />
+                  <e p="ClientMultiUserTests.cs" t="Include" />
+                  <e p="InstanceAuthTests.cs" t="Include" />
+                  <e p="StaticAuthTests.cs" t="Include" />
+                </e>
+                <e p="Entity" t="Include">
+                  <e p="EntityApiTests.cs" t="Include" />
+                </e>
+                <e p="PersistentSockets" t="Include">
+                  <e p="PubSubTest.cs" t="Include" />
+                </e>
+                <e p="Server" t="Include">
+                  <e p="ServerApiTests.cs" t="Include" />
+                  <e p="ServerInstanceApiTests.cs" t="Include" />
+                </e>
+                <e p="Shared" t="Include">
+                  <e p="TestTitleDataLoader.cs" t="Include" />
+                  <e p="Uunit" t="Include">
+                    <e p="PlayFabUUnitUtils.cs" t="Include" />
+                    <e p="UUnitAssertException.cs" t="Include" />
+                    <e p="UUnitIncrementalTestRunner.cs" t="Include" />
+                    <e p="UUnitTestCase.cs" t="Include" />
+                    <e p="UUnitTestContext.cs" t="Include" />
+                    <e p="UUnitTestReport.cs" t="Include" />
+                    <e p="UUnitTestSuite.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Utility" t="Include">
+                  <e p="JsonUnitTests.cs" t="Include" />
+                  <e p="PluginManagerTests.cs" t="Include" />
+                  <e p="UtilTest.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="AutoGen" t="Include">
+            <e p="MessagePack_Formatters_SourceShare_Share_TransportData_CommonErrorResponseFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_SourceShare_Share_TransportData_LoginRequestFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_SourceShare_Share_TransportData_LoginResponseFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_SourceShare_Share_TransportData_TestRequestFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_SourceShare_Share_TransportData_TestResponseFormatter.cs" t="Include" />
+            <e p="MessagePack_Resolvers_GeneratedResolver.cs" t="Include" />
+          </e>
+          <e p="Client" t="Include">
+            <e p="ResponseHandler" t="Include">
+              <e p="APINetworkHandler.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Demo" t="Include">
+            <e p="StartUp.cs" t="Include" />
+          </e>
+          <e p="LiteNetLib" t="Include">
+            <e p="BaseChannel.cs" t="Include" />
+            <e p="ConnectionRequest.cs" t="Include" />
+            <e p="INetEventListener.cs" t="Include" />
+            <e p="NatPunchModule.cs" t="Include" />
+            <e p="NetConstants.cs" t="Include" />
+            <e p="NetDebug.cs" t="Include" />
+            <e p="NetExceptions.cs" t="Include" />
+            <e p="NetManager.cs" t="Include" />
+            <e p="NetPacket.cs" t="Include" />
+            <e p="NetPacketPool.cs" t="Include" />
+            <e p="NetPeer.cs" t="Include" />
+            <e p="NetSocket.cs" t="Include" />
+            <e p="NetStatistics.cs" t="Include" />
+            <e p="NetUtils.cs" t="Include" />
+            <e p="Ntp" t="Include">
+              <e p="NtpPacket.cs" t="Include" />
+              <e p="NtpRequest.cs" t="Include" />
+            </e>
+            <e p="Properties" t="Include">
+              <e p="AssemblyInfo.cs" t="Include" />
+            </e>
+            <e p="ReliableChannel.cs" t="Include" />
+            <e p="SequencedChannel.cs" t="Include" />
+            <e p="SimpleChannel.cs" t="Include" />
+            <e p="Utils" t="Include">
+              <e p="FastBitConverter.cs" t="Include" />
+              <e p="INetSerializable.cs" t="Include" />
+              <e p="NetDataReader.cs" t="Include" />
+              <e p="NetDataWriter.cs" t="Include" />
+              <e p="NetPacketProcessor.cs" t="Include" />
+              <e p="NetSerializer.cs" t="Include" />
+              <e p="NetSerializerExceptions.cs" t="Include" />
+            </e>
+          </e>
+          <e p="MessagePack" t="Include">
+            <e p="Annotations" t="Include">
+              <e p="Attributes.cs" t="Include" />
+              <e p="IMessagePackSerializationCallbackReceiver.cs" t="Include" />
+            </e>
+            <e p="BufferWriter.cs" t="Include" />
+            <e p="ExtensionHeader.cs" t="Include" />
+            <e p="ExtensionResult.cs" t="Include" />
+            <e p="Formatters" t="Include">
+              <e p="CollectionFormatter.cs" t="Include" />
+              <e p="DateTimeFormatters.cs" t="Include" />
+              <e p="DictionaryFormatter.cs" t="Include" />
+              <e p="DynamicObjectTypeFallbackFormatter.cs" t="Include" />
+              <e p="EnumAsStringFormatter`1.cs" t="Include" />
+              <e p="GenericEnumFormatter`1.cs" t="Include" />
+              <e p="IgnoreFormatter`1.cs" t="Include" />
+              <e p="IMessagePackFormatter`1.cs" t="Include" />
+              <e p="MultiDimensionalArrayFormatter.cs" t="Include" />
+              <e p="NilFormatter.cs" t="Include" />
+              <e p="NullableFormatter.cs" t="Include" />
+              <e p="PrimitiveObjectFormatter.cs" t="Include" />
+              <e p="StandardClassLibraryFormatter.cs" t="Include" />
+              <e p="TypelessFormatter.cs" t="Include" />
+              <e p="UnsafeBinaryFormatters.cs" t="Include" />
+            </e>
+            <e p="IFormatterResolver.cs" t="Include" />
+            <e p="Internal" t="Include">
+              <e p="AsymmetricKeyHashTable.cs" t="Include" />
+              <e p="AutomataDictionary.cs" t="Include" />
+              <e p="ByteArrayStringHashTable.cs" t="Include" />
+              <e p="CodeGenHelpers.cs" t="Include" />
+              <e p="DateTimeConstants.cs" t="Include" />
+              <e p="DynamicAssembly.cs" t="Include" />
+              <e p="ExpressionUtility.cs" t="Include" />
+              <e p="FarmHash.cs" t="Include" />
+              <e p="GuidBits.cs" t="Include" />
+              <e p="ILGeneratorExtensions.cs" t="Include" />
+              <e p="ReflectionExtensions.cs" t="Include" />
+              <e p="Sequence`1.cs" t="Include" />
+              <e p="ThreadsafeTypeKeyHashTable.cs" t="Include" />
+              <e p="TinyJsonReader.cs" t="Include" />
+              <e p="UnsafeMemory.Low.cs" t="Include" />
+            </e>
+            <e p="LZ4" t="Include">
+              <e p="LZ4Codec.cs" t="Include" />
+              <e p="LZ4Codec.Helper.cs" t="Include" />
+              <e p="LZ4Codec.Safe.cs" t="Include" />
+              <e p="LZ4Codec.Safe32.Dirty.cs" t="Include" />
+              <e p="LZ4Codec.Safe64.Dirty.cs" t="Include" />
+              <e p="LZ4Codec.Unsafe.cs" t="Include" />
+              <e p="LZ4Codec.Unsafe32.Dirty.cs" t="Include" />
+              <e p="LZ4Codec.Unsafe64.Dirty.cs" t="Include" />
+            </e>
+            <e p="MessagePack.asmdef" t="Include" />
+            <e p="MessagePackCode.cs" t="Include" />
+            <e p="MessagePackCompression.cs" t="Include" />
+            <e p="MessagePackReader.cs" t="Include" />
+            <e p="MessagePackSerializationException.cs" t="Include" />
+            <e p="MessagePackSerializer.cs" t="Include" />
+            <e p="MessagePackSerializer.Json.cs" t="Include" />
+            <e p="MessagePackSerializer.NonGeneric.cs" t="Include" />
+            <e p="MessagePackSerializerOptions.cs" t="Include" />
+            <e p="MessagePackStreamReader.cs" t="Include" />
+            <e p="MessagePackWriter.cs" t="Include" />
+            <e p="Nil.cs" t="Include" />
+            <e p="Resolvers" t="Include">
+              <e p="AttributeFormatterResolver.cs" t="Include" />
+              <e p="BuiltinResolver.cs" t="Include" />
+              <e p="CachingFormatterResolver.cs" t="Include" />
+              <e p="CompositeResolver.cs" t="Include" />
+              <e p="ContractlessReflectionObjectResolver.cs" t="Include" />
+              <e p="DynamicEnumAsStringResolver.cs" t="Include" />
+              <e p="DynamicEnumResolver.cs" t="Include" />
+              <e p="DynamicGenericResolver.cs" t="Include" />
+              <e p="DynamicObjectResolver.cs" t="Include" />
+              <e p="DynamicUnionResolver.cs" t="Include" />
+              <e p="NativeDateTimeResolver.cs" t="Include" />
+              <e p="NativeDecimalResolver.cs" t="Include" />
+              <e p="NativeGuidResolver.cs" t="Include" />
+              <e p="PrimitiveObjectResolver.cs" t="Include" />
+              <e p="StandardResolver.cs" t="Include" />
+              <e p="StaticCompositeResolver.cs" t="Include" />
+              <e p="TypelessContractlessStandardResolver.cs" t="Include" />
+              <e p="TypelessObjectResolver.cs" t="Include" />
+            </e>
+            <e p="SequencePool.cs" t="Include" />
+            <e p="SequenceReader.cs" t="Include" />
+            <e p="SequenceReaderExtensions.cs" t="Include" />
+            <e p="StreamPolyfillExtensions.cs" t="Include" />
+            <e p="StringEncoding.cs" t="Include" />
+            <e p="T4" t="Include">
+              <e p="ForceSizePrimitiveFormatter.cs" t="Include" />
+              <e p="MessagePackReader.Integers.cs" t="Include" />
+              <e p="PrimitiveFormatter.cs" t="Include" />
+              <e p="TupleFormatter.cs" t="Include" />
+              <e p="UnsafeMemory.cs" t="Include" />
+              <e p="ValueTupleFormatter.cs" t="Include" />
+            </e>
+            <e p="ThisLibraryExtensionTypeCodes.cs" t="Include" />
+            <e p="Unity" t="Include">
+              <e p="Extension" t="Include">
+                <e p="UnityBlitResolver.cs" t="Include" />
+                <e p="UnsafeBlitFormatter.cs" t="Include" />
+              </e>
+              <e p="Formatters.cs" t="Include" />
+              <e p="MessagePackWindow.cs" t="Include" />
+              <e p="UnityResolver.cs" t="Include" />
+            </e>
+            <e p="Utilities.cs" t="Include" />
+          </e>
+          <e p="NetworkV2" t="Include">
+            <e p="TimeOutChecker.cs" t="Include" />
+          </e>
+          <e p="PlayFabCustom" t="Include">
+            <e p="Models" t="Include">
+              <e p="NodeAccount.cs" t="Include" />
+              <e p="Player.cs" t="Include" />
+              <e p="PlayerProfile.cs" t="Include" />
+              <e p="PlayerStatistic.cs" t="Include" />
+            </e>
+            <e p="PFHelper.cs" t="Include" />
+            <e p="PlayFabAuthService.cs" t="Include" />
+          </e>
+          <e p="Share" t="Include">
+            <e p="NetworkV2" t="Include">
+              <e p="Base" t="Include">
+                <e p="IReceiveNetDataHandler.cs" t="Include" />
+              </e>
+              <e p="Client" t="Include">
+                <e p="ClientReceiveNetDataHandler.cs" t="Include" />
+              </e>
+              <e p="NetClient.cs" t="Include" />
+              <e p="NetPlayer.cs" t="Include" />
+            </e>
+            <e p="Router" t="Include">
+              <e p="HashName.cs" t="Include" />
+              <e p="NetRouter.cs" t="Include" />
+              <e p="TempNetRouter.cs" t="Include" />
+            </e>
+            <e p="TransportData" t="Include">
+              <e p="Base" t="Include">
+                <e p="INetData.cs" t="Include" />
+                <e p="ITimeOutChecker.cs" t="Include" />
+              </e>
+              <e p="Define" t="Include">
+                <e p="NetHeader.cs" t="Include" />
+              </e>
+              <e p="Header" t="Include">
+                <e p="INetDataHeader.cs" t="Include" />
+                <e p="RequestHeader.cs" t="Include" />
+                <e p="ResponseHeader.cs" t="Include" />
+              </e>
+              <e p="Login.cs" t="Include" />
+              <e p="Misc" t="Include">
+                <e p="RequestTimeOut.cs" t="Include" />
+              </e>
+              <e p="Test.cs" t="Include" />
+            </e>
+            <e p="Utils" t="Include">
+              <e p="Debuger.cs" t="Include" />
+              <e p="Timer.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="ChatClient.sln" t="IncludeFlat" />
+      <e p="MessagePack.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="PlayFab.csproj" t="IncludeRecursive" />
+      <e p="PlayFabSDKEditor.csproj" t="IncludeRecursive" />
+      <e p="PlayFabTestingEditor.csproj" t="IncludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
