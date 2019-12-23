@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using SourceShare.Share.NetworkV2.Base;
-using SourceShare.Share.TransportData.Base;
-using SourceShare.Share.TransportData.Misc;
-using SourceShare.Share.Utils;
+using SourceShare.Share.NetworkV2.TransportData.Base;
+using SourceShare.Share.NetworkV2.TransportData.Misc;
+using SourceShare.Share.NetworkV2.Utils;
 
-namespace IAHNetCoreServer.Server
+namespace NetworkV2.Server
 {
     public class TimeOutChecker : ITimeOutChecker
     {

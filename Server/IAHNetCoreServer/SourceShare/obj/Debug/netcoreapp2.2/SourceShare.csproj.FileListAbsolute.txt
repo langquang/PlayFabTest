@@ -1,0 +1,7 @@
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\netcoreapp2.2\SourceShare.deps.json
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\netcoreapp2.2\SourceShare.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\netcoreapp2.2\SourceShare.pdb
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\obj\Debug\netcoreapp2.2\SourceShare.csprojAssemblyReference.cache
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\obj\Debug\netcoreapp2.2\SourceShare.csproj.CoreCompileInputs.cache
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\obj\Debug\netcoreapp2.2\SourceShare.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\obj\Debug\netcoreapp2.2\SourceShare.pdb

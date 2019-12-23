@@ -1,11 +1,11 @@
 using LiteNetLib.Utils;
 using MessagePack;
-using SourceShare.Share.TransportData.Base;
-using SourceShare.Share.TransportData.define;
-using SourceShare.Share.TransportData.Define;
-using SourceShare.Share.TransportData.Header;
+using SourceShare.Share.NetRequest.Config;
+using SourceShare.Share.NetworkV2.TransportData.Base;
+using SourceShare.Share.NetworkV2.TransportData.Define;
+using SourceShare.Share.NetworkV2.TransportData.Header;
 
-namespace SourceShare.Share.TransportData
+namespace SourceShare.Share.NetRequest
 {
     [MessagePackObject]
     public class LoginRequest : INetData

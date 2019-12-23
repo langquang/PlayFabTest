@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using LiteNetLib.Utils;
 
-namespace IAHNetCoreServer.Server
+namespace NetworkV2.Server
 {
     public class SimplePoolWriter
     {

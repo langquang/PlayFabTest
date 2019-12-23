@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Threading;
 using IAHNetCoreServer.Logic.Server.RequestHandlers;
-using IAHNetCoreServer.Server;
-using IAHNetCoreServer.Share.NetworkV2;
 using MessagePack;
 using MessagePack.Resolvers;
-using UnityEngine;
+using MessagePack.Unity;
+using MessagePack.Unity.Extension;
+using NetworkV2.Base;
+using NetworkV2.Server;
 
 namespace IAHNetCoreServer
 {
@@ -17,14 +17,14 @@ namespace IAHNetCoreServer
         static void Main(string[] args)
         {
             ConfigMessagePack();
-            
+
             Console.WriteLine($"Start Server with Thread: {ThreadHelper.GetCurrentThreadName("Main")}");
             Console.WriteLine($"Creating a server with port:{port}");
             NetServer netServer = new NetServer("Server", new EntryHandler());
             netServer.Start(port, key);
 
             bool _quitFlag = false;
-            while(!_quitFlag)
+            while (!_quitFlag)
             {
                 var keyInfo = Console.ReadKey();
                 _quitFlag = keyInfo.Key == ConsoleKey.C
@@ -37,8 +37,8 @@ namespace IAHNetCoreServer
             // set extensions to default resolver.
             var resolver = CompositeResolver.Create(
                 // enable extension packages first
-                MessagePack.Unity.Extension.UnityBlitResolver.Instance,
-                MessagePack.Unity.UnityResolver.Instance,
+                UnityBlitResolver.Instance,
+                UnityResolver.Instance,
                 // finally use standard(default) resolver
                 StandardResolver.Instance
             );

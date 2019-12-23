@@ -57,11 +57,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_TransportData_CommonErrorResponseFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_TransportData_LoginRequestFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_TransportData_LoginResponseFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_TransportData_TestRequestFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_TransportData_TestResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CommonErrorResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_LoginRequestFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_LoginResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_TestRequestFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_TestResponseFormatter.cs" />
     <Compile Include="Assets\Scripts\AutoGen\MessagePack_Resolvers_GeneratedResolver.cs" />
     <Compile Include="Assets\Scripts\Client\ResponseHandler\APINetworkHandler.cs" />
     <Compile Include="Assets\Scripts\Demo\StartUp.cs" />
@@ -92,7 +92,7 @@
     <Compile Include="Assets\Scripts\LiteNetLib\Utils\NetPacketProcessor.cs" />
     <Compile Include="Assets\Scripts\LiteNetLib\Utils\NetSerializer.cs" />
     <Compile Include="Assets\Scripts\LiteNetLib\Utils\NetSerializerExceptions.cs" />
-    <Compile Include="Assets\Scripts\NetworkV2\TimeOutChecker.cs" />
+    <Compile Include="Assets\Scripts\NetworkV2\Unity\TimeOutChecker.cs" />
     <Compile Include="Assets\Scripts\PlayFabCustom\Models\NodeAccount.cs" />
     <Compile Include="Assets\Scripts\PlayFabCustom\Models\Player.cs" />
     <Compile Include="Assets\Scripts\PlayFabCustom\Models\PlayerProfile.cs" />

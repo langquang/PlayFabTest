@@ -1,4 +1,4 @@
-namespace SourceShare.Share.TransportData.Base
+namespace SourceShare.Share.NetworkV2.TransportData.Base
 {
     public interface ITimeOutChecker
     {

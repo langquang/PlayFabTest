@@ -1,6 +1,6 @@
 using System.Threading;
 
-namespace IAHNetCoreServer.Server
+namespace NetworkV2.Server
 {
     public class ThreadHelper
     {

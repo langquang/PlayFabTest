@@ -53,11 +53,11 @@ namespace MessagePack.Resolvers
         {
             lookup = new global::System.Collections.Generic.Dictionary<Type, int>(5)
             {
-                { typeof(global::SourceShare.Share.TransportData.LoginRequest), 0 },
-                { typeof(global::SourceShare.Share.TransportData.LoginResponse), 1 },
-                { typeof(global::SourceShare.Share.TransportData.CommonErrorResponse), 2 },
-                { typeof(global::SourceShare.Share.TransportData.TestRequest), 3 },
-                { typeof(global::SourceShare.Share.TransportData.TestResponse), 4 },
+                { typeof(global::SourceShare.Share.NetRequest.LoginRequest), 0 },
+                { typeof(global::SourceShare.Share.NetRequest.LoginResponse), 1 },
+                { typeof(global::SourceShare.Share.NetRequest.CommonErrorResponse), 2 },
+                { typeof(global::SourceShare.Share.NetRequest.TestRequest), 3 },
+                { typeof(global::SourceShare.Share.NetRequest.TestResponse), 4 },
             };
         }
 
@@ -71,11 +71,11 @@ namespace MessagePack.Resolvers
 
             switch (key)
             {
-                case 0: return new MessagePack.Formatters.SourceShare.Share.TransportData.LoginRequestFormatter();
-                case 1: return new MessagePack.Formatters.SourceShare.Share.TransportData.LoginResponseFormatter();
-                case 2: return new MessagePack.Formatters.SourceShare.Share.TransportData.CommonErrorResponseFormatter();
-                case 3: return new MessagePack.Formatters.SourceShare.Share.TransportData.TestRequestFormatter();
-                case 4: return new MessagePack.Formatters.SourceShare.Share.TransportData.TestResponseFormatter();
+                case 0: return new MessagePack.Formatters.SourceShare.Share.NetRequest.LoginRequestFormatter();
+                case 1: return new MessagePack.Formatters.SourceShare.Share.NetRequest.LoginResponseFormatter();
+                case 2: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CommonErrorResponseFormatter();
+                case 3: return new MessagePack.Formatters.SourceShare.Share.NetRequest.TestRequestFormatter();
+                case 4: return new MessagePack.Formatters.SourceShare.Share.NetRequest.TestResponseFormatter();
                 default: return null;
             }
         }

@@ -1,7 +1,7 @@
 using LiteNetLib.Utils;
-using SourceShare.Share.TransportData.Define;
+using SourceShare.Share.NetworkV2.TransportData.Define;
 
-namespace SourceShare.Share.TransportData.Header
+namespace SourceShare.Share.NetworkV2.TransportData.Header
 {
     public interface INetDataHeader
     {

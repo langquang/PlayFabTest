@@ -1,4 +1,4 @@
-namespace SourceShare.Share.TransportData.Define
+namespace SourceShare.Share.NetworkV2.TransportData.Define
 {
     public enum ENetType
     {

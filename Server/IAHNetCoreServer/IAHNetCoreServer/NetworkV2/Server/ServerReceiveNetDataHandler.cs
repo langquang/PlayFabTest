@@ -1,11 +1,11 @@
 using System.Threading.Tasks;
-using IAHNetCoreServer.Share.NetworkV2;
 using LiteNetLib;
+using SourceShare.Share.NetworkV2;
 using SourceShare.Share.NetworkV2.Base;
-using SourceShare.Share.TransportData.Base;
-using SourceShare.Share.TransportData.Misc;
+using SourceShare.Share.NetworkV2.TransportData.Base;
+using SourceShare.Share.NetworkV2.TransportData.Misc;
 
-namespace IAHNetCoreServer.Server
+namespace NetworkV2.Server
 {
     public abstract class ServerReceiveNetDataHandler<TPlayer> : IReceiveNetDataHandler where TPlayer : NetPlayer
     {

@@ -14,17 +14,17 @@
 #pragma warning disable SA1403 // File may only contain a single namespace
 #pragma warning disable SA1649 // File name should match first type name
 
-namespace MessagePack.Formatters.SourceShare.Share.TransportData
+namespace MessagePack.Formatters.SourceShare.Share.NetRequest
 {
     using System;
     using System.Buffers;
     using MessagePack;
 
-    public sealed class LoginResponseFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::SourceShare.Share.TransportData.LoginResponse>
+    public sealed class TestRequestFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::SourceShare.Share.NetRequest.TestRequest>
     {
 
 
-        public void Serialize(ref MessagePackWriter writer, global::SourceShare.Share.TransportData.LoginResponse value, global::MessagePack.MessagePackSerializerOptions options)
+        public void Serialize(ref MessagePackWriter writer, global::SourceShare.Share.NetRequest.TestRequest value, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (value == null)
             {
@@ -34,10 +34,10 @@ namespace MessagePack.Formatters.SourceShare.Share.TransportData
 
             IFormatterResolver formatterResolver = options.Resolver;
             writer.WriteArrayHeader(1);
-            formatterResolver.GetFormatterWithVerify<string>().Serialize(ref writer, value.token, options);
+            formatterResolver.GetFormatterWithVerify<string>().Serialize(ref writer, value.msg, options);
         }
 
-        public global::SourceShare.Share.TransportData.LoginResponse Deserialize(ref MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
+        public global::SourceShare.Share.NetRequest.TestRequest Deserialize(ref MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (reader.TryReadNil())
             {
@@ -46,7 +46,7 @@ namespace MessagePack.Formatters.SourceShare.Share.TransportData
 
             IFormatterResolver formatterResolver = options.Resolver;
             var length = reader.ReadArrayHeader();
-            var __token__ = default(string);
+            var __msg__ = default(string);
 
             for (int i = 0; i < length; i++)
             {
@@ -55,7 +55,7 @@ namespace MessagePack.Formatters.SourceShare.Share.TransportData
                 switch (key)
                 {
                     case 0:
-                        __token__ = formatterResolver.GetFormatterWithVerify<string>().Deserialize(ref reader, options);
+                        __msg__ = formatterResolver.GetFormatterWithVerify<string>().Deserialize(ref reader, options);
                         break;
                     default:
                         reader.Skip();
@@ -63,8 +63,8 @@ namespace MessagePack.Formatters.SourceShare.Share.TransportData
                 }
             }
 
-            var ____result = new global::SourceShare.Share.TransportData.LoginResponse();
-            ____result.token = __token__;
+            var ____result = new global::SourceShare.Share.NetRequest.TestRequest(__msg__);
+            ____result.msg = __msg__;
             return ____result;
         }
     }

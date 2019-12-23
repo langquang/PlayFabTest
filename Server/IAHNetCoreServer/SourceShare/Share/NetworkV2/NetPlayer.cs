@@ -1,11 +1,11 @@
 using System;
 using LiteNetLib;
 using LiteNetLib.Utils;
-using SourceShare.Share.Router;
-using SourceShare.Share.TransportData.Base;
-using SourceShare.Share.TransportData.Header;
+using SourceShare.Share.NetworkV2.Router;
+using SourceShare.Share.NetworkV2.TransportData.Base;
+using SourceShare.Share.NetworkV2.TransportData.Header;
 
-namespace IAHNetCoreServer.Share.NetworkV2
+namespace SourceShare.Share.NetworkV2
 {
     public class NetPlayer
     {

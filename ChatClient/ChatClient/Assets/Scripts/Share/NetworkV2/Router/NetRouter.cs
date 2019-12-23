@@ -1,14 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using IAHNetCoreServer.Share.NetworkV2;
 using LiteNetLib.Utils;
 using MessagePack;
-using SourceShare.Share.TransportData.Base;
-using SourceShare.Share.TransportData.Define;
-using SourceShare.Share.TransportData.Header;
+using SourceShare.Share.NetworkV2.TransportData.Base;
+using SourceShare.Share.NetworkV2.TransportData.Define;
+using SourceShare.Share.NetworkV2.TransportData.Header;
 
-namespace SourceShare.Share.Router
+namespace SourceShare.Share.NetworkV2.Router
 {
     public class NetRouter
     {

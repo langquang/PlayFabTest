@@ -1,9 +1,8 @@
-﻿using System;
-using MessagePack;
+﻿using MessagePack;
 using MessagePack.Resolvers;
 using PlayFab.ClientModels;
 using PlayFabCustom;
-using SourceShare.Share.TransportData;
+using SourceShare.Share.NetRequest;
 using UnityClientLib.Logic.Client.ResponseHandler;
 using UnityEditor;
 using UnityEngine;
@@ -48,7 +47,7 @@ namespace Demo
             if (!serializerRegistered)
             {
                 StaticCompositeResolver.Instance.Register(
-                    MessagePack.Resolvers.GeneratedResolver.Instance,
+                    GeneratedResolver.Instance,
                     StandardResolver.Instance
                 );
 

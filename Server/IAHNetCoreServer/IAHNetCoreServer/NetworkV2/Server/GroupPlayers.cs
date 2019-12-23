@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Concurrent;
-using IAHNetCoreServer.Share.NetworkV2;
+using SourceShare.Share.NetworkV2;
 
-namespace IAHNetCoreServer.Server
+namespace NetworkV2.Server
 {
     public sealed class GroupPlayers<TKey>
     {

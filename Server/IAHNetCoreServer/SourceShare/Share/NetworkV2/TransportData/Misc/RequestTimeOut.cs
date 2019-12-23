@@ -1,6 +1,4 @@
-using SourceShare.Share.TransportData.Define;
-
-namespace SourceShare.Share.TransportData.Misc
+namespace SourceShare.Share.NetworkV2.TransportData.Misc
 {
     public class RequestTimeOut
     {

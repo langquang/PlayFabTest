@@ -2,103 +2,79 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba6c7bc-5434-46d7-b785-75c4638eaff9" name="Default Changelist" comment="bo generic">
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp2.2/IAHNetCoreServer.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPICommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.Annotations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/MessagePack.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Buffers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Memory.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Numerics.Vectors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UnityClientLib/bin/Debug/System.Threading.Tasks.Extensions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/UnityEngine.1.0.0/.signature.p7s" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/UnityEngine.1.0.0/UnityEngine.1.0.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/NetworkV2/Unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UnityClientLib/NetworkV2/Unity/TimeOutChecker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/.idea/.idea.ChatClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/.idea/.idea.ChatClient/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/PlayFabEditorExtensions/Editor/Resources/PlayFabEditorPrefsSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/PlayFabEditorExtensions/Editor/Resources/PlayFabEditorPrefsSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_TransportData_CommonErrorResponseFormatter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_TransportData_CommonErrorResponseFormatter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_TransportData_LoginRequestFormatter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_TransportData_LoginRequestFormatter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_TransportData_LoginResponseFormatter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_TransportData_LoginResponseFormatter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/NetworkV2/Unity/TimeOutChecker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_TransportData_TestRequestFormatter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_TransportData_TestRequestFormatter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_TransportData_TestResponseFormatter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_TransportData_TestResponseFormatter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Resolvers_GeneratedResolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Resolvers_GeneratedResolver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Client/ResponseHandler/APINetworkHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Client/ResponseHandler/APINetworkHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Base.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Base.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Base/IReceiveNetDataHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Base/IReceiveNetDataHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Client.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Client.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/NetClient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/NetClient.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/NetPlayer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/NetPlayer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Router.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Router/HashName.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Router/HashName.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Router/NetRouter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Router/NetRouter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Router/TempNetRouter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Router/TempNetRouter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Base.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Base/INetData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Base/INetData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Base/ITimeOutChecker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Base/ITimeOutChecker.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Define.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Define/NetHeader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Define/NetHeader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Header.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Header/INetDataHeader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Header/INetDataHeader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Header/RequestHeader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Header/RequestHeader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Header/ResponseHeader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Header/ResponseHeader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Login.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Login.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Misc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Misc/RequestTimeOut.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Misc/RequestTimeOut.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Test.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData/Test.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Utils.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Utils/Debuger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Utils/Debuger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Utils/Timer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/Utils/Timer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/MessagePack.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/MessagePack.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/PlayFab.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/PlayFab.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/PlayFabSDKEditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/PlayFabSDKEditor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/PlayFabTestingEditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/PlayFabTestingEditor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PlayFabTest/.idea/.idea.PlayFabTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Demo/StartUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Demo/StartUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/NetworkV2.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/NetworkV2.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/NetworkV2/TimeOutChecker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/NetworkV2/TimeOutChecker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/Config/NetAPICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/Config/NetAPICommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Base/IReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Base/IReceiveNetDataHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Router/HashName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Router/HashName.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Router/NetRouter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Base/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Base/INetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Base/ITimeOutChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Base/ITimeOutChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Define/NetHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Define/NetHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Header/INetDataHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Header/INetDataHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Header/RequestHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Header/RequestHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Header/ResponseHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Header/ResponseHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Misc/RequestTimeOut.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Misc/RequestTimeOut.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Utils/Debuger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Utils/Debuger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Utils/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Utils/Timer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/Router/HashName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/HashName.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/NetRouter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/Router/TempNetRouter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/TransportData/Base/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/INetData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/TransportData/Base/ITimeOutChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/ITimeOutChecker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/TransportData/Define/NetHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Define/NetHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/INetDataHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/INetDataHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/RequestHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/RequestHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/ResponseHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/ResponseHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/TransportData/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/TransportData/Misc/RequestTimeOut.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Misc/RequestTimeOut.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/TransportData/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/Utils/Debuger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Utils/Debuger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/Utils/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Utils/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ThreadHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ThreadHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPICommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Login.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Base/IReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Base/IReceiveNetDataHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/HashName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/HashName.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/NetRouter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/INetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/ITimeOutChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/ITimeOutChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Define/NetHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Define/NetHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/INetDataHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/INetDataHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/RequestHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/RequestHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/ResponseHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/ResponseHeader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Misc/RequestTimeOut.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Misc/RequestTimeOut.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Utils/Debuger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Utils/Debuger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Utils/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Utils/Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/SourceShare.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/SourceShare.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnityClientLib/NetworkV2/TimeOutChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/NetworkV2/Unity/TimeOutChecker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UnityClientLib/UnityClientLib.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UnityClientLib/UnityClientLib.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityClientLib/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/UnityClientLib/packages.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +92,7 @@
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPICommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/LiteNetLib/NetPeer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/UnityClientLib/NetworkV2/TimeOutChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/UnityClientLib/NetworkV2/Unity/TimeOutChecker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/RequestHeader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/ResponseHeader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/INetDataHeader.cs" root0="FORCE_HIGHLIGHTING" />
@@ -155,16 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Header/INetDataHeader.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Utils/Timer.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Base/ITimeOutChecker.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Misc/RequestTimeOut.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Share/Router/NetRouter.cs" />
-        <option value="$PROJECT_DIR$/UnityClientLib/MonoBehaviour1.cs" />
-        <option value="$PROJECT_DIR$/UnityClientLib/Logic/Client/ResponseHandler/Test.cs" />
-        <option value="$PROJECT_DIR$/Share/Class1.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Class1.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetClient.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/UnityClient/IReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/Router/HashName.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/Router/TempNetRouter.cs" />
@@ -178,7 +144,6 @@
         <option value="$PROJECT_DIR$/SourceShare/Share/Utils/Timer.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/IReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Misc/RequestTimeOut.cs" />
         <option value="$PROJECT_DIR$/UnityClientLib/NetworkV2/TimeOutChecker.cs" />
         <option value="$PROJECT_DIR$/UnityClientLib/Logic/Client/ResponseHandler/APINetworkHandler.cs" />
@@ -187,25 +152,36 @@
         <option value="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.AssemblyInfo.cs" />
         <option value="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.AssemblyInfo.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/Utils/Debuger.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/RequestHeader.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/Router/NetRouter.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Define/NetHeader.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/define/ComandId.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/define/CommandId.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Define/NetHeader.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/NetRouter.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Misc/RequestTimeOut.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/INetDataHeader.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPICommand.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/Login.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/RequestHeader.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/Test.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/NetRouter.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/HashName.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/INetData.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/ITimeOutChecker.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Define/NetHeader.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/INetDataHeader.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/RequestHeader.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/ResponseHeader.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Misc/RequestTimeOut.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Utils/Debuger.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Utils/Timer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ThreadHelper.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
       </list>
     </option>
   </component>
@@ -301,7 +277,7 @@
       <workItem from="1576813606767" duration="26837000" />
       <workItem from="1576856838151" duration="6547000" />
       <workItem from="1577016928924" duration="14784000" />
-      <workItem from="1577068640633" duration="6457000" />
+      <workItem from="1577068640633" duration="8781000" />
     </task>
     <task id="LOCAL-00001" summary="Request - response">
       <created>1576752828936</created>
@@ -371,26 +347,26 @@
     </state>
     <state width="483" height="466" key="DebuggerActiveHint/62.0.1858.1080@62.0.1858.1080" timestamp="1577033119772" />
     <state width="532" height="466" key="DebuggerActiveHint/62.0.2498.1080@62.0.2498.1080" timestamp="1577083426629" />
-    <state width="2455" height="342" key="GridCell.Tab.0.bottom" timestamp="1577083458717">
+    <state width="2455" height="278" key="GridCell.Tab.0.bottom" timestamp="1577085965079">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577083458717" />
-    <state width="2455" height="342" key="GridCell.Tab.0.center" timestamp="1577083458716">
+    <state width="2455" height="278" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577085965079" />
+    <state width="2455" height="278" key="GridCell.Tab.0.center" timestamp="1577085965078">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577083458716" />
-    <state width="2455" height="342" key="GridCell.Tab.0.left" timestamp="1577083458716">
+    <state width="2455" height="278" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577085965078" />
+    <state width="2455" height="278" key="GridCell.Tab.0.left" timestamp="1577085965078">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577083458716" />
-    <state width="2455" height="342" key="GridCell.Tab.0.right" timestamp="1577083458717">
+    <state width="2455" height="278" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577085965078" />
+    <state width="2455" height="278" key="GridCell.Tab.0.right" timestamp="1577085965078">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577083458717" />
+    <state width="2455" height="278" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577085965078" />
     <state width="2455" height="342" key="GridCell.Tab.1.bottom" timestamp="1577083458717">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
@@ -493,11 +469,11 @@
     </state>
     <state x="751" y="277" width="632" height="526" key="find.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1577017091341" />
     <state x="989" y="277" width="644" height="526" key="find.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1576833081238" />
-    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1577078922214">
+    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1577084236121">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="740" y="235" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1577033214645" />
-    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1577078922214" />
+    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1577084236121" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -531,19 +507,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs</url>
-          <line>96</line>
-          <properties documentPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" initialLine="96">
-            <startOffsets>
-              <option value="3779" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3801" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,11 +2,12 @@ using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-using IAHNetCoreServer.Share.NetworkV2;
 using LiteNetLib;
-using SourceShare.Share.Utils;
+using NetworkV2.Server;
+using SourceShare.Share.NetworkV2;
+using SourceShare.Share.NetworkV2.Utils;
 
-namespace IAHNetCoreServer.Server
+namespace NetworkV2.Base
 {
     public class NetServer
     {

@@ -14,17 +14,17 @@
 #pragma warning disable SA1403 // File may only contain a single namespace
 #pragma warning disable SA1649 // File name should match first type name
 
-namespace MessagePack.Formatters.SourceShare.Share.TransportData
+namespace MessagePack.Formatters.SourceShare.Share.NetRequest
 {
     using System;
     using System.Buffers;
     using MessagePack;
 
-    public sealed class LoginRequestFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::SourceShare.Share.TransportData.LoginRequest>
+    public sealed class CommonErrorResponseFormatter : global::MessagePack.Formatters.IMessagePackFormatter<global::SourceShare.Share.NetRequest.CommonErrorResponse>
     {
 
 
-        public void Serialize(ref MessagePackWriter writer, global::SourceShare.Share.TransportData.LoginRequest value, global::MessagePack.MessagePackSerializerOptions options)
+        public void Serialize(ref MessagePackWriter writer, global::SourceShare.Share.NetRequest.CommonErrorResponse value, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (value == null)
             {
@@ -33,12 +33,10 @@ namespace MessagePack.Formatters.SourceShare.Share.TransportData
             }
 
             IFormatterResolver formatterResolver = options.Resolver;
-            writer.WriteArrayHeader(2);
-            formatterResolver.GetFormatterWithVerify<string>().Serialize(ref writer, value.playerId, options);
-            formatterResolver.GetFormatterWithVerify<string>().Serialize(ref writer, value.sessionTicket, options);
+            writer.WriteArrayHeader(0);
         }
 
-        public global::SourceShare.Share.TransportData.LoginRequest Deserialize(ref MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
+        public global::SourceShare.Share.NetRequest.CommonErrorResponse Deserialize(ref MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
         {
             if (reader.TryReadNil())
             {
@@ -47,8 +45,6 @@ namespace MessagePack.Formatters.SourceShare.Share.TransportData
 
             IFormatterResolver formatterResolver = options.Resolver;
             var length = reader.ReadArrayHeader();
-            var __playerId__ = default(string);
-            var __sessionTicket__ = default(string);
 
             for (int i = 0; i < length; i++)
             {
@@ -56,21 +52,13 @@ namespace MessagePack.Formatters.SourceShare.Share.TransportData
 
                 switch (key)
                 {
-                    case 0:
-                        __playerId__ = formatterResolver.GetFormatterWithVerify<string>().Deserialize(ref reader, options);
-                        break;
-                    case 1:
-                        __sessionTicket__ = formatterResolver.GetFormatterWithVerify<string>().Deserialize(ref reader, options);
-                        break;
                     default:
                         reader.Skip();
                         break;
                 }
             }
 
-            var ____result = new global::SourceShare.Share.TransportData.LoginRequest(__playerId__, __sessionTicket__);
-            ____result.playerId = __playerId__;
-            ____result.sessionTicket = __sessionTicket__;
+            var ____result = new global::SourceShare.Share.NetRequest.CommonErrorResponse();
             return ____result;
         }
     }

@@ -1,15 +1,13 @@
-using System.ComponentModel;
-
-namespace SourceShare.Share.TransportData.define
+namespace SourceShare.Share.NetRequest.Config
 {
     public class NetAPICommand
     {
         // Request
-        [Description("My Property")] public const int LOGIN_REQUEST = 1;
+        public const int LOGIN_REQUEST = 1;
 
-        [Description("My Property")] public const int TEST_REQUEST = 1_000_000;
+        public const int TEST_REQUEST = 1_000_000;
 
         // Message
-        [Description("My Property")] public const int TEST_MESSAGE = 1;
+        public const int TEST_MESSAGE = 1;
     }
 }
