@@ -10,6 +10,7 @@ using PlayFab.ServerModels;
 using SourceShare.Share.Router;
 using SourceShare.Share.TransportData;
 using SourceShare.Share.TransportData.Base;
+using SourceShare.Share.TransportData.define;
 using SourceShare.Share.TransportData.Define;
 using SourceShare.Share.TransportData.Header;
 using SourceShare.Share.TransportData.Misc;
@@ -28,7 +29,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());
 
-            _router.Subscribe<TestRequest>(ENetCommand.TEST_REQUEST, OnTestHandler);
+            _router.Subscribe<TestRequest>(NetAPICommand.TEST_REQUEST, OnTestHandler);
         }
 
 
@@ -44,7 +45,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
         public override (NetPlayer, INetData) BeginLogin(NetPeer peer, NetPacketReader reader)
         {
             var header = _router.ReadHeader(reader);
-            if (header.NetType != ENetType.REQUEST || header.NetCommand != ENetCommand.LOGIN_REQUEST)
+            if (header.NetType != ENetType.REQUEST || header.NetCommand != NetAPICommand.LOGIN_REQUEST)
             {
                 Debugger.Write("invalid login header");
                 peer.Disconnect();
@@ -53,7 +54,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
             var loginRequest = MessagePackSerializer.Deserialize<LoginRequest>(reader.GetBytesWithLength());
             loginRequest.Header = header;
-            var player = new NetPlayer(loginRequest.playerId ,peer, _router, false, GenToken());
+            var player = new NetPlayer(loginRequest.playerId, peer, _router, false, GenToken());
             if (!loginRequest.IsValid())
             {
                 Debugger.Write("invalid login request");
@@ -99,7 +100,15 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
         public override void Perform(NetPlayer player, NetPacketReader reader)
         {
-            _router.ReadAllPackets(reader, player);
+            try
+            {
+                _router.ReadAllPackets(reader, player);
+            }
+            catch (Exception e)
+            {
+                Debugger.Write(e.ToString());
+                throw;
+            }
         }
 
         public override void OnDisconnect(NetPlayer player)

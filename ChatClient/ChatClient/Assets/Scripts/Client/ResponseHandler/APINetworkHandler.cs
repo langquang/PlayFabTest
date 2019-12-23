@@ -5,6 +5,7 @@ using SourceShare.Share.NetworkV2;
 using SourceShare.Share.NetworkV2.Client;
 using SourceShare.Share.Router;
 using SourceShare.Share.TransportData;
+using SourceShare.Share.TransportData.define;
 using SourceShare.Share.TransportData.Define;
 using SourceShare.Share.TransportData.Header;
 using SourceShare.Share.TransportData.Misc;
@@ -58,8 +59,8 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());
             // Subscribe income Handler (one way)
-            _router.Subscribe<TestRequest>(ENetCommand.TEST_REQUEST, OnReceiveTestRequest);
-            _router.Subscribe<TestResponse>(ENetCommand.TEST_REQUEST, OnReceiveTestResponse);
+            _router.Subscribe<TestRequest>(NetAPICommand.TEST_REQUEST, OnReceiveTestRequest);
+            _router.Subscribe<TestResponse>(NetAPICommand.TEST_REQUEST, OnReceiveTestResponse);
         }
 
         public void StartConnect(string curPlayFabId, string sessionTicket)

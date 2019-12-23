@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\admin\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\admin\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ChatClient.815567169.00" t="ExcludeRecursive" />
+    <e p="C:\Users\abutin\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\abutin\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ChatClient.815567169.00" t="ExcludeRecursive" />
     <e p="D:\projects\suga_iah\PlayFabTest\ChatClient\ChatClient" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -415,6 +415,13 @@
             <e p="PlayFabAuthService.cs" t="Include" />
           </e>
           <e p="Share" t="Include">
+            <e p="NetRequest" t="Include">
+              <e p="Config" t="Include">
+                <e p="NetAPICommand.cs" t="Include" />
+              </e>
+              <e p="Login.cs" t="Include" />
+              <e p="Test.cs" t="Include" />
+            </e>
             <e p="NetworkV2" t="Include">
               <e p="Base" t="Include">
                 <e p="IReceiveNetDataHandler.cs" t="Include" />
@@ -424,34 +431,31 @@
               </e>
               <e p="NetClient.cs" t="Include" />
               <e p="NetPlayer.cs" t="Include" />
-            </e>
-            <e p="Router" t="Include">
-              <e p="HashName.cs" t="Include" />
-              <e p="NetRouter.cs" t="Include" />
-              <e p="TempNetRouter.cs" t="Include" />
-            </e>
-            <e p="TransportData" t="Include">
-              <e p="Base" t="Include">
-                <e p="INetData.cs" t="Include" />
-                <e p="ITimeOutChecker.cs" t="Include" />
+              <e p="Router" t="Include">
+                <e p="HashName.cs" t="Include" />
+                <e p="NetRouter.cs" t="Include" />
               </e>
-              <e p="Define" t="Include">
-                <e p="NetHeader.cs" t="Include" />
+              <e p="TransportData" t="Include">
+                <e p="Base" t="Include">
+                  <e p="INetData.cs" t="Include" />
+                  <e p="ITimeOutChecker.cs" t="Include" />
+                </e>
+                <e p="Define" t="Include">
+                  <e p="NetHeader.cs" t="Include" />
+                </e>
+                <e p="Header" t="Include">
+                  <e p="INetDataHeader.cs" t="Include" />
+                  <e p="RequestHeader.cs" t="Include" />
+                  <e p="ResponseHeader.cs" t="Include" />
+                </e>
+                <e p="Misc" t="Include">
+                  <e p="RequestTimeOut.cs" t="Include" />
+                </e>
               </e>
-              <e p="Header" t="Include">
-                <e p="INetDataHeader.cs" t="Include" />
-                <e p="RequestHeader.cs" t="Include" />
-                <e p="ResponseHeader.cs" t="Include" />
+              <e p="Utils" t="Include">
+                <e p="Debuger.cs" t="Include" />
+                <e p="Timer.cs" t="Include" />
               </e>
-              <e p="Login.cs" t="Include" />
-              <e p="Misc" t="Include">
-                <e p="RequestTimeOut.cs" t="Include" />
-              </e>
-              <e p="Test.cs" t="Include" />
-            </e>
-            <e p="Utils" t="Include">
-              <e p="Debuger.cs" t="Include" />
-              <e p="Timer.cs" t="Include" />
             </e>
           </e>
         </e>

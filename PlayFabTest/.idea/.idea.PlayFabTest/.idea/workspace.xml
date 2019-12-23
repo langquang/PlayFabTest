@@ -1,118 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d0cce2e-1425-4408-b348-992e839154b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Logic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/Client.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/Client/RequestHandler.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/Client/ResponseHandler.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/Client/ResponseHandler/APINetworkHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Logic/Client/ResponseHandler/APINetworkHandler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Share/NetworkV2/Client.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Share/NetworkV2/Client/IReceiveNetDataHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Share/NetworkV2/Client/IReceiveNetDataHandler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Share/Router/HashName.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Share/Router/HashName.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Share/Router/TempNetRouter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Share/Router/TempNetRouter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/09/0905947592fed6846a2f831cbfa42a5e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/09/0905947592fed6846a2f831cbfa42a5e.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/31/3174033451a17974485d02fd93d98f21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/31/3174033451a17974485d02fd93d98f21.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/3c/3c3c4135f6815294c941af0d6395b4d7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/3c/3c3c4135f6815294c941af0d6395b4d7.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/48/48e0bf631d8ca1d49a0cf5c99e76fcb4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/48/48e0bf631d8ca1d49a0cf5c99e76fcb4.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/8f/8f8b355a776a742428981aeb9d95c32c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/8f/8f8b355a776a742428981aeb9d95c32c.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/a6/a69632d6f5a09b245b81c312e7f8fb2f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/a6/a69632d6f5a09b245b81c312e7f8fb2f.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/aa/aa1cf8b63ae2b094c8ee7cd6a01f60eb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/aa/aa1cf8b63ae2b094c8ee7cd6a01f60eb.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/d6/d60e9323b24292c4886210eeb4662b3e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/metadata/d6/d60e9323b24292c4886210eeb4662b3e.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-034eb3326a26a0948a87cca7ae17d645" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-04bd9e16d4cea6b4f84361ca59b3c73a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-0866537c9a6145e459d356e7eb4fe59a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-0d78083d8279989439271ecb40373717" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-2a6445d637e1a924cb7d2714fd54f74a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-3f2fc462d0e888249a2f7dc7bda86cf1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-4ccbfe0f60bbb2d4f833119b884fc4a0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-4d9df5b5e6f3d7e4ab7afbae12b82c2b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-62ac50c679d985745add8d87ebb4a39f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-671f48aa5493f844aaf5d4a6f3822274" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-7bce5060abce75e41953f7b444230823" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-8f610399f35fb2d43aaf0dbc988c4767" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-a05d49c410d0af74db88cfcc67d13c28" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-ae441402a7a5ef2459f51f1c2a55e5f4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-b99fdc06b29564b4aae18110b2d3c419" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-c913d85637dfe0f49aee581cfb4953d8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-d049f319f5e5e8b4fbf5da81b011d1e1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-e8a0ae69bf7179847bababbe44626e16" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-eb5beb6feaf83c54ba209cab7deb20de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-ec7d7c181f1854b4d98249edd04a6d9b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/UnityTempFile-fab863d22b4d9b245a22372a69625445" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/NetworkV2/Client/IReceiveNetDataHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/Router/TempNetRouter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PlayFabTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlayFabTest/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PlayFabTest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlayFabTest/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PlayFabTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlayFabTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/PlayFabAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/PlayFabAuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/NetworkV2/NetClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Share/NetworkV2/NetClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/NetworkV2/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Share/Router/NetRouter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Base/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Base/INetData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Base/Request.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Base/Request.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Base/Response.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Base/Response.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Define/NetHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Define/NetHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Header/INetDataHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Header/INetDataHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Header/ResponseHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Header/ResponseHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StartUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StartUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/f2bca1-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/f2bca1-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/0e/0e2f0f209e019d845869175107c1d1cd" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/0e/0e2f0f209e019d845869175107c1d1cd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/14/14e02ee091f636240a219ca4be3aac0f" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/14/14e02ee091f636240a219ca4be3aac0f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/1d/1d0e6d23ec74a2d4daf628ed1fbfa4fd" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1d/1d0e6d23ec74a2d4daf628ed1fbfa4fd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/2a/2a48e22f0c1f1d34998bba63cddee8ab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/2a/2a48e22f0c1f1d34998bba63cddee8ab.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/2e/2e3aa666d30f7364498a010b0a9cfdc2" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/2e/2e3aa666d30f7364498a010b0a9cfdc2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/2e/2e731e149f988a441b18aab2277265d2" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/2e/2e731e149f988a441b18aab2277265d2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/47/479e296b503ee5b48971afece8c67bf0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/47/479e296b503ee5b48971afece8c67bf0.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/70/70529d57f759f1743bf4905714408dc3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/70/70529d57f759f1743bf4905714408dc3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/b6/b6754a2c700a9d94191dcd42b9ece471" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/b6/b6754a2c700a9d94191dcd42b9ece471" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/d3/d388f0f1931fe10418ccd9e1cb089a01" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/d3/d388f0f1931fe10418ccd9e1cb089a01" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/d6/d6c882840162efb4c96d69a42f0534dc" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/d6/d6c882840162efb4c96d69a42f0534dc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/e1/e102474bbe350de44a2c6c1cbaa9871e" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/e1/e102474bbe350de44a2c6c1cbaa9871e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/f3/f386baa71d8f550458429e5cc13ecb91" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/f3/f386baa71d8f550458429e5cc13ecb91" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/f3/f386baa71d8f550458429e5cc13ecb91.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/f3/f386baa71d8f550458429e5cc13ecb91.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/IAHNetCoreServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/IAHNetCoreServer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Logic/Client/ResponseHandler/ClientResponseHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Logic/Client/ResponseHandler/APINetworkHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/Router/ClientNetRouter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/Router/NetRouter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Base/INetData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Base/Request.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Base/Response.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Define/NetHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Test.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/copy_source_share_to_client.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/copy_source_share_to_client.cmd" afterDir="false" />
-    </list>
+    <list default="true" id="1d0cce2e-1425-4408-b348-992e839154b6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="true" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,42 +11,40 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Models/SharedModels.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayFabSdk/Authentication/PlayFabEvents.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessagePack/MessagePackWriter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessagePack/IFormatterResolver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Test.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessagePack/T4/PrimitiveFormatter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessagePack/Formatters/IMessagePackFormatter`1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabErrors.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/PFHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Logic/Client/ResponseHandler/APINetworkHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/Models/NodeAccount.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/Models/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gen/MessagePack_Resolvers_GeneratedResolver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_LoginRequestFormatter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/Models/PlayerProfile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_CommonErrorResponseFormatter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_LoginResponseFormatter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Models/SharedModels.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/Models/PlayerStatistic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Share/NetworkV2/NetPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Share/NetworkV2/NetClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Share/Router/NetRouter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessagePack/Unity/Formatters.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_TestResponseFormatter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayFabSdk/Authentication/PlayFabEvents.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StartUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayFabSdk/Client/PlayFabClientModels.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7BA07F08-8431-485B-B722-F3B3373E87EE/a6/5dbeadbc/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/NetworkV2/NetClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/NetworkV2/Server/ThreadHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/PlayFabAuthService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LiteNetLib/INetEventListener.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Server/IAHNetCoreServer/IAHNetCoreServer/Share/TransportData/Header/ResponseHeader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessagePack/MessagePackWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessagePack/IFormatterResolver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessagePack/T4/PrimitiveFormatter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MessagePack/Formatters/IMessagePackFormatter`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayFabSdk/Shared/Internal/PlayFabErrors.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Login.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Share/TransportData/Login.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Base/INetData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/PFHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Logic/Client/ResponseHandler/APINetworkHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Share/TransportData/Header/RequestHeader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/Models/NodeAccount.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/Models/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gen/MessagePack_Resolvers_GeneratedResolver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_LoginRequestFormatter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayFabCustom/Models/PlayerProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_CommonErrorResponseFormatter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
