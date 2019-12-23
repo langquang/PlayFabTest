@@ -6,6 +6,7 @@ using MessagePack.Unity;
 using MessagePack.Unity.Extension;
 using NetworkV2.Base;
 using NetworkV2.Server;
+using PlayFabCustom;
 
 namespace IAHNetCoreServer
 {
@@ -16,7 +17,8 @@ namespace IAHNetCoreServer
 
         static void Main(string[] args)
         {
-            ConfigMessagePack();
+            SetupMessagePack();
+            SetupPlayFab();
 
             Console.WriteLine($"Start Server with Thread: {ThreadHelper.GetCurrentThreadName("Main")}");
             Console.WriteLine($"Creating a server with port:{port}");
@@ -32,7 +34,7 @@ namespace IAHNetCoreServer
             }
         }
 
-        static void ConfigMessagePack()
+        static void SetupMessagePack()
         {
             // set extensions to default resolver.
             var resolver = CompositeResolver.Create(
@@ -46,6 +48,11 @@ namespace IAHNetCoreServer
 
             // pass options to every time or set as default
             MessagePackSerializer.DefaultOptions = options;
+        }
+
+        static void SetupPlayFab()
+        {
+            PlayFabService.Setup();
         }
     }
 }

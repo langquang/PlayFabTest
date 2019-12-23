@@ -17,7 +17,7 @@ namespace SourceShare.Share.NetRequest
         {
         }
 
-        public LoginRequest(string playerId, string sessionTicket) : base(new RequestHeader(ENetType.REQUEST, NetAPICommand.LOGIN_REQUEST))
+        public LoginRequest(string playerId, string sessionTicket) : base(new RequestHeader(ENetType.REQUEST, NetAPICommand.LOGIN))
         {
             this.playerId = playerId;
             this.sessionTicket = sessionTicket;

@@ -6,6 +6,7 @@ using MessagePack;
 using NetworkV2.Server;
 using PlayFab;
 using PlayFab.ServerModels;
+using PlayFabCustom;
 using SourceShare.Share.NetRequest;
 using SourceShare.Share.NetRequest.Config;
 using SourceShare.Share.NetworkV2;
@@ -45,7 +46,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
         public override (NetPlayer, INetData) BeginLogin(NetPeer peer, NetPacketReader reader)
         {
             var header = _router.ReadHeader(reader);
-            if (header.NetType != ENetType.REQUEST || header.NetCommand != NetAPICommand.LOGIN_REQUEST)
+            if (header.NetType != ENetType.REQUEST || header.NetCommand != NetAPICommand.LOGIN)
             {
                 Debugger.Write("invalid login header");
                 peer.Disconnect();
@@ -80,7 +81,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             PlayFabSettings.staticSettings.DeveloperSecretKey = "U7XWD3YGJFIOD3HX7F74J75RYOOGE4UHO75KGMK7APBBQUPBUJ";
 
             var loginRequest = (LoginRequest) request;
-            var result = await PlayFabServerAPI.AuthenticateSessionTicketAsync(new AuthenticateSessionTicketRequest() {SessionTicket = loginRequest.sessionTicket}); // asynchronous here, make a sub task, calling thread is free and comeback to next line of code when sub task is done
+            var result = await PlayFabService.AuthenticateSessionTicketAsync(loginRequest.sessionTicket); // asynchronous here, make a sub task, calling thread is free and comeback to next line of code when sub task is done
             if (result.Error == null)
             {
                 Debugger.Write($"UserName: {result.Result.UserInfo.Username}");
@@ -124,6 +125,13 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
         public static INetData ResponseError(NetPlayer player, INetData request, int errorCode)
         {
             var response = new CommonErrorResponse(request, errorCode);
+            player.Send(response);
+            return response;
+        }
+        
+        public static INetData ResponseSuccess<T>(NetPlayer player, INetData request, T response) where T : INetData
+        {
+            response.Header = new ResponseHeader(request.Header);
             player.Send(response);
             return response;
         }

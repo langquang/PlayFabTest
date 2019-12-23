@@ -100,6 +100,7 @@
     <Compile Include="Assets\Scripts\PlayFabCustom\PFHelper.cs" />
     <Compile Include="Assets\Scripts\PlayFabCustom\PlayFabAuthService.cs" />
     <Compile Include="Assets\Scripts\Share\NetRequest\Config\NetAPICommand.cs" />
+    <Compile Include="Assets\Scripts\Share\NetRequest\CreateMasterAccountRequest.cs" />
     <Compile Include="Assets\Scripts\Share\NetRequest\Login.cs" />
     <Compile Include="Assets\Scripts\Share\NetRequest\Test.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\Base\IReceiveNetDataHandler.cs" />

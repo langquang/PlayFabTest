@@ -421,6 +421,7 @@
               <e p="Config" t="Include">
                 <e p="NetAPICommand.cs" t="Include" />
               </e>
+              <e p="CreateMasterAccountRequest.cs" t="Include" />
               <e p="Login.cs" t="Include" />
               <e p="Test.cs" t="Include" />
             </e>

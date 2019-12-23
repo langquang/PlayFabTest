@@ -9,7 +9,19 @@
         <e p="IAHNetCoreServer.csproj" t="IncludeRecursive" />
         <e p="Logic" t="Include">
           <e p="Server" t="Include">
+            <e p="PlayFabCustom" t="Include">
+              <e p="Models" t="Include">
+                <e p="DataPlayer.cs" t="Include" />
+                <e p="NodeAccount.cs" t="Include" />
+                <e p="PlayerProfile.cs" t="Include" />
+                <e p="PlayerStatistic.cs" t="Include" />
+              </e>
+              <e p="PFHelper.cs" t="Include" />
+              <e p="PlayFabService.cs" t="Include" />
+            </e>
             <e p="RequestHandlers" t="Include">
+              <e p="CreateMasterAccountHandler.cs" t="Include" />
+              <e p="CreateNodeAccountHandler.cs" t="Include" />
               <e p="EntryHandler.cs" t="Include" />
             </e>
           </e>
@@ -81,7 +93,10 @@
           <e p="NetRequest" t="Include">
             <e p="Config" t="Include">
               <e p="NetAPICommand.cs" t="Include" />
+              <e p="NetAPIErrorCode.cs" t="Include" />
             </e>
+            <e p="CreateMasterAccountRequest.cs" t="Include" />
+            <e p="CreateNodeAccountRequest.cs" t="Include" />
             <e p="Login.cs" t="Include" />
             <e p="Test.cs" t="Include" />
           </e>
@@ -120,7 +135,10 @@
               <e p="Timer.cs" t="Include" />
             </e>
           </e>
-          <e p="TransportData" t="Include" />
+          <e p="PlayFabCustom" t="Include">
+            <e p="PFPlayerDataFlag.cs" t="Include" />
+            <e p="PFPlayerDataKey.cs" t="Include" />
+          </e>
         </e>
         <e p="SourceShare.csproj" t="IncludeRecursive" />
       </e>
