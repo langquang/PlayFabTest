@@ -1,12 +1,14 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using IAHNetCoreServer.Logic.Server.SGPlayFab;
 using LiteNetLib;
 using MessagePack;
 using NetworkV2.Server;
 using PlayFab;
 using PlayFab.ServerModels;
 using PlayFabCustom;
+using PlayFabCustom.Models;
 using SourceShare.Share.NetRequest;
 using SourceShare.Share.NetRequest.Config;
 using SourceShare.Share.NetworkV2;
@@ -19,7 +21,7 @@ using SourceShare.Share.NetworkV2.Utils;
 
 namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
-    public class EntryHandler : ServerReceiveNetDataHandler<NetPlayer>
+    public class EntryHandler : ServerReceiveNetDataHandler<DataPlayer>
     {
         private readonly NetRouter _router;
 
@@ -43,7 +45,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             return Path.GetRandomFileName();
         }
 
-        public override (NetPlayer, INetData) BeginLogin(NetPeer peer, NetPacketReader reader)
+        public override (DataPlayer, INetData) BeginLogin(NetPeer peer, NetPacketReader reader)
         {
             var header = _router.ReadHeader(reader);
             if (header.NetType != ENetType.REQUEST || header.NetCommand != NetAPICommand.LOGIN)
@@ -55,7 +57,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
             var loginRequest = MessagePackSerializer.Deserialize<LoginRequest>(reader.GetBytesWithLength());
             loginRequest.Header = header;
-            var player = new NetPlayer(loginRequest.playerId, peer, _router, false, GenToken());
+            var player = new DataPlayer(loginRequest.playerId, peer, _router, false, GenToken());
             if (!loginRequest.IsValid())
             {
                 Debugger.Write("invalid login request");
@@ -75,13 +77,13 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             return (player, loginRequest);
         }
 
-        public override async Task<NetPlayer> VerifyLogin(NetPlayer player, INetData request)
+        public override async Task<DataPlayer> VerifyLogin(DataPlayer player, INetData request)
         {
             PlayFabSettings.staticSettings.TitleId = "20443";
             PlayFabSettings.staticSettings.DeveloperSecretKey = "U7XWD3YGJFIOD3HX7F74J75RYOOGE4UHO75KGMK7APBBQUPBUJ";
 
             var loginRequest = (LoginRequest) request;
-            var result = await PlayFabService.AuthenticateSessionTicketAsync(loginRequest.sessionTicket); // asynchronous here, make a sub task, calling thread is free and comeback to next line of code when sub task is done
+            var result = await PFDriver.AuthenticateSessionTicketAsync(loginRequest.sessionTicket); // asynchronous here, make a sub task, calling thread is free and comeback to next line of code when sub task is done
             if (result.Error == null)
             {
                 Debugger.Write($"UserName: {result.Result.UserInfo.Username}");
@@ -91,9 +93,20 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
                 Debugger.Write("Invalid Session Ticket");
             }
 
+            // set state of current player to online
             player.IsLogined = true;
             OnlinePlayers.Instance.Players.AddPlayer(loginRequest.playerId, player);
-            // response to client
+            // load data of player from PlayFab
+             var dataPlayer = await PFDriver.GetUserData(player);
+             if (dataPlayer == null)
+             {
+                 ResponseError(player, loginRequest, NetAPIErrorCode.FATAL_ERROR);
+                 return null;
+             }
+
+             dataPlayer.IsLoadedPlayFabData = true; // set data has been load
+
+             // response to client
             var response = new LoginResponse(new ResponseHeader(loginRequest.Header)) {token = player.Token};
             player.Send(response);
             return player;
@@ -112,7 +125,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             }
         }
 
-        public override void OnDisconnect(NetPlayer player)
+        public override void OnDisconnect(DataPlayer player)
         {
             OnlinePlayers.Instance.Players.RemovePlayer(player.PlayerId);
         }

@@ -1,12 +1,14 @@
 ﻿using System;
 using IAHNetCoreServer.Logic.Server.RequestHandlers;
+using IAHNetCoreServer.Logic.Server.SGPlayFab;
 using MessagePack;
 using MessagePack.Resolvers;
 using MessagePack.Unity;
 using MessagePack.Unity.Extension;
 using NetworkV2.Base;
 using NetworkV2.Server;
-using PlayFabCustom;
+using PlayFabCustom.Models;
+using SourceShare.Share.NetworkV2;
 
 namespace IAHNetCoreServer
 {
@@ -22,7 +24,7 @@ namespace IAHNetCoreServer
 
             Console.WriteLine($"Start Server with Thread: {ThreadHelper.GetCurrentThreadName("Main")}");
             Console.WriteLine($"Creating a server with port:{port}");
-            NetServer netServer = new NetServer("Server", new EntryHandler());
+            NetServer<DataPlayer> netServer = new NetServer<DataPlayer>("Server", new EntryHandler());
             netServer.Start(port, key);
 
             bool _quitFlag = false;
@@ -52,7 +54,7 @@ namespace IAHNetCoreServer
 
         static void SetupPlayFab()
         {
-            PlayFabService.Setup();
+            PFDriver.Setup();
         }
     }
 }

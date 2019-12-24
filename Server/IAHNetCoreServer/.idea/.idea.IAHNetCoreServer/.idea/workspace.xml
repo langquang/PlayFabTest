@@ -2,34 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba6c7bc-5434-46d7-b785-75c4638eaff9" name="Default Changelist" comment="bo generic">
-      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/CreateMasterAccountRequest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/TransportData.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/DataPlayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/NodeAccount.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/PlayerProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/PlayerStatistic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/PFHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/PlayFabService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateNodeAccountHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPIErrorCode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/CreateMasterAccountRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/CreateNodeAccountRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/PFPlayerDataFlag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/PFPlayerDataKey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/.idea/.idea.ChatClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/.idea/.idea.ChatClient/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/Config/NetAPICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/Config/NetAPICommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/Login.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CloudScript/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CloudScript/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CloudScript/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CloudScript/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CloudScript/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CloudScript/CloudScript.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CloudScript/CloudScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CloudScript/CloudScript.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/Define/PFCloudScripFuncName.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFDriver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFUpdatePlayerReceipt.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/SGPlayFabCustomModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/Setting/GameSetting.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/Newtonsoft.Json.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/DataPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/NodeAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/NodeAccount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/PlayerProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/PFProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/PlayerStatistic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/PFStatistic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/PFHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/PlayFabService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateNodeAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateNodeAccountHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPICommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/INetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/PFPlayerDataFlag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFPlayerDataFlag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/PFPlayerDataKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFPlayerDataKey.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/SourceShare.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/SourceShare.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +47,13 @@
   <component name="FavoritesManager">
     <favorites_list name="IAHNetCoreServer" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -47,8 +62,8 @@
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPICommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPIErrorCode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/e2/51b46686/GetUserDataRequest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/PFPlayerDataKey.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/PFPlayerDataFlag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFPlayerDataKey.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFPlayerDataFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateNodeAccountHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetRequest/CreateNodeAccountRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/UnityClientLib/NetworkV2/Unity/TimeOutChecker.cs" root0="FORCE_HIGHLIGHTING" />
@@ -76,6 +91,8 @@
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/Client/ClientReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/Base/IReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/LiteNetLib/BaseChannel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/0a/d1a6390e/GetPlayerCombinedInfoResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/5f/6fe085b0/GetPlayerCombinedInfoResultPayload.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../PlayFabTest/Assets/Scripts/Gen/MessagePack_Formatters_IAHNetCoreServer_Share_TransportData_CommonErrorResponseFormatter.cs" root0="SKIP_HIGHLIGHTING" />
@@ -84,76 +101,88 @@
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/fe/352c5c89/PlayFabServerAPI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/Setting/GameSetting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/Define/PFCloudScripFuncName.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ThreadHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFDriver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/SGPlayFabCustomModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/56/e3f318f3/ItemGrant.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFUpdatePlayerReceipt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/72E891DF-2FF8-473B-AA79-8C8A5CEBFB3A/7/MessagePackSerializer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/DataPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/NodeAccount.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/PlayerProfile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/PlayerStatistic.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/PFHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/PlayFabService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/NodeAccount.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/PFProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/PFStatistic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/0d/1ee570f3/PlayerStatistic.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/UnityClientLib/NetworkV2/TimeOutChecker.cs" />
-        <option value="$PROJECT_DIR$/UnityClientLib/Logic/Client/ResponseHandler/APINetworkHandler.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/Utils/Log.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Login.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.AssemblyInfo.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.AssemblyInfo.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/Utils/Debuger.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Header/RequestHeader.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/Router/NetRouter.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/TransportData/Define/NetHeader.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/define/ComandId.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/define/CommandId.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/Test.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/NetRouter.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/HashName.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/ITimeOutChecker.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Define/NetHeader.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/INetDataHeader.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/RequestHeader.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/ResponseHeader.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Misc/RequestTimeOut.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Utils/Debuger.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Utils/Timer.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ThreadHelper.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/Tét.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPICommand.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/Login.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Base/INetData.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/Models/Player.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/Player.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/PFPlayerDataKey.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/PlayerStatistic.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/NodeAccount.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/PFPlayerDataFlag.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/DataPlayer.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/PlayFabService.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/CreateMasterAccountRequest.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/Config/NetAPIErrorCode.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateNodeAccountHandler.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/CreateNodeAccountRequest.cs" />
+        <option value="$PROJECT_DIR$/CloudScript/CloudScript.js" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/CloudScript.js" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/CustomModels/SGPlayFabCustomModel.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/UpdatePlayerReceipt.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/SGPlayFabCustomModel.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFUpdatePlayerReceipt.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/Define/CloudScripFuncName.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/Setting/GameSetting.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFCoreGameAPI.cs" />
+        <option value="$PROJECT_DIR$/UnityClientLib/PlayFabCustom/PFHelper.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/Models/NodeAccount.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/Models/PlayerStatistic.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/PFHelper.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/Models/Statistic.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/PlayFabCustom/Models/NodeAccount.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/NodeAccount.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/PlayerProfile.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/Statistic.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFHelper.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFPlayerDataFlag.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFPlayerDataKey.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PlayFabService.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/PFStatistic.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/PFProfile.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFDriver.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateNodeAccountHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" />
       </list>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -180,7 +209,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RunManager" selected=".NET Project.Server">
     <configuration name="Server" type="DotNetProject" factoryName=".NET Project">
@@ -247,7 +276,9 @@
       <workItem from="1576813606767" duration="26837000" />
       <workItem from="1576856838151" duration="6547000" />
       <workItem from="1577016928924" duration="14784000" />
-      <workItem from="1577068640633" duration="20275000" />
+      <workItem from="1577068640633" duration="20881000" />
+      <workItem from="1577155493566" duration="809000" />
+      <workItem from="1577156639255" duration="12593000" />
     </task>
     <task id="LOCAL-00001" summary="Request - response">
       <created>1576752828936</created>
@@ -272,6 +303,9 @@
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -317,119 +351,120 @@
     </state>
     <state width="483" height="466" key="DebuggerActiveHint/62.0.1858.1080@62.0.1858.1080" timestamp="1577033119772" />
     <state width="532" height="466" key="DebuggerActiveHint/62.0.2498.1080@62.0.2498.1080" timestamp="1577083426629" />
-    <state width="2455" height="342" key="GridCell.Tab.0.bottom" timestamp="1577086850209">
+    <state width="2455" height="342" key="GridCell.Tab.0.bottom" timestamp="1577101091301">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850209" />
-    <state width="2455" height="342" key="GridCell.Tab.0.center" timestamp="1577086850209">
+    <state width="2455" height="342" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
+    <state width="2455" height="342" key="GridCell.Tab.0.center" timestamp="1577101091300">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850209" />
-    <state width="2455" height="342" key="GridCell.Tab.0.left" timestamp="1577086850209">
+    <state width="2455" height="342" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091300" />
+    <state width="2455" height="342" key="GridCell.Tab.0.left" timestamp="1577101091300">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850209" />
-    <state width="2455" height="342" key="GridCell.Tab.0.right" timestamp="1577086850209">
+    <state width="2455" height="342" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091300" />
+    <state width="2455" height="342" key="GridCell.Tab.0.right" timestamp="1577101091301">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850209" />
-    <state width="2455" height="342" key="GridCell.Tab.1.bottom" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
+    <state width="2455" height="342" key="GridCell.Tab.1.bottom" timestamp="1577101091301">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.1.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.1.center" timestamp="1577086850209">
+    <state width="2455" height="342" key="GridCell.Tab.1.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
+    <state width="2455" height="342" key="GridCell.Tab.1.center" timestamp="1577101091301">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166686" />
-    <state width="2455" height="342" key="GridCell.Tab.1.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850209" />
-    <state width="2455" height="342" key="GridCell.Tab.1.left" timestamp="1577086850209">
+    <state width="2455" height="342" key="GridCell.Tab.1.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
+    <state width="2455" height="342" key="GridCell.Tab.1.left" timestamp="1577101091301">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166686" />
-    <state width="2455" height="342" key="GridCell.Tab.1.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850209" />
-    <state width="2455" height="342" key="GridCell.Tab.1.right" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.1.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
+    <state width="2455" height="342" key="GridCell.Tab.1.right" timestamp="1577101091301">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166686" />
-    <state width="2455" height="342" key="GridCell.Tab.1.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.2.bottom" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.1.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
+    <state width="2455" height="342" key="GridCell.Tab.2.bottom" timestamp="1577101091301">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.2.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.2.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.2.center" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.2.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
+    <state width="2455" height="342" key="GridCell.Tab.2.center" timestamp="1577101091301">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.2.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.2.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.2.left" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.2.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
+    <state width="2455" height="342" key="GridCell.Tab.2.left" timestamp="1577101091301">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.2.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.2.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.2.right" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.2.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
+    <state width="2455" height="342" key="GridCell.Tab.2.right" timestamp="1577101091301">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.2.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.2.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.3.bottom" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.2.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
+    <state width="2455" height="342" key="GridCell.Tab.3.bottom" timestamp="1577101091302">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.3.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.3.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.3.center" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.3.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091302" />
+    <state width="2455" height="342" key="GridCell.Tab.3.center" timestamp="1577101091302">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.3.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.3.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.3.left" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.3.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091302" />
+    <state width="2455" height="342" key="GridCell.Tab.3.left" timestamp="1577101091302">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.3.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.3.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.3.right" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.3.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091302" />
+    <state width="2455" height="342" key="GridCell.Tab.3.right" timestamp="1577101091302">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.3.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.3.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.4.bottom" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.3.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091302" />
+    <state width="2455" height="342" key="GridCell.Tab.4.bottom" timestamp="1577101091302">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.4.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.4.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.4.center" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.4.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091302" />
+    <state width="2455" height="342" key="GridCell.Tab.4.center" timestamp="1577101091302">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.4.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.4.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.4.left" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.4.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091302" />
+    <state width="2455" height="342" key="GridCell.Tab.4.left" timestamp="1577101091302">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.4.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.4.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state width="2455" height="342" key="GridCell.Tab.4.right" timestamp="1577086850210">
+    <state width="2455" height="342" key="GridCell.Tab.4.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091302" />
+    <state width="2455" height="342" key="GridCell.Tab.4.right" timestamp="1577101091302">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="338" key="GridCell.Tab.4.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033166687" />
-    <state width="2455" height="342" key="GridCell.Tab.4.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577086850210" />
-    <state x="583" y="271" key="Rider.ProjectTemplateDialog.Size" timestamp="1576860288409">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state width="2455" height="342" key="GridCell.Tab.4.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091302" />
+    <state x="762" y="271" key="Rider.ProjectTemplateDialog.Size" timestamp="1577158071477">
+      <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="583" y="271" key="Rider.ProjectTemplateDialog.Size/62.0.1858.1080@62.0.1858.1080" timestamp="1576860288409" />
-    <state x="1021" y="219" key="RiderGenerateDialog" timestamp="1577088082349">
+    <state x="762" y="271" key="Rider.ProjectTemplateDialog.Size/62.0.2498.1080@62.0.2498.1080" timestamp="1577158071477" />
+    <state x="1021" y="219" key="RiderGenerateDialog" timestamp="1577170208713">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="775" y="219" key="RiderGenerateDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1577028825938" />
-    <state x="1021" y="219" key="RiderGenerateDialog/62.0.2498.1080@62.0.2498.1080" timestamp="1577088082349" />
-    <state x="812" y="181" key="SettingsEditor" timestamp="1577086808309">
+    <state x="1021" y="219" key="RiderGenerateDialog/62.0.2498.1080@62.0.2498.1080" timestamp="1577170208713" />
+    <state x="812" y="181" key="SettingsEditor" timestamp="1577157964155">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
-    <state x="812" y="181" key="SettingsEditor/62.0.2498.1080@62.0.2498.1080" timestamp="1577086808309" />
+    <state x="812" y="181" key="SettingsEditor/62.0.2498.1080@62.0.2498.1080" timestamp="1577157964155" />
     <state x="903" y="272" key="Vcs.Push.Dialog.v2" timestamp="1576752832186">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>

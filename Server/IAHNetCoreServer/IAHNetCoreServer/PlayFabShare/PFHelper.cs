@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using PlayFab.ClientModels;
-using PlayFabCustom.Models;
+using PlayFabShare.Models;
 
-namespace PlayFabCustom
+namespace PlayFabShare
 {
     public class PFHelper
     {
@@ -26,7 +26,7 @@ namespace PlayFabCustom
 
         public static string FindServerFromStatistic(List<StatisticValue> payload)
         {
-            var statistic = payload.Find(s => s.StatisticName.Equals(PlayerStatistic.SERVER));
+            var statistic = payload.Find(s => s.StatisticName.Equals(PFStatistic.SERVER));
             return statistic == null ? string.Empty : $"{statistic.Value}";
         }
     }

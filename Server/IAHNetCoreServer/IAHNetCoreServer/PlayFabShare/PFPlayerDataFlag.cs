@@ -1,4 +1,4 @@
-namespace SourceShare.Share.PlayFabCustom
+namespace PlayFabShare
 {
     public class PFPlayerDataFlag
     {

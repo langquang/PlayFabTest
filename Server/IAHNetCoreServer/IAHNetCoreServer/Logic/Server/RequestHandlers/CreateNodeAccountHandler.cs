@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using IAHNetCoreServer.Logic.Server.SGPlayFab;
 using PlayFabCustom;
 using PlayFabCustom.Models;
+using PlayFabShare;
+using PlayFabShare.Models;
 using SourceShare.Share.NetRequest;
 using SourceShare.Share.NetRequest.Config;
 using SourceShare.Share.NetworkV2.TransportData.Base;
-using SourceShare.Share.PlayFabCustom;
 
 namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
@@ -25,7 +27,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             }
 
             // ================= Try to check with newest data from PlayFab ============================================
-            var result = await PlayFabService.LoadInternalData(player, new List<string> {PFPlayerDataKey.ACCOUNT});
+            var result = await PFDriver.GetInternalData(player, new List<string> {PFPlayerDataKey.ACCOUNT});
             if (result.Error != null)
             {
                 return EntryHandler.ResponseError(player, request, NetAPIErrorCode.INTERNAL_NETWORK_ERROR);
@@ -54,19 +56,20 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             {
                 return EntryHandler.ResponseError(player, request, NetAPIErrorCode.ALREADY_CREATED_ACCOUNT_IN_THIS_SERVER);
             }
+
             // ======================== EVERY THING IS OK ==============================================================
             var account = new NodeAccount()
             {
                 serverID = player.Statistic.Server,
                 playFabId = player.PlayerId,
-                customId = player.CustomId,
+                customId = player.PFCustomId,
                 level = player.Statistic.Level
             };
             player.ClusterAccount.isMaster = false;
             player.ClusterAccount.accounts.Add(account);
 
             // save to PlayFab
-            var success = await PlayFabService.SaveInternalData(player, PFPlayerDataFlag.ACCOUNT);
+            var success = await PFDriver.SaveInternalData(player, PFPlayerDataFlag.ACCOUNT);
             if (!success)
             {
                 return EntryHandler.ResponseError(player, request, NetAPIErrorCode.FATAL_ERROR);

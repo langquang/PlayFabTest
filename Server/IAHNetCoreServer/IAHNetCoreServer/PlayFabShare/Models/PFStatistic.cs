@@ -1,9 +1,13 @@
 using System.Collections.Generic;
+#if SERVER_SIDE
+using PlayFab.ServerModels;
+#else
 using PlayFab.ClientModels;
+#endif
 
-namespace PlayFabCustom.Models
+namespace PlayFabShare.Models
 {
-    public class PlayerStatistic
+    public class PFStatistic
     {
         public const string SERVER = "server";
         public const string LEVEL  = "level";
@@ -11,7 +15,11 @@ namespace PlayFabCustom.Models
         public int Server { get; set; }
         public int Level { get; set; }
 
-        public PlayerStatistic(List<StatisticValue> payload)
+        public PFStatistic()
+        {
+        }
+
+        public void Import(List<StatisticValue> payload)
         {
             foreach (var element in payload)
             {

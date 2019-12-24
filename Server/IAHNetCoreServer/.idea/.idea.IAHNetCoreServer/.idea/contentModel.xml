@@ -9,20 +9,24 @@
         <e p="IAHNetCoreServer.csproj" t="IncludeRecursive" />
         <e p="Logic" t="Include">
           <e p="Server" t="Include">
-            <e p="PlayFabCustom" t="Include">
-              <e p="Models" t="Include">
-                <e p="DataPlayer.cs" t="Include" />
-                <e p="NodeAccount.cs" t="Include" />
-                <e p="PlayerProfile.cs" t="Include" />
-                <e p="PlayerStatistic.cs" t="Include" />
-              </e>
-              <e p="PFHelper.cs" t="Include" />
-              <e p="PlayFabService.cs" t="Include" />
-            </e>
             <e p="RequestHandlers" t="Include">
               <e p="CreateMasterAccountHandler.cs" t="Include" />
               <e p="CreateNodeAccountHandler.cs" t="Include" />
               <e p="EntryHandler.cs" t="Include" />
+            </e>
+            <e p="Setting" t="Include">
+              <e p="GameSetting.cs" t="Include" />
+            </e>
+            <e p="SGPlayFab" t="Include">
+              <e p="Define" t="Include">
+                <e p="PFCloudScripFuncName.cs" t="Include" />
+              </e>
+              <e p="PFDriver.cs" t="Include" />
+              <e p="PFUpdatePlayerReceipt.cs" t="Include" />
+              <e p="ServerModels" t="Include">
+                <e p="DataPlayer.cs" t="Include" />
+                <e p="SGPlayFabCustomModel.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>
@@ -46,6 +50,16 @@
               <e p="IAHNetCoreServer.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="PlayFabShare" t="Include">
+          <e p="Models" t="Include">
+            <e p="NodeAccount.cs" t="Include" />
+            <e p="PFProfile.cs" t="Include" />
+            <e p="PFStatistic.cs" t="Include" />
+          </e>
+          <e p="PFHelper.cs" t="Include" />
+          <e p="PFPlayerDataFlag.cs" t="Include" />
+          <e p="PFPlayerDataKey.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
       </e>
@@ -134,10 +148,6 @@
               <e p="Debuger.cs" t="Include" />
               <e p="Timer.cs" t="Include" />
             </e>
-          </e>
-          <e p="PlayFabCustom" t="Include">
-            <e p="PFPlayerDataFlag.cs" t="Include" />
-            <e p="PFPlayerDataKey.cs" t="Include" />
           </e>
         </e>
         <e p="SourceShare.csproj" t="IncludeRecursive" />

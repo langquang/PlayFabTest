@@ -6,6 +6,14 @@
         <LangVersion>7</LangVersion>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DefineConstants>TRACE;SERVER_SIDE</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DefineConstants>TRACE;SERVER_SIDE</DefineConstants>
+    </PropertyGroup>
+
     <ItemGroup>
       <PackageReference Include="MessagePack" Version="2.0.323" />
       <PackageReference Include="MessagePack.UnityShims" Version="2.0.323" />

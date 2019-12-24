@@ -9,11 +9,11 @@ using SourceShare.Share.NetworkV2.Utils;
 
 namespace NetworkV2.Base
 {
-    public class NetServer
+    public class NetServer<T> where T : NetPlayer
     {
         // Read only props
         private readonly string                                 _name;
-        private readonly ServerReceiveNetDataHandler<NetPlayer> _handler;
+        private readonly ServerReceiveNetDataHandler<T> _handler;
 
         private EventBasedNetListener _listener;
         private NetManager            _server;
@@ -23,9 +23,9 @@ namespace NetworkV2.Base
         private string           _acceptKey;
 
         // Events
-        public Action<NetServer, NetManager> CustomParamsEvent;
+        public Action<NetServer<T>, NetManager> CustomParamsEvent;
 
-        public NetServer(string name, ServerReceiveNetDataHandler<NetPlayer> handler)
+        public NetServer(string name, ServerReceiveNetDataHandler<T> handler)
         {
             _name = name;
             _handler = handler;
@@ -113,7 +113,7 @@ namespace NetworkV2.Base
         private void OnPeerDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
         {
             Debugger.Write("[Server] Peer disconnected: " + peer.EndPoint + ", reason: " + disconnectInfo.Reason);
-            var player = (NetPlayer) peer.Tag;
+            var player = (T) peer.Tag;
             if (player != null && player.IsLogined)
                 _handler.OnDisconnect(player);
         }
