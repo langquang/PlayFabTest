@@ -1,6 +1,9 @@
 using LiteNetLib.Utils;
 using MessagePack;
+using SourceShare.Share.NetRequest.Config;
 using SourceShare.Share.NetworkV2.TransportData.Base;
+using SourceShare.Share.NetworkV2.TransportData.Define;
+using SourceShare.Share.NetworkV2.TransportData.Header;
 
 namespace SourceShare.Share.NetRequest
 {
@@ -8,7 +11,13 @@ namespace SourceShare.Share.NetRequest
     public class CreateNodeAccountRequest : INetData
     {
         [Key(0)] public int serverId;
-        [Key(1)] public int masterId;
+        [Key(1)] public string masterId;
+
+        public CreateNodeAccountRequest(int serverId, string masterId) : base(new RequestHeader(ENetType.REQUEST, NetAPICommand.CREATE_NODE_ACCOUNT))
+        {
+            this.serverId = serverId;
+            this.masterId = masterId;
+        }
 
         public override void Serialize(NetDataWriter writer)
         {
@@ -17,7 +26,7 @@ namespace SourceShare.Share.NetRequest
         }
     }
 
-    [MessagePackObject()]
+    [MessagePackObject]
     public class CreateNodeAccountResponse : INetData
     {
         public override void Serialize(NetDataWriter writer)

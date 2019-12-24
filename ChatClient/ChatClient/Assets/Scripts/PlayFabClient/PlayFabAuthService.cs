@@ -4,6 +4,9 @@ using PlayFab;
 using PlayFab.ClientModels;
 using PlayFab.SharedModels;
 using PlayFabShare.Models;
+using SourceShare.Share.NetRequest;
+using SourceShare.Share.NetworkV2.Utils;
+using UnityClientLib.Logic.Client.ResponseHandler;
 using UnityEngine;
 
 namespace PlayFabCustom
@@ -12,12 +15,11 @@ namespace PlayFabCustom
     {
         private const string PREFS_TOKEN_KEY = "tokens"; // key in PlayerPrefs
 
-        public Action<PlayFabResultCommon>       OnRequestSuccess;
-        public Action<PlayFabError>              OnRequestFailure;
         public Action<LoginResult, CreateParams> OnLoginSuccess;
-        public Action<LoginResult, CreateParams> OnCreateNodeAccount;
-        public Action<LoginResult, CreateParams> OnCreateMasterAccount;
-        public Action<LoginResult>               OnFatalError;
+
+        // public Action<LoginResult, CreateParams> OnCreateNodeAccount;
+        // public Action<LoginResult, CreateParams> OnCreateMasterAccount;
+        public Action<LoginResult> OnFatalError;
 
         private ClusterAccount _clusterAccount;
 
@@ -50,16 +52,17 @@ namespace PlayFabCustom
 
         public void Start()
         {
-            OnRequestSuccess += OnRequestSuccessHandler;
-            OnRequestFailure += OnRequestFailureHandler;
+            // OnCreateMasterAccount += CreateMasterAccountHandler;
+            // OnCreateNodeAccount += CreateNodeAccountHandler;
             LoadFromLocal();
             LoginFromCacheOrAutoSignUp();
         }
 
         public void Stop()
         {
-            OnRequestSuccess -= OnRequestSuccessHandler;
-            OnRequestFailure -= OnRequestFailureHandler;
+            // OnCreateMasterAccount = CreateMasterAccountHandler;
+            // OnCreateNodeAccount -= CreateNodeAccountHandler;
+
             SaveToLocal();
         }
 
@@ -129,11 +132,13 @@ namespace PlayFabCustom
                         // service master account
                         _clusterAccount.MasterId = loginResult.PlayFabId;
                         _clusterAccount.isMaster = true;
-                        OnCreateMasterAccount?.Invoke(loginResult, createParams);
+                        // OnCreateMasterAccount?.Invoke(loginResult, createParams);
+                        createParams.needRegisterMasterAccount = true;
                     }
                     else
                     {
-                        OnCreateNodeAccount?.Invoke(loginResult, createParams);
+                        // OnCreateNodeAccount?.Invoke(loginResult, createParams);
+                        createParams.needRegisterNodeAccount = true;
                     }
                 }
             }
@@ -162,7 +167,7 @@ namespace PlayFabCustom
                 }
             }
 
-            // if (isSuccessful)
+            if (isSuccessful)
             {
                 _clusterAccount.startUpPlayFabId = loginResult.PlayFabId;
                 SaveToLocal();
@@ -195,7 +200,7 @@ namespace PlayFabCustom
             LoginWithCustomID(customId, new CreateParams {isCreateMaster = true, server = suggestServer});
         }
 
-        public void LoginWithCustomID(string customId, CreateParams createParams = null, Action<LoginResult> resultCallback = null, Action<PlayFabError> errorCallback = null)
+        public void LoginWithCustomID(string customId, CreateParams createParams = null, Action<LoginResult, CreateParams> OnSuccess = null, Action<PlayFabError> onError = null)
         {
             // Login with custom id on UNITY_EDITOR
             PlayFabClientAPI.LoginWithCustomID(new LoginWithCustomIDRequest
@@ -207,28 +212,24 @@ namespace PlayFabCustom
                 },
                 res =>
                 {
-                    resultCallback?.Invoke(res);
-                    OnRequestSuccess?.Invoke(res);
                     OnLoginSuccessHandler(res, customId, createParams);
+                    OnSuccess?.Invoke(res, createParams);
                 },
-                err =>
-                {
-                    errorCallback?.Invoke(err);
-                    OnRequestFailure?.Invoke(err);
-                });
+                err => { onError?.Invoke(err); });
         }
 
+       
         public void SwitchServer(int serverId)
         {
-            var acc = _clusterAccount.FindAccountByServerId(serverId);
-            if (acc != null)
-            {
-                LoginWithCustomID(acc.customId, null, result => { }, error => { });
-            }
-            else
-            {
-                LoginWithCustomID($"{serverId}-{Guid.NewGuid().ToString()}", null, result => { }, error => { });
-            }
+            // var acc = _clusterAccount.FindAccountByServerId(serverId);
+            // if (acc != null)
+            // {
+            //     LoginWithCustomID(acc.customId, null, (result, createParams, null, null) => { }, error => { });
+            // }
+            // else
+            // {
+            //     LoginWithCustomID($"{serverId}-{Guid.NewGuid().ToString()}", null, (result, createParams) => { }, error => { });
+            // }
         }
     }
 }

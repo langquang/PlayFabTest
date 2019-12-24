@@ -1,4 +1,5 @@
 using LiteNetLib;
+using PlayFabCustom;
 using SourceShare.Share.NetRequest;
 using SourceShare.Share.NetRequest.Config;
 using SourceShare.Share.NetworkV2;
@@ -40,7 +41,8 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
 
         public NetPlayer Player => _player;
 
-        private string _curPlayFabId, _sessionTicket;
+        private string       _curPlayFabId, _sessionTicket;
+        private CreateParams _createParams;
 
         public APINetworkHandler()
         {
@@ -60,22 +62,27 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
             _router.Subscribe<TestResponse>(NetAPICommand.TEST_REQUEST, OnReceiveTestResponse);
         }
 
-        public void StartConnect(string curPlayFabId, string sessionTicket)
+        public void StartConnect(string curPlayFabId, string sessionTicket, CreateParams createParams)
         {
             _curPlayFabId = curPlayFabId;
             _sessionTicket = sessionTicket;
+            _createParams = createParams;
             _netClient.Start("127.0.0.1", 8000, "ButinABC");
         }
 
         private void OnConnected(NetPeer peer)
         {
-            // Debug.Log("Try to Login to server");
+            Debugger.Write("API Server: OnConnected");
             var loginRequest = new LoginRequest(_curPlayFabId, _sessionTicket);
             _player = new NetPlayer(_curPlayFabId, peer, _router, true, null);
             _player.SendRequest<LoginResponse>(loginRequest, (response, player) =>
             {
                 Debugger.Write($"Login successful, token = {response.token}");
                 player.Token = response.token;
+                if (_createParams.needRegisterMasterAccount)
+                    CreateMasterAccountHandler(_createParams.server);
+                else if (_createParams.needRegisterNodeAccount)
+                    CreateNodeAccountHandler(_createParams.server, _createParams.masterId);
             }, i => Debugger.Write($"Login error = {i}"));
         }
 
@@ -118,6 +125,20 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
 
         public void OnSendTestFinally(TestRequest request, TestResponse response, NetPlayer player)
         {
+        }
+
+        private static void CreateMasterAccountHandler(int server)
+        {
+            Debugger.Write("Try to CreateMasterAccountRequest");
+            var request = new CreateMasterAccountRequest(server);
+            APINetworkHandler.Instance.Player.SendRequest<CreateMasterAccountResponse>(request, (response, player) => { Debugger.Write("Create node account successful"); }, i => { Debugger.Write($"Create Master Account fail, code = {i};"); });
+        }
+
+        private static void CreateNodeAccountHandler(int server, string masterId)
+        {
+            Debugger.Write("Try to CreateNodeAccountRequest");
+            var request = new CreateNodeAccountRequest(server, masterId);
+            APINetworkHandler.Instance.Player.SendRequest<CreateNodeAccountResponse>(request, (response, player) => { Debugger.Write("Create node account successful"); }, i => { Debugger.Write($"Create Master Account fail, code = {i}"); });
         }
     }
 }

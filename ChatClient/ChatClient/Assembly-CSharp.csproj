@@ -58,6 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CommonErrorResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountRequestFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CreateNodeAccountRequestFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CreateNodeAccountResponseFormatter.cs" />
     <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_LoginRequestFormatter.cs" />
     <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_LoginResponseFormatter.cs" />
     <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_TestRequestFormatter.cs" />
@@ -104,8 +108,8 @@
     <Compile Include="Assets\Scripts\PlayFabShare\PFPlayerDataKey.cs" />
     <Compile Include="Assets\Scripts\Share\NetRequest\Config\NetAPICommand.cs" />
     <Compile Include="Assets\Scripts\Share\NetRequest\Config\NetAPIErrorCode.cs" />
-    <Compile Include="Assets\Scripts\Share\NetRequest\CreateMasterAccountRequest.cs" />
-    <Compile Include="Assets\Scripts\Share\NetRequest\CreateNodeAccountRequest.cs" />
+    <Compile Include="Assets\Scripts\Share\NetRequest\CreateMasterAccount.cs" />
+    <Compile Include="Assets\Scripts\Share\NetRequest\CreateNodeAccount.cs" />
     <Compile Include="Assets\Scripts\Share\NetRequest\Login.cs" />
     <Compile Include="Assets\Scripts\Share\NetRequest\Test.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\Base\IReceiveNetDataHandler.cs" />

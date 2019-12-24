@@ -21,11 +21,11 @@ namespace Demo
             PlayFabAuthService.Instance.Start();
         }
 
-        private void OnLoginSuccess(LoginResult arg1, CreateParams arg2)
+        private void OnLoginSuccess(LoginResult loginResult, CreateParams createParams)
         {
             Debug.Log("Try to connect to Game Server...");
-            _playFabLoginResult = arg1;
-            APINetworkHandler.Instance.StartConnect(_playFabLoginResult.PlayFabId, _playFabLoginResult.SessionTicket);
+            _playFabLoginResult = loginResult;
+            APINetworkHandler.Instance.StartConnect(_playFabLoginResult.PlayFabId, _playFabLoginResult.SessionTicket, createParams);
         }
 
         // Update is called once per frame

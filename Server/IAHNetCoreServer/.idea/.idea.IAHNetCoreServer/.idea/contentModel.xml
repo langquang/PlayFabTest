@@ -109,8 +109,8 @@
               <e p="NetAPICommand.cs" t="Include" />
               <e p="NetAPIErrorCode.cs" t="Include" />
             </e>
-            <e p="CreateMasterAccountRequest.cs" t="Include" />
-            <e p="CreateNodeAccountRequest.cs" t="Include" />
+            <e p="CreateMasterAccount.cs" t="Include" />
+            <e p="CreateNodeAccount.cs" t="Include" />
             <e p="Login.cs" t="Include" />
             <e p="Test.cs" t="Include" />
           </e>
@@ -121,6 +121,7 @@
             <e p="Client" t="Include">
               <e p="ClientReceiveNetDataHandler.cs" t="Include" />
             </e>
+            <e p="INetPlayer.cs" t="Include" />
             <e p="NetClient.cs" t="Include" />
             <e p="NetPlayer.cs" t="Include" />
             <e p="Router" t="Include">

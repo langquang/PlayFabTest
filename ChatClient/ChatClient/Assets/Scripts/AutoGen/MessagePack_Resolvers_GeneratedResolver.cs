@@ -51,13 +51,17 @@ namespace MessagePack.Resolvers
 
         static GeneratedResolverGetFormatterHelper()
         {
-            lookup = new global::System.Collections.Generic.Dictionary<Type, int>(5)
+            lookup = new global::System.Collections.Generic.Dictionary<Type, int>(9)
             {
-                { typeof(global::SourceShare.Share.NetRequest.LoginRequest), 0 },
-                { typeof(global::SourceShare.Share.NetRequest.LoginResponse), 1 },
-                { typeof(global::SourceShare.Share.NetRequest.CommonErrorResponse), 2 },
-                { typeof(global::SourceShare.Share.NetRequest.TestRequest), 3 },
-                { typeof(global::SourceShare.Share.NetRequest.TestResponse), 4 },
+                { typeof(global::SourceShare.Share.NetRequest.CreateMasterAccountRequest), 0 },
+                { typeof(global::SourceShare.Share.NetRequest.CreateMasterAccountResponse), 1 },
+                { typeof(global::SourceShare.Share.NetRequest.CreateNodeAccountRequest), 2 },
+                { typeof(global::SourceShare.Share.NetRequest.CreateNodeAccountResponse), 3 },
+                { typeof(global::SourceShare.Share.NetRequest.LoginRequest), 4 },
+                { typeof(global::SourceShare.Share.NetRequest.LoginResponse), 5 },
+                { typeof(global::SourceShare.Share.NetRequest.CommonErrorResponse), 6 },
+                { typeof(global::SourceShare.Share.NetRequest.TestRequest), 7 },
+                { typeof(global::SourceShare.Share.NetRequest.TestResponse), 8 },
             };
         }
 
@@ -71,11 +75,15 @@ namespace MessagePack.Resolvers
 
             switch (key)
             {
-                case 0: return new MessagePack.Formatters.SourceShare.Share.NetRequest.LoginRequestFormatter();
-                case 1: return new MessagePack.Formatters.SourceShare.Share.NetRequest.LoginResponseFormatter();
-                case 2: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CommonErrorResponseFormatter();
-                case 3: return new MessagePack.Formatters.SourceShare.Share.NetRequest.TestRequestFormatter();
-                case 4: return new MessagePack.Formatters.SourceShare.Share.NetRequest.TestResponseFormatter();
+                case 0: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateMasterAccountRequestFormatter();
+                case 1: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateMasterAccountResponseFormatter();
+                case 2: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateNodeAccountRequestFormatter();
+                case 3: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateNodeAccountResponseFormatter();
+                case 4: return new MessagePack.Formatters.SourceShare.Share.NetRequest.LoginRequestFormatter();
+                case 5: return new MessagePack.Formatters.SourceShare.Share.NetRequest.LoginResponseFormatter();
+                case 6: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CommonErrorResponseFormatter();
+                case 7: return new MessagePack.Formatters.SourceShare.Share.NetRequest.TestRequestFormatter();
+                case 8: return new MessagePack.Formatters.SourceShare.Share.NetRequest.TestResponseFormatter();
                 default: return null;
             }
         }

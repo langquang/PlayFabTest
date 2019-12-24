@@ -6,13 +6,19 @@ using PlayFabShare;
 using PlayFabShare.Models;
 using SourceShare.Share.NetRequest;
 using SourceShare.Share.NetRequest.Config;
+using SourceShare.Share.NetworkV2;
 using SourceShare.Share.NetworkV2.TransportData.Base;
 
 namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
     public class CreateMasterAccountHandler
     {
-        public static async Task<INetData> Perform(CreateMasterAccountRequest request, DataPlayer player)
+        public static void Perform(CreateMasterAccountRequest request, DataPlayer player)
+        {
+            PerformAsync(request, player);
+        }
+        
+        private static async Task<INetData> PerformAsync(CreateMasterAccountRequest request, DataPlayer player)
         {
             // ======================== the first check ================================================================
             if (player.IsMasterAccount())

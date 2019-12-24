@@ -33,7 +33,12 @@ namespace PlayFabCustom
 
     public class CreateParams
     {
+        // create params
         public bool isCreateMaster;
         public int  server;
+        public string masterId;
+        // action params
+        public bool needRegisterMasterAccount;
+        public bool needRegisterNodeAccount;
     }
 }

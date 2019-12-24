@@ -6,12 +6,9 @@ using LiteNetLib;
 using MessagePack;
 using NetworkV2.Server;
 using PlayFab;
-using PlayFab.ServerModels;
-using PlayFabCustom;
 using PlayFabCustom.Models;
 using SourceShare.Share.NetRequest;
 using SourceShare.Share.NetRequest.Config;
-using SourceShare.Share.NetworkV2;
 using SourceShare.Share.NetworkV2.Router;
 using SourceShare.Share.NetworkV2.TransportData.Base;
 using SourceShare.Share.NetworkV2.TransportData.Define;
@@ -33,6 +30,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());
 
             _router.Subscribe<TestRequest>(NetAPICommand.TEST_REQUEST, OnTestHandler);
+            _router.Subscribe<CreateMasterAccountRequest>(NetAPICommand.CREATE_MASTER_ACCOUNT, CreateMasterAccountHandler.Perform);
         }
 
 
@@ -97,22 +95,22 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             player.IsLogined = true;
             OnlinePlayers.Instance.Players.AddPlayer(loginRequest.playerId, player);
             // load data of player from PlayFab
-             var dataPlayer = await PFDriver.GetUserData(player);
-             if (dataPlayer == null)
-             {
-                 ResponseError(player, loginRequest, NetAPIErrorCode.FATAL_ERROR);
-                 return null;
-             }
+            var dataPlayer = await PFDriver.GetUserData(player);
+            if (dataPlayer == null)
+            {
+                ResponseError(player, loginRequest, NetAPIErrorCode.FATAL_ERROR);
+                return null;
+            }
 
-             dataPlayer.IsLoadedPlayFabData = true; // set data has been load
+            dataPlayer.IsLoadedPlayFabData = true; // set data has been load
 
-             // response to client
+            // response to client
             var response = new LoginResponse(new ResponseHeader(loginRequest.Header)) {token = player.Token};
             player.Send(response);
             return player;
         }
 
-        public override void Perform(NetPlayer player, NetPacketReader reader)
+        public override void Perform(DataPlayer player, NetPacketReader reader)
         {
             try
             {
@@ -135,21 +133,21 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             Debugger.Write($"RequestTimeOut {requestTimeOut.command}");
         }
 
-        public static INetData ResponseError(NetPlayer player, INetData request, int errorCode)
+        public static INetData ResponseError(DataPlayer player, INetData request, int errorCode)
         {
             var response = new CommonErrorResponse(request, errorCode);
             player.Send(response);
             return response;
         }
-        
-        public static INetData ResponseSuccess<T>(NetPlayer player, INetData request, T response) where T : INetData
+
+        public static INetData ResponseSuccess<T>(DataPlayer player, INetData request, T response) where T : INetData
         {
             response.Header = new ResponseHeader(request.Header);
             player.Send(response);
             return response;
         }
 
-        private static void OnTestHandler(TestRequest request, NetPlayer player)
+        private static void OnTestHandler(TestRequest request, DataPlayer player)
         {
             Debugger.Write($"Server receive a Test Command with content={request.msg}");
             var response = new TestResponse(request) {msg = "A response of test command from server"};
