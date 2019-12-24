@@ -114,6 +114,7 @@
     <Compile Include="Assets\Scripts\Share\NetRequest\Test.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\Base\IReceiveNetDataHandler.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\Client\ClientReceiveNetDataHandler.cs" />
+    <Compile Include="Assets\Scripts\Share\NetworkV2\INetPlayer.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\NetClient.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\NetPlayer.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\Router\HashName.cs" />

@@ -11,18 +11,18 @@ namespace SourceShare.Share.NetworkV2
     {
         private readonly NetPeer       _connection;
         private readonly bool          _isClient;
-        private readonly NetRouter     _router;
+        // private readonly NetRouter     _router;
         private          NetDataWriter _writer;
         private          string        _token;
 
         public bool IsLogined { get; set; }
         public string PlayerId { get; private set; }
 
-        public NetPlayer(string playerId, NetPeer peer, NetRouter router, bool isClient, string token)
+        public NetPlayer(string playerId, NetPeer peer, bool isClient, string token)
         {
             PlayerId = playerId;
             _connection = peer;
-            _router = router;
+            // _router = router;
             _isClient = isClient;
             Token = token;
         }
@@ -55,23 +55,6 @@ namespace SourceShare.Share.NetworkV2
             // send
             _connection.Send(_writer, DeliveryMethod.ReliableOrdered);
             _connection.Flush(); // mask immediate send
-        }
-
-        public void SendRequest<TNetResponse>(INetData request, Action<TNetResponse, NetPlayer> onSuccess, Action<int> onError) where TNetResponse : INetData
-        {
-            SendRequest<TNetResponse>(request, onSuccess, onError, null, 0);
-        }
-
-        public void SendRequest<TNetResponse>(INetData request, Action<TNetResponse, NetPlayer> onSuccess, Action<int> onError, Action<TNetResponse, NetPlayer> onFinally) where TNetResponse : INetData
-        {
-            SendRequest<TNetResponse>(request, onSuccess, onError, onFinally, 0);
-        }
-
-        public void SendRequest<TNetResponse>(INetData request, Action<TNetResponse, NetPlayer> onSuccess, Action<int> onError, Action<TNetResponse, NetPlayer> onFinally, int timeOut) where TNetResponse : INetData
-        {
-            if (onSuccess != null || onError != null || onFinally != null)
-                _router.SubscribeWaitingRequest(request, onSuccess, onError, onFinally, timeOut);
-            Send(request);
         }
     }
 }

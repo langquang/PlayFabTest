@@ -20,11 +20,11 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
     public class EntryHandler : ServerReceiveNetDataHandler<DataPlayer>
     {
-        private readonly NetRouter _router;
+        private readonly NetRouter<DataPlayer> _router;
 
         public EntryHandler()
         {
-            _router = new NetRouter(new TimeOutChecker(this));
+            _router = new NetRouter<DataPlayer>(new TimeOutChecker(this));
             // Register headers
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());
@@ -55,7 +55,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
             var loginRequest = MessagePackSerializer.Deserialize<LoginRequest>(reader.GetBytesWithLength());
             loginRequest.Header = header;
-            var player = new DataPlayer(loginRequest.playerId, peer, _router, false, GenToken());
+            var player = new DataPlayer(loginRequest.playerId, peer, false, GenToken());
             if (!loginRequest.IsValid())
             {
                 Debugger.Write("invalid login request");
@@ -70,7 +70,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
                 ResponseError(player, loginRequest, 2);
                 return (null, null);
             }
-
+            
             // todo: check parallel login
             return (player, loginRequest);
         }

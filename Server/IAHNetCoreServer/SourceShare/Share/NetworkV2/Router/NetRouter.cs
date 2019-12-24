@@ -9,7 +9,7 @@ using SourceShare.Share.NetworkV2.TransportData.Header;
 
 namespace SourceShare.Share.NetworkV2.Router
 {
-    public class NetRouter
+    public class NetRouter<T> where T : NetPlayer
     {
         private readonly Dictionary<ulong, Func<INetDataHeader>> _headerConstructors = new Dictionary<ulong, Func<INetDataHeader>>();
 
@@ -20,7 +20,7 @@ namespace SourceShare.Share.NetworkV2.Router
         private readonly Dictionary<int, SubscribeWaitingResponseDelegate> _waitingForResponseCallbacks = new Dictionary<int, SubscribeWaitingResponseDelegate>();
 
 
-        public ITimeOutChecker _timeOutChecker;
+        private readonly ITimeOutChecker _timeOutChecker;
 
         public NetRouter(ITimeOutChecker timeOutChecker)
         {
@@ -52,12 +52,6 @@ namespace SourceShare.Share.NetworkV2.Router
         public INetDataHeader ReadHeader(NetDataReader reader)
         {
             var hashOfHeaderName = reader.GetULong();
-            if (hashOfHeaderName.Equals("4698292977389273193"))
-            {
-                var a = 0;
-                a++;
-            }
-
             if (_headerConstructors.ContainsKey(hashOfHeaderName))
             {
                 var header = _headerConstructors[hashOfHeaderName].Invoke();
@@ -68,7 +62,7 @@ namespace SourceShare.Share.NetworkV2.Router
             return new RequestHeader();
         }
 
-        public void ReadPacket(NetDataReader reader, NetPlayer player)
+        public void ReadPacket(NetDataReader reader, T player)
         {
             var header = ReadHeader(reader);
             if (header.NetType == ENetType.REQUEST || header.NetType == ENetType.MESSAGE)
@@ -98,7 +92,7 @@ namespace SourceShare.Share.NetworkV2.Router
         /// <param name="reader">NetDataReader with packets data</param>
         /// <param name="player">Argument that passed to OnReceivedEvent</param>
         /// <exception cref="ParseException">Malformed packet</exception>
-        public void ReadAllPackets(NetDataReader reader, NetPlayer player)
+        public void ReadAllPackets(NetDataReader reader, T player)
         {
             while (reader.AvailableBytes > 0) ReadPacket(reader, player);
         }
@@ -108,7 +102,7 @@ namespace SourceShare.Share.NetworkV2.Router
         /// </summary>
         /// <param name="command">command id</param>
         /// <param name="onReceive">event that will be called when packet deserialized with ReadPacket method</param>
-        public void Subscribe<TNetRequest>(int command, Action<TNetRequest, NetPlayer> onReceive) where TNetRequest : INetData
+        public void Subscribe<TNetRequest>(int command, Action<TNetRequest, T> onReceive) where TNetRequest : INetData
         {
             _incomeRequestCallbacks[command] = (header, reader, player) =>
             {
@@ -118,7 +112,7 @@ namespace SourceShare.Share.NetworkV2.Router
             };
         }
 
-        public void SubscribeWaitingRequest<TNetResponse>(INetData request, Action<TNetResponse, NetPlayer> onSuccess, Action<int> onError, Action<TNetResponse, NetPlayer> onFinally, float timeOut = 0) where TNetResponse : INetData
+        private void SubscribeWaitingRequest<TNetResponse>(INetData request, Action<TNetResponse, T> onSuccess, Action<int> onError, Action<TNetResponse, NetPlayer> onFinally, float timeOut = 0) where TNetResponse : INetData
         {
             var requestId = GenID();
             request.Header.RequestId = requestId;
@@ -136,10 +130,27 @@ namespace SourceShare.Share.NetworkV2.Router
 
             if (_timeOutChecker != null && timeOut > 0f) _timeOutChecker.Add(request);
         }
-        
+
+        public void SendRequest<TNetResponse>(T destPlayer, INetData request, Action<TNetResponse, NetPlayer> onSuccess, Action<int> onError) where TNetResponse : INetData
+        {
+            SendRequest<TNetResponse>(destPlayer, request, onSuccess, onError, null, 0);
+        }
+
+        public void SendRequest<TNetResponse>(T destPlayer, INetData request, Action<TNetResponse, NetPlayer> onSuccess, Action<int> onError, Action<TNetResponse, NetPlayer> onFinally) where TNetResponse : INetData
+        {
+            SendRequest<TNetResponse>(destPlayer, request, onSuccess, onError, onFinally, 0);
+        }
+
+        public void SendRequest<TNetResponse>(T destPlayer, INetData request, Action<TNetResponse, NetPlayer> onSuccess, Action<int> onError, Action<TNetResponse, NetPlayer> onFinally, int timeOut) where TNetResponse : INetData
+        {
+            if (onSuccess != null || onError != null || onFinally != null)
+                SubscribeWaitingRequest(request, onSuccess, onError, onFinally, timeOut);
+            destPlayer.Send(request);
+        }
+
         #region STATIC FUNCTION: auto gen id
 
-        private static volatile int IDMaker = int.MaxValue -1;
+        private static volatile int IDMaker = int.MaxValue - 1;
 
         private static int GenID()
         {
@@ -151,8 +162,8 @@ namespace SourceShare.Share.NetworkV2.Router
 
         #endregion
 
-        private delegate void SubscribeIncomeDelegate(INetDataHeader header, NetDataReader reader, NetPlayer player);
+        private delegate void SubscribeIncomeDelegate(INetDataHeader header, NetDataReader reader, T player);
 
-        private delegate void SubscribeWaitingResponseDelegate(ResponseHeader header, NetDataReader reader, NetPlayer player);
+        private delegate void SubscribeWaitingResponseDelegate(ResponseHeader header, NetDataReader reader, T player);
     }
 }

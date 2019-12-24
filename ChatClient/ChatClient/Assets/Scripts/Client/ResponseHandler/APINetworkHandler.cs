@@ -1,3 +1,4 @@
+using System;
 using LiteNetLib;
 using PlayFabCustom;
 using SourceShare.Share.NetRequest;
@@ -5,6 +6,7 @@ using SourceShare.Share.NetRequest.Config;
 using SourceShare.Share.NetworkV2;
 using SourceShare.Share.NetworkV2.Client;
 using SourceShare.Share.NetworkV2.Router;
+using SourceShare.Share.NetworkV2.TransportData.Base;
 using SourceShare.Share.NetworkV2.TransportData.Header;
 using SourceShare.Share.NetworkV2.TransportData.Misc;
 using SourceShare.Share.NetworkV2.Utils;
@@ -34,9 +36,9 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
 
         #endregion
 
-        private readonly NetRouter _router;
+        private readonly NetRouter<NetPlayer> _router;
+        private readonly NetClient            _netClient;
 
-        private NetClient _netClient;
         private NetPlayer _player;
 
         public NetPlayer Player => _player;
@@ -44,7 +46,7 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
         private string       _curPlayFabId, _sessionTicket;
         private CreateParams _createParams;
 
-        public APINetworkHandler()
+        private APINetworkHandler()
         {
             // ===================== Make a network ====================================================================
             _netClient = new NetClient("api-server", this);
@@ -53,7 +55,7 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
             _netClient.Listener.PeerConnectedEvent += OnConnected;                               // start login after connected
 
             // ===================== Config Router =====================================================================
-            _router = new NetRouter(new TimeOutChecker(this));
+            _router = new NetRouter<NetPlayer>(new TimeOutChecker(this));
             // Register headers
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());
@@ -74,8 +76,8 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
         {
             Debugger.Write("API Server: OnConnected");
             var loginRequest = new LoginRequest(_curPlayFabId, _sessionTicket);
-            _player = new NetPlayer(_curPlayFabId, peer, _router, true, null);
-            _player.SendRequest<LoginResponse>(loginRequest, (response, player) =>
+            _player = new NetPlayer(_curPlayFabId, peer, true, null);
+            _router.SendRequest<LoginResponse>(_player, loginRequest, (response, player) =>
             {
                 Debugger.Write($"Login successful, token = {response.token}");
                 player.Token = response.token;
@@ -96,7 +98,6 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
             _netClient?.Stop();
         }
 
-
         public override void Perform(NetClient netClient, NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
             _router.ReadAllPackets(reader, _player);
@@ -107,12 +108,36 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
             Debug.Log($"OnTimeRequestTimeOut {requestTimeOut.command}");
         }
 
+        public void SendRequest<TNetResponse>(INetData request, Action<TNetResponse, NetPlayer> onSuccess, Action<int> onError) where TNetResponse : INetData
+        {
+            _router.SendRequest(_player, request, onSuccess, onError, null, 0);
+        }
+
+        public void SendRequest<TNetResponse>(INetData request, Action<TNetResponse, NetPlayer> onSuccess, Action<int> onError, Action<TNetResponse, NetPlayer> onFinally, int timeOut) where TNetResponse : INetData
+        {
+            _router.SendRequest(_player, request, onSuccess, onError, onFinally, timeOut);
+        }
+
         public void OnReceiveTestRequest(TestRequest request, NetPlayer player)
         {
         }
 
         public void OnReceiveTestResponse(TestResponse response, NetPlayer player)
         {
+        }
+
+        private static void CreateMasterAccountHandler(int server)
+        {
+            Debugger.Write("Try to CreateMasterAccountRequest");
+            var request = new CreateMasterAccountRequest(server);
+            APINetworkHandler.Instance.SendRequest<CreateMasterAccountResponse>(request, (response, player) => { Debugger.Write("Create node account successful"); }, i => { Debugger.Write($"Create Master Account fail, code = {i};"); });
+        }
+
+        private static void CreateNodeAccountHandler(int server, string masterId)
+        {
+            Debugger.Write("Try to CreateNodeAccountRequest");
+            var request = new CreateNodeAccountRequest(server, masterId);
+            APINetworkHandler.Instance.SendRequest<CreateNodeAccountResponse>(request, (response, player) => { Debugger.Write("Create node account successful"); }, i => { Debugger.Write($"Create Master Account fail, code = {i}"); });
         }
 
         public void OnSendTestSuccess(TestRequest request, TestResponse response, NetPlayer player)
@@ -125,20 +150,6 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
 
         public void OnSendTestFinally(TestRequest request, TestResponse response, NetPlayer player)
         {
-        }
-
-        private static void CreateMasterAccountHandler(int server)
-        {
-            Debugger.Write("Try to CreateMasterAccountRequest");
-            var request = new CreateMasterAccountRequest(server);
-            APINetworkHandler.Instance.Player.SendRequest<CreateMasterAccountResponse>(request, (response, player) => { Debugger.Write("Create node account successful"); }, i => { Debugger.Write($"Create Master Account fail, code = {i};"); });
-        }
-
-        private static void CreateNodeAccountHandler(int server, string masterId)
-        {
-            Debugger.Write("Try to CreateNodeAccountRequest");
-            var request = new CreateNodeAccountRequest(server, masterId);
-            APINetworkHandler.Instance.Player.SendRequest<CreateNodeAccountResponse>(request, (response, player) => { Debugger.Write("Create node account successful"); }, i => { Debugger.Write($"Create Master Account fail, code = {i}"); });
         }
     }
 }

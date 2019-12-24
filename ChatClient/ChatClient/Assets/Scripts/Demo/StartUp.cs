@@ -73,7 +73,7 @@ namespace Demo
         {
             Debug.Log("Try to send TestRequest");
             var testRequest = new TestRequest("TestRequest from client");
-            APINetworkHandler.Instance.Player.SendRequest<TestResponse>(testRequest, (response, player) => { Debug.Log($"TestResponse from server: {response.msg}"); }, null, null);
+            APINetworkHandler.Instance.SendRequest<TestResponse>(testRequest, (response, player) => { Debug.Log($"TestResponse from server: {response.msg}"); }, null);
         }
     }
 }

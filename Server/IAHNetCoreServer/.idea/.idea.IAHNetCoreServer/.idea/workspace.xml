@@ -2,39 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba6c7bc-5434-46d7-b785-75c4638eaff9" name="Default Changelist" comment="bo generic">
-      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountRequestFormatter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountResponseFormatter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_NetRequest_CreateNodeAccountRequestFormatter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_NetRequest_CreateNodeAccountRequestFormatter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_NetRequest_CreateNodeAccountResponseFormatter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_NetRequest_CreateNodeAccountResponseFormatter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/CreateMasterAccount.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/CreateNodeAccount.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/INetPlayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/Newtonsoft.Json.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.deps.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/INetPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/INetPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/.idea/.idea.WebApplication/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/WebApplication/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/WebApplication/Properties/launchSettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/WebApplication/Startup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/WebApplication/WebApplication.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/WebApplication/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebApplication/WebApplication/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/.idea/.idea.ChatClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/.idea/.idea.ChatClient/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Resolvers_GeneratedResolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Resolvers_GeneratedResolver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Client/ResponseHandler/APINetworkHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Client/ResponseHandler/APINetworkHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Demo/StartUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Demo/StartUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabClient/PFHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabClient/PFHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabClient/PlayFabAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabClient/PlayFabAuthService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/CreateMasterAccountRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/CreateMasterAccount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/CreateMasterAccountRequest.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountRequestFormatter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/CreateNodeAccountRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/CreateNodeAccount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/CreateNodeAccountRequest.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/AutoGen/MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountResponseFormatter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/Router/NetRouter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetRequest/CreateMasterAccountRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/CreateMasterAccount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetRequest/CreateNodeAccountRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetRequest/CreateNodeAccount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/NetRouter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,10 +155,10 @@
         <option value="$PROJECT_DIR$/SourceShare/Share/NetRequest/CreateNodeAccount.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/INetPlayer.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
-        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" />
+        <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/NetworkV2/Router/NetRouter.cs" />
       </list>
     </option>
@@ -276,7 +263,7 @@
       <workItem from="1577016928924" duration="14784000" />
       <workItem from="1577068640633" duration="20881000" />
       <workItem from="1577155493566" duration="809000" />
-      <workItem from="1577156639255" duration="18431000" />
+      <workItem from="1577156639255" duration="20461000" />
     </task>
     <task id="LOCAL-00001" summary="Request - response">
       <created>1576752828936</created>

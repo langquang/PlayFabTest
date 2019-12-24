@@ -5,23 +5,21 @@ using PlayFab.ServerModels;
 using PlayFabShare;
 using PlayFabShare.Models;
 using SourceShare.Share.NetworkV2;
-using SourceShare.Share.NetworkV2.Router;
-
 
 namespace PlayFabCustom.Models
 {
     public class DataPlayer : NetPlayer
     {
         public bool IsLoadedPlayFabData { get; set; }
-        
+
         public string PFCustomId { get; private set; }
 
         public PFProfile Profile { get; set; }
         public PFStatistic Statistic { get; set; }
-        
+
         public ClusterAccount ClusterAccount { get; set; }
 
-        public DataPlayer(string playerId, NetPeer peer, NetRouter router, bool isClient, string token) : base(playerId, peer, router, isClient, token)
+        public DataPlayer(string playerId, NetPeer peer, bool isClient, string token) : base(playerId, peer, isClient, token)
         {
             Profile = new PFProfile();
             Statistic = new PFStatistic();
@@ -45,6 +43,7 @@ namespace PlayFabCustom.Models
             {
                 PFCustomId = payload.AccountInfo.CustomIdInfo.CustomId;
             }
+
             // Import Profile
             Profile.Import(payload.PlayerProfile);
             // Import Statistic
@@ -64,7 +63,7 @@ namespace PlayFabCustom.Models
                 }
             }
         }
-        
+
         public Dictionary<string, string> ExportData(int playFabDataFlag)
         {
             var exportData = new Dictionary<string, string>();
