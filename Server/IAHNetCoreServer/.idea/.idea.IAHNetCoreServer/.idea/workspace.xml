@@ -2,42 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba6c7bc-5434-46d7-b785-75c4638eaff9" name="Default Changelist" comment="bo generic">
-      <change afterPath="$PROJECT_DIR$/../../CloudScript/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../CloudScript/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../CloudScript/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../CloudScript/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../CloudScript/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../CloudScript/CloudScript.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../CloudScript/CloudScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CloudScript/CloudScript.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/Define/PFCloudScripFuncName.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFDriver.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFUpdatePlayerReceipt.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/SGPlayFabCustomModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/Setting/GameSetting.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/Models.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/Models/NodeAccount.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/Models/PFProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/Models/PFProfile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/Models/PFStatistic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/PFHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/PFHelper.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/PFPlayerDataFlag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/PFPlayerDataFlag.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/PFPlayerDataKey.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/PFPlayerDataKey.cs.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/net472/Newtonsoft.Json.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/SourceShare/bin/Debug/netcoreapp2.2/SourceShare.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/.idea/.idea.ChatClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/.idea/.idea.ChatClient/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabClient.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/Models/NodeAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/Models/NodeAccount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/Models/NodeAccount.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/Models/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabClient/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/Models/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabClient/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/Models/PlayerProfile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/Models/PlayerProfile.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/Models/PlayerStatistic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabShare/Models/PFStatistic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/Models/PlayerStatistic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/PFHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabClient/PFHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/PFHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabClient/PFHelper.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/PlayFabAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabClient/PlayFabAuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabCustom/PlayFabAuthService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/PlayFabClient/PlayFabAuthService.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/CreateMasterAccountRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetRequest/CreateMasterAccountRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Base/INetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../ChatClient/ChatClient/Assets/Scripts/Share/NetworkV2/TransportData/Base/INetData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/IAHNetCoreServer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/DataPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/NodeAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/NodeAccount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/PlayerProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/PFProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/Models/PlayerStatistic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/PFStatistic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/PFHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/PlayFabCustom/PlayFabService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateNodeAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateNodeAccountHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/PFPlayerDataFlag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFPlayerDataFlag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/Share/PlayFabCustom/PFPlayerDataKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/PFPlayerDataKey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceShare/SourceShare.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/SourceShare.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../copy_source_share_to_client.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../copy_source_share_to_client.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../copy_source_share_to_server.cmd" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,12 +174,12 @@
         <option value="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/PFStatistic.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/PlayFabShare/Models/PFProfile.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFDriver.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateNodeAccountHandler.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CreateMasterAccountHandler.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/DataPlayer.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Base/NetServer.cs" />
       </list>
     </option>
   </component>
@@ -278,7 +283,7 @@
       <workItem from="1577016928924" duration="14784000" />
       <workItem from="1577068640633" duration="20881000" />
       <workItem from="1577155493566" duration="809000" />
-      <workItem from="1577156639255" duration="12593000" />
+      <workItem from="1577156639255" duration="13667000" />
     </task>
     <task id="LOCAL-00001" summary="Request - response">
       <created>1576752828936</created>
@@ -351,26 +356,26 @@
     </state>
     <state width="483" height="466" key="DebuggerActiveHint/62.0.1858.1080@62.0.1858.1080" timestamp="1577033119772" />
     <state width="532" height="466" key="DebuggerActiveHint/62.0.2498.1080@62.0.2498.1080" timestamp="1577083426629" />
-    <state width="2455" height="342" key="GridCell.Tab.0.bottom" timestamp="1577101091301">
+    <state width="1080" height="278" key="GridCell.Tab.0.bottom" timestamp="1577177940720">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
-    <state width="2455" height="342" key="GridCell.Tab.0.center" timestamp="1577101091300">
+    <state width="1080" height="278" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577177940720" />
+    <state width="1080" height="278" key="GridCell.Tab.0.center" timestamp="1577177940719">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091300" />
-    <state width="2455" height="342" key="GridCell.Tab.0.left" timestamp="1577101091300">
+    <state width="1080" height="278" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577177940719" />
+    <state width="1080" height="278" key="GridCell.Tab.0.left" timestamp="1577177940719">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091300" />
-    <state width="2455" height="342" key="GridCell.Tab.0.right" timestamp="1577101091301">
+    <state width="1080" height="278" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577177940719" />
+    <state width="1080" height="278" key="GridCell.Tab.0.right" timestamp="1577177940720">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="869" height="288" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577033518092" />
-    <state width="2455" height="342" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577101091301" />
+    <state width="1080" height="278" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577177940720" />
     <state width="2455" height="342" key="GridCell.Tab.1.bottom" timestamp="1577101091301">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
@@ -474,11 +479,11 @@
     </state>
     <state x="751" y="277" width="632" height="526" key="find.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1577017091341" />
     <state x="989" y="277" width="644" height="526" key="find.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1576833081238" />
-    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1577098534262">
+    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1577176979581">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="740" y="235" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1577033214645" />
-    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1577098534262" />
+    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1577176979581" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

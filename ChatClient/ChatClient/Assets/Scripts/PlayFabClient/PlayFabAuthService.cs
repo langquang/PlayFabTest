@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using Newtonsoft.Json;
 using PlayFab;
 using PlayFab.ClientModels;
 using PlayFab.SharedModels;
-using PlayFabCustom.Models;
+using PlayFabShare.Models;
 using UnityEngine;
 
 namespace PlayFabCustom
@@ -141,7 +140,7 @@ namespace PlayFabCustom
             else // Login to exist account
             {
                 var curServerID = PFHelper.FindServerFromStatistic(loginResult.InfoResultPayload.PlayerStatistics);
-                if (!string.IsNullOrEmpty(curServerID))
+                if (curServerID > 0)
                 {
                     var account = _clusterAccount.accounts.Find(a => a.playFabId.Equals(loginResult.PlayFabId));
                     if (account == null)
@@ -192,7 +191,7 @@ namespace PlayFabCustom
 
             // sign-up new account
             var customId = Guid.NewGuid().ToString();
-            var suggestServer = "0"; // todo: set suggest Server
+            var suggestServer = 1; // todo: set suggest Server
             LoginWithCustomID(customId, new CreateParams {isCreateMaster = true, server = suggestServer});
         }
 
@@ -219,7 +218,7 @@ namespace PlayFabCustom
                 });
         }
 
-        public void SwitchServer(string serverId)
+        public void SwitchServer(int serverId)
         {
             var acc = _clusterAccount.FindAccountByServerId(serverId);
             if (acc != null)

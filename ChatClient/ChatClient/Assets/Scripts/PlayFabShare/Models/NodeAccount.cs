@@ -2,15 +2,15 @@ using System.Collections.Generic;
 using MessagePack;
 using Newtonsoft.Json;
 
-namespace PlayFabCustom.Models
+namespace PlayFabShare.Models
 {
     [MessagePackObject]
     public class NodeAccount
     {
-        [JsonProperty("0")] [Key(0)] public string serverID;
+        [JsonProperty("0")] [Key(0)] public int    serverID;
         [JsonProperty("1")] [Key(1)] public string playFabId;
         [JsonProperty("2")] [Key(2)] public string customId; // use to login to PlayFab if node account, null if master
-        [JsonProperty("3")] [Key(3)] public string level;
+        [JsonProperty("3")] [Key(3)] public int    level;
         [JsonProperty("4")] [Key(4)] public string avatar;
         [JsonProperty("5")] [Key(5)] public string sessionTicket; // client caches only
     }
@@ -32,10 +32,10 @@ namespace PlayFabCustom.Models
         {
             return accounts.Find(a => a.playFabId.Equals(startUpPlayFabId));
         }
-        
-        public NodeAccount FindAccountByServerId(string serverID)
+
+        public NodeAccount FindAccountByServerId(int serverID)
         {
-            return accounts.Find(a => a.serverID.Equals(serverID));
+            return accounts.Find(a => a.serverID == serverID);
         }
     }
 }

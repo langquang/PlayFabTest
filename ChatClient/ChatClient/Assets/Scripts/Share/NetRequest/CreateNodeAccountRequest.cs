@@ -5,9 +5,11 @@ using SourceShare.Share.NetworkV2.TransportData.Base;
 namespace SourceShare.Share.NetRequest
 {
     [MessagePackObject]
-    public class CreateMasterAccountRequest : INetData
+    public class CreateNodeAccountRequest : INetData
     {
         [Key(0)] public int serverId;
+        [Key(1)] public int masterId;
+
         public override void Serialize(NetDataWriter writer)
         {
             base.Serialize(writer);
@@ -16,7 +18,7 @@ namespace SourceShare.Share.NetRequest
     }
 
     [MessagePackObject()]
-    public class CreateMasterAccountResponse : INetData
+    public class CreateNodeAccountResponse : INetData
     {
         public override void Serialize(NetDataWriter writer)
         {

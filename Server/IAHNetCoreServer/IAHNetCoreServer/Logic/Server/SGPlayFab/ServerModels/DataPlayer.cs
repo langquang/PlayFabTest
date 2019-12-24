@@ -23,6 +23,9 @@ namespace PlayFabCustom.Models
 
         public DataPlayer(string playerId, NetPeer peer, NetRouter router, bool isClient, string token) : base(playerId, peer, router, isClient, token)
         {
+            Profile = new PFProfile();
+            Statistic = new PFStatistic();
+            ClusterAccount = new ClusterAccount();
         }
 
         public bool IsMasterAccount()

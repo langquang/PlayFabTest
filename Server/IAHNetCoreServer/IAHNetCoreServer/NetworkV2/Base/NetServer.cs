@@ -125,7 +125,7 @@ namespace NetworkV2.Base
 
         private async void OnNetworkReceive(NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
         {
-            var existPlayer = (NetPlayer) peer.Tag;
+            var existPlayer = (T) peer.Tag;
             if (existPlayer == null)
             {
                 var (newPlayer, request) = _handler.BeginLogin(peer, reader);

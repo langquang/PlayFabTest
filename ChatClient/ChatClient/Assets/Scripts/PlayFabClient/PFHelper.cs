@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using PlayFab.ClientModels;
-using PlayFabCustom.Models;
+using PlayFabShare.Models;
 
 namespace PlayFabCustom
 {
@@ -24,16 +24,16 @@ namespace PlayFabCustom
             }
         };
 
-        public static string FindServerFromStatistic(List<StatisticValue> payload)
+        public static int FindServerFromStatistic(List<StatisticValue> payload)
         {
-            var statistic = payload.Find(s => s.StatisticName.Equals(PlayerStatistic.SERVER));
-            return statistic == null ? string.Empty : $"{statistic.Value}";
+            var statistic = payload.Find(s => s.StatisticName.Equals(PFStatistic.SERVER));
+            return statistic?.Value ?? 0;
         }
     }
 
     public class CreateParams
     {
-        public bool   isCreateMaster;
-        public string server;
+        public bool isCreateMaster;
+        public int  server;
     }
 }
