@@ -1,6 +1,7 @@
 using System;
 using LiteNetLib;
 using PlayFabCustom;
+using PlayFabShare;
 using SourceShare.Share.NetRequest;
 using SourceShare.Share.NetRequest.Config;
 using SourceShare.Share.NetworkV2;
@@ -76,15 +77,19 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
         {
             Debugger.Write("API Server: OnConnected");
             var loginRequest = new LoginRequest(_curPlayFabId, _sessionTicket);
-            _player = new NetPlayer(_curPlayFabId, peer, true, null);
+            _player = new NetPlayer(_curPlayFabId, peer, null);
             _router.SendRequest<LoginResponse>(_player, loginRequest, (response, player) =>
             {
                 Debugger.Write($"Login successful, token = {response.token}");
                 player.Token = response.token;
-                if (_createParams.needRegisterMasterAccount)
-                    CreateMasterAccountHandler(_createParams.server);
-                else if (_createParams.needRegisterNodeAccount)
-                    CreateNodeAccountHandler(_createParams.server, _createParams.masterId);
+
+                if (_createParams != null)
+                {
+                    if (_createParams.needRegisterMasterAccount)
+                        CreateMasterAccountHandler(_createParams.server);
+                    else if (_createParams.needRegisterNodeAccount)
+                        CreateNodeAccountHandler(_createParams.server, _createParams.masterId);
+                }
             }, i => Debugger.Write($"Login error = {i}"));
         }
 

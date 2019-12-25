@@ -24,7 +24,7 @@ namespace SourceShare.Share.NetworkV2.Utils
     /// </summary>
     public static class Debugger
     {
-        private static           ILogger Logger       = null;
+        private static          ILogger Logger       = null;
         private static readonly object  DebugLogLock = new object();
 
         private static void WriteLogic(DebuggerLevel logLevel, string str, params object[] args)
@@ -68,7 +68,23 @@ namespace SourceShare.Share.NetworkV2.Utils
 
         public static void WriteError(string str, params object[] args)
         {
-            WriteLogic(DebuggerLevel.Error, str, args);
+            WriteLogic(DebuggerLevel.Error, $"[Error] {str}", args);
+        }
+        
+        public static void WriteWarning(string str, params object[] args)
+        {
+            WriteLogic(DebuggerLevel.Warning, $"[Warning] {str}", args);
+        }
+
+        public static string FindConstName<T>(int code)
+        {
+            foreach (var field in typeof(T).GetFields())
+            {
+                if ((int) field.GetValue(null) == code)
+                    return field.Name;
+            }
+
+            return $"Unknown prop: {code}";
         }
     }
 }

@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using PlayFab.ClientModels;
 using PlayFabShare.Models;
 
-namespace PlayFabShare
+namespace PlayFabCustom
 {
-    public class PFHelper
+    public class PFClientHelper
     {
         public static readonly GetPlayerCombinedInfoRequestParams loginInfoRequestParams = new GetPlayerCombinedInfoRequestParams
         {
@@ -24,16 +24,21 @@ namespace PlayFabShare
             }
         };
 
-        public static string FindServerFromStatistic(List<StatisticValue> payload)
+        public static int FindServerFromStatistic(List<StatisticValue> payload)
         {
             var statistic = payload.Find(s => s.StatisticName.Equals(PFStatistic.SERVER));
-            return statistic == null ? string.Empty : $"{statistic.Value}";
+            return statistic?.Value ?? 0;
         }
     }
 
     public class CreateParams
     {
-        public bool   isCreateMaster;
-        public string server;
+        // create params
+        public bool isCreateMaster;
+        public int  server;
+        public string masterId;
+        // action params
+        public bool needRegisterMasterAccount;
+        public bool needRegisterNodeAccount;
     }
 }

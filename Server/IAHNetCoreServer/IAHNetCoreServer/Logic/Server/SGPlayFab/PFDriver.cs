@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using IAHNetCoreServer.Logic.Server.Setting;
 using IAHNetCoreServer.Logic.Server.SGPlayFab.Define;
+using Newtonsoft.Json;
 using PlayFab;
 using PlayFab.ServerModels;
 using PlayFabCustom.Models;
+using PlayFabShare;
 using SourceShare.Share.NetworkV2.Utils;
 
 namespace IAHNetCoreServer.Logic.Server.SGPlayFab
@@ -17,99 +19,69 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
             PlayFabSettings.staticSettings.TitleId = "20443";
             PlayFabSettings.staticSettings.DeveloperSecretKey = "U7XWD3YGJFIOD3HX7F74J75RYOOGE4UHO75KGMK7APBBQUPBUJ";
         }
-        
-        /// <summary>
-        ///  Load newest data from PlayFab and fill to player
-        /// </summary>
-        /// <param name="player"></param>
-        /// <param name="combinedInfo"></param>
-        /// <returns></returns>
-        public static async Task<DataPlayer> GetUserData(DataPlayer player, GetPlayerCombinedInfoRequestParams combinedInfo = null)
-        {
-            if (combinedInfo == null)
-            {
-                combinedInfo = new GetPlayerCombinedInfoRequestParams()
-                {
-                    GetUserAccountInfo = true,
-                    GetPlayerStatistics = true,
-                    GetPlayerProfile = true,
-                    GetUserReadOnlyData = true,
-                    GetUserInventory = true,
-                    GetUserVirtualCurrency = true,
-                    ProfileConstraints = new PlayerProfileViewConstraints()
-                    {
-                        ShowDisplayName = true,
-                        ShowLocations = true,
-                        ShowStatistics = true,
-                    }
-                };
-            }
 
-            var request = new GetPlayerCombinedInfoRequest()
+        public static async Task<bool> CommitChanged(DataPlayer player)
+        {
+            var receipt = player.PrepareToCommitChangedData();
+            return await UpdateUserData(player, receipt);
+        }
+
+        #region GET DATA BY GROUP FUNCTION
+
+        private static async Task<bool> LoadPublicData(DataPlayer player, int dataFlag)
+        {
+            var request = new GetUserDataRequest
             {
                 PlayFabId = player.PlayerId,
-                InfoRequestParameters = combinedInfo
+                Keys = PFPlayerDataFlag.ConvertToUserDataNames(dataFlag)
             };
-            var result = await PlayFabServerAPI.GetPlayerCombinedInfoAsync(request);
+            var result = await PlayFabServerAPI.GetUserDataAsync(request);
             if (result.Error != null)
             {
-                Debugger.Write($"PFDrive: GetUserData fail {result.Error.ErrorMessage}");
-                return null;
+                return false;
             }
-            else
-            {
-                player.UpdateDataFromPayload(result.Result.InfoResultPayload);
-                return player;
-            }
+
+            player.UpdateDataFromPayload(result.Result.Data);
+            return true;
         }
 
-        /// <summary>
-        /// Core class Update UserData into PlayFab. It'll call ExecuteCloudScript "UpdateUserData"
-        /// </summary>
-        /// <param name="player">User data.</param>
-        /// <param name="receipt">Data update required.</param>
-        /// <param name="errCallback">Error callback.</param>
-        public static async Task UpdateUserData(DataPlayer player, PFUpdatePlayerReceipt receipt, Action<string> errCallback = null)
+        private static async Task<bool> LoadReadOnlyData(DataPlayer player, int dataFlag)
         {
-            var request = new ExecuteCloudScriptServerRequest()
+            var request = new GetUserDataRequest
             {
                 PlayFabId = player.PlayerId,
-                FunctionName = PFCloudScripFuncName.CS_UPDATE_USER_DATA,
-                FunctionParameter = receipt,
-                GeneratePlayStreamEvent = true,
-                RevisionSelection = GameSetting.DEFAULT_CLOUD_SCRIPT_VERSION_IS_LATEST ? CloudScriptRevisionOption.Latest : CloudScriptRevisionOption.Live
+                Keys = PFPlayerDataFlag.ConvertToUserDataNames(dataFlag)
             };
-
-            var result = await PlayFabServerAPI.ExecuteCloudScriptAsync(request);
+            var result = await PlayFabServerAPI.GetUserReadOnlyDataAsync(request);
             if (result.Error != null)
             {
-                errCallback.Invoke(result.Error.ErrorMessage);
-                // ToDo: Handler UpdateUserData fail
+                return false;
             }
-            else
-            {
-                Debugger.Write($"UpdateUserData {player.PlayerId} successful");
-            }
-        }
-        
-        public static Task<PlayFabResult<AuthenticateSessionTicketResult>> AuthenticateSessionTicketAsync(string sessionTicket)
-        {
-            return PlayFabServerAPI.AuthenticateSessionTicketAsync(new AuthenticateSessionTicketRequest() {SessionTicket = sessionTicket}); // asynchronous here, make a sub task, calling thread is free and comeback to next line of code when sub task is done
+
+            player.UpdateDataFromPayload(result.Result.Data);
+            return true;
         }
 
-        public static Task<PlayFabResult<GetUserDataResult>> GetInternalData(DataPlayer player, List<string> keys)
+        private static async Task<bool> LoadInternalData(DataPlayer player, int dataFlag)
         {
-            var request = new GetUserDataRequest()
+            var request = new GetUserDataRequest
             {
                 PlayFabId = player.PlayerId,
-                Keys = keys
+                Keys = PFPlayerDataFlag.ConvertToUserDataNames(dataFlag)
             };
-            return PlayFabServerAPI.GetUserInternalDataAsync(request);
+            var result = await PlayFabServerAPI.GetUserInternalDataAsync(request);
+            if (result.Error != null)
+            {
+                return false;
+            }
+
+            player.UpdateDataFromPayload(result.Result.Data);
+            return true;
         }
 
         public static async Task<bool> SaveInternalData(DataPlayer player, int playFabDataFlag)
         {
-            var data = player.ExportData(playFabDataFlag);
+            var data = player.ExportPlayerInternalData(playFabDataFlag);
             if (data.Count == 0)
             {
                 return false;
@@ -127,6 +99,109 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
             }
 
             return true;
+        }
+
+        #endregion
+
+
+        /// <summary>
+        ///
+        /// todo: use cloud script?????
+        /// </summary>
+        /// <returns></returns>
+        public static async Task<bool> LoadUserData(DataPlayer player, int dataFlag)
+        {
+            var success = false;
+            if (PFPlayerDataFlag.IsContainsInternalData(dataFlag))
+            {
+                success |= await LoadInternalData(player, dataFlag);
+            }
+
+            if (PFPlayerDataFlag.IsContainsReadOnlyData(dataFlag))
+            {
+                success |= await LoadReadOnlyData(player, dataFlag);
+            }
+
+            if (PFPlayerDataFlag.IsContainsPublicData(dataFlag))
+            {
+                success |= await LoadPublicData(player, dataFlag);
+            }
+
+            return success;
+        }
+
+        /// <summary>
+        ///  Load newest data from PlayFab and fill to player
+        /// </summary>
+        /// <param name="player"></param>
+        /// <returns></returns>
+        public static async Task<DataPlayer> LoadUserData(DataPlayer player)
+        {
+            var combinedInfo = new GetPlayerCombinedInfoRequestParams()
+            {
+                GetUserAccountInfo = true,
+                GetPlayerStatistics = true,
+                GetPlayerProfile = true,
+                GetUserReadOnlyData = true,
+                GetUserData = true,
+                GetUserInventory = true,
+                GetUserVirtualCurrency = true,
+                ProfileConstraints = new PlayerProfileViewConstraints()
+                {
+                    ShowDisplayName = true,
+                    ShowLocations = true,
+                    ShowStatistics = true,
+                }
+            };
+
+            var request = new GetPlayerCombinedInfoRequest()
+            {
+                PlayFabId = player.PlayerId,
+                InfoRequestParameters = combinedInfo
+            };
+            var result = await PlayFabServerAPI.GetPlayerCombinedInfoAsync(request);
+            if (result.Error != null)
+            {
+                Debugger.Write($"PFDrive: GetUserData fail {result.Error.ErrorMessage}");
+                return null;
+            }
+
+            player.UpdateDataFromPayload(result.Result.InfoResultPayload);
+            return player;
+        }
+
+        /// <summary>
+        /// Core class Update UserData into PlayFab. It'll call ExecuteCloudScript "UpdateUserData"
+        /// </summary>
+        /// <param name="player">User data.</param>
+        /// <param name="receipt">Data update required.</param>
+        /// <param name="errCallback">Error callback.</param>
+        private static async Task<bool> UpdateUserData(DataPlayer player, PFUpdatePlayerReceipt receipt, Action<string> errCallback = null)
+        {
+            var request = new ExecuteCloudScriptServerRequest
+            {
+                PlayFabId = player.PlayerId,
+                FunctionName = PFCloudScripFuncName.CS_UPDATE_USER_DATA,
+                FunctionParameter = JsonConvert.SerializeObject(receipt),
+                GeneratePlayStreamEvent = true,
+                RevisionSelection = GameSetting.DEFAULT_CLOUD_SCRIPT_VERSION_IS_LATEST ? CloudScriptRevisionOption.Latest : CloudScriptRevisionOption.Live
+            };
+
+            var result = await PlayFabServerAPI.ExecuteCloudScriptAsync(request);
+            if (result.Error != null)
+            {
+                errCallback.Invoke(result.Error.ErrorMessage);
+                // ToDo: Handler UpdateUserData fail
+                return false;
+            }
+
+            Debugger.Write($"UpdateUserData {player.PlayerId} successful");
+            return true;
+        }
+
+        public static Task<PlayFabResult<AuthenticateSessionTicketResult>> AuthenticateSessionTicketAsync(string sessionTicket)
+        {
+            return PlayFabServerAPI.AuthenticateSessionTicketAsync(new AuthenticateSessionTicketRequest() {SessionTicket = sessionTicket}); // asynchronous here, make a sub task, calling thread is free and comeback to next line of code when sub task is done
         }
     }
 }

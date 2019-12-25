@@ -7,11 +7,11 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DefineConstants>TRACE;SERVER_SIDE</DefineConstants>
+      <DefineConstants>TRACE;SERVER_SIDE;NETWORK_V2;AUTO_CHANGE_PF_DATA</DefineConstants>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DefineConstants>TRACE;SERVER_SIDE</DefineConstants>
+      <DefineConstants>TRACE;SERVER_SIDE;DEBUG_NETWORK_V2;DEBUG_AUTO_CHANGE_PF_DATA</DefineConstants>
     </PropertyGroup>
 
     <ItemGroup>

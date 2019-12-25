@@ -31,6 +31,8 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
             _router.Subscribe<TestRequest>(NetAPICommand.TEST_REQUEST, OnTestHandler);
             _router.Subscribe<CreateMasterAccountRequest>(NetAPICommand.CREATE_MASTER_ACCOUNT, CreateMasterAccountHandler.Perform);
+            _router.Subscribe<CheckCreateNodeAccountRequest>(NetAPICommand.CHECK_CREATE_NODE_ACCOUNT, CheckCreateNodeAccountHandler.Perform);
+            _router.Subscribe<CreateNodeAccountRequest>(NetAPICommand.CREATE_MASTER_ACCOUNT, CreateNodeAccountHandler.Perform);
         }
 
 
@@ -55,7 +57,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
             var loginRequest = MessagePackSerializer.Deserialize<LoginRequest>(reader.GetBytesWithLength());
             loginRequest.Header = header;
-            var player = new DataPlayer(loginRequest.playerId, peer, false, GenToken());
+            var player = new DataPlayer(loginRequest.playerId, peer, GenToken());
             if (!loginRequest.IsValid())
             {
                 Debugger.Write("invalid login request");
@@ -95,7 +97,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             player.IsLogined = true;
             OnlinePlayers.Instance.Players.AddPlayer(loginRequest.playerId, player);
             // load data of player from PlayFab
-            var dataPlayer = await PFDriver.GetUserData(player);
+            var dataPlayer = await PFDriver.LoadUserData(player);
             if (dataPlayer == null)
             {
                 ResponseError(player, loginRequest, NetAPIErrorCode.FATAL_ERROR);

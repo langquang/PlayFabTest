@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using IAHNetCoreServer.Logic.Server.Setting;
 using IAHNetCoreServer.Logic.Server.SGPlayFab;
 using PlayFabCustom.Models;
 using PlayFabShare;
 using PlayFabShare.Models;
 using SourceShare.Share.NetRequest;
 using SourceShare.Share.NetRequest.Config;
-using SourceShare.Share.NetworkV2;
 using SourceShare.Share.NetworkV2.TransportData.Base;
 
 namespace IAHNetCoreServer.Logic.Server.RequestHandlers
@@ -17,9 +17,14 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
         {
             PerformAsync(request, player);
         }
-        
+
         private static async Task<INetData> PerformAsync(CreateMasterAccountRequest request, DataPlayer player)
         {
+            if (request.serverId != GameSetting.CURRENT_SERVER)
+            {
+                return EntryHandler.ResponseError(player, request, NetAPIErrorCode.WRONG_SERVER);
+            }
+
             // ======================== the first check ================================================================
             if (player.IsMasterAccount())
             {
@@ -32,20 +37,12 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             }
 
             // ================= Try to check with newest data from PlayFab ============================================
-            var result = await PFDriver.GetInternalData(player, new List<string> {PFPlayerDataKey.ACCOUNT});
-            if (result.Error != null)
+            var updateSuccess = await PFDriver.LoadUserData(player, PFPlayerDataFlag.ACCOUNT);
+            if (!updateSuccess)
             {
-                return EntryHandler.ResponseError(player, request, NetAPIErrorCode.INTERNAL_NETWORK_ERROR);
+                return EntryHandler.ResponseError(player, request, NetAPIErrorCode.FATAL_ERROR);
             }
-
-            result.Result.Data.TryGetValue(PFPlayerDataKey.ACCOUNT, out var record);
-            if (record == null)
-            {
-                return EntryHandler.ResponseError(player, request, NetAPIErrorCode.INTERNAL_NETWORK_ERROR);
-            }
-
-            player.UpdateDataFromPayload(result.Result.Data); // update new data from PlayFab
-
+            
             // ======================== the second check ===============================================================
             if (player.IsMasterAccount())
             {
@@ -60,17 +57,19 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             // ======================== EVERY THING IS OK ==============================================================
             var account = new NodeAccount()
             {
-                serverID = player.Statistic.Server,
+                serverID = request.serverId,
                 playFabId = player.PlayerId,
                 customId = player.PFCustomId,
-                level = player.Statistic.Level
+                level = 1
             };
             player.ClusterAccount.isMaster = true;
             player.ClusterAccount.MasterId = player.PlayerId;
             player.ClusterAccount.accounts.Add(account);
+            player.AddChangedDataFlag(PFPlayerDataFlag.ACCOUNT);
+            player.Server = request.serverId;
 
             // save to PlayFab
-            var success = await PFDriver.SaveInternalData(player, PFPlayerDataFlag.ACCOUNT);
+            var success = await PFDriver.CommitChanged(player);
             if (!success)
             {
                 return EntryHandler.ResponseError(player, request, NetAPIErrorCode.FATAL_ERROR);

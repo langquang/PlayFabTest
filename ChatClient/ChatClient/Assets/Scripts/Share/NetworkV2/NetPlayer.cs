@@ -1,29 +1,27 @@
 using System;
 using LiteNetLib;
 using LiteNetLib.Utils;
+using SourceShare.Share.NetRequest.Config;
 using SourceShare.Share.NetworkV2.Router;
 using SourceShare.Share.NetworkV2.TransportData.Base;
 using SourceShare.Share.NetworkV2.TransportData.Header;
+using SourceShare.Share.NetworkV2.Utils;
 
 namespace SourceShare.Share.NetworkV2
 {
     public class NetPlayer
     {
         private readonly NetPeer       _connection;
-        private readonly bool          _isClient;
-        // private readonly NetRouter     _router;
         private          NetDataWriter _writer;
         private          string        _token;
 
         public bool IsLogined { get; set; }
         public string PlayerId { get; private set; }
 
-        public NetPlayer(string playerId, NetPeer peer, bool isClient, string token)
+        public NetPlayer(string playerId, NetPeer peer, string token)
         {
             PlayerId = playerId;
             _connection = peer;
-            // _router = router;
-            _isClient = isClient;
             Token = token;
         }
 
@@ -44,6 +42,9 @@ namespace SourceShare.Share.NetworkV2
 
         public void Send(INetData netData)
         {
+#if DEBUG_NETWORK_V2
+            Debugger.Write($"[Net] Send <{PlayerId}> {netData.Header.NetType} >> {Debugger.FindConstName<NetAPICommand>(netData.Header.NetCommand)}");
+#endif
             // Secret key between client and server
             if (Token != null && netData.Header is RequestHeader header)
                 header.Token = Token;

@@ -37,5 +37,10 @@ namespace PlayFabShare.Models
         {
             return accounts.Find(a => a.serverID == serverID);
         }
+
+        public bool ContainsNode(string playFabId)
+        {
+            return accounts.Find(a => a.playFabId.Equals(playFabId)) != null;
+        }
     }
 }

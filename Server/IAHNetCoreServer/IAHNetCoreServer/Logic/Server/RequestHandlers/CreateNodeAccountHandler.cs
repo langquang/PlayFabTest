@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using IAHNetCoreServer.Logic.Server.SGPlayFab;
-using PlayFabCustom;
 using PlayFabCustom.Models;
 using PlayFabShare;
 using PlayFabShare.Models;
@@ -13,7 +12,12 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
     public class CreateNodeAccountHandler
     {
-        public static async Task<INetData> Perform(CreateNodeAccountRequest request, DataPlayer player)
+        public static void Perform(CreateNodeAccountRequest request, DataPlayer player)
+        {
+            PerformAsync(request, player);
+        }
+
+        private static async Task<INetData> PerformAsync(CreateNodeAccountRequest request, DataPlayer player)
         {
             // ======================== the first check ================================================================
             if (player.IsMasterAccount())
@@ -27,19 +31,11 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             }
 
             // ================= Try to check with newest data from PlayFab ============================================
-            var result = await PFDriver.GetInternalData(player, new List<string> {PFPlayerDataKey.ACCOUNT});
-            if (result.Error != null)
+            var updateSuccess = await PFDriver.LoadUserData(player, PFPlayerDataFlag.ACCOUNT);
+            if (!updateSuccess)
             {
                 return EntryHandler.ResponseError(player, request, NetAPIErrorCode.INTERNAL_NETWORK_ERROR);
             }
-
-            result.Result.Data.TryGetValue(PFPlayerDataKey.ACCOUNT, out var record);
-            if (record == null)
-            {
-                return EntryHandler.ResponseError(player, request, NetAPIErrorCode.INTERNAL_NETWORK_ERROR);
-            }
-
-            player.UpdateDataFromPayload(result.Result.Data); // update new data from PlayFab
 
             // ======================== the second check ===============================================================
             if (player.IsMasterAccount())

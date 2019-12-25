@@ -20,115 +20,66 @@ handlers.UpdateUserData = function (args) {
 
     let errorCode = 0;
 
+    args = JSON.parse(args);
     //------------------------------------------------------------------------------------------------------------
     //	VIRTUAL CURRENCIES
     //------------------------------------------------------------------------------------------------------------
-    let gemReward = args.gemReward;
-    let gemDecrease = args.gemDecrease;
-
-    let goldReward = args.goldReward;
-    let goldDecrease = args.goldDecrease;
-
-    let questPointReward = args.questPointReward;
-    let questPointDecrease = args.questPointDecrease;
-
     let VCResults = [];
+    let currencyReward = args.CurrencyReward;
+    if(currencyReward){
+        Object.entries(currencyReward).forEach(([vc_code, vc_value])=>{
+            log.info(`${vc_code}:${vc_value}`)
 
-    if (gemReward > 0) {
-        let result = server.AddUserVirtualCurrency({
-            PlayFabId: currentPlayerId,
-            VirtualCurrency: VC_GEM,
-            Amount: gemReward
-        });
-        VCResults.push({
-            VCName: result.VirtualCurrency,
-            balance: result.Balance,
-            balanceChange: result.BalanceChange
-        });
+            let result = server.AddUserVirtualCurrency({
+                PlayFabId: currentPlayerId,
+                VirtualCurrency: vc_code,
+                Amount: vc_value
+            });
+            VCResults.push({
+                VCName: result.VirtualCurrency,
+                balance: result.Balance,
+                balanceChange: result.BalanceChange
+            });
+        })
     }
 
-    if (goldReward > 0) {
-        let result = server.AddUserVirtualCurrency({
-            PlayFabId: currentPlayerId,
-            VirtualCurrency: VC_GOLD,
-            Amount: goldReward
-        });
-        VCResults.push({
-            VCName: result.VirtualCurrency,
-            balance: result.Balance,
-            balanceChange: result.BalanceChange
-        });
+    let currencyDecrease = args.CurrencyDecrease;
+    if(currencyDecrease){
+        Object.entries(currencyDecrease).forEach(([vc_code, vc_value])=>{
+            console.log(`${vc_code}:${vc_value}`)
+
+            let result = server.SubtractUserVirtualCurrency({
+                PlayFabId: currentPlayerId,
+                VirtualCurrency: vc_code,
+                Amount: vc_value
+            });
+            VCResults.push({
+                VCName: result.VirtualCurrency,
+                balance: result.Balance,
+                balanceChange: result.BalanceChange
+            });
+        })
     }
 
-    if (questPointReward > 0) {
-        let result = server.AddUserVirtualCurrency({
-            PlayFabId: currentPlayerId,
-            VirtualCurrency: VC_QUEST_POINT,
-            Amount: questPointReward
-        });
-        VCResults.push({
-            VCName: result.VirtualCurrency,
-            balance: result.Balance,
-            balanceChange: result.BalanceChange
-        });
-    }
-
-    if (gemDecrease > 0) {
-        let result = server.SubtractUserVirtualCurrency({
-            PlayFabId: currentPlayerId,
-            VirtualCurrency: VC_GEM,
-            Amount: gemDecrease
-        });
-        VCResults.push({
-            VCName: result.VirtualCurrency,
-            balance: result.Balance,
-            balanceChange: result.BalanceChange
-        });
-    }
-
-    if (goldDecrease > 0) {
-        let result = server.SubtractUserVirtualCurrency({
-            PlayFabId: currentPlayerId,
-            VirtualCurrency: VC_GOLD,
-            Amount: goldDecrease
-        });
-        VCResults.push({
-            VCName: result.VirtualCurrency,
-            balance: result.Balance,
-            balanceChange: result.BalanceChange
-        });
-    }
-
-    if (questPointDecrease > 0) {
-        let result = server.SubtractUserVirtualCurrency({
-            PlayFabId: currentPlayerId,
-            VirtualCurrency: VC_QUEST_POINT,
-            Amount: questPointDecrease
-        });
-        VCResults.push({
-            VCName: result.VirtualCurrency,
-            balance: result.Balance,
-            balanceChange: result.BalanceChange
-        });
-    }
 
     //------------------------------------------------------------------------------------------------------------
     //	STATISTICS
     //------------------------------------------------------------------------------------------------------------
-    let statsUpdate = args.statsUpdate;
-
-    if (statsUpdate)
-        server.UpdatePlayerStatistics({PlayFabId: currentPlayerId, Statistics: statsUpdate});
+    let Statistic = args.Statistic;
+    if (Statistic)
+        server.UpdatePlayerStatistics({PlayFabId: currentPlayerId, Statistics: Statistic});
 
 
     //------------------------------------------------------------------------------------------------------------
     //	USER TITLE DATA
     //------------------------------------------------------------------------------------------------------------
-    let userReadonlyData = args.userReadonlyData;
+    let ReadOnlyData = args.ReadOnlyData;
+    if (ReadOnlyData)
+        server.UpdateUserReadOnlyData({PlayFabId: currentPlayerId, Data: ReadOnlyData, Permission: 1});
 
-    // Update UserReadOnlyData
-    if (userReadonlyData)
-        server.UpdateUserReadOnlyData({PlayFabId: currentPlayerId, Data: userReadonlyData, Permission: 1});
+    let InternalData = args.InternalData;
+    if (InternalData)
+        server.UpdateUserInternalData({PlayFabId: currentPlayerId, Data: InternalData, Permission: 1});
 
 
     //------------------------------------------------------------------------------------------------------------
@@ -158,26 +109,26 @@ handlers.UpdateUserData = function (args) {
     //	INVENTORIES
     //------------------------------------------------------------------------------------------------------------
 
-    let itemsGrant = args.itemsGrant;
-    let itemsCustomData = args.itemsCustomData;
-    let itemRevoke = args.itemRevoke;
-    let itemsModifyUses = args.itemsModifyUses;
+    let ItemsGrant = args.ItemsGrant;
+    let ItemsCustomData = args.ItemsCustomData;
+    let ItemRevoke = args.ItemRevoke;
+    let ItemsModifyUses = args.ItemsModifyUses;
 
     let itemsGrantRes = null;
 
     //Items Grant
-    if (itemsGrant) {
+    if (ItemsGrant) {
         let catalogVersion = args.catalogVersion;
         let result = null;
         try {
             if (catalogVersion)
                 result = server.GrantItemsToUsers({
                     PlayFabId: currentPlayerId,
-                    ItemGrants: itemsGrant,
+                    ItemGrants: ItemsGrant,
                     CatalogVersion: catalogVersion
                 });
             else
-                result = server.GrantItemsToUsers({PlayFabId: currentPlayerId, ItemGrants: itemsGrant});
+                result = server.GrantItemsToUsers({PlayFabId: currentPlayerId, ItemGrants: ItemsGrant});
 
             itemsGrantRes = [];
             for (let i = 0; i < result.ItemGrantResults.length; i++) {
@@ -197,28 +148,28 @@ handlers.UpdateUserData = function (args) {
     }
 
     // Revoke Items
-    if (itemRevoke)
-        server.RevokeInventoryItems({Items: itemRevoke});
+    if (ItemRevoke)
+        server.RevokeInventoryItems({Items: ItemRevoke});
 
     // Modify Items Use
-    if (itemsModifyUses) {
-        for (let i = 0; i < itemsModifyUses.length; i++) {
+    if (ItemsModifyUses) {
+        for (let i = 0; i < ItemsModifyUses.length; i++) {
             server.ModifyItemUses({
-                PlayFabId: itemsModifyUses[i].PlayFabId,
-                ItemInstanceId: itemsModifyUses[i].ItemInstanceId,
-                UsesToAdd: itemsModifyUses[i].UsesToAdd
+                PlayFabId: ItemsModifyUses[i].PlayFabId,
+                ItemInstanceId: ItemsModifyUses[i].ItemInstanceId,
+                UsesToAdd: ItemsModifyUses[i].UsesToAdd
             });
         }
     }
 
     // Update item CustomData
-    if (itemsCustomData) {
-        for (let i = 0; i < itemsCustomData.length; i++) {
+    if (ItemsCustomData) {
+        for (let i = 0; i < ItemsCustomData.length; i++) {
             server.UpdateUserInventoryItemCustomData({
                 PlayFabId: currentPlayerId,
-                ItemInstanceId: itemsCustomData[i].itemInstance.ItemInstanceId,
-                Data: itemsCustomData[i].itemInstance.CustomData,
-                KeysToRemove: itemsCustomData[i].keysRemove
+                ItemInstanceId: ItemsCustomData[i].itemInstance.ItemInstanceId,
+                Data: ItemsCustomData[i].itemInstance.CustomData,
+                KeysToRemove: ItemsCustomData[i].keysRemove
             });
         }
     }

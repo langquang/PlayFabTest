@@ -241,6 +241,8 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AutoGen" t="Include">
+            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CheckCreateNodeAccountRequestFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CheckCreateNodeAccountResponseFormatter.cs" t="Include" />
             <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CommonErrorResponseFormatter.cs" t="Include" />
             <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountRequestFormatter.cs" t="Include" />
             <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountResponseFormatter.cs" t="Include" />
@@ -411,17 +413,17 @@
             </e>
           </e>
           <e p="PlayFabClient" t="Include">
-            <e p="PFHelper.cs" t="Include" />
+            <e p="PFClientHelper.cs" t="Include" />
             <e p="Player.cs" t="Include" />
             <e p="PlayFabAuthService.cs" t="Include" />
           </e>
           <e p="PlayFabShare" t="Include">
             <e p="Models" t="Include">
               <e p="NodeAccount.cs" t="Include" />
+              <e p="PFCurrency.cs" t="Include" />
               <e p="PFProfile.cs" t="Include" />
               <e p="PFStatistic.cs" t="Include" />
             </e>
-            <e p="PFHelper.cs" t="Include" />
             <e p="PFPlayerDataFlag.cs" t="Include" />
             <e p="PFPlayerDataKey.cs" t="Include" />
           </e>

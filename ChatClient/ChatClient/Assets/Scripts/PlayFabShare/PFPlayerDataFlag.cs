@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace PlayFabShare
 {
     public class PFPlayerDataFlag
@@ -7,5 +9,16 @@ namespace PlayFabShare
         public const int TOURNAMENT = 1 << 1;
 
         public const int GROUP_INTERNAL = ACCOUNT;
+
+        public static List<string> ConvertToUserDataNames(int flag)
+        {
+            var keys = new List<string>();
+            if ((flag & ACCOUNT) != 0)
+            {
+                keys.Add(PFPlayerDataKey.ACCOUNT);
+            }
+
+            return keys;
+        }
     }
 }

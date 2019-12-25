@@ -10,6 +10,7 @@
         <e p="Logic" t="Include">
           <e p="Server" t="Include">
             <e p="RequestHandlers" t="Include">
+              <e p="CheckCreateNodeAccountHandler.cs" t="Include" />
               <e p="CreateMasterAccountHandler.cs" t="Include" />
               <e p="CreateNodeAccountHandler.cs" t="Include" />
               <e p="EntryHandler.cs" t="Include" />
@@ -54,14 +55,17 @@
         <e p="PlayFabShare" t="Include">
           <e p="Models" t="Include">
             <e p="NodeAccount.cs" t="Include" />
+            <e p="PFCurrency.cs" t="Include" />
             <e p="PFProfile.cs" t="Include" />
             <e p="PFStatistic.cs" t="Include" />
           </e>
-          <e p="PFHelper.cs" t="Include" />
           <e p="PFPlayerDataFlag.cs" t="Include" />
           <e p="PFPlayerDataKey.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="Utils" t="Include">
+          <e p="MathHelper.cs" t="Include" />
+        </e>
       </e>
       <e p="IAHNetCoreServer.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

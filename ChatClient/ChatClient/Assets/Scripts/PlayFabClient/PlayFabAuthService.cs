@@ -4,9 +4,6 @@ using PlayFab;
 using PlayFab.ClientModels;
 using PlayFab.SharedModels;
 using PlayFabShare.Models;
-using SourceShare.Share.NetRequest;
-using SourceShare.Share.NetworkV2.Utils;
-using UnityClientLib.Logic.Client.ResponseHandler;
 using UnityEngine;
 
 namespace PlayFabCustom
@@ -144,7 +141,7 @@ namespace PlayFabCustom
             }
             else // Login to exist account
             {
-                var curServerID = PFHelper.FindServerFromStatistic(loginResult.InfoResultPayload.PlayerStatistics);
+                var curServerID = PFClientHelper.FindServerFromStatistic(loginResult.InfoResultPayload.PlayerStatistics);
                 if (curServerID > 0)
                 {
                     var account = _clusterAccount.accounts.Find(a => a.playFabId.Equals(loginResult.PlayFabId));
@@ -208,7 +205,7 @@ namespace PlayFabCustom
                     CreateAccount = true,
                     CustomId = customId,
                     TitleId = PlayFabSettings.TitleId,
-                    InfoRequestParameters = PFHelper.loginInfoRequestParams
+                    InfoRequestParameters = PFClientHelper.loginInfoRequestParams
                 },
                 res =>
                 {
@@ -218,18 +215,33 @@ namespace PlayFabCustom
                 err => { onError?.Invoke(err); });
         }
 
-       
         public void SwitchServer(int serverId)
         {
-            // var acc = _clusterAccount.FindAccountByServerId(serverId);
-            // if (acc != null)
-            // {
-            //     LoginWithCustomID(acc.customId, null, (result, createParams, null, null) => { }, error => { });
-            // }
-            // else
-            // {
-            //     LoginWithCustomID($"{serverId}-{Guid.NewGuid().ToString()}", null, (result, createParams) => { }, error => { });
-            // }
+            var acc = _clusterAccount.FindAccountByServerId(serverId);
+            if (acc != null)
+            {
+                LoginWithCustomID(acc.customId, null, (result, createParams) => { }, error => { });
+            }
+            else
+            {
+                var customParams = new CreateParams
+                {
+                    server = serverId,
+                    masterId = _clusterAccount.MasterId
+                };
+
+                LoginWithCustomID($"{serverId}-{Guid.NewGuid().ToString()}", customParams, (result, createParams) => { }, error => { });
+            }
+        }
+
+        public string getMasterId()
+        {
+            return _clusterAccount.MasterId;
+        }
+
+        public bool IsContainsAccount(int server)
+        {
+            return _clusterAccount.FindAccountByServerId(server) != null;
         }
     }
 }

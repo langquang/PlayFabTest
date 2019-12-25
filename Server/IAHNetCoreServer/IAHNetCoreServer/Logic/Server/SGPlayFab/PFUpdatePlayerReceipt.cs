@@ -1,6 +1,11 @@
+using System;
 using System.Collections.Generic;
 using IAHNetCoreServer.Logic.Server.SGPlayFab.CustomModels;
+using Newtonsoft.Json;
+using PlayFab;
 using PlayFab.ServerModels;
+using SourceShare.Share.NetworkV2.Utils;
+using SourceShare.Share.Utils;
 
 namespace IAHNetCoreServer.Logic.Server.SGPlayFab
 {
@@ -12,55 +17,38 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
         //----------------------------------------------------------------------
         //  Virtual Currencies
         //----------------------------------------------------------------------
-        private Dictionary<string, uint> _currencyReward;   // currency code -> gain value
-        private Dictionary<string, uint> _currencyDecrease; // currency code -> decrease value
+        [JsonProperty("CurrencyReward")]   private Dictionary<string, int> _currencyReward;   // currency code -> gain value
+        [JsonProperty("CurrencyDecrease")] private Dictionary<string, int> _currencyDecrease; // currency code -> decrease value
 
         //----------------------------------------------------------------------
         //  Inventory
         //----------------------------------------------------------------------
-        private string                      _catalogVersion; //add version to determine what's version using update in catalog
-        private List<ItemGrant>             _itemsGrant;
-        private List<RevokeInventoryItem>   _itemRevoke;
-        private List<ItemUpdateCustomData>  _itemsCustomData;
-        private List<ModifyItemUsesRequest> _itemsModifyUses;
+        private                                   string                      _catalogVersion; //add version to determine what's version using update in catalog
+        [JsonProperty("ItemsGrant")]      private List<ItemGrant>             _itemsGrant;
+        [JsonProperty("ItemRevoke")]      private List<RevokeInventoryItem>   _itemRevoke;
+        [JsonProperty("ItemsCustomData")] private List<ItemUpdateCustomData>  _itemsCustomData;
+        [JsonProperty("ItemsModifyUses")] private List<ModifyItemUsesRequest> _itemsModifyUses;
 
         //----------------------------------------------------------------------
         //  Statistic
         //----------------------------------------------------------------------
-        private List<StatisticUpdate> _statistic;
+        [JsonProperty("Statistic")] private List<StatisticUpdate> _statistic;
 
         //----------------------------------------------------------------------
         //  Player Data (Title) - Internal
         //----------------------------------------------------------------------
-        private Dictionary<string, string> _internalData;
+        [JsonProperty("InternalData")] private Dictionary<string, string> _internalData;
 
         //----------------------------------------------------------------------
         //  Player Data (Title) - Read Only
         //----------------------------------------------------------------------
-        private Dictionary<string, string> _readOnlyData;
+        [JsonProperty("ReadOnlyData")] private Dictionary<string, string> _readOnlyData;
 
+        private int _totalChangedDataFlag;
 
         #region PROPERTIES
 
-        public Dictionary<string, uint> CurrencyReward => _currencyReward;
-
-        public Dictionary<string, uint> CurrencyDecrease => _currencyDecrease;
-
-        public string CatalogVersion => _catalogVersion;
-
-        public List<ItemGrant> ItemsGrant => _itemsGrant;
-
-        public List<RevokeInventoryItem> ItemRevoke => _itemRevoke;
-
-        public List<ItemUpdateCustomData> ItemsCustomData => _itemsCustomData;
-
-        public List<ModifyItemUsesRequest> ItemsModifyUses => _itemsModifyUses;
-
-        public List<StatisticUpdate> Statistic => _statistic;
-
-        public Dictionary<string, string> InternalData => _internalData;
-
-        public Dictionary<string, string> ReadOnlyData => _readOnlyData;
+        [JsonIgnore] public int TotalChangedDataFlag => _totalChangedDataFlag;
 
         #endregion
 
@@ -68,6 +56,42 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
         //----------------------------------------------------------------------
         //  HELPER METHODS
         //----------------------------------------------------------------------
+        public void IncreaseCurrency(string currencyName, int incValue)
+        {
+            if (_currencyReward == null)
+                _currencyReward = new Dictionary<string, int>();
+
+            var beginValue = 0;
+            if (_currencyReward.TryGetValue(currencyName, out var currentReward))
+            {
+                beginValue = currentReward;
+            }
+
+            int afterValue = MathHelper.SafeIncreaseIntValue(beginValue, incValue);
+#if DEBUG_AUTO_CHANGE_PF_DATA
+            Debugger.Write($"[DEBUG_AUTO_CHANGE_PF_DATA] {currencyName} change from {beginValue} to {afterValue}");
+#endif
+            _currencyReward.Add(currencyName, afterValue);
+        }
+
+        public void DecreaseCurrency(string currencyName, int decValue)
+        {
+            if (_currencyReward == null)
+                _currencyReward = new Dictionary<string, int>();
+
+            var beginValue = 0;
+            if (_currencyReward.TryGetValue(currencyName, out var currentDecrease))
+            {
+                beginValue = currentDecrease;
+            }
+
+            int afterValue = MathHelper.SafeDecreaseIntValue(beginValue, decValue);
+#if DEBUG_AUTO_CHANGE_PF_DATA
+            Debugger.Write($"[DEBUG_AUTO_CHANGE_PF_DATA] {currencyName} change from {beginValue} to {afterValue}");
+#endif
+            _currencyDecrease.Add(currencyName, afterValue);
+        }
+
         public void UpdateStatistics(string statName, int value)
         {
             if (_statistic == null)
@@ -103,6 +127,17 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
             _internalData[key] = value;
         }
 
+        public void UpdateInternalData(Dictionary<string, string> data)
+        {
+            if (_internalData == null)
+                _internalData = new Dictionary<string, string>();
+
+            foreach (var keyValuePair in data)
+            {
+                _internalData[keyValuePair.Key] = keyValuePair.Value;
+            }
+        }
+
         public ItemGrant GrantNewInventoryItem(string playFabId, string itemId)
         {
             if (_itemsGrant == null)
@@ -118,6 +153,11 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
             if (_itemsCustomData == null)
                 _itemsCustomData = new List<ItemUpdateCustomData>();
             _itemsCustomData.Add(new ItemUpdateCustomData {itemInstance = itemInstance});
+        }
+
+        public void AddChangedDataFlag(int flag)
+        {
+            _totalChangedDataFlag |= flag;
         }
     }
 }

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Threading;
 using LiteNetLib.Utils;
 using MessagePack;
+using SourceShare.Share.NetRequest.Config;
 using SourceShare.Share.NetworkV2.TransportData.Base;
 using SourceShare.Share.NetworkV2.TransportData.Define;
 using SourceShare.Share.NetworkV2.TransportData.Header;
+using SourceShare.Share.NetworkV2.Utils;
 
 namespace SourceShare.Share.NetworkV2.Router
 {
@@ -27,9 +29,9 @@ namespace SourceShare.Share.NetworkV2.Router
             _timeOutChecker = timeOutChecker;
         }
 
-        public void RegisterHeader<T>(Func<T> headerConstructor) where T : INetDataHeader, new()
+        public void RegisterHeader<H>(Func<H> headerConstructor) where H : INetDataHeader, new()
         {
-            var t = typeof(T);
+            var t = typeof(H);
             var hash = HashName.GetHash(t);
             _headerConstructors[hash] = () => headerConstructor.Invoke();
         }
@@ -65,6 +67,9 @@ namespace SourceShare.Share.NetworkV2.Router
         public void ReadPacket(NetDataReader reader, T player)
         {
             var header = ReadHeader(reader);
+#if DEBUG_NETWORK_V2
+            Debugger.Write($"[Net] Receive <{player.PlayerId}> {header.NetType} >> {Debugger.FindConstName<NetAPICommand>(header.NetCommand)}");
+#endif        
             if (header.NetType == ENetType.REQUEST || header.NetType == ENetType.MESSAGE)
             {
                 var action = GetIncomeRequestCallback(header.NetCommand);
@@ -94,7 +99,10 @@ namespace SourceShare.Share.NetworkV2.Router
         /// <exception cref="ParseException">Malformed packet</exception>
         public void ReadAllPackets(NetDataReader reader, T player)
         {
-            while (reader.AvailableBytes > 0) ReadPacket(reader, player);
+            while (reader.AvailableBytes > 0)
+            {
+                ReadPacket(reader, player);
+            }
         }
 
         /// <summary>

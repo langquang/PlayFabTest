@@ -57,6 +57,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CheckCreateNodeAccountRequestFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CheckCreateNodeAccountResponseFormatter.cs" />
     <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CommonErrorResponseFormatter.cs" />
     <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountRequestFormatter.cs" />
     <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountResponseFormatter.cs" />
@@ -97,13 +99,13 @@
     <Compile Include="Assets\Scripts\LiteNetLib\Utils\NetSerializer.cs" />
     <Compile Include="Assets\Scripts\LiteNetLib\Utils\NetSerializerExceptions.cs" />
     <Compile Include="Assets\Scripts\NetworkV2\Unity\TimeOutChecker.cs" />
-    <Compile Include="Assets\Scripts\PlayFabClient\PFHelper.cs" />
+    <Compile Include="Assets\Scripts\PlayFabClient\PFClientHelper.cs" />
     <Compile Include="Assets\Scripts\PlayFabClient\Player.cs" />
     <Compile Include="Assets\Scripts\PlayFabClient\PlayFabAuthService.cs" />
     <Compile Include="Assets\Scripts\PlayFabShare\Models\NodeAccount.cs" />
+    <Compile Include="Assets\Scripts\PlayFabShare\Models\PFCurrency.cs" />
     <Compile Include="Assets\Scripts\PlayFabShare\Models\PFProfile.cs" />
     <Compile Include="Assets\Scripts\PlayFabShare\Models\PFStatistic.cs" />
-    <Compile Include="Assets\Scripts\PlayFabShare\PFHelper.cs" />
     <Compile Include="Assets\Scripts\PlayFabShare\PFPlayerDataFlag.cs" />
     <Compile Include="Assets\Scripts\PlayFabShare\PFPlayerDataKey.cs" />
     <Compile Include="Assets\Scripts\Share\NetRequest\Config\NetAPICommand.cs" />
