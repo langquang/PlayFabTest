@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using IAHNetCoreServer.Logic.Server.Setting;
 using IAHNetCoreServer.Logic.Server.SGPlayFab.Define;
@@ -111,23 +112,26 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
         /// <returns></returns>
         public static async Task<bool> LoadUserData(DataPlayer player, int dataFlag)
         {
-            var success = false;
+            var tasks = new List<Task<bool>>(3);
             if (PFPlayerDataFlag.IsContainsInternalData(dataFlag))
             {
-                success |= await LoadInternalData(player, dataFlag);
+                tasks.Add(LoadInternalData(player, dataFlag));
             }
 
             if (PFPlayerDataFlag.IsContainsReadOnlyData(dataFlag))
             {
-                success |= await LoadReadOnlyData(player, dataFlag);
+                tasks.Add(LoadReadOnlyData(player, dataFlag));
             }
 
             if (PFPlayerDataFlag.IsContainsPublicData(dataFlag))
             {
-                success |= await LoadPublicData(player, dataFlag);
+                tasks.Add(LoadPublicData(player, dataFlag));
             }
 
-            return success;
+            if (tasks.Count <= 0) return false;
+            
+            var result = await Task.WhenAll(tasks);
+            return result.Any(success => success);
         }
 
         /// <summary>
