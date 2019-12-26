@@ -13,27 +13,15 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
     public class CheckCreateNodeAccountHandler
     {
-        public static void Perform(CheckCreateNodeAccountRequest request, DataPlayer player)
+        public static async Task<INetData> Perform(CheckCreateNodeAccountRequest request, DataPlayer player)
         {
             if (player.IsMasterAccount())
             {
-                PerformWithMasterAccountRole(request, player);
+                return PerformWithMasterAccountRole(request, player);
             }
             else
             {
-                Task.Run(async () =>
-                {
-                    Debugger.Write($"current thread: {ThreadHelper.GetCurrentThreadName("handler")}");
-                    try
-                    {
-                        await PerformWithNodeAccountRole(request, player);
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e);
-                        throw;
-                    }
-                });
+                return await PerformWithNodeAccountRole(request, player);
             }
         }
 

@@ -13,9 +13,9 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
     public class CreateMasterAccountHandler
     {
-        public static void Perform(CreateMasterAccountRequest request, DataPlayer player)
+        public static async Task<INetData> Perform(CreateMasterAccountRequest request, DataPlayer player)
         {
-            PerformAsync(request, player);
+            return await PerformAsync(request, player);
         }
 
         private static async Task<INetData> PerformAsync(CreateMasterAccountRequest request, DataPlayer player)

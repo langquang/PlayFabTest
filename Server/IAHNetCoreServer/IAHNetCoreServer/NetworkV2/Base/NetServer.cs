@@ -83,12 +83,12 @@ namespace NetworkV2.Base
             thread.Start();
         }
 
-        public void Loop()
+        private void Loop()
         {
             while (_running)
             {
                 _server.PollEvents();
-                Thread.Sleep(15);
+                Thread.Sleep(1);
             }
 
             _server.DisconnectAll();

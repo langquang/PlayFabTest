@@ -32,7 +32,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             _router.Subscribe<TestRequest>(NetAPICommand.TEST_REQUEST, OnTestHandler);
             _router.Subscribe<CreateMasterAccountRequest>(NetAPICommand.CREATE_MASTER_ACCOUNT, CreateMasterAccountHandler.Perform);
             _router.Subscribe<CheckCreateNodeAccountRequest>(NetAPICommand.CHECK_CREATE_NODE_ACCOUNT, CheckCreateNodeAccountHandler.Perform);
-            _router.Subscribe<CreateNodeAccountRequest>(NetAPICommand.CREATE_MASTER_ACCOUNT, CreateNodeAccountHandler.Perform);
+            _router.Subscribe<CreateNodeAccountRequest>(NetAPICommand.CREATE_NODE_ACCOUNT, CreateNodeAccountHandler.Perform);
         }
 
 
@@ -114,15 +114,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
         public override void Perform(DataPlayer player, NetPacketReader reader)
         {
-            try
-            {
-                _router.ReadAllPackets(reader, player);
-            }
-            catch (Exception e)
-            {
-                Debugger.Write(e.ToString());
-                throw;
-            }
+            _router.ReadAllPackets(reader, player);
         }
 
         public override void OnDisconnect(DataPlayer player)
@@ -149,11 +141,15 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             return response;
         }
 
-        private static void OnTestHandler(TestRequest request, DataPlayer player)
+        private static Task<INetData> OnTestHandler(TestRequest request, DataPlayer player)
         {
             Debugger.Write($"Server receive a Test Command with content={request.msg}");
             var response = new TestResponse(request) {msg = "A response of test command from server"};
             player.Send(response);
+            
+            throw new Exception("butin loi roi");
+
+            return Task.FromResult((INetData)response);
         }
     }
 }

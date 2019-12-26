@@ -70,7 +70,8 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
             _curPlayFabId = curPlayFabId;
             _sessionTicket = sessionTicket;
             _createParams = createParams;
-            _netClient.Start("127.0.0.1", 8000, "ButinABC");
+            // _netClient.Start("127.0.0.1", 8000, "ButinABC");
+            _netClient.Start("35.187.249.32", 8000, "ButinABC");
         }
 
         private void OnConnected(NetPeer peer)

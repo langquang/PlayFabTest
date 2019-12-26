@@ -15,8 +15,6 @@
       "netcoreapp2.2"
     ],
     "sources": {
-      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-      "D:\\projects\\suga_iah\\dll_sources": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 using LiteNetLib.Utils;
 using MessagePack;
 using SourceShare.Share.NetRequest.Config;
@@ -64,16 +65,16 @@ namespace SourceShare.Share.NetworkV2.Router
             return new RequestHeader();
         }
 
-        public void ReadPacket(NetDataReader reader, T player)
+        private async Task ReadPacket(NetDataReader reader, T player)
         {
             var header = ReadHeader(reader);
 #if DEBUG_NETWORK_V2
             Debugger.Write($"[Net] Receive <{player.PlayerId}> {header.NetType} >> {Debugger.FindConstName<NetAPICommand>(header.NetCommand)}");
-#endif        
+#endif
             if (header.NetType == ENetType.REQUEST || header.NetType == ENetType.MESSAGE)
             {
                 var action = GetIncomeRequestCallback(header.NetCommand);
-                action?.Invoke(header, reader, player);
+                if (action != null) await action.Invoke(header, reader, player);
             }
             else
             {
@@ -81,7 +82,7 @@ namespace SourceShare.Share.NetworkV2.Router
                 if (header.RequestId == 0)
                 {
                     var action = GetIncomeRequestCallback(header.NetCommand);
-                    action?.Invoke(header, reader, player);
+                    await action.Invoke(header, reader, player);
                 }
                 else // round trip data
                 {
@@ -97,11 +98,18 @@ namespace SourceShare.Share.NetworkV2.Router
         /// <param name="reader">NetDataReader with packets data</param>
         /// <param name="player">Argument that passed to OnReceivedEvent</param>
         /// <exception cref="ParseException">Malformed packet</exception>
-        public void ReadAllPackets(NetDataReader reader, T player)
+        public async Task ReadAllPackets(NetDataReader reader, T player)
         {
             while (reader.AvailableBytes > 0)
             {
-                ReadPacket(reader, player);
+                try
+                {
+                    await ReadPacket(reader, player);
+                }
+                catch (Exception e)
+                {
+                    Debugger.WriteError(e.Message);
+                }
             }
         }
 
@@ -110,13 +118,13 @@ namespace SourceShare.Share.NetworkV2.Router
         /// </summary>
         /// <param name="command">command id</param>
         /// <param name="onReceive">event that will be called when packet deserialized with ReadPacket method</param>
-        public void Subscribe<TNetRequest>(int command, Action<TNetRequest, T> onReceive) where TNetRequest : INetData
+        public void Subscribe<TNetRequest>(int command, Func<TNetRequest, T, Task<INetData>> onReceive) where TNetRequest : INetData
         {
-            _incomeRequestCallbacks[command] = (header, reader, player) =>
+            _incomeRequestCallbacks[command] = async (header, reader, player) =>
             {
                 var request = MessagePackSerializer.Deserialize<TNetRequest>(reader.GetBytesWithLength());
                 request.Header = header;
-                onReceive.Invoke(request, player);
+                return await onReceive.Invoke(request, player);
             };
         }
 
@@ -170,7 +178,7 @@ namespace SourceShare.Share.NetworkV2.Router
 
         #endregion
 
-        private delegate void SubscribeIncomeDelegate(INetDataHeader header, NetDataReader reader, T player);
+        private delegate Task<INetData> SubscribeIncomeDelegate(INetDataHeader header, NetDataReader reader, T player);
 
         private delegate void SubscribeWaitingResponseDelegate(ResponseHeader header, NetDataReader reader, T player);
     }

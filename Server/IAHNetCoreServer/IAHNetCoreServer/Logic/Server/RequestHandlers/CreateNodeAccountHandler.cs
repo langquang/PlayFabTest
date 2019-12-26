@@ -12,9 +12,9 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 {
     public class CreateNodeAccountHandler
     {
-        public static void Perform(CreateNodeAccountRequest request, DataPlayer player)
+        public static async Task<INetData> Perform(CreateNodeAccountRequest request, DataPlayer player)
         {
-            PerformAsync(request, player);
+            return await PerformAsync(request, player);
         }
 
         private static async Task<INetData> PerformAsync(CreateNodeAccountRequest request, DataPlayer player)

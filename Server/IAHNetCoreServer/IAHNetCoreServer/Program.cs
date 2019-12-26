@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using IAHNetCoreServer.Logic.Server.RequestHandlers;
 using IAHNetCoreServer.Logic.Server.SGPlayFab;
 using MessagePack;
@@ -27,13 +28,18 @@ namespace IAHNetCoreServer
             NetServer<DataPlayer> netServer = new NetServer<DataPlayer>("Server", new EntryHandler());
             netServer.Start(port, key);
 
-            bool _quitFlag = false;
-            while (!_quitFlag)
-            {
-                var keyInfo = Console.ReadKey();
-                _quitFlag = keyInfo.Key == ConsoleKey.C
-                            && keyInfo.Modifiers == ConsoleModifiers.Control;
-            }
+            int workerThreads, completionPortThreads;
+            ThreadPool.GetMaxThreads(out workerThreads, out completionPortThreads);
+            Console.WriteLine($"workerThreads={workerThreads},completionPortThreads={completionPortThreads}");
+            
+            // bool _quitFlag = false;
+            // while (!_quitFlag)
+            // {
+            //     var keyInfo = Console.ReadKey();
+            //     _quitFlag = keyInfo.Key == ConsoleKey.C
+            //                 && keyInfo.Modifiers == ConsoleModifiers.Control;
+            // }
+            
         }
 
         static void SetupMessagePack()
