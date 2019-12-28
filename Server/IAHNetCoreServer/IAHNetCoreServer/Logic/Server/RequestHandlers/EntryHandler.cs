@@ -146,9 +146,6 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             Debugger.Write($"Server receive a Test Command with content={request.msg}");
             var response = new TestResponse(request) {msg = "A response of test command from server"};
             player.Send(response);
-            
-            throw new Exception("butin loi roi");
-
             return Task.FromResult((INetData)response);
         }
     }

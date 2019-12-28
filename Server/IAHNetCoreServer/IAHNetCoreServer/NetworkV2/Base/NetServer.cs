@@ -11,6 +11,8 @@ namespace NetworkV2.Base
 {
     public class NetServer<T> where T : NetPlayer
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
         // Read only props
         private readonly string                                 _name;
         private readonly ServerReceiveNetDataHandler<T> _handler;
@@ -27,6 +29,7 @@ namespace NetworkV2.Base
 
         public NetServer(string name, ServerReceiveNetDataHandler<T> handler)
         {
+            logger.Info($"Create a NetServer: {name}...");
             _name = name;
             _handler = handler;
         }
@@ -47,12 +50,12 @@ namespace NetworkV2.Base
 
             if (CustomParamsEvent != null)
             {
-                Console.WriteLine($"Start server {_name} with custom params");
+                logger.Debug($"Start server {_name} with custom params");
                 CustomParamsEvent.Invoke(this, _server);
             }
             else
             {
-                Console.WriteLine($"Start server {_name} with default params");
+                logger.Debug($"Start server {_name} with default params");
                 SetDefaultParams();
             }
         }
@@ -69,6 +72,7 @@ namespace NetworkV2.Base
 
         public void Start(int port, string acceptKey)
         {
+            logger.Info($"Start NetServer:{_name}... with port:{port}");
             if (_server != null)
             {
                 throw new Exception("NetServer already start!");
@@ -97,16 +101,17 @@ namespace NetworkV2.Base
 
         public void Stop()
         {
+            logger.Info($"Stop NetServer:{_name}......");
             _running = false;
         }
 
         private void OnPeerConnected(NetPeer peer)
         {
-            Console.WriteLine($"[Server] Peer connected: {peer.EndPoint}, thread={ThreadHelper.GetCurrentThreadName("Socket")}");
+            logger.Debug($"[Server] Peer connected: {peer.EndPoint}, thread={ThreadHelper.GetCurrentThreadName("Socket")}");
             var peers = _server.GetPeers(ConnectionState.Connected);
             foreach (var netPeer in peers)
             {
-                Console.WriteLine("ConnectedPeersList: id={0}, ep={1}", netPeer.Id, netPeer.EndPoint);
+                logger.Debug("ConnectedPeersList: id={0}, ep={1}", netPeer.Id, netPeer.EndPoint);
             }
         }
 
@@ -120,7 +125,7 @@ namespace NetworkV2.Base
 
         private void OnNetworkError(IPEndPoint endPoint, SocketError socketErrorCode)
         {
-            Console.WriteLine("[Server] error: " + socketErrorCode);
+            logger.Debug("[Server] error: " + socketErrorCode);
         }
 
         private async void OnNetworkReceive(NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
@@ -152,7 +157,7 @@ namespace NetworkV2.Base
 
         private void OnNetworkReceiveUnconnected(IPEndPoint remoteEndPoint, NetPacketReader reader, UnconnectedMessageType messageType)
         {
-            Console.WriteLine("[Server] ReceiveUnconnected {0}. From: {1}. Data: {2}", messageType, remoteEndPoint, reader.GetString(100));
+            logger.Debug("[Server] ReceiveUnconnected {0}. From: {1}. Data: {2}", messageType, remoteEndPoint, reader.GetString(100));
             var writer = _poolWriter.Spawn();
             writer.Put("SERVER DISCOVERY RESPONSE");
             _server.SendUnconnectedMessage(writer, remoteEndPoint);

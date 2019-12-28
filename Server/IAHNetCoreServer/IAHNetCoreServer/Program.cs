@@ -1,45 +1,70 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 using IAHNetCoreServer.Logic.Server.RequestHandlers;
 using IAHNetCoreServer.Logic.Server.SGPlayFab;
 using MessagePack;
 using MessagePack.Resolvers;
 using MessagePack.Unity;
 using MessagePack.Unity.Extension;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using NetworkV2.Base;
-using NetworkV2.Server;
+using NLog;
+using NLog.Extensions.Hosting;
+using NLog.Extensions.Logging;
 using PlayFabCustom.Models;
-using SourceShare.Share.NetworkV2;
+using ILogger = Microsoft.Extensions.Logging.ILogger;
+using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 namespace IAHNetCoreServer
 {
     class Program
     {
-        private static int    port = 8000;
-        private static string key  = "ButinABC";
+        public static int    port = 8000;
+        public static string key  = "ButinABC";
 
-        static void Main(string[] args)
+
+        private static NLog.Logger           logger = LogManager.GetCurrentClassLogger();
+        public static NetServer<DataPlayer> netServer;
+
+
+        static async Task Main(string[] args)
         {
             SetupMessagePack();
             SetupPlayFab();
-
-            Console.WriteLine($"Start Server with Thread: {ThreadHelper.GetCurrentThreadName("Main")}");
-            Console.WriteLine($"Creating a server with port:{port}");
-            NetServer<DataPlayer> netServer = new NetServer<DataPlayer>("Server", new EntryHandler());
-            netServer.Start(port, key);
-
-            int workerThreads, completionPortThreads;
-            ThreadPool.GetMaxThreads(out workerThreads, out completionPortThreads);
-            Console.WriteLine($"workerThreads={workerThreads},completionPortThreads={completionPortThreads}");
+            AppDomain.CurrentDomain.ProcessExit += CurrentDomain_ProcessExit;
             
-            // bool _quitFlag = false;
-            // while (!_quitFlag)
-            // {
-            //     var keyInfo = Console.ReadKey();
-            //     _quitFlag = keyInfo.Key == ConsoleKey.C
-            //                 && keyInfo.Modifiers == ConsoleModifiers.Control;
-            // }
+            // Program.netServer = new NetServer<DataPlayer>("Server", new EntryHandler());
+            // Program.netServer.Start(Program.port, Program.key);
+
+            var hostBuilder = new HostBuilder()
+                .ConfigureServices((hostContext, services) =>
+                {
+                    services.AddLogging(loggingBuilder =>
+                    {
+                        loggingBuilder.ClearProviders();
+                        loggingBuilder.SetMinimumLevel(LogLevel.Trace);
+                        loggingBuilder.AddNLog();
+                    });
+                    services.AddHostedService<LifetimeEventsHostedService>();
+                })
+                .UseNLog()
+                .UseConsoleLifetime();
+                // .Build();
             
+            await hostBuilder.RunConsoleAsync();
+
+            // Console.WriteLine("The host container has terminated. Press ANY key to exit the console.");
+            // Console.ReadKey();
+        }
+
+        private static void CurrentDomain_ProcessExit(object sender, EventArgs e)
+        {
+            logger.Info("================== STOPPING SERVER ================");
+            netServer.Stop();
+            Thread.Sleep(100);
         }
 
         static void SetupMessagePack()
@@ -61,6 +86,68 @@ namespace IAHNetCoreServer
         static void SetupPlayFab()
         {
             PFDriver.Setup();
+        }
+    }
+    
+    internal class LifetimeEventsHostedService : IHostedService, IDisposable
+    {
+        private readonly ILogger                  _logger;
+        private readonly IHostApplicationLifetime _appLifetime;
+
+        public LifetimeEventsHostedService(
+            ILogger<LifetimeEventsHostedService> logger, 
+            IHostApplicationLifetime appLifetime)
+        {
+            _logger = logger;
+            _appLifetime = appLifetime;
+        }
+
+        public Task StartAsync(CancellationToken cancellationToken)
+        {
+            _logger.LogInformation("Starting daemon: ");
+            
+            _appLifetime.ApplicationStarted.Register(OnStarted);
+            _appLifetime.ApplicationStopping.Register(OnStopping);
+            _appLifetime.ApplicationStopped.Register(OnStopped);
+            
+            Program.netServer = new NetServer<DataPlayer>("Server", new EntryHandler());
+            Program.netServer.Start(Program.port, Program.key);
+            
+            return Task.CompletedTask;
+        }
+
+        public Task StopAsync(CancellationToken cancellationToken)
+        {
+            _logger.LogInformation("stop daemon: ");
+
+            return Task.CompletedTask;
+        }
+
+        private void OnStarted()
+        {
+            _logger.LogInformation("OnStarted has been called.");
+
+            // Perform post-startup activities here
+        }
+
+        private void OnStopping()
+        {
+            _logger.LogInformation("OnStopping has been called.");
+
+            // Perform on-stopping activities here
+        }
+
+        private void OnStopped()
+        {
+            _logger.LogInformation("OnStopped has been called.");
+
+            // Perform post-stopped activities here
+            Program.netServer.Stop();
+        }
+        
+        public void Dispose()
+        {
+            _logger.LogInformation("Disposing....");
         }
     }
 }
