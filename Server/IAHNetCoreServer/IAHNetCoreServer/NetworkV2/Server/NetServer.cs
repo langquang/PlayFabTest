@@ -4,17 +4,17 @@ using System.Net.Sockets;
 using System.Threading;
 using LiteNetLib;
 using NetworkV2.Server;
+using NLog;
 using SourceShare.Share.NetworkV2;
-using SourceShare.Share.NetworkV2.Utils;
 
 namespace NetworkV2.Base
 {
     public class NetServer<T> where T : NetPlayer
     {
-        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         // Read only props
-        private readonly string                                 _name;
+        private readonly string                         _name;
         private readonly ServerReceiveNetDataHandler<T> _handler;
 
         private EventBasedNetListener _listener;
@@ -29,7 +29,7 @@ namespace NetworkV2.Base
 
         public NetServer(string name, ServerReceiveNetDataHandler<T> handler)
         {
-            logger.Info($"Create a NetServer: {name}...");
+            Logger.Info($"Create a NetServer: name={name}.......");
             _name = name;
             _handler = handler;
         }
@@ -50,12 +50,12 @@ namespace NetworkV2.Base
 
             if (CustomParamsEvent != null)
             {
-                logger.Debug($"Start server {_name} with custom params");
+                Logger.Debug($"Start server {_name} with custom params");
                 CustomParamsEvent.Invoke(this, _server);
             }
             else
             {
-                logger.Debug($"Start server {_name} with default params");
+                Logger.Debug($"Start server {_name} with default params");
                 SetDefaultParams();
             }
         }
@@ -72,10 +72,10 @@ namespace NetworkV2.Base
 
         public void Start(int port, string acceptKey)
         {
-            logger.Info($"Start NetServer:{_name}... with port:{port}");
+            Logger.Info($"Start NetServer: name={_name}....... with port:{port}");
             if (_server != null)
             {
-                throw new Exception("NetServer already start!");
+                throw new Exception($"NetServer name={_name} already start!");
             }
 
             Init();
@@ -97,27 +97,23 @@ namespace NetworkV2.Base
 
             _server.DisconnectAll();
             _server.Stop();
+            Logger.Info($"Stop NetServer: name={_name} successful");
         }
 
         public void Stop()
         {
-            logger.Info($"Stop NetServer:{_name}......");
+            Logger.Info($"Try to Stop NetServer: name={_name}, status={_running}......");
             _running = false;
         }
 
         private void OnPeerConnected(NetPeer peer)
         {
-            logger.Debug($"[Server] Peer connected: {peer.EndPoint}, thread={ThreadHelper.GetCurrentThreadName("Socket")}");
-            var peers = _server.GetPeers(ConnectionState.Connected);
-            foreach (var netPeer in peers)
-            {
-                logger.Debug("ConnectedPeersList: id={0}, ep={1}", netPeer.Id, netPeer.EndPoint);
-            }
+            Logger.Debug($"Peer connected: {peer.EndPoint}, thread={Thread.CurrentThread.ManagedThreadId}");
         }
 
         private void OnPeerDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
         {
-            Debugger.Write("[Server] Peer disconnected: " + peer.EndPoint + ", reason: " + disconnectInfo.Reason);
+            Logger.Debug("Peer disconnected: " + peer.EndPoint + ", reason: " + disconnectInfo.Reason);
             var player = (T) peer.Tag;
             if (player != null && player.IsLogined)
                 _handler.OnDisconnect(player);
@@ -125,7 +121,7 @@ namespace NetworkV2.Base
 
         private void OnNetworkError(IPEndPoint endPoint, SocketError socketErrorCode)
         {
-            logger.Debug("[Server] error: " + socketErrorCode);
+            Logger.Debug("[Server] error: " + socketErrorCode);
         }
 
         private async void OnNetworkReceive(NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
@@ -137,18 +133,18 @@ namespace NetworkV2.Base
                 if (newPlayer != null)
                 {
                     peer.Tag = newPlayer;
-                    var result = await _handler.VerifyLogin(newPlayer, request);
+                    await _handler.VerifyLogin(newPlayer, request);
                 }
             }
             else
             {
                 if (existPlayer.IsLogined)
                 {
-                    _handler.Perform(existPlayer, reader);
+                    await _handler.Perform(existPlayer, reader);
                 }
                 else
                 {
-                    Debugger.Write("[Error] Receive data from unlogged player");
+                    Logger.Error("Receive data from unlogged player");
                 }
             }
 
@@ -157,7 +153,7 @@ namespace NetworkV2.Base
 
         private void OnNetworkReceiveUnconnected(IPEndPoint remoteEndPoint, NetPacketReader reader, UnconnectedMessageType messageType)
         {
-            logger.Debug("[Server] ReceiveUnconnected {0}. From: {1}. Data: {2}", messageType, remoteEndPoint, reader.GetString(100));
+            Logger.Debug("ReceiveUnconnected {0}. From: {1}. Data: {2}", messageType, remoteEndPoint, reader.GetString(100));
             var writer = _poolWriter.Spawn();
             writer.Put("SERVER DISCOVERY RESPONSE");
             _server.SendUnconnectedMessage(writer, remoteEndPoint);

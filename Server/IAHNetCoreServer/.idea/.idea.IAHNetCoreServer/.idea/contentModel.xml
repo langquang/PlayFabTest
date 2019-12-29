@@ -36,16 +36,14 @@
           </e>
         </e>
         <e p="NetworkV2" t="Include">
-          <e p="Base" t="Include">
-            <e p="NetServer.cs" t="Include" />
-          </e>
           <e p="Server" t="Include">
             <e p="GroupPlayers.cs" t="Include" />
             <e p="NetDataRequestHeaderInfo.cs" t="Include" />
+            <e p="NetRouter.cs" t="Include" />
+            <e p="NetServer.cs" t="Include" />
             <e p="OnlinePlayers.cs" t="Include" />
             <e p="ServerReceiveNetDataHandler.cs" t="Include" />
             <e p="SimplePoolWriter.cs" t="Include" />
-            <e p="ThreadHelper.cs" t="Include" />
             <e p="TimeOutChecker.cs" t="Include" />
           </e>
         </e>
@@ -113,7 +111,7 @@
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="Share" t="Include">
-          <e p="NetRequest" t="Include">
+          <e p="APINetRequest" t="Include">
             <e p="Config" t="Include">
               <e p="NetAPICommand.cs" t="Include" />
               <e p="NetAPIErrorCode.cs" t="Include" />
@@ -125,18 +123,14 @@
           </e>
           <e p="NetworkV2" t="Include">
             <e p="Base" t="Include">
+              <e p="INetPlayer.cs" t="Include" />
               <e p="IReceiveNetDataHandler.cs" t="Include" />
             </e>
             <e p="Client" t="Include">
               <e p="ClientReceiveNetDataHandler.cs" t="Include" />
             </e>
-            <e p="INetPlayer.cs" t="Include" />
             <e p="NetClient.cs" t="Include" />
             <e p="NetPlayer.cs" t="Include" />
-            <e p="Router" t="Include">
-              <e p="HashName.cs" t="Include" />
-              <e p="NetRouter.cs" t="Include" />
-            </e>
             <e p="TransportData" t="Include">
               <e p="Base" t="Include">
                 <e p="INetData.cs" t="Include" />
@@ -156,6 +150,7 @@
             </e>
             <e p="Utils" t="Include">
               <e p="Debuger.cs" t="Include" />
+              <e p="HashName.cs" t="Include" />
               <e p="Timer.cs" t="Include" />
             </e>
           </e>
@@ -166,6 +161,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="NetworkV2" t="Include">
           <e p="Unity" t="Include">
+            <e p="NetRouter.cs" t="Include" />
             <e p="TimeOutChecker.cs" t="Include" />
           </e>
         </e>

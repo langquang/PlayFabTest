@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NetworkV2\Unity\NetRouter.cs" />
     <Compile Include="NetworkV2\Unity\TimeOutChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

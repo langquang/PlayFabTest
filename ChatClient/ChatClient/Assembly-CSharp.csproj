@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\LiteNetLib\Utils\NetPacketProcessor.cs" />
     <Compile Include="Assets\Scripts\LiteNetLib\Utils\NetSerializer.cs" />
     <Compile Include="Assets\Scripts\LiteNetLib\Utils\NetSerializerExceptions.cs" />
+    <Compile Include="Assets\Scripts\NetworkV2\Unity\NetRouter.cs" />
     <Compile Include="Assets\Scripts\NetworkV2\Unity\TimeOutChecker.cs" />
     <Compile Include="Assets\Scripts\PlayFabClient\PFClientHelper.cs" />
     <Compile Include="Assets\Scripts\PlayFabClient\Player.cs" />
@@ -108,19 +109,17 @@
     <Compile Include="Assets\Scripts\PlayFabShare\Models\PFStatistic.cs" />
     <Compile Include="Assets\Scripts\PlayFabShare\PFPlayerDataFlag.cs" />
     <Compile Include="Assets\Scripts\PlayFabShare\PFPlayerDataKey.cs" />
-    <Compile Include="Assets\Scripts\Share\NetRequest\Config\NetAPICommand.cs" />
-    <Compile Include="Assets\Scripts\Share\NetRequest\Config\NetAPIErrorCode.cs" />
-    <Compile Include="Assets\Scripts\Share\NetRequest\CreateMasterAccount.cs" />
-    <Compile Include="Assets\Scripts\Share\NetRequest\CreateNodeAccount.cs" />
-    <Compile Include="Assets\Scripts\Share\NetRequest\Login.cs" />
-    <Compile Include="Assets\Scripts\Share\NetRequest\Test.cs" />
+    <Compile Include="Assets\Scripts\Share\APINetRequest\Config\NetAPICommand.cs" />
+    <Compile Include="Assets\Scripts\Share\APINetRequest\Config\NetAPIErrorCode.cs" />
+    <Compile Include="Assets\Scripts\Share\APINetRequest\CreateMasterAccount.cs" />
+    <Compile Include="Assets\Scripts\Share\APINetRequest\CreateNodeAccount.cs" />
+    <Compile Include="Assets\Scripts\Share\APINetRequest\Login.cs" />
+    <Compile Include="Assets\Scripts\Share\APINetRequest\Test.cs" />
+    <Compile Include="Assets\Scripts\Share\NetworkV2\Base\INetPlayer.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\Base\IReceiveNetDataHandler.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\Client\ClientReceiveNetDataHandler.cs" />
-    <Compile Include="Assets\Scripts\Share\NetworkV2\INetPlayer.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\NetClient.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\NetPlayer.cs" />
-    <Compile Include="Assets\Scripts\Share\NetworkV2\Router\HashName.cs" />
-    <Compile Include="Assets\Scripts\Share\NetworkV2\Router\NetRouter.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\TransportData\Base\INetData.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\TransportData\Base\ITimeOutChecker.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\TransportData\Define\NetHeader.cs" />
@@ -129,6 +128,7 @@
     <Compile Include="Assets\Scripts\Share\NetworkV2\TransportData\Header\ResponseHeader.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\TransportData\Misc\RequestTimeOut.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\Utils\Debuger.cs" />
+    <Compile Include="Assets\Scripts\Share\NetworkV2\Utils\HashName.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\Utils\Timer.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/projects/suga_iah/PlayFabTest/ChatClient/ChatClient/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

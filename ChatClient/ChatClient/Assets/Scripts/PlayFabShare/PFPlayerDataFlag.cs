@@ -20,5 +20,34 @@ namespace PlayFabShare
 
             return keys;
         }
+
+        /// <summary>
+        /// This func is not good, but it's work!
+        /// </summary>
+        public static bool IsContainsInternalData(int flag)
+        {
+            if ((flag & ACCOUNT) != 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        
+        /// <summary>
+        /// This func is not good, but it's work!
+        /// </summary>
+        public static bool IsContainsPublicData(int flag)
+        {
+            return false;
+        }
+        
+        /// <summary>
+        /// This func is not good, but it's work!
+        /// </summary>
+        public static bool IsContainsReadOnlyData(int flag)
+        {
+            return false;
+        }
     }
 }

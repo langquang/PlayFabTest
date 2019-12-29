@@ -112,9 +112,9 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             return player;
         }
 
-        public override void Perform(DataPlayer player, NetPacketReader reader)
+        public override async Task Perform(DataPlayer player, NetPacketReader reader)
         {
-            _router.ReadAllPackets(reader, player);
+            await _router.ReadAllPackets(reader, player);
         }
 
         public override void OnDisconnect(DataPlayer player)

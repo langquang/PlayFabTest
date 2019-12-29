@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Threading;
 using LiteNetLib.Utils;
 using MessagePack;
-using SourceShare.Share.NetRequest.Config;
+using SourceShare.Share.NetworkV2;
+using SourceShare.Share.NetworkV2.Router;
 using SourceShare.Share.NetworkV2.TransportData.Base;
 using SourceShare.Share.NetworkV2.TransportData.Define;
 using SourceShare.Share.NetworkV2.TransportData.Header;
-using SourceShare.Share.NetworkV2.Utils;
 
-namespace SourceShare.Share.NetworkV2.Router
+namespace UnityClientLib.NetworkV2
 {
     public class NetRouter<T> where T : NetPlayer
     {
@@ -69,7 +69,7 @@ namespace SourceShare.Share.NetworkV2.Router
             var header = ReadHeader(reader);
 #if DEBUG_NETWORK_V2
             Debugger.Write($"[Net] Receive <{player.PlayerId}> {header.NetType} >> {Debugger.FindConstName<NetAPICommand>(header.NetCommand)}");
-#endif        
+#endif
             if (header.NetType == ENetType.REQUEST || header.NetType == ENetType.MESSAGE)
             {
                 var action = GetIncomeRequestCallback(header.NetCommand);
