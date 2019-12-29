@@ -18,6 +18,7 @@
               <e p="CreateMasterAccountHandler.cs" t="Include" />
               <e p="CreateNodeAccountHandler.cs" t="Include" />
               <e p="EntryHandler.cs" t="Include" />
+              <e p="TestHandler.cs" t="Include" />
             </e>
             <e p="Setting" t="Include">
               <e p="GameSetting.cs" t="Include" />
@@ -30,6 +31,8 @@
               <e p="PFUpdatePlayerReceipt.cs" t="Include" />
               <e p="ServerModels" t="Include">
                 <e p="DataPlayer.cs" t="Include" />
+                <e p="Inventory.cs" t="Include" />
+                <e p="KeyReward.cs" t="Include" />
                 <e p="SGPlayFabCustomModel.cs" t="Include" />
               </e>
             </e>
@@ -68,6 +71,8 @@
         <e p="Program.cs" t="Include" />
         <e p="Utils" t="Include">
           <e p="MathHelper.cs" t="Include" />
+          <e p="RandomHelper.cs" t="Include" />
+          <e p="SyncHelper.cs" t="Include" />
         </e>
       </e>
       <e p="IAHNetCoreServer.sln" t="IncludeFlat" />
@@ -111,15 +116,27 @@
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="Share" t="Include">
-          <e p="APINetRequest" t="Include">
-            <e p="Config" t="Include">
-              <e p="NetAPICommand.cs" t="Include" />
-              <e p="NetAPIErrorCode.cs" t="Include" />
+          <e p="APIServer" t="Include">
+            <e p="Data" t="Include">
+              <e p="Entities" t="Include">
+                <e p="IEntity.cs" t="Include" />
+                <e p="OnlineReward.cs" t="Include" />
+              </e>
+              <e p="SyncEntityName.cs" t="Include" />
+              <e p="SyncPlayerDataReceipt.cs" t="Include" />
+              <e p="TempInventoryItem.cs" t="Include" />
             </e>
-            <e p="CreateMasterAccount.cs" t="Include" />
-            <e p="CreateNodeAccount.cs" t="Include" />
-            <e p="Login.cs" t="Include" />
-            <e p="Test.cs" t="Include" />
+            <e p="Request" t="Include">
+              <e p="Config" t="Include">
+                <e p="NetAPICommand.cs" t="Include" />
+                <e p="NetAPIErrorCode.cs" t="Include" />
+              </e>
+              <e p="CreateMasterAccount.cs" t="Include" />
+              <e p="CreateNodeAccount.cs" t="Include" />
+              <e p="Login.cs" t="Include" />
+              <e p="SyncData.cs" t="Include" />
+              <e p="Test.cs" t="Include" />
+            </e>
           </e>
           <e p="NetworkV2" t="Include">
             <e p="Base" t="Include">

@@ -69,7 +69,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             player.Server = request.serverId;
 
             // save to PlayFab
-            var success = await PFDriver.CommitChanged(player);
+            var success = await PFDriver.CommitChangedToPlayFab(player);
             if (!success)
             {
                 return EntryHandler.ResponseError(player, request, NetAPIErrorCode.FATAL_ERROR);

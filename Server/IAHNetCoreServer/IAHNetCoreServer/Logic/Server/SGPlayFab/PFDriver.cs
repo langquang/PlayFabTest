@@ -21,9 +21,9 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
             PlayFabSettings.staticSettings.DeveloperSecretKey = "U7XWD3YGJFIOD3HX7F74J75RYOOGE4UHO75KGMK7APBBQUPBUJ";
         }
 
-        public static async Task<bool> CommitChanged(DataPlayer player)
+        public static async Task<bool> CommitChangedToPlayFab(DataPlayer player)
         {
-            var receipt = player.PrepareToCommitChangedData();
+            var receipt = player.PrepareCommitChangedData();
             return await UpdateUserData(player, receipt);
         }
 

@@ -1,7 +1,7 @@
-using System;
 using System.IO;
 using System.Threading.Tasks;
 using IAHNetCoreServer.Logic.Server.SGPlayFab;
+using IAHNetCoreServer.Utils;
 using LiteNetLib;
 using MessagePack;
 using NetworkV2.Server;
@@ -29,21 +29,12 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());
 
-            _router.Subscribe<TestRequest>(NetAPICommand.TEST_REQUEST, OnTestHandler);
+            _router.Subscribe<TestRequest>(NetAPICommand.TEST_REQUEST, TestHandler.Perform);
             _router.Subscribe<CreateMasterAccountRequest>(NetAPICommand.CREATE_MASTER_ACCOUNT, CreateMasterAccountHandler.Perform);
             _router.Subscribe<CheckCreateNodeAccountRequest>(NetAPICommand.CHECK_CREATE_NODE_ACCOUNT, CheckCreateNodeAccountHandler.Perform);
             _router.Subscribe<CreateNodeAccountRequest>(NetAPICommand.CREATE_NODE_ACCOUNT, CreateNodeAccountHandler.Perform);
         }
 
-
-        /// <summary>
-        /// Gen a session ticket
-        /// </summary>
-        /// <returns></returns>
-        private static string GenToken()
-        {
-            return Path.GetRandomFileName();
-        }
 
         public override (DataPlayer, INetData) BeginLogin(NetPeer peer, NetPacketReader reader)
         {
@@ -57,7 +48,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
             var loginRequest = MessagePackSerializer.Deserialize<LoginRequest>(reader.GetBytesWithLength());
             loginRequest.Header = header;
-            var player = new DataPlayer(loginRequest.playerId, peer, GenToken());
+            var player = new DataPlayer(loginRequest.playerId, peer, RandomHelper.RandomString());
             if (!loginRequest.IsValid())
             {
                 Debugger.Write("invalid login request");
@@ -72,7 +63,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
                 ResponseError(player, loginRequest, 2);
                 return (null, null);
             }
-            
+
             // todo: check parallel login
             return (player, loginRequest);
         }
@@ -139,14 +130,6 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             response.Header = new ResponseHeader(request.Header);
             player.Send(response);
             return response;
-        }
-
-        private static Task<INetData> OnTestHandler(TestRequest request, DataPlayer player)
-        {
-            Debugger.Write($"Server receive a Test Command with content={request.msg}");
-            var response = new TestResponse(request) {msg = "A response of test command from server"};
-            player.Send(response);
-            return Task.FromResult((INetData)response);
         }
     }
 }
