@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\admin\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\admin\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ChatClient.815567169.00" t="ExcludeRecursive" />
+    <e p="C:\Users\abutin\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\abutin\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ChatClient.815567169.00" t="ExcludeRecursive" />
     <e p="D:\projects\suga_iah\PlayFabTest\ChatClient\ChatClient" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -241,6 +241,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AutoGen" t="Include">
+            <e p="MessagePack_Formatters_SourceShare_Share_APIServer_Data_GiftPackFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_SourceShare_Share_APIServer_Data_OnlineRewardFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_SourceShare_Share_APIServer_Data_SyncPlayerDataReceiptFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_SourceShare_Share_APIServer_Data_TempInventoryItemFormatter.cs" t="Include" />
             <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CheckCreateNodeAccountRequestFormatter.cs" t="Include" />
             <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CheckCreateNodeAccountResponseFormatter.cs" t="Include" />
             <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CommonErrorResponseFormatter.cs" t="Include" />
@@ -250,6 +254,7 @@
             <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CreateNodeAccountResponseFormatter.cs" t="Include" />
             <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_LoginRequestFormatter.cs" t="Include" />
             <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_LoginResponseFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_SyncDataMessageFormatter.cs" t="Include" />
             <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_TestRequestFormatter.cs" t="Include" />
             <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_TestResponseFormatter.cs" t="Include" />
             <e p="MessagePack_Resolvers_GeneratedResolver.cs" t="Include" />
@@ -429,15 +434,28 @@
             <e p="PFPlayerDataKey.cs" t="Include" />
           </e>
           <e p="Share" t="Include">
-            <e p="APINetRequest" t="Include">
-              <e p="Config" t="Include">
-                <e p="NetAPICommand.cs" t="Include" />
-                <e p="NetAPIErrorCode.cs" t="Include" />
+            <e p="APIServer" t="Include">
+              <e p="Data" t="Include">
+                <e p="Entities" t="Include">
+                  <e p="GiftPack.cs" t="Include" />
+                  <e p="IEntity.cs" t="Include" />
+                  <e p="OnlineReward.cs" t="Include" />
+                </e>
+                <e p="SyncEntityName.cs" t="Include" />
+                <e p="SyncPlayerDataReceipt.cs" t="Include" />
+                <e p="TempInventoryItem.cs" t="Include" />
               </e>
-              <e p="CreateMasterAccount.cs" t="Include" />
-              <e p="CreateNodeAccount.cs" t="Include" />
-              <e p="Login.cs" t="Include" />
-              <e p="Test.cs" t="Include" />
+              <e p="Request" t="Include">
+                <e p="Config" t="Include">
+                  <e p="NetAPICommand.cs" t="Include" />
+                  <e p="NetAPIErrorCode.cs" t="Include" />
+                </e>
+                <e p="CreateMasterAccount.cs" t="Include" />
+                <e p="CreateNodeAccount.cs" t="Include" />
+                <e p="Login.cs" t="Include" />
+                <e p="SyncData.cs" t="Include" />
+                <e p="Test.cs" t="Include" />
+              </e>
             </e>
             <e p="NetworkV2" t="Include">
               <e p="Base" t="Include">

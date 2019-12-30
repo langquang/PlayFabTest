@@ -4,6 +4,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using LiteNetLib.Utils;
 using MessagePack;
+using NLog;
+using NLog.Fluent;
 using SourceShare.Share.NetRequest.Config;
 using SourceShare.Share.NetworkV2.TransportData.Base;
 using SourceShare.Share.NetworkV2.TransportData.Define;
@@ -14,6 +16,8 @@ namespace SourceShare.Share.NetworkV2.Router
 {
     public class NetRouter<T> where T : NetPlayer
     {
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
         private readonly Dictionary<ulong, Func<INetDataHeader>> _headerConstructors = new Dictionary<ulong, Func<INetDataHeader>>();
 
         // subscribe with ENetCommand
@@ -25,14 +29,17 @@ namespace SourceShare.Share.NetworkV2.Router
 
         private readonly ITimeOutChecker _timeOutChecker;
 
-        public NetRouter(ITimeOutChecker timeOutChecker)
+        private readonly string _name;
+
+        public NetRouter(string name, ITimeOutChecker timeOutChecker)
         {
+            _name = name;
             _timeOutChecker = timeOutChecker;
         }
 
         public void RegisterHeader<H>(Func<H> headerConstructor) where H : INetDataHeader, new()
         {
-            var t = typeof(H);
+            var t    = typeof(H);
             var hash = HashName.GetHash(t);
             _headerConstructors[hash] = () => headerConstructor.Invoke();
         }
@@ -65,7 +72,7 @@ namespace SourceShare.Share.NetworkV2.Router
             return new RequestHeader();
         }
 
-        private async Task ReadPacket(NetDataReader reader, T player)
+        private async Task<bool> ReadPacket(NetDataReader reader, T player)
         {
             var header = ReadHeader(reader);
 #if DEBUG_NETWORK_V2
@@ -74,7 +81,16 @@ namespace SourceShare.Share.NetworkV2.Router
             if (header.NetType == ENetType.REQUEST || header.NetType == ENetType.MESSAGE)
             {
                 var action = GetIncomeRequestCallback(header.NetCommand);
-                if (action != null) await action.Invoke(header, reader, player);
+                if (action != null)
+                {
+                    await action.Invoke(header, reader, player);
+                    return true;
+                }
+                else
+                {
+                    Logger.Warn($"Not implement handler of request-message: router={_name} NetType={header.NetType}, command={header.NetCommand}");
+                    return false;
+                }
             }
             else
             {
@@ -82,12 +98,30 @@ namespace SourceShare.Share.NetworkV2.Router
                 if (header.RequestId == 0)
                 {
                     var action = GetIncomeRequestCallback(header.NetCommand);
-                    await action.Invoke(header, reader, player);
+                    if (action != null)
+                    {
+                        await action.Invoke(header, reader, player);
+                        return true;
+                    }
+                    else
+                    {
+                        Logger.Warn($"Not implement handler of request: router={_name} NetType={header.NetType}, command={header.NetCommand}");
+                        return false;
+                    }
                 }
                 else // round trip data
                 {
                     var waitingCallback = GetWaitingCallback(header.RequestId);
-                    waitingCallback?.Invoke((ResponseHeader) header, reader, player);
+                    if (waitingCallback != null)
+                    {
+                        waitingCallback.Invoke((ResponseHeader) header, reader, player);
+                        return true;
+                    }
+                    else
+                    {
+                        Logger.Warn($"Not implement handler of response: router={_name} NetType={header.NetType}, command={header.NetCommand}");
+                        return false;
+                    }
                 }
             }
         }
@@ -100,15 +134,17 @@ namespace SourceShare.Share.NetworkV2.Router
         /// <exception cref="ParseException">Malformed packet</exception>
         public async Task ReadAllPackets(NetDataReader reader, T player)
         {
-            while (reader.AvailableBytes > 0)
+            bool doNextPacket = true;
+            while (reader.AvailableBytes > 0 && doNextPacket)
             {
                 try
                 {
-                    await ReadPacket(reader, player);
+                    doNextPacket = await ReadPacket(reader, player); // may be wrong net structure or unlistened packet, ignore other packet
                 }
                 catch (Exception e)
                 {
-                    Debugger.WriteError(e.Message);
+                    doNextPacket = false;
+                    Logger.Error(e, $"Handler error, user={player.PlayerId}");
                 }
             }
         }
@@ -121,11 +157,11 @@ namespace SourceShare.Share.NetworkV2.Router
         public void Subscribe<TNetRequest>(int command, Func<TNetRequest, T, Task<INetData>> onReceive) where TNetRequest : INetData
         {
             _incomeRequestCallbacks[command] = async (header, reader, player) =>
-            {
-                var request = MessagePackSerializer.Deserialize<TNetRequest>(reader.GetBytesWithLength());
-                request.Header = header;
-                return await onReceive.Invoke(request, player);
-            };
+                                               {
+                                                   var request = MessagePackSerializer.Deserialize<TNetRequest>(reader.GetBytesWithLength());
+                                                   request.Header = header;
+                                                   return await onReceive.Invoke(request, player);
+                                               };
         }
 
         private void SubscribeWaitingRequest<TNetResponse>(INetData request, Action<TNetResponse, T> onSuccess, Action<int> onError, Action<TNetResponse, NetPlayer> onFinally, float timeOut = 0) where TNetResponse : INetData
@@ -133,16 +169,16 @@ namespace SourceShare.Share.NetworkV2.Router
             var requestId = GenID();
             request.Header.RequestId = requestId;
             _waitingForResponseCallbacks[requestId] = (header, reader, player) =>
-            {
-                var response = MessagePackSerializer.Deserialize<TNetResponse>(reader.GetBytesWithLength());
-                response.Header = header;
-                if (header.Error == 0)
-                    onSuccess?.Invoke(response, player);
-                else
-                    onError?.Invoke(header.Error);
+                                                      {
+                                                          var response = MessagePackSerializer.Deserialize<TNetResponse>(reader.GetBytesWithLength());
+                                                          response.Header = header;
+                                                          if (header.Error == 0)
+                                                              onSuccess?.Invoke(response, player);
+                                                          else
+                                                              onError?.Invoke(header.Error);
 
-                onFinally?.Invoke(response, player);
-            };
+                                                          onFinally?.Invoke(response, player);
+                                                      };
 
             if (_timeOutChecker != null && timeOut > 0f) _timeOutChecker.Add(request);
         }
@@ -164,7 +200,7 @@ namespace SourceShare.Share.NetworkV2.Router
             destPlayer.Send(request);
         }
 
-        #region STATIC FUNCTION: auto gen id
+    #region STATIC FUNCTION: auto gen id
 
         private static volatile int IDMaker = int.MaxValue - 1;
 
@@ -176,7 +212,7 @@ namespace SourceShare.Share.NetworkV2.Router
             return id;
         }
 
-        #endregion
+    #endregion
 
         private delegate Task<INetData> SubscribeIncomeDelegate(INetDataHeader header, NetDataReader reader, T player);
 

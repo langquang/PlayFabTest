@@ -4,11 +4,11 @@ using PlayFab.ServerModels;
 
 namespace IAHNetCoreServer.Logic.Server.SGPlayFab.ServerModels
 {
-    public class Inventory
+    public class PFInventory
     {
         private readonly Dictionary<string, ItemInstance> _items; // itemInstanceId -> instance
 
-        public Inventory()
+        public PFInventory()
         {
             _items = new Dictionary<string, ItemInstance>();
         }
@@ -31,10 +31,25 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab.ServerModels
         {
             _items.Add(instance.ItemInstanceId, instance);
         }
-
-        public void Grant(string itemId)
+        
+        /// <summary>
+        ///  Override or make new
+        /// </summary>
+        /// <param name="instance"></param>
+        public void Set(ItemInstance instance)
         {
-            Grant(new ItemInstance(){ItemInstanceId = });
+            _items[instance.ItemInstanceId] = instance; // override
+        }
+
+        public void Revoke(ItemInstance instance)
+        {
+            _items.Remove(instance.ItemInstanceId);
+        }
+        
+        public void Import(List<ItemInstance> UserInventory)
+        {
+           _items.Clear();
+           UserInventory.ForEach(i=>_items.Add(i.ItemInstanceId, i));
         }
     }
 }

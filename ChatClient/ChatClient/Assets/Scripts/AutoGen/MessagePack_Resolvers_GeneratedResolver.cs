@@ -51,19 +51,25 @@ namespace MessagePack.Resolvers
 
         static GeneratedResolverGetFormatterHelper()
         {
-            lookup = new global::System.Collections.Generic.Dictionary<Type, int>(11)
+            lookup = new global::System.Collections.Generic.Dictionary<Type, int>(17)
             {
-                { typeof(global::SourceShare.Share.NetRequest.CreateMasterAccountRequest), 0 },
-                { typeof(global::SourceShare.Share.NetRequest.CreateMasterAccountResponse), 1 },
-                { typeof(global::SourceShare.Share.NetRequest.CreateNodeAccountRequest), 2 },
-                { typeof(global::SourceShare.Share.NetRequest.CreateNodeAccountResponse), 3 },
-                { typeof(global::SourceShare.Share.NetRequest.CheckCreateNodeAccountRequest), 4 },
-                { typeof(global::SourceShare.Share.NetRequest.CheckCreateNodeAccountResponse), 5 },
-                { typeof(global::SourceShare.Share.NetRequest.LoginRequest), 6 },
-                { typeof(global::SourceShare.Share.NetRequest.LoginResponse), 7 },
-                { typeof(global::SourceShare.Share.NetRequest.CommonErrorResponse), 8 },
-                { typeof(global::SourceShare.Share.NetRequest.TestRequest), 9 },
-                { typeof(global::SourceShare.Share.NetRequest.TestResponse), 10 },
+                { typeof(global::System.Collections.Generic.Dictionary<string, string>), 0 },
+                { typeof(global::SourceShare.Share.APIServer.Data.SyncPlayerDataReceipt), 1 },
+                { typeof(global::SourceShare.Share.APIServer.Data.TempInventoryItem), 2 },
+                { typeof(global::SourceShare.Share.APIServer.Data.GiftPack), 3 },
+                { typeof(global::SourceShare.Share.APIServer.Data.OnlineReward), 4 },
+                { typeof(global::SourceShare.Share.NetRequest.CreateMasterAccountRequest), 5 },
+                { typeof(global::SourceShare.Share.NetRequest.CreateMasterAccountResponse), 6 },
+                { typeof(global::SourceShare.Share.NetRequest.CreateNodeAccountRequest), 7 },
+                { typeof(global::SourceShare.Share.NetRequest.CreateNodeAccountResponse), 8 },
+                { typeof(global::SourceShare.Share.NetRequest.CheckCreateNodeAccountRequest), 9 },
+                { typeof(global::SourceShare.Share.NetRequest.CheckCreateNodeAccountResponse), 10 },
+                { typeof(global::SourceShare.Share.NetRequest.LoginRequest), 11 },
+                { typeof(global::SourceShare.Share.NetRequest.LoginResponse), 12 },
+                { typeof(global::SourceShare.Share.NetRequest.CommonErrorResponse), 13 },
+                { typeof(global::SourceShare.Share.NetRequest.SyncDataMessage), 14 },
+                { typeof(global::SourceShare.Share.NetRequest.TestRequest), 15 },
+                { typeof(global::SourceShare.Share.NetRequest.TestResponse), 16 },
             };
         }
 
@@ -77,17 +83,23 @@ namespace MessagePack.Resolvers
 
             switch (key)
             {
-                case 0: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateMasterAccountRequestFormatter();
-                case 1: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateMasterAccountResponseFormatter();
-                case 2: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateNodeAccountRequestFormatter();
-                case 3: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateNodeAccountResponseFormatter();
-                case 4: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CheckCreateNodeAccountRequestFormatter();
-                case 5: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CheckCreateNodeAccountResponseFormatter();
-                case 6: return new MessagePack.Formatters.SourceShare.Share.NetRequest.LoginRequestFormatter();
-                case 7: return new MessagePack.Formatters.SourceShare.Share.NetRequest.LoginResponseFormatter();
-                case 8: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CommonErrorResponseFormatter();
-                case 9: return new MessagePack.Formatters.SourceShare.Share.NetRequest.TestRequestFormatter();
-                case 10: return new MessagePack.Formatters.SourceShare.Share.NetRequest.TestResponseFormatter();
+                case 0: return new global::MessagePack.Formatters.DictionaryFormatter<string, string>();
+                case 1: return new MessagePack.Formatters.SourceShare.Share.APIServer.Data.SyncPlayerDataReceiptFormatter();
+                case 2: return new MessagePack.Formatters.SourceShare.Share.APIServer.Data.TempInventoryItemFormatter();
+                case 3: return new MessagePack.Formatters.SourceShare.Share.APIServer.Data.GiftPackFormatter();
+                case 4: return new MessagePack.Formatters.SourceShare.Share.APIServer.Data.OnlineRewardFormatter();
+                case 5: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateMasterAccountRequestFormatter();
+                case 6: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateMasterAccountResponseFormatter();
+                case 7: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateNodeAccountRequestFormatter();
+                case 8: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CreateNodeAccountResponseFormatter();
+                case 9: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CheckCreateNodeAccountRequestFormatter();
+                case 10: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CheckCreateNodeAccountResponseFormatter();
+                case 11: return new MessagePack.Formatters.SourceShare.Share.NetRequest.LoginRequestFormatter();
+                case 12: return new MessagePack.Formatters.SourceShare.Share.NetRequest.LoginResponseFormatter();
+                case 13: return new MessagePack.Formatters.SourceShare.Share.NetRequest.CommonErrorResponseFormatter();
+                case 14: return new MessagePack.Formatters.SourceShare.Share.NetRequest.SyncDataMessageFormatter();
+                case 15: return new MessagePack.Formatters.SourceShare.Share.NetRequest.TestRequestFormatter();
+                case 16: return new MessagePack.Formatters.SourceShare.Share.NetRequest.TestResponseFormatter();
                 default: return null;
             }
         }

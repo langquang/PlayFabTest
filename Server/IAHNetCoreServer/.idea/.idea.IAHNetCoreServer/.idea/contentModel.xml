@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\admin\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\admin\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_IAHNetCoreServer.-1248965471.00" t="ExcludeRecursive" />
+    <e p="C:\Users\abutin\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\abutin\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_IAHNetCoreServer.-1248965471.00" t="ExcludeRecursive" />
     <e p="D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer" t="IncludeFlat">
       <e p="IAHNetCoreServer" t="IncludeRecursive">
         <e p="_ConfigData" t="Include">
@@ -27,12 +27,14 @@
               <e p="Define" t="Include">
                 <e p="PFCloudScripFuncName.cs" t="Include" />
               </e>
+              <e p="PFCatalog.cs" t="Include" />
               <e p="PFDriver.cs" t="Include" />
+              <e p="PFHelper.cs" t="Include" />
               <e p="PFUpdatePlayerReceipt.cs" t="Include" />
               <e p="ServerModels" t="Include">
                 <e p="DataPlayer.cs" t="Include" />
-                <e p="Inventory.cs" t="Include" />
                 <e p="KeyReward.cs" t="Include" />
+                <e p="PFInventory.cs" t="Include" />
                 <e p="SGPlayFabCustomModel.cs" t="Include" />
               </e>
             </e>
@@ -119,6 +121,7 @@
           <e p="APIServer" t="Include">
             <e p="Data" t="Include">
               <e p="Entities" t="Include">
+                <e p="GiftPack.cs" t="Include" />
                 <e p="IEntity.cs" t="Include" />
                 <e p="OnlineReward.cs" t="Include" />
               </e>

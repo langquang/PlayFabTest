@@ -18,11 +18,11 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab.CustomModels
     /// Core Class contains all data response from PlayFab after execute cloudScript "UpdateUserData" success
     /// </summary>
     [Serializable]
-    public class CustomCombinedUpdateUserDataResult
+    public class UpdateUserDataResult
     {
-        public int                         errorCode;
-        public List<CustomVCResult>        VCResults;
-        public List<CustomItemGrantResult> itemsGrantResult;
+        public int                       errorCode;
+        public List<CustomVCResult>      VCResults;
+        public List<GrantedItemInstance> itemsGrantResult;
     }
 
     [Serializable]

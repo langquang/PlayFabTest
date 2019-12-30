@@ -1,11 +1,10 @@
-using System;
 using System.Collections.Generic;
+using IAHNetCoreServer.Logic.Server.Setting;
 using IAHNetCoreServer.Logic.Server.SGPlayFab.CustomModels;
 using Newtonsoft.Json;
-using PlayFab;
 using PlayFab.ServerModels;
-using SourceShare.Share.NetworkV2.Utils;
 using SourceShare.Share.Utils;
+
 
 namespace IAHNetCoreServer.Logic.Server.SGPlayFab
 {
@@ -14,6 +13,9 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
     /// </summary>
     public class PFUpdatePlayerReceipt
     {
+        // Secret key
+        [JsonProperty("key")] private readonly string _key;
+
         //----------------------------------------------------------------------
         //  Virtual Currencies
         //----------------------------------------------------------------------
@@ -24,7 +26,7 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
         //  Inventory
         //----------------------------------------------------------------------
         private                                   string                      _catalogVersion; //add version to determine what's version using update in catalog
-        [JsonProperty("ItemsGrant")]      private List<ItemGrant>             _itemsGrant;
+        [JsonProperty("ItemsGrant")]      private List<string>                _itemsGrant;// todo support grant item with custom data via api GrantItemsToUsers, just add a new property
         [JsonProperty("ItemRevoke")]      private List<RevokeInventoryItem>   _itemRevoke;
         [JsonProperty("ItemsCustomData")] private List<ItemUpdateCustomData>  _itemsCustomData;
         [JsonProperty("ItemsModifyUses")] private List<ModifyItemUsesRequest> _itemsModifyUses;
@@ -46,11 +48,16 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
 
         private int _totalChangedDataFlag;
 
-        #region PROPERTIES
+    #region PROPERTIES
 
         [JsonIgnore] public int TotalChangedDataFlag => _totalChangedDataFlag;
 
-        #endregion
+    #endregion
+
+        public PFUpdatePlayerReceipt()
+        {
+            _key = GameSetting.CLOUD_SCRIPT_SECRET_KEY;
+        }
 
 
         //----------------------------------------------------------------------
@@ -76,16 +83,16 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
 
         public void DecreaseCurrency(string currencyName, int decValue)
         {
-            if (_currencyReward == null)
-                _currencyReward = new Dictionary<string, int>();
+            if (_currencyDecrease == null)
+                _currencyDecrease = new Dictionary<string, int>();
 
             var beginValue = 0;
-            if (_currencyReward.TryGetValue(currencyName, out var currentDecrease))
+            if (_currencyDecrease.TryGetValue(currencyName, out var currentDecrease))
             {
                 beginValue = currentDecrease;
             }
 
-            int afterValue = MathHelper.SafeDecreaseIntValue(beginValue, decValue);
+            int afterValue = MathHelper.SafeIncreaseIntValue(beginValue, decValue); // Note increase <decrease num> here
 #if DEBUG_AUTO_CHANGE_PF_DATA
             Debugger.Write($"[DEBUG_AUTO_CHANGE_PF_DATA] {currencyName} change from {beginValue} to {afterValue}");
 #endif
@@ -105,10 +112,10 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
             else
             {
                 _statistic.Add(new StatisticUpdate()
-                {
-                    StatisticName = statName,
-                    Value = value
-                });
+                               {
+                                   StatisticName = statName,
+                                   Value         = value
+                               });
             }
         }
 
@@ -138,17 +145,29 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
             }
         }
 
-        public ItemGrant GrantNewInventoryItem(string playFabId, string itemId)
+        public void GrantNewItem(string itemId)
         {
             if (_itemsGrant == null)
-                _itemsGrant = new List<ItemGrant>();
+                _itemsGrant = new List<string>();
 
-            var item = new ItemGrant {PlayFabId = playFabId, ItemId = itemId};
-            _itemsGrant.Add(item);
-            return item;
+            _itemsGrant.Add(itemId);
         }
 
-        public void UpdateExistInventoryItem(ItemInstance itemInstance)
+        public void RevokeItem(RevokeInventoryItem item)
+        {
+            if (_itemRevoke == null)
+                _itemRevoke = new List<RevokeInventoryItem>();
+            _itemRevoke.Add(item);
+        }
+
+        public void ModifyExistItemUses(ModifyItemUsesRequest modifyItemUsesRequest)
+        {
+            if (_itemsModifyUses == null)
+                _itemsModifyUses = new List<ModifyItemUsesRequest>();
+            _itemsModifyUses.Add(modifyItemUsesRequest);
+        }
+
+        public void UpdateExistItemCustomData(ItemInstance itemInstance)
         {
             if (_itemsCustomData == null)
                 _itemsCustomData = new List<ItemUpdateCustomData>();

@@ -8,6 +8,7 @@ namespace SourceShare.Share.NetRequest.Config
         public const int CREATE_NODE_ACCOUNT       = 3;
         public const int CHECK_CREATE_NODE_ACCOUNT = 4;
         public const int CHANGE_DISPLAY_NAME       = 5;
+        public const int SYNC_DATA                 = 6;
 
         public const int TEST_REQUEST = 1_000_000;
 

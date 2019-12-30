@@ -71,7 +71,7 @@
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>C:\Program Files\Unity\Hub\2018.4.10f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\dll\unity_2018_4_10\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -24,7 +24,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
         public EntryHandler()
         {
-            _router = new NetRouter<DataPlayer>(new TimeOutChecker(this));
+            _router = new NetRouter<DataPlayer>("API-Server-Router" ,new TimeOutChecker(this));
             // Register headers
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());

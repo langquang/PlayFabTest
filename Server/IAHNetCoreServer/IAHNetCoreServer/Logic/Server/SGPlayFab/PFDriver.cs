@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using IAHNetCoreServer.Logic.Server.Setting;
+using IAHNetCoreServer.Logic.Server.SGPlayFab.CustomModels;
 using IAHNetCoreServer.Logic.Server.SGPlayFab.Define;
 using Newtonsoft.Json;
+using NLog;
 using PlayFab;
 using PlayFab.ServerModels;
 using PlayFabCustom.Models;
 using PlayFabShare;
+using SourceShare.Share.APIServer.Data;
 using SourceShare.Share.NetworkV2.Utils;
+using UpdateUserDataResult = IAHNetCoreServer.Logic.Server.SGPlayFab.CustomModels.UpdateUserDataResult;
 
 namespace IAHNetCoreServer.Logic.Server.SGPlayFab
 {
     public class PFDriver
     {
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        
         public static void Setup()
         {
             PlayFabSettings.staticSettings.TitleId = "20443";
@@ -194,10 +200,44 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
             var result = await PlayFabServerAPI.ExecuteCloudScriptAsync(request);
             if (result.Error != null)
             {
-                errCallback.Invoke(result.Error.ErrorMessage);
+                Logger.Error($"Save to PlayFab error:  {result.Error.ErrorMessage}");
+                errCallback?.Invoke(result.Error.ErrorMessage);
                 // ToDo: Handler UpdateUserData fail
                 return false;
             }
+            if (result.Result.Error != null)
+            {
+                Logger.Error($"Save to PlayFab error:  {result.Result.Error.Message}");
+                Logger.Debug("Run cloudscript log:");
+                result.Result.Logs.ForEach(l=>Logger.Debug(l.Message));
+                errCallback?.Invoke(result.Result.Error.Message);
+                // ToDo: Handler UpdateUserData fail
+                return false;
+            }
+            
+            Logger.Debug("Run cloudscript log:");
+            result.Result.Logs.ForEach(l=>Logger.Debug(l.Message));
+            
+            var dataResult = JsonConvert.DeserializeObject<UpdateUserDataResult>(result.Result.FunctionResult.ToString());
+            if (dataResult != null && dataResult.errorCode != 0)
+            {
+                Logger.Error($"<CS>Error from Execute. ErrorCode = {dataResult.errorCode}");
+                return false;
+            }
+
+            var syncReceipt = new SyncPlayerDataReceipt();
+            if (dataResult?.itemsGrantResult != null && dataResult.itemsGrantResult.Count > 0)
+            {
+                // add new item instance inventory and sync to client
+                foreach (var grantedItemInstance in dataResult.itemsGrantResult)
+                {
+                    var itemInstance = PFHelper.Convert(grantedItemInstance);
+                    player.SyncInventoryItemFromPF(itemInstance);
+                    syncReceipt.UpdateItem(itemInstance);
+                }
+            }
+
+
 
             Debugger.Write($"UpdateUserData {player.PlayerId} successful");
             return true;

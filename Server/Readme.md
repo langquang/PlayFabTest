@@ -1,4 +1,12 @@
-Publish
+Setup
+
+Enviroment
+
+> .Net Core SDK 2.2.8
+>
+> download: https://dotnet.microsoft.com/download/dotnet-core/2.2
+
+# Publish
 
 ```sh
 Vào folder chứa file `sln`

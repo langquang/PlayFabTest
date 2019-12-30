@@ -26,7 +26,7 @@ namespace IAHNetCoreServer
         public static string key  = "ButinABC";
 
 
-        private static NLog.Logger           logger = LogManager.GetCurrentClassLogger();
+        private static Logger           logger = LogManager.GetCurrentClassLogger();
         public static NetServer<DataPlayer> netServer;
 
 
@@ -34,11 +34,10 @@ namespace IAHNetCoreServer
         {
             SetupMessagePack();
             SetupPlayFab();
+            logger.Info("Try to get PlayFab Catalog ....");
+            await PFCatalog.Init();
             AppDomain.CurrentDomain.ProcessExit += CurrentDomain_ProcessExit;
             
-            // Program.netServer = new NetServer<DataPlayer>("Server", new EntryHandler());
-            // Program.netServer.Start(Program.port, Program.key);
-
             var hostBuilder = new HostBuilder()
                 .ConfigureServices((hostContext, services) =>
                 {

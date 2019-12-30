@@ -2,6 +2,7 @@
 const VC_GOLD = "GO";
 const VC_GEM = "GE";
 const VC_QUEST_POINT = "QP";
+const API_SERVER_KEY = "XBq$b6iK6ye!";
 
 
 handlers.AddPlayerTag = function (args) {
@@ -19,8 +20,16 @@ handlers.RemovePlayerTag = function (args) {
 handlers.UpdateUserData = function (args) {
 
     let errorCode = 0;
-
     args = JSON.parse(args);
+
+    // Ensure this request is called from my server
+    let key = args.key;
+    if( !key && key !== API_SERVER_KEY) {
+        return {
+            errorCode: 1000
+        };
+    }
+
     //------------------------------------------------------------------------------------------------------------
     //	VIRTUAL CURRENCIES
     //------------------------------------------------------------------------------------------------------------
@@ -46,7 +55,7 @@ handlers.UpdateUserData = function (args) {
     let currencyDecrease = args.CurrencyDecrease;
     if(currencyDecrease){
         Object.entries(currencyDecrease).forEach(([vc_code, vc_value])=>{
-            console.log(`${vc_code}:${vc_value}`)
+            log.info(`${vc_code}:${vc_value}`)
 
             let result = server.SubtractUserVirtualCurrency({
                 PlayFabId: currentPlayerId,
@@ -109,7 +118,7 @@ handlers.UpdateUserData = function (args) {
     //	INVENTORIES
     //------------------------------------------------------------------------------------------------------------
 
-    let ItemsGrant = args.ItemsGrant;
+    let ItemsGrant = args.ItemsGrant; // array of itemId
     let ItemsCustomData = args.ItemsCustomData;
     let ItemRevoke = args.ItemRevoke;
     let ItemsModifyUses = args.ItemsModifyUses;
@@ -122,25 +131,15 @@ handlers.UpdateUserData = function (args) {
         let result = null;
         try {
             if (catalogVersion)
-                result = server.GrantItemsToUsers({
+                result = server.GrantItemsToUser({
                     PlayFabId: currentPlayerId,
-                    ItemGrants: ItemsGrant,
+                    ItemIds: ItemsGrant,
                     CatalogVersion: catalogVersion
                 });
             else
-                result = server.GrantItemsToUsers({PlayFabId: currentPlayerId, ItemGrants: ItemsGrant});
+                result = server.GrantItemsToUser({PlayFabId: currentPlayerId, ItemIds: ItemsGrant});
 
-            itemsGrantRes = [];
-            for (let i = 0; i < result.ItemGrantResults.length; i++) {
-                let item = {
-                    ItemId: result.ItemGrantResults[i].ItemId,
-                    ItemInstanceId: result.ItemGrantResults[i].ItemInstanceitemsCustomDataId,
-                    ItemClass: result.ItemGrantResults[i].ItemClass,
-                    RemainingUses: result.ItemGrantResults[i].RemainingUses,
-                    CustomData: result.ItemGrantResults[i].CustomData,
-                };
-                itemsGrantRes.push(item);
-            }
+            itemsGrantRes = result.ItemGrantResults;
         } catch (ex) {
             server.WriteTitleEvent({EventName: 'cs_error', Body: ex});
             log.debug("cs_error_GrantItemsToUsers: " + ex);

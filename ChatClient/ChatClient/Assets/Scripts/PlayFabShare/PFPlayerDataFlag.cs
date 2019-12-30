@@ -4,9 +4,9 @@ namespace PlayFabShare
 {
     public class PFPlayerDataFlag
     {
-        public const int EMPTY      = 0;
-        public const int ACCOUNT    = 1; // INTERNAL
-        public const int TOURNAMENT = 1 << 1;
+        public const int EMPTY   = 0;
+        public const int ACCOUNT = 1; // INTERNAL
+        public const int REWARD  = 1 << 1;
 
         public const int GROUP_INTERNAL = ACCOUNT;
 
@@ -33,7 +33,7 @@ namespace PlayFabShare
 
             return false;
         }
-        
+
         /// <summary>
         /// This func is not good, but it's work!
         /// </summary>
@@ -41,7 +41,7 @@ namespace PlayFabShare
         {
             return false;
         }
-        
+
         /// <summary>
         /// This func is not good, but it's work!
         /// </summary>
