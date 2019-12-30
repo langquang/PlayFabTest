@@ -423,16 +423,6 @@
             <e p="Player.cs" t="Include" />
             <e p="PlayFabAuthService.cs" t="Include" />
           </e>
-          <e p="PlayFabShare" t="Include">
-            <e p="Models" t="Include">
-              <e p="NodeAccount.cs" t="Include" />
-              <e p="PFCurrency.cs" t="Include" />
-              <e p="PFProfile.cs" t="Include" />
-              <e p="PFStatistic.cs" t="Include" />
-            </e>
-            <e p="PFPlayerDataFlag.cs" t="Include" />
-            <e p="PFPlayerDataKey.cs" t="Include" />
-          </e>
           <e p="Share" t="Include">
             <e p="APIServer" t="Include">
               <e p="Data" t="Include">
@@ -489,6 +479,19 @@
                 <e p="HashName.cs" t="Include" />
                 <e p="Timer.cs" t="Include" />
               </e>
+            </e>
+            <e p="PlayFabShare" t="Include">
+              <e p="ClientDataPlayer.cs" t="Include" />
+              <e p="Models" t="Include">
+                <e p="KeyReward.cs" t="Include" />
+                <e p="NodeAccount.cs" t="Include" />
+                <e p="PFCurrency.cs" t="Include" />
+                <e p="PFInventory.cs" t="Include" />
+                <e p="PFProfile.cs" t="Include" />
+                <e p="PFStatistic.cs" t="Include" />
+              </e>
+              <e p="PFPlayerDataFlag.cs" t="Include" />
+              <e p="PFPlayerDataKey.cs" t="Include" />
             </e>
           </e>
         </e>

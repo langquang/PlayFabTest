@@ -1,8 +1,13 @@
+
 using System.Collections.Generic;
 using System.Linq;
+#if SERVER_SIDE
 using PlayFab.ServerModels;
+#else
+using PlayFab.ClientModels;
+#endif
 
-namespace IAHNetCoreServer.Logic.Server.SGPlayFab.ServerModels
+namespace PlayFabShare.Models
 {
     public class PFInventory
     {

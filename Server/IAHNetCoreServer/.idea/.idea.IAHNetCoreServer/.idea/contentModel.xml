@@ -33,8 +33,6 @@
               <e p="PFUpdatePlayerReceipt.cs" t="Include" />
               <e p="ServerModels" t="Include">
                 <e p="DataPlayer.cs" t="Include" />
-                <e p="KeyReward.cs" t="Include" />
-                <e p="PFInventory.cs" t="Include" />
                 <e p="SGPlayFabCustomModel.cs" t="Include" />
               </e>
             </e>
@@ -59,16 +57,6 @@
               <e p="IAHNetCoreServer.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
-        </e>
-        <e p="PlayFabShare" t="Include">
-          <e p="Models" t="Include">
-            <e p="NodeAccount.cs" t="Include" />
-            <e p="PFCurrency.cs" t="Include" />
-            <e p="PFProfile.cs" t="Include" />
-            <e p="PFStatistic.cs" t="Include" />
-          </e>
-          <e p="PFPlayerDataFlag.cs" t="Include" />
-          <e p="PFPlayerDataKey.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Utils" t="Include">
@@ -173,6 +161,19 @@
               <e p="HashName.cs" t="Include" />
               <e p="Timer.cs" t="Include" />
             </e>
+          </e>
+          <e p="PlayFabShare" t="Include">
+            <e p="ClientDataPlayer.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="KeyReward.cs" t="Include" />
+              <e p="NodeAccount.cs" t="Include" />
+              <e p="PFCurrency.cs" t="Include" />
+              <e p="PFInventory.cs" t="Include" />
+              <e p="PFProfile.cs" t="Include" />
+              <e p="PFStatistic.cs" t="Include" />
+            </e>
+            <e p="PFPlayerDataFlag.cs" t="Include" />
+            <e p="PFPlayerDataKey.cs" t="Include" />
           </e>
         </e>
         <e p="SourceShare.csproj" t="IncludeRecursive" />

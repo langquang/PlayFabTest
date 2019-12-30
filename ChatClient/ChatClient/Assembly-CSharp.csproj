@@ -108,12 +108,6 @@
     <Compile Include="Assets\Scripts\PlayFabClient\PFClientHelper.cs" />
     <Compile Include="Assets\Scripts\PlayFabClient\Player.cs" />
     <Compile Include="Assets\Scripts\PlayFabClient\PlayFabAuthService.cs" />
-    <Compile Include="Assets\Scripts\PlayFabShare\Models\NodeAccount.cs" />
-    <Compile Include="Assets\Scripts\PlayFabShare\Models\PFCurrency.cs" />
-    <Compile Include="Assets\Scripts\PlayFabShare\Models\PFProfile.cs" />
-    <Compile Include="Assets\Scripts\PlayFabShare\Models\PFStatistic.cs" />
-    <Compile Include="Assets\Scripts\PlayFabShare\PFPlayerDataFlag.cs" />
-    <Compile Include="Assets\Scripts\PlayFabShare\PFPlayerDataKey.cs" />
     <Compile Include="Assets\Scripts\Share\APIServer\Data\Entities\GiftPack.cs" />
     <Compile Include="Assets\Scripts\Share\APIServer\Data\Entities\IEntity.cs" />
     <Compile Include="Assets\Scripts\Share\APIServer\Data\Entities\OnlineReward.cs" />
@@ -142,6 +136,15 @@
     <Compile Include="Assets\Scripts\Share\NetworkV2\Utils\Debuger.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\Utils\HashName.cs" />
     <Compile Include="Assets\Scripts\Share\NetworkV2\Utils\Timer.cs" />
+    <Compile Include="Assets\Scripts\Share\PlayFabShare\ClientDataPlayer.cs" />
+    <Compile Include="Assets\Scripts\Share\PlayFabShare\Models\KeyReward.cs" />
+    <Compile Include="Assets\Scripts\Share\PlayFabShare\Models\NodeAccount.cs" />
+    <Compile Include="Assets\Scripts\Share\PlayFabShare\Models\PFCurrency.cs" />
+    <Compile Include="Assets\Scripts\Share\PlayFabShare\Models\PFInventory.cs" />
+    <Compile Include="Assets\Scripts\Share\PlayFabShare\Models\PFProfile.cs" />
+    <Compile Include="Assets\Scripts\Share\PlayFabShare\Models\PFStatistic.cs" />
+    <Compile Include="Assets\Scripts\Share\PlayFabShare\PFPlayerDataFlag.cs" />
+    <Compile Include="Assets\Scripts\Share\PlayFabShare\PFPlayerDataKey.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/projects/suga_iah/PlayFabTest/ChatClient/ChatClient/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

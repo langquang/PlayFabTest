@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using MessagePack;
 #if SERVER_SIDE
+using Newtonsoft.Json;
 using PlayFab.ServerModels;
+
 #endif
 
 namespace SourceShare.Share.APIServer.Data
@@ -84,6 +86,26 @@ namespace SourceShare.Share.APIServer.Data
         public void RevokeItem(string itemInstanceId)
         {
             _revokeItems.Add(itemInstanceId);
+        }
+
+        public void SerializeJson()
+        {
+            // data
+            if (_entities != null && _entities.Count > 0)
+            {
+                _jsonEntities = new Dictionary<int, string>(_entities.Count);
+                foreach (var pair in _entities)
+                {
+                    _jsonEntities.Add(pair.Key, JsonConvert.SerializeObject(pair.Value));
+                }
+            }
+
+            // item
+            if (_updateItems != null && _updateItems.Count > 0)
+            {
+                _jsonUpdateItems = new List<string>(_updateItems.Count);
+                _updateItems.ForEach(item => _jsonUpdateItems.Add(JsonConvert.SerializeObject(item)));
+            }
         }
 #endif
 

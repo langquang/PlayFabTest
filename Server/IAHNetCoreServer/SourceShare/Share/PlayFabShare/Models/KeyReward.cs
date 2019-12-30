@@ -1,6 +1,6 @@
 using SourceShare.Share.APIServer.Data;
 
-namespace IAHNetCoreServer.Logic.Server.SGPlayFab.ServerModels
+namespace PlayFabShare.Models
 {
     public class KeyReward
     {

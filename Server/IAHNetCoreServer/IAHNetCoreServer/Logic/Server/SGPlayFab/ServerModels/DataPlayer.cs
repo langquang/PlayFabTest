@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using IAHNetCoreServer.Logic.Server.SGPlayFab;
-using IAHNetCoreServer.Logic.Server.SGPlayFab.ServerModels;
 using LiteNetLib;
 using Newtonsoft.Json;
 using NLog;
@@ -22,7 +21,7 @@ namespace PlayFabCustom.Models
         UPDATE_CACHES_IN_IMMEDIATE,
         UPDATE_CACHES_IN_LATER
     }
-    
+
     public class DataPlayer : NetPlayer
     {
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
@@ -33,7 +32,7 @@ namespace PlayFabCustom.Models
 
         public bool IsOnline { get; private set; }
 
-        #region PLAYFAB DATA PROPS
+    #region PLAYFAB DATA PROPS
 
         public PFProfile Profile { get; set; }
         public PFStatistic Statistic { get; set; }
@@ -45,30 +44,30 @@ namespace PlayFabCustom.Models
 
         public KeyReward KeyReward { get; set; }
 
-        #endregion
+    #endregion
 
-        #region AUTO TRACKING CHANGE DATA PROPS
+    #region AUTO TRACKING CHANGE DATA PROPS
 
         private          PFUpdatePlayerReceipt    _updateReceipt;
         private          SyncPlayerDataReceipt    _syncReceipt;
         private readonly Dictionary<int, IEntity> _registerSyncEntities;
 
-        #endregion
+    #endregion
 
         public DataPlayer(string playerId, NetPeer peer, string token) : base(playerId, peer, token)
         {
-            IsOnline = true;
-            Profile = new PFProfile();
-            Statistic = new PFStatistic();
-            Currency = new PFCurrency();
-            Inventory = new PFInventory();
+            IsOnline       = true;
+            Profile        = new PFProfile();
+            Statistic      = new PFStatistic();
+            Currency       = new PFCurrency();
+            Inventory      = new PFInventory();
             ClusterAccount = new ClusterAccount();
             // entities
             KeyReward = new KeyReward();
 
             // online mode only
             _updateReceipt = new PFUpdatePlayerReceipt();
-            _syncReceipt = new SyncPlayerDataReceipt();
+            _syncReceipt   = new SyncPlayerDataReceipt();
             _registerSyncEntities = new Dictionary<int, IEntity>
                                     {
                                         {SyncEntityName.ONLINE_REWARD, KeyReward.OnlineReward}
@@ -80,7 +79,7 @@ namespace PlayFabCustom.Models
             IsOnline = false;
         }
 
-        #region ACCOUNT TYPE
+    #region ACCOUNT TYPE
 
         public bool IsMasterAccount()
         {
@@ -92,9 +91,9 @@ namespace PlayFabCustom.Models
             return !ClusterAccount.isMaster && !string.IsNullOrEmpty(ClusterAccount.MasterId) && !PlayerId.Equals(ClusterAccount.MasterId);
         }
 
-        #endregion
+    #endregion
 
-        #region PARSING DATA FROM PLAYFAB
+    #region PARSING DATA FROM PLAYFAB
 
         public void UpdateDataFromPayload(GetPlayerCombinedInfoResultPayload payload)
         {
@@ -126,9 +125,9 @@ namespace PlayFabCustom.Models
             }
         }
 
-        #endregion
+    #endregion
 
-        #region TEMP DIRECT DATA FUNCTIONS
+    #region TEMP DIRECT DATA FUNCTIONS
 
         public Dictionary<string, string> ExportPlayerInternalData(int playFabDataFlag)
         {
@@ -143,9 +142,9 @@ namespace PlayFabCustom.Models
             return exportData;
         }
 
-        #endregion
+    #endregion
 
-        #region AUTO TRACKING CHANGE DATA FUNCTIONS
+    #region AUTO TRACKING CHANGE DATA FUNCTIONS
 
         public int Server
         {
@@ -253,6 +252,7 @@ namespace PlayFabCustom.Models
                 {
                     _updateReceipt.GrantNewItem(itemId); // update cache in later
                 }
+
                 return IncreaseInventoryItemState.UPDATE_CACHES_IN_LATER;
             }
             else
@@ -266,6 +266,7 @@ namespace PlayFabCustom.Models
                         {
                             _updateReceipt.GrantNewItem(itemId); // update cache in later
                         }
+
                         return IncreaseInventoryItemState.UPDATE_CACHES_IN_LATER;
                     }
                     case 1: // right now, this is exactly what i want
@@ -273,9 +274,9 @@ namespace PlayFabCustom.Models
                         var instance = itemInstances.First(); // safe to get first element
                         var modifyRequest = new ModifyItemUsesRequest
                                             {
-                                                PlayFabId = PlayerId,
+                                                PlayFabId      = PlayerId,
                                                 ItemInstanceId = instance.ItemInstanceId,
-                                                UsesToAdd = quantity
+                                                UsesToAdd      = quantity
                                             };
                         _updateReceipt.ModifyExistItemUses(modifyRequest);
 
@@ -289,6 +290,7 @@ namespace PlayFabCustom.Models
                         {
                             _updateReceipt.GrantNewItem(itemId); // update cache in later
                         }
+
                         return IncreaseInventoryItemState.UPDATE_CACHES_IN_LATER;
                     }
                 }
@@ -315,14 +317,14 @@ namespace PlayFabCustom.Models
                 {
                     throw new Exception($"Wrong logic, revoke stackable item instance with quantity > 0, user={PlayerId}, itemId={instance.ItemId}, quantity={quantity}");
                 }
-                
+
                 var revokeRequest = new RevokeInventoryItem
                                     {
-                                        PlayFabId = PlayerId,
+                                        PlayFabId      = PlayerId,
                                         ItemInstanceId = instance.ItemInstanceId
                                     };
                 _updateReceipt.RevokeItem(revokeRequest);
-                
+
                 Inventory.Revoke(instance); // update cache in immediate
             }
             else
@@ -331,12 +333,12 @@ namespace PlayFabCustom.Models
                 {
                     var modifyRequest = new ModifyItemUsesRequest
                                         {
-                                            PlayFabId = PlayerId,
+                                            PlayFabId      = PlayerId,
                                             ItemInstanceId = instance.ItemInstanceId,
-                                            UsesToAdd = -quantity // Note: Must negative here
+                                            UsesToAdd      = -quantity // Note: Must negative here
                                         };
                     _updateReceipt.ModifyExistItemUses(modifyRequest);
-                    
+
                     instance.RemainingUses -= quantity; // update cache in immediate
                     Inventory.Set(instance);
                 }
@@ -344,11 +346,11 @@ namespace PlayFabCustom.Models
                 {
                     var revokeRequest = new RevokeInventoryItem
                                         {
-                                            PlayFabId = PlayerId,
+                                            PlayFabId      = PlayerId,
                                             ItemInstanceId = instance.ItemInstanceId
                                         };
                     _updateReceipt.RevokeItem(revokeRequest);
-                    
+
                     Inventory.Revoke(instance); // update cache in immediate
                 }
             }
@@ -413,9 +415,10 @@ namespace PlayFabCustom.Models
         {
             var receipt = _syncReceipt;
             _syncReceipt = new SyncPlayerDataReceipt();
+            receipt.SerializeJson();
             return receipt;
         }
 
-        #endregion
+    #endregion
     }
 }
