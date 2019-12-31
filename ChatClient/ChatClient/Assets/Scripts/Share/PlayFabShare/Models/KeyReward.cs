@@ -4,7 +4,7 @@ namespace PlayFabShare.Models
 {
     public class KeyReward
     {
-        public readonly OnlineReward OnlineReward;
+        public OnlineReward OnlineReward;
 
         public KeyReward()
         {

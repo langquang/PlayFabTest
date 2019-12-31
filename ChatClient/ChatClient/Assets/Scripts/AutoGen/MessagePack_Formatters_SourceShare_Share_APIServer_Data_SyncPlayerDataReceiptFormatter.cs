@@ -33,7 +33,12 @@ namespace MessagePack.Formatters.SourceShare.Share.APIServer.Data
             }
 
             IFormatterResolver formatterResolver = options.Resolver;
-            writer.WriteArrayHeader(0);
+            writer.WriteArrayHeader(5);
+            formatterResolver.GetFormatterWithVerify<global::System.Collections.Generic.Dictionary<string, int>>().Serialize(ref writer, value.Currency, options);
+            formatterResolver.GetFormatterWithVerify<global::System.Collections.Generic.Dictionary<string, int>>().Serialize(ref writer, value.Statistic, options);
+            formatterResolver.GetFormatterWithVerify<global::System.Collections.Generic.Dictionary<int, string>>().Serialize(ref writer, value.JsonEntities, options);
+            formatterResolver.GetFormatterWithVerify<global::System.Collections.Generic.List<string>>().Serialize(ref writer, value.JsonUpdateItems, options);
+            formatterResolver.GetFormatterWithVerify<global::System.Collections.Generic.List<string>>().Serialize(ref writer, value.RevokeItems, options);
         }
 
         public global::SourceShare.Share.APIServer.Data.SyncPlayerDataReceipt Deserialize(ref MessagePackReader reader, global::MessagePack.MessagePackSerializerOptions options)
@@ -45,6 +50,11 @@ namespace MessagePack.Formatters.SourceShare.Share.APIServer.Data
 
             IFormatterResolver formatterResolver = options.Resolver;
             var length = reader.ReadArrayHeader();
+            var __Currency__ = default(global::System.Collections.Generic.Dictionary<string, int>);
+            var __Statistic__ = default(global::System.Collections.Generic.Dictionary<string, int>);
+            var __JsonEntities__ = default(global::System.Collections.Generic.Dictionary<int, string>);
+            var __JsonUpdateItems__ = default(global::System.Collections.Generic.List<string>);
+            var __RevokeItems__ = default(global::System.Collections.Generic.List<string>);
 
             for (int i = 0; i < length; i++)
             {
@@ -52,6 +62,21 @@ namespace MessagePack.Formatters.SourceShare.Share.APIServer.Data
 
                 switch (key)
                 {
+                    case 0:
+                        __Currency__ = formatterResolver.GetFormatterWithVerify<global::System.Collections.Generic.Dictionary<string, int>>().Deserialize(ref reader, options);
+                        break;
+                    case 1:
+                        __Statistic__ = formatterResolver.GetFormatterWithVerify<global::System.Collections.Generic.Dictionary<string, int>>().Deserialize(ref reader, options);
+                        break;
+                    case 2:
+                        __JsonEntities__ = formatterResolver.GetFormatterWithVerify<global::System.Collections.Generic.Dictionary<int, string>>().Deserialize(ref reader, options);
+                        break;
+                    case 3:
+                        __JsonUpdateItems__ = formatterResolver.GetFormatterWithVerify<global::System.Collections.Generic.List<string>>().Deserialize(ref reader, options);
+                        break;
+                    case 4:
+                        __RevokeItems__ = formatterResolver.GetFormatterWithVerify<global::System.Collections.Generic.List<string>>().Deserialize(ref reader, options);
+                        break;
                     default:
                         reader.Skip();
                         break;
@@ -59,6 +84,11 @@ namespace MessagePack.Formatters.SourceShare.Share.APIServer.Data
             }
 
             var ____result = new global::SourceShare.Share.APIServer.Data.SyncPlayerDataReceipt();
+            ____result.Currency = __Currency__;
+            ____result.Statistic = __Statistic__;
+            ____result.JsonEntities = __JsonEntities__;
+            ____result.JsonUpdateItems = __JsonUpdateItems__;
+            ____result.RevokeItems = __RevokeItems__;
             return ____result;
         }
     }

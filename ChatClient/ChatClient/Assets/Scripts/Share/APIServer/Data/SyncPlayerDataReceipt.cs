@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using MessagePack;
-#if SERVER_SIDE
 using Newtonsoft.Json;
+#if SERVER_SIDE
 using PlayFab.ServerModels;
 
+#else
+using PlayFab.ClientModels;
 #endif
 
 namespace SourceShare.Share.APIServer.Data
@@ -14,45 +16,47 @@ namespace SourceShare.Share.APIServer.Data
         //----------------------------------------------------------------------
         //  Virtual Currencies
         //----------------------------------------------------------------------
-        [Key(0)] private Dictionary<string, int> _currency; // currency code -> value
+        [Key(0)] public Dictionary<string, int> Currency { get; set; } // currency code -> value
 
         //----------------------------------------------------------------------
         //  Statistic
         //----------------------------------------------------------------------
-        [Key(1)] private Dictionary<string, int> _statistic;
+        [Key(1)] public Dictionary<string, int> Statistic { get; set; }
 
         //----------------------------------------------------------------------
         //  Data
         //----------------------------------------------------------------------
-        [Key(2)] private Dictionary<int, string> _jsonEntities; // SyncDataName -> json
-#if SERVER_SIDE
-        [IgnoreMember] private Dictionary<int, IEntity> _entities; // SyncDataName -> json
-#endif
+        [Key(2)] public Dictionary<int, string> JsonEntities { get; set; } // SyncDataName -> json
+
+// #if SERVER_SIDE
+        [IgnoreMember] private Dictionary<int, IEntity> _entities { get; set; } // SyncDataName -> json
+// #endif
 
         //----------------------------------------------------------------------
         //  Reward
         //----------------------------------------------------------------------
-        [Key(3)] private List<string> _jsonUpdateItems; // grant or update item
-#if SERVER_SIDE
-        [IgnoreMember] private List<ItemInstance> _updateItems;
-#endif
+        [Key(3)] public List<string> JsonUpdateItems { get; set; } // grant or update item
+
+// #if SERVER_SIDE
+        [IgnoreMember] private Dictionary<string, ItemInstance> _updateItems;
+// #endif
 
 
         //----------------------------------------------------------------------
         //  Revoke Item
         //----------------------------------------------------------------------
-        [Key(4)] private List<string> _revokeItems; // delete item
+        [Key(4)] public List<string> RevokeItems { get; set; } // delete item
 
         public SyncPlayerDataReceipt()
         {
-            _currency    = new Dictionary<string, int>();
-            _statistic   = new Dictionary<string, int>();
-            _revokeItems = new List<string>();
+            Currency    = new Dictionary<string, int>();
+            Statistic   = new Dictionary<string, int>();
+            RevokeItems = new List<string>();
 
         #region SERVER_CODE
 
 #if SERVER_SIDE
-            _updateItems = new List<ItemInstance>();
+            _updateItems = new Dictionary<string, ItemInstance>();
             _entities    = new Dictionary<int, IEntity>();
 #endif
 
@@ -62,20 +66,20 @@ namespace SourceShare.Share.APIServer.Data
 
     #region SERVER_CODE
 
-#if SERVER_SIDE
+// #if SERVER_SIDE
         public void SyncCurrency(string currencyCode, int afterValue)
         {
-            _currency[currencyCode] = afterValue;
+            Currency[currencyCode] = afterValue;
         }
 
         public void SyncStatistic(string name, int value)
         {
-            _currency[name] = value;
+            Statistic[name] = value;
         }
 
-        public void UpdateItem(ItemInstance item)
+        public void SyncUpdateItem(ItemInstance item)
         {
-            _updateItems.Add(item);
+            _updateItems[item.ItemInstanceId] = item;
         }
 
         public void SyncEntities(int name, IEntity entity)
@@ -83,9 +87,10 @@ namespace SourceShare.Share.APIServer.Data
             _entities[name] = entity;
         }
 
-        public void RevokeItem(string itemInstanceId)
+        public void SyncRevokeItem(ItemInstance item)
         {
-            _revokeItems.Add(itemInstanceId);
+            if (!RevokeItems.Contains(item.ItemInstanceId))
+                RevokeItems.Add(item.ItemInstanceId);
         }
 
         public void SerializeJson()
@@ -93,21 +98,28 @@ namespace SourceShare.Share.APIServer.Data
             // data
             if (_entities != null && _entities.Count > 0)
             {
-                _jsonEntities = new Dictionary<int, string>(_entities.Count);
+                JsonEntities = new Dictionary<int, string>(_entities.Count);
                 foreach (var pair in _entities)
                 {
-                    _jsonEntities.Add(pair.Key, JsonConvert.SerializeObject(pair.Value));
+                    JsonEntities.Add(pair.Key, JsonConvert.SerializeObject(pair.Value));
                 }
             }
 
             // item
             if (_updateItems != null && _updateItems.Count > 0)
             {
-                _jsonUpdateItems = new List<string>(_updateItems.Count);
-                _updateItems.ForEach(item => _jsonUpdateItems.Add(JsonConvert.SerializeObject(item)));
+                JsonUpdateItems = new List<string>(_updateItems.Count);
+                foreach (var pair in _updateItems)
+                {
+                    JsonUpdateItems.Add(JsonConvert.SerializeObject(pair.Value));
+                }
             }
         }
-#endif
+// #endif
+
+    #endregion
+
+    #region CLIENT_CODE
 
     #endregion
     }

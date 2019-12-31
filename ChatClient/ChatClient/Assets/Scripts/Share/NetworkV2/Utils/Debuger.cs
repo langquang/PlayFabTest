@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace SourceShare.Share.NetworkV2.Utils
 {
@@ -34,7 +35,27 @@ namespace SourceShare.Share.NetworkV2.Utils
                 if (Logger == null)
                 {
 #if UNITY_4 || UNITY_5 || UNITY_5_3_OR_NEWER
-                    UnityEngine.Debug.Log(string.Format(str, args));
+                    if (logLevel == DebuggerLevel.Error)
+                    {
+                        if (args == null || args.Length == 0)
+                            UnityEngine.Debug.LogError(str);
+                        else
+                            UnityEngine.Debug.LogError(string.Format(str, args));
+                    }
+                    else if (logLevel == DebuggerLevel.Warning)
+                    {
+                        if (args == null || args.Length == 0)
+                            UnityEngine.Debug.LogWarning(str);
+                        else
+                            UnityEngine.Debug.LogWarning(string.Format(str, args));
+                    }
+                    else
+                    {
+                        if (args == null || args.Length == 0)
+                            UnityEngine.Debug.Log(str);
+                        else
+                            UnityEngine.Debug.Log(string.Format(str, args));
+                    }
 #else
                     Console.WriteLine(str, args);
 #endif
@@ -70,7 +91,7 @@ namespace SourceShare.Share.NetworkV2.Utils
         {
             WriteLogic(DebuggerLevel.Error, $"[Error] {str}", args);
         }
-        
+
         public static void WriteWarning(string str, params object[] args)
         {
             WriteLogic(DebuggerLevel.Warning, $"[Warning] {str}", args);
@@ -85,6 +106,35 @@ namespace SourceShare.Share.NetworkV2.Utils
             }
 
             return $"Unknown prop: {code}";
+        }
+
+        public static void Write<K, V>(Dictionary<K, V> dictionary, string dictionaryName = null, Func<K, string> keyMapper = null)
+        {
+            if (dictionary == null)
+                return;
+
+            var realName = dictionaryName ?? string.Empty;
+            WriteLogic(DebuggerLevel.Trace, $"Dictionary {realName}:");
+            foreach (var pair in dictionary)
+            {
+                var keyName = pair.Key.ToString();
+                if (keyMapper != null)
+                    keyName = keyMapper.Invoke(pair.Key);
+                WriteLogic(DebuggerLevel.Trace, $"  ** {keyName} => {pair.Value.ToString()}");
+            }
+        }
+
+        public static void Write<T>(IEnumerable<T> collection, string collectionName = null)
+        {
+            if (collection == null)
+                return;
+
+            var realName = collectionName ?? string.Empty;
+            WriteLogic(DebuggerLevel.Trace, $"Collection {realName}:");
+            foreach (var item in collection)
+            {
+                WriteLogic(DebuggerLevel.Trace, $"  ** {item.ToString()}");
+            }
         }
     }
 }

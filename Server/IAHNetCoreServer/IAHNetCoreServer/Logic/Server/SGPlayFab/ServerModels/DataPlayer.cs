@@ -279,7 +279,8 @@ namespace PlayFabCustom.Models
                                                 UsesToAdd      = quantity
                                             };
                         _updateReceipt.ModifyExistItemUses(modifyRequest);
-
+                        _syncReceipt.SyncUpdateItem(instance);
+                        
                         instance.RemainingUses += quantity; // update cache in immediate
                         return IncreaseInventoryItemState.UPDATE_CACHES_IN_IMMEDIATE;
                     }
@@ -324,6 +325,7 @@ namespace PlayFabCustom.Models
                                         ItemInstanceId = instance.ItemInstanceId
                                     };
                 _updateReceipt.RevokeItem(revokeRequest);
+                _syncReceipt.SyncRevokeItem(instance);
 
                 Inventory.Revoke(instance); // update cache in immediate
             }
@@ -338,6 +340,7 @@ namespace PlayFabCustom.Models
                                             UsesToAdd      = -quantity // Note: Must negative here
                                         };
                     _updateReceipt.ModifyExistItemUses(modifyRequest);
+                    _syncReceipt.SyncUpdateItem(instance);
 
                     instance.RemainingUses -= quantity; // update cache in immediate
                     Inventory.Set(instance);
@@ -350,6 +353,7 @@ namespace PlayFabCustom.Models
                                             ItemInstanceId = instance.ItemInstanceId
                                         };
                     _updateReceipt.RevokeItem(revokeRequest);
+                    _syncReceipt.SyncRevokeItem(instance);
 
                     Inventory.Revoke(instance); // update cache in immediate
                 }
@@ -365,6 +369,7 @@ namespace PlayFabCustom.Models
         {
             Inventory.Set(instance);
             _updateReceipt.UpdateExistItemCustomData(instance);
+            _syncReceipt.SyncUpdateItem(instance);
         }
 
         public ItemInstance GetInventoryItem(string itemInstanceId)

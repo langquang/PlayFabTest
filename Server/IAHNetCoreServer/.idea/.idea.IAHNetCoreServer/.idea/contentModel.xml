@@ -165,9 +165,13 @@
           <e p="PlayFabShare" t="Include">
             <e p="ClientDataPlayer.cs" t="Include" />
             <e p="Models" t="Include">
+              <e p="Base" t="Include">
+                <e p="ISyncEntity.cs" t="Include" />
+              </e>
               <e p="KeyReward.cs" t="Include" />
               <e p="NodeAccount.cs" t="Include" />
               <e p="PFCurrency.cs" t="Include" />
+              <e p="PFData.cs" t="Include" />
               <e p="PFInventory.cs" t="Include" />
               <e p="PFProfile.cs" t="Include" />
               <e p="PFStatistic.cs" t="Include" />

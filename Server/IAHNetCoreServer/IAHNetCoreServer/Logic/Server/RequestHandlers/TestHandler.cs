@@ -72,7 +72,7 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
 
             // edit data
             player.KeyReward.OnlineReward.nextAt = DateTime.UtcNow;                       // online reward is a property inside KeyReward
-            player.AddSyncEntities(SyncEntityName.ONLINE_REWARD);                         // mask sync entity OnlineReward to client
+            player.AddSyncEntities(SyncEntityName.ONLINE_REWARD);             // mask sync entity OnlineReward to client
             player.AddChangedDataFlag(PFPlayerDataFlag.REWARD | PFPlayerDataFlag.REWARD); // mask save key REWARD to PlayFab
 
             //----------------------------------------------------------------------------------------------------------

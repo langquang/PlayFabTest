@@ -233,7 +233,7 @@ namespace IAHNetCoreServer.Logic.Server.SGPlayFab
                 {
                     var itemInstance = PFHelper.Convert(grantedItemInstance);
                     player.SyncInventoryItemFromPF(itemInstance);
-                    syncReceipt.UpdateItem(itemInstance);
+                    syncReceipt.SyncUpdateItem(itemInstance);
                 }
             }
 

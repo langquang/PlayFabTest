@@ -6,7 +6,6 @@ using SourceShare.Share.NetRequest;
 using SourceShare.Share.NetRequest.Config;
 using SourceShare.Share.NetworkV2;
 using SourceShare.Share.NetworkV2.Client;
-using SourceShare.Share.NetworkV2.Router;
 using SourceShare.Share.NetworkV2.TransportData.Base;
 using SourceShare.Share.NetworkV2.TransportData.Header;
 using SourceShare.Share.NetworkV2.TransportData.Misc;
@@ -18,7 +17,7 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
 {
     public class APINetworkHandler : ClientReceiveNetDataHandler
     {
-        #region SINGLETON
+    #region SINGLETON
 
         private static APINetworkHandler _instance;
 
@@ -35,14 +34,14 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
             }
         }
 
-        #endregion
+    #endregion
 
         private readonly NetRouter<NetPlayer> _router;
         private readonly NetClient            _netClient;
 
-        private NetPlayer _player;
+        private ClientDataPlayer _player;
 
-        public NetPlayer Player => _player;
+        public ClientDataPlayer Player => _player;
 
         private string       _curPlayFabId, _sessionTicket;
         private CreateParams _createParams;
@@ -51,25 +50,28 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
         {
             // ===================== Make a network ====================================================================
             _netClient = new NetClient("api-server", this);
-            _netClient.CustomParamsEvent += (client, manager) => { client.SetDefaultParams(); }; // can custom network option here
-            _netClient.Init();                                                                   // init network from custom network option
-            _netClient.Listener.PeerConnectedEvent += OnConnected;                               // start login after connected
+            _netClient.CustomParamsEvent += (client, manager) =>
+                                            {
+                                                client.SetDefaultParams();
+                                            };                     // can custom network option here
+            _netClient.Init();                                     // init network from custom network option
+            _netClient.Listener.PeerConnectedEvent += OnConnected; // start login after connected
 
             // ===================== Config Router =====================================================================
-            _router = new NetRouter<NetPlayer>("API-Client-Router" ,new TimeOutChecker(this));
+            _router = new NetRouter<NetPlayer>("API-Client-Router", new TimeOutChecker(this));
             // Register headers
             _router.RegisterHeader<RequestHeader>(() => new RequestHeader());
             _router.RegisterHeader<ResponseHeader>(() => new ResponseHeader());
             // Subscribe income Handler (one way)
-            _router.Subscribe<TestRequest>(NetAPICommand.TEST_REQUEST, OnReceiveTestRequest);
+            _router.Subscribe<SyncDataMessage>(NetAPICommand.SYNC_DATA, OnSyncDataHandler);
             _router.Subscribe<TestResponse>(NetAPICommand.TEST_REQUEST, OnReceiveTestResponse);
         }
 
         public void StartConnect(string curPlayFabId, string sessionTicket, CreateParams createParams)
         {
-            _curPlayFabId = curPlayFabId;
+            _curPlayFabId  = curPlayFabId;
             _sessionTicket = sessionTicket;
-            _createParams = createParams;
+            _createParams  = createParams;
             _netClient.Start("127.0.0.1", 8000, "ButinABC");
             // _netClient.Start("35.187.249.32", 8000, "ButinABC");
         }
@@ -78,20 +80,24 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
         {
             Debugger.Write("API Server: OnConnected");
             var loginRequest = new LoginRequest(_curPlayFabId, _sessionTicket);
-            _player = new NetPlayer(_curPlayFabId, peer, null);
-            _router.SendRequest<LoginResponse>(_player, loginRequest, (response, player) =>
-            {
-                Debugger.Write($"Login successful, token = {response.token}");
-                player.Token = response.token;
-
-                if (_createParams != null)
+            _player = new ClientDataPlayer(_curPlayFabId, peer, null);
+            _router.SendRequest<LoginResponse>(
+                _player,
+                loginRequest,
+                (response, player) =>
                 {
-                    if (_createParams.needRegisterMasterAccount)
-                        CreateMasterAccountHandler(_createParams.server);
-                    else if (_createParams.needRegisterNodeAccount)
-                        CreateNodeAccountHandler(_createParams.server, _createParams.masterId);
-                }
-            }, i => Debugger.Write($"Login error = {i}"));
+                    Debugger.Write($"Login successful, token = {response.token}");
+                    player.Token = response.token;
+
+                    if (_createParams != null)
+                    {
+                        if (_createParams.needRegisterMasterAccount)
+                            CreateMasterAccountHandler(_createParams.server);
+                        else if (_createParams.needRegisterNodeAccount)
+                            CreateNodeAccountHandler(_createParams.server, _createParams.masterId);
+                    }
+                }, i => Debugger.Write($"Login error = {i}")
+            );
         }
 
         public void Update()
@@ -124,8 +130,9 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
             _router.SendRequest(_player, request, onSuccess, onError, onFinally, timeOut);
         }
 
-        public void OnReceiveTestRequest(TestRequest request, NetPlayer player)
+        public void OnSyncDataHandler(SyncDataMessage msg, NetPlayer player)
         {
+            _player.Sync(msg.Receipt);
         }
 
         public void OnReceiveTestResponse(TestResponse response, NetPlayer player)
@@ -136,14 +143,34 @@ namespace UnityClientLib.Logic.Client.ResponseHandler
         {
             Debugger.Write("Try to CreateMasterAccountRequest");
             var request = new CreateMasterAccountRequest(server);
-            APINetworkHandler.Instance.SendRequest<CreateMasterAccountResponse>(request, (response, player) => { Debugger.Write("Create node account successful"); }, i => { Debugger.Write($"Create Master Account fail, code = {i};"); });
+            Instance.SendRequest<CreateMasterAccountResponse>(
+                request,
+                (response, player) =>
+                {
+                    Debugger.Write("Create node account successful");
+                },
+                i =>
+                {
+                    Debugger.Write($"Create Master Account fail, code = {i};");
+                }
+            );
         }
 
         private static void CreateNodeAccountHandler(int server, string masterId)
         {
             Debugger.Write("Try to CreateNodeAccountRequest");
             var request = new CreateNodeAccountRequest(server, masterId);
-            APINetworkHandler.Instance.SendRequest<CreateNodeAccountResponse>(request, (response, player) => { Debugger.Write("Create node account successful"); }, i => { Debugger.Write($"Create Master Account fail, code = {i}"); });
+            Instance.SendRequest<CreateNodeAccountResponse>(
+                request,
+                (response, player) =>
+                {
+                    Debugger.Write("Create node account successful");
+                },
+                i =>
+                {
+                    Debugger.Write($"Create Master Account fail, code = {i}");
+                }
+            );
         }
 
         public void OnSendTestSuccess(TestRequest request, TestResponse response, NetPlayer player)

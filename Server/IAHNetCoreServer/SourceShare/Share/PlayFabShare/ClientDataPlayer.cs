@@ -2,11 +2,14 @@ using System.Collections.Generic;
 using LiteNetLib;
 using Newtonsoft.Json;
 using PlayFabShare.Models;
+using SourceShare.Share.APIServer.Data;
 using SourceShare.Share.NetworkV2;
 #if SERVER_SIDE
 using PlayFab.ServerModels;
+
 #else
 using PlayFab.ClientModels;
+
 #endif
 
 namespace PlayFabShare
@@ -19,13 +22,10 @@ namespace PlayFabShare
 
         public PFProfile Profile { get; set; }
         public PFStatistic Statistic { get; set; }
-
-        private PFCurrency Currency { get; set; }
-
+        public PFCurrency Currency { get; set; }
         private PFInventory Inventory { get; set; }
         public ClusterAccount ClusterAccount { get; set; }
-
-        public KeyReward KeyReward { get; set; }
+        public PFData Data { get; set; }
 
     #endregion
 
@@ -37,8 +37,7 @@ namespace PlayFabShare
             Currency       = new PFCurrency();
             Inventory      = new PFInventory();
             ClusterAccount = new ClusterAccount();
-            // entities
-            KeyReward = new KeyReward();
+            Data           = new PFData();
         }
 
         public ClientDataPlayer(string playerId) : base(playerId, null, null)
@@ -70,6 +69,34 @@ namespace PlayFabShare
                     ClusterAccount = JsonConvert.DeserializeObject<ClusterAccount>(account.Value);
                 }
             }
+        }
+
+    #endregion
+
+    #region SYNC DATA FROM API SERVER
+
+        public void Sync(SyncPlayerDataReceipt receipt)
+        {
+            Currency.Sync(receipt);
+            Statistic.Sync(receipt);
+            Inventory.Sync(receipt);
+            Data.Sync(receipt);
+        }
+
+    #endregion
+
+    #region Get - Set Data
+
+        public int Gem
+        {
+            get => Currency.Gem;
+            set => Currency.Gem = value;
+        }
+
+        public int Gold
+        {
+            get => Currency.Gold;
+            set => Currency.Gold = value;
         }
 
     #endregion
