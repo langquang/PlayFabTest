@@ -78,10 +78,10 @@ namespace IAHNetCoreServer.Logic.Server.RequestHandlers
             //----------------------------------------------------------------------------------------------------------
             //---------------- COMMIT EDITED DATA ----------------------------------------------------------------------
             //----------------------------------------------------------------------------------------------------------
-            // save to PlayFab
-            await PFDriver.CommitChangedToPlayFab(player); // asynchronous
             // sync to client
             SyncHelper.SyncDataToClient(player); // send a SyncData message to client
+            // save to PlayFab
+            await PFDriver.CommitChangedToPlayFab(player); // asynchronous
 
             // Response for current request
             var response = new TestResponse(request) {msg = "A response of test command from server"};

@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
@@ -7,6 +6,7 @@ using SourceShare.Share.APIServer.Data;
 using SourceShare.Share.NetworkV2.Utils;
 #if SERVER_SIDE
 using PlayFab.ServerModels;
+
 #else
 using PlayFab.ClientModels;
 #endif
@@ -31,8 +31,8 @@ namespace PlayFabShare.Models
         public IEnumerable<ItemInstance> FindFromItemId(string itemId)
         {
             var match = _items
-                .Where(pair => pair.Value.ItemId.Equals(itemId))
-                .Select(pair => pair.Value);
+                        .Where(pair => pair.Value.ItemId.Equals(itemId))
+                        .Select(pair => pair.Value);
             return match;
         }
 
@@ -40,7 +40,7 @@ namespace PlayFabShare.Models
         {
             _items.Add(instance.ItemInstanceId, instance);
         }
-        
+
         /// <summary>
         ///  Override or make new
         /// </summary>
@@ -54,7 +54,7 @@ namespace PlayFabShare.Models
         {
             _items.Remove(instance.ItemInstanceId);
         }
-        
+
         public void Revoke(List<string> listInstanceId)
         {
             foreach (var instanceId in listInstanceId)
@@ -62,11 +62,11 @@ namespace PlayFabShare.Models
                 _items.Remove(instanceId);
             }
         }
-        
+
         public void Import(List<ItemInstance> UserInventory)
         {
-           _items.Clear();
-           UserInventory.ForEach(i=>_items.Add(i.ItemInstanceId, i));
+            _items.Clear();
+            UserInventory.ForEach(i => _items.Add(i.ItemInstanceId, i));
         }
 
         public void Sync(SyncPlayerDataReceipt syncReceipt)

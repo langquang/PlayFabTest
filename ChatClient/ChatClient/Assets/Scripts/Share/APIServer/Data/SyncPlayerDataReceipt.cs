@@ -4,8 +4,6 @@ using Newtonsoft.Json;
 #if SERVER_SIDE
 using PlayFab.ServerModels;
 
-#else
-using PlayFab.ClientModels;
 #endif
 
 namespace SourceShare.Share.APIServer.Data
@@ -28,18 +26,18 @@ namespace SourceShare.Share.APIServer.Data
         //----------------------------------------------------------------------
         [Key(2)] public Dictionary<int, string> JsonEntities { get; set; } // SyncDataName -> json
 
-// #if SERVER_SIDE
+#if SERVER_SIDE
         [IgnoreMember] private Dictionary<int, IEntity> _entities { get; set; } // SyncDataName -> json
-// #endif
+#endif
 
         //----------------------------------------------------------------------
         //  Reward
         //----------------------------------------------------------------------
         [Key(3)] public List<string> JsonUpdateItems { get; set; } // grant or update item
 
-// #if SERVER_SIDE
+#if SERVER_SIDE
         [IgnoreMember] private Dictionary<string, ItemInstance> _updateItems;
-// #endif
+#endif
 
 
         //----------------------------------------------------------------------
@@ -66,7 +64,12 @@ namespace SourceShare.Share.APIServer.Data
 
     #region SERVER_CODE
 
-// #if SERVER_SIDE
+#if SERVER_SIDE
+        public bool IsEmpty()
+        {
+            return Currency.Count == 0 && Statistic.Count == 0 && RevokeItems.Count == 0 && _updateItems.Count == 0 && _entities.Count == 0;
+        }
+
         public void SyncCurrency(string currencyCode, int afterValue)
         {
             Currency[currencyCode] = afterValue;
@@ -115,11 +118,7 @@ namespace SourceShare.Share.APIServer.Data
                 }
             }
         }
-// #endif
-
-    #endregion
-
-    #region CLIENT_CODE
+#endif
 
     #endregion
     }

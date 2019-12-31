@@ -124,7 +124,7 @@ namespace SourceShare.Share.NetworkV2.Utils
             }
         }
 
-        public static void Write<T>(IEnumerable<T> collection, string collectionName = null)
+        public static void Write<T>(IEnumerable<T> collection, string collectionName = null, Func<T, string> keyMapper = null)
         {
             if (collection == null)
                 return;
@@ -133,7 +133,10 @@ namespace SourceShare.Share.NetworkV2.Utils
             WriteLogic(DebuggerLevel.Trace, $"Collection {realName}:");
             foreach (var item in collection)
             {
-                WriteLogic(DebuggerLevel.Trace, $"  ** {item.ToString()}");
+                var keyName = string.Empty;
+                if (keyMapper != null)
+                    keyName = keyMapper.Invoke(item);
+                WriteLogic(DebuggerLevel.Trace, $"  ** {keyName} => {item.ToString()}");
             }
         }
     }

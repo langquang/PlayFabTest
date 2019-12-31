@@ -416,11 +416,10 @@ namespace PlayFabCustom.Models
             return receipt;
         }
 
-        public SyncPlayerDataReceipt PrepareSyncData()
+        public SyncPlayerDataReceipt RollSyncReceipt()
         {
             var receipt = _syncReceipt;
             _syncReceipt = new SyncPlayerDataReceipt();
-            receipt.SerializeJson();
             return receipt;
         }
 

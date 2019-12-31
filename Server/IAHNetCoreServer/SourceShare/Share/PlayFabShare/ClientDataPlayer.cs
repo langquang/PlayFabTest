@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using PlayFabShare.Models;
 using SourceShare.Share.APIServer.Data;
 using SourceShare.Share.NetworkV2;
+using SourceShare.Share.NetworkV2.Utils;
 #if SERVER_SIDE
 using PlayFab.ServerModels;
 
@@ -77,6 +78,9 @@ namespace PlayFabShare
 
         public void Sync(SyncPlayerDataReceipt receipt)
         {
+#if DEBUG_SYNC_DATA
+            Debugger.Write("---------------- SYNC DATA----------------");
+#endif
             Currency.Sync(receipt);
             Statistic.Sync(receipt);
             Inventory.Sync(receipt);
