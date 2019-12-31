@@ -17,7 +17,6 @@ namespace PlayFabShare.Models
         public void Sync(SyncPlayerDataReceipt syncReceipt)
         {
 #if DEBUG_SYNC_DATA
-            Debugger.Write("Sync PFData");
             Debugger.Write(syncReceipt.JsonEntities, "JsonEntities", Debugger.FindConstName<SyncEntityName>);
 #endif
             if (syncReceipt.JsonEntities != null)

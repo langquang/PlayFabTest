@@ -72,7 +72,6 @@ namespace PlayFabShare.Models
         public void Sync(SyncPlayerDataReceipt syncReceipt)
         {
 #if DEBUG_SYNC_DATA
-            Debugger.Write("Sync Inventory");
             Debugger.Write(syncReceipt.RevokeItems, "RevokeItems");
             Debugger.Write(syncReceipt.JsonUpdateItems, "UpdateItems");
 #endif

@@ -11,54 +11,31 @@ namespace SourceShare.Share.APIServer.Data
     [MessagePackObject]
     public class SyncPlayerDataReceipt
     {
-        //----------------------------------------------------------------------
         //  Virtual Currencies
-        //----------------------------------------------------------------------
-        [Key(0)] public Dictionary<string, int> Currency { get; set; } // currency code -> value
+        [Key(0)] public Dictionary<string, int> Currency; // currency code -> value
 
-        //----------------------------------------------------------------------
         //  Statistic
-        //----------------------------------------------------------------------
-        [Key(1)] public Dictionary<string, int> Statistic { get; set; }
+        [Key(1)] public Dictionary<string, int> Statistic;
 
-        //----------------------------------------------------------------------
-        //  Data
-        //----------------------------------------------------------------------
-        [Key(2)] public Dictionary<int, string> JsonEntities { get; set; } // SyncDataName -> json
+        //  Read Only Data, Internal Data
+        [Key(2)] public Dictionary<int, string> JsonEntities; // SyncDataName -> json
+
+        //  Inventory
+        [Key(3)] public List<string> JsonUpdateItems; // grant or update inventory item
+        [Key(4)] public List<string> RevokeItems;     // delete inventory item
+
+    #region SERVER_CODE
 
 #if SERVER_SIDE
         [IgnoreMember] private Dictionary<int, IEntity> _entities { get; set; } // SyncDataName -> json
-#endif
-
-        //----------------------------------------------------------------------
-        //  Reward
-        //----------------------------------------------------------------------
-        [Key(3)] public List<string> JsonUpdateItems { get; set; } // grant or update item
-
-#if SERVER_SIDE
         [IgnoreMember] private Dictionary<string, ItemInstance> _updateItems;
+
 #endif
 
-
-        //----------------------------------------------------------------------
-        //  Revoke Item
-        //----------------------------------------------------------------------
-        [Key(4)] public List<string> RevokeItems { get; set; } // delete item
+    #endregion
 
         public SyncPlayerDataReceipt()
         {
-            Currency    = new Dictionary<string, int>();
-            Statistic   = new Dictionary<string, int>();
-            RevokeItems = new List<string>();
-
-        #region SERVER_CODE
-
-#if SERVER_SIDE
-            _updateItems = new Dictionary<string, ItemInstance>();
-            _entities    = new Dictionary<int, IEntity>();
-#endif
-
-        #endregion
         }
 
 
@@ -67,31 +44,41 @@ namespace SourceShare.Share.APIServer.Data
 #if SERVER_SIDE
         public bool IsEmpty()
         {
-            return Currency.Count == 0 && Statistic.Count == 0 && RevokeItems.Count == 0 && _updateItems.Count == 0 && _entities.Count == 0;
+            return Currency == null && Statistic == null && RevokeItems == null && _updateItems == null && _entities == null;
         }
 
         public void SyncCurrency(string currencyCode, int afterValue)
         {
+            if (Currency == null)
+                Currency = new Dictionary<string, int>();
             Currency[currencyCode] = afterValue;
         }
 
         public void SyncStatistic(string name, int value)
         {
+            if (Statistic == null)
+                Statistic = new Dictionary<string, int>();
             Statistic[name] = value;
         }
 
         public void SyncUpdateItem(ItemInstance item)
         {
+            if (_updateItems == null)
+                _updateItems = new Dictionary<string, ItemInstance>();
             _updateItems[item.ItemInstanceId] = item;
         }
 
         public void SyncEntities(int name, IEntity entity)
         {
+            if (_entities == null)
+                _entities = new Dictionary<int, IEntity>();
             _entities[name] = entity;
         }
 
         public void SyncRevokeItem(ItemInstance item)
         {
+            if (RevokeItems == null)
+                RevokeItems = new List<string>();
             if (!RevokeItems.Contains(item.ItemInstanceId))
                 RevokeItems.Add(item.ItemInstanceId);
         }
