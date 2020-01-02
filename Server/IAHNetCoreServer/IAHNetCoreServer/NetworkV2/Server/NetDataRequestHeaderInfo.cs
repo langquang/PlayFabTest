@@ -1,6 +1,6 @@
 using SourceShare.Share.NetworkV2.TransportData.Define;
 
-namespace NetworkV2.Server
+namespace IAHNetCoreServer.NetworkV2.Server
 {
     public class NetDataRequestHeaderInfo
     {

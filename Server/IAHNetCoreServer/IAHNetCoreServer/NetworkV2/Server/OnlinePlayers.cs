@@ -1,6 +1,6 @@
 using System;
 
-namespace NetworkV2.Server
+namespace IAHNetCoreServer.NetworkV2.Server
 {
     public sealed class OnlinePlayers
     {

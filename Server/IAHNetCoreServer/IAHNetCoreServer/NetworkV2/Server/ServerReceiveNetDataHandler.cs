@@ -5,7 +5,7 @@ using SourceShare.Share.NetworkV2.Base;
 using SourceShare.Share.NetworkV2.TransportData.Base;
 using SourceShare.Share.NetworkV2.TransportData.Misc;
 
-namespace NetworkV2.Server
+namespace IAHNetCoreServer.NetworkV2.Server
 {
     public abstract class ServerReceiveNetDataHandler<TPlayer> : IReceiveNetDataHandler where TPlayer : NetPlayer
     {

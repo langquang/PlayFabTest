@@ -4,7 +4,7 @@ using SourceShare.Share.NetworkV2.TransportData.Base;
 using SourceShare.Share.NetworkV2.TransportData.Misc;
 using SourceShare.Share.NetworkV2.Utils;
 
-namespace NetworkV2.Server
+namespace IAHNetCoreServer.NetworkV2.Server
 {
     public class TimeOutChecker : ITimeOutChecker
     {

@@ -3,11 +3,10 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using LiteNetLib;
-using NetworkV2.Server;
 using NLog;
 using SourceShare.Share.NetworkV2;
 
-namespace NetworkV2.Base
+namespace IAHNetCoreServer.NetworkV2.Server
 {
     public class NetServer<T> where T : NetPlayer
     {

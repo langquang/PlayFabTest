@@ -2,7 +2,7 @@ using System;
 using System.Collections.Concurrent;
 using SourceShare.Share.NetworkV2;
 
-namespace NetworkV2.Server
+namespace IAHNetCoreServer.NetworkV2.Server
 {
     public sealed class GroupPlayers<TKey>
     {
