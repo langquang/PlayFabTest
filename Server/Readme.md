@@ -2,7 +2,7 @@
 
 ## Các thư viện sử dụng
 
-> + LiteNetLib: thư viện netword (udp)
+> + ## LiteNetLib: thư viện netword (udp)
 > + MessagePack: Encode - Decode các packet giữ client - server: `request, response, message, model`
 > + Newtonsoft.Json: để Encode - Decode `model` lưu vào PlayFab. *Căn nhắc đổi sang utf8json đồng bộ với MessagePack (vì cùng 1 người viêt) và được đánh giá là nhanh hơn*
 > + PlayFab SDK C#
@@ -13,6 +13,23 @@
 >
 > download: https://dotnet.microsoft.com/download/dotnet-core/2.2
 
+## Setup Server
+
+> + Register Microsoft key and feed:
+>
+>    `sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm`
+>
+> + Install the .NET Core SDK:
+>
+>   `sudo yum install dotnet-sdk-3.1`
+>
+> + Install the .NET Core runtime
+>   `sudo yum install dotnet-runtime-3.1`
+>
+> + Install htop để thay thế top
+>
+>   `sudo yum install htop`
+
 # Publish
 
 ```sh
@@ -21,27 +38,36 @@ dotnet publish -c Release -r rhel.7-x64
 ```
 
 > + Vào folder chứa file `sln`
->
-> + `dotnet publish -c Release -r rhel.7-x64`
+>+ `dotnet publish -c Release -r rhel.7-x64 --framework netcoreapp2.2`
 
 ## Config Service
 
->sudo nano /etc/systemd/system/IAHNetCoreServer.service
+>+ Install **nano** đê edit file text
+>
+>  ```shell
+>	sudo yum install nano
+>  ```
+>
+>+ Tạo file server
+>
+>```shell
+>	sudo nano /etc/systemd/system/IAHServerAPI.service
+>```
+>
 
-Nhập nội dung:
+Nhập nội dung sau vào file **IAHServerAPI.service**:
 
 ```sh
 
 [Unit]
-Description=IAHNetCoreServer
+Description=IAHServerAPI
 
 [Service]
-ExecStart=/usr/bin/dotnet /home/tinbq/dotnet_test/rhel.7-x64/publish/IAHNetCoreServer.dll
-WorkingDirectory=/home/tinbq/dotnet_test/rhel.7-x64/publish/
+ExecStart=/usr/bin/dotnet /home/tinbq/API_Server/publish/IAHNetCoreServer.dll
+WorkingDirectory=/home/tinbq/API_Server/publish/
 Restart=on-failure
-SyslogIdentifier=IAHNetCoreServer
-PrivateTemp=true
-KillSignal=true
+SyslogIdentifier=IAHServerAPI
+PrivateTmp=true
 KillSignal=SIGTERM
 
 [Install]  
@@ -50,11 +76,11 @@ WantedBy=multi-user.target
 
 > sudo systemctl daemon-reload
 >
-> sudo systemctl start IAHNetCoreServer
+> sudo systemctl start IAHServerAPI
 >
-> sudo systemctl status IAHNetCoreServer
+> sudo systemctl status IAHServerAPI
 >
-> sudo systemctl stop IAHNetCoreServer
+> sudo systemctl stop IAHServerAPI
 
 
 
