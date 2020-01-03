@@ -1,7 +1,7 @@
 using System;
 using MessagePack;
 
-namespace SourceShare.Share.APIServer.Data
+namespace Share.APIServer.Data.Entities
 {
     [MessagePackObject]
     public class OnlineReward : IEntity

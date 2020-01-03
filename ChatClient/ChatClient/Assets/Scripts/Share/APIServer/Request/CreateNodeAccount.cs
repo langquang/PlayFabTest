@@ -1,11 +1,11 @@
-using LiteNetLib.Utils;
 using MessagePack;
-using SourceShare.Share.NetRequest.Config;
-using SourceShare.Share.NetworkV2.TransportData.Base;
-using SourceShare.Share.NetworkV2.TransportData.Define;
-using SourceShare.Share.NetworkV2.TransportData.Header;
+using Share.APIServer.Request.Config;
+using LiteNetLib.Utils;
+using Share.NetworkV2.TransportData.Base;
+using Share.NetworkV2.TransportData.Define;
+using Share.NetworkV2.TransportData.Header;
 
-namespace SourceShare.Share.NetRequest
+namespace Share.APIServer.Request
 {
     [MessagePackObject]
     public class CreateNodeAccountRequest : INetData

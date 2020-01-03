@@ -1,4 +1,4 @@
-namespace SourceShare.Share.APIServer.Data
+namespace Share.APIServer.Data.Entities
 {
     public interface IEntity
     {

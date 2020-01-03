@@ -1,4 +1,4 @@
-namespace SourceShare.Share.NetRequest.Config
+namespace Share.APIServer.Request.Config
 {
     public class NetAPICommand
     {

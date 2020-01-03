@@ -1,6 +1,6 @@
 using System;
 
-namespace SourceShare.Share.NetworkV2.Utils
+namespace Share.NetworkV2.Utils
 {
     public class Timer
     {

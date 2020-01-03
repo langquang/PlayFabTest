@@ -1,15 +1,16 @@
 using System.Collections.Generic;
-using PlayFabShare.Models.Base;
-using SourceShare.Share.APIServer.Data;
-using SourceShare.Share.NetworkV2.Utils;
+using Share.APIServer.Data;
+using Share.NetworkV2.Utils;
+using Share.PlayFabShare.Models.Base;
 #if SERVER_SIDE
 using PlayFab.ServerModels;
+
 #else
 using PlayFab.ClientModels;
 
 #endif
 
-namespace PlayFabShare.Models
+namespace Share.PlayFabShare.Models
 {
     public class PFStatistic : ISyncEntity
     {

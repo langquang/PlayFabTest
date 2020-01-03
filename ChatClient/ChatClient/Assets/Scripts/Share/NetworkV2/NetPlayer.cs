@@ -1,13 +1,11 @@
-using System;
+using Share.APIServer.Request.Config;
 using LiteNetLib;
 using LiteNetLib.Utils;
-using SourceShare.Share.NetRequest.Config;
-using SourceShare.Share.NetworkV2.Router;
-using SourceShare.Share.NetworkV2.TransportData.Base;
-using SourceShare.Share.NetworkV2.TransportData.Header;
-using SourceShare.Share.NetworkV2.Utils;
+using Share.NetworkV2.TransportData.Base;
+using Share.NetworkV2.TransportData.Header;
+using Share.NetworkV2.Utils;
 
-namespace SourceShare.Share.NetworkV2
+namespace Share.NetworkV2
 {
     public class NetPlayer
     {

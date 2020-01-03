@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SourceShare.Share.NetworkV2.Router
+namespace Share.NetworkV2.Utils
 {
     public class HashName
     {

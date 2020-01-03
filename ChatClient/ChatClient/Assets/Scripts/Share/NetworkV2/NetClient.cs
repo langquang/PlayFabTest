@@ -2,9 +2,9 @@ using System;
 using System.Net;
 using System.Net.Sockets;
 using LiteNetLib;
-using SourceShare.Share.NetworkV2.Client;
+using Share.NetworkV2.Client;
 
-namespace SourceShare.Share.NetworkV2
+namespace Share.NetworkV2
 {
     public class NetClient
     {

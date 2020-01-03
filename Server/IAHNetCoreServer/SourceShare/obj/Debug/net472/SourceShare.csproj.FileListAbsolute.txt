@@ -1,0 +1,16 @@
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\net472\SourceShare.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\net472\SourceShare.pdb
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\net472\MessagePack.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\net472\MessagePack.Annotations.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\net472\Newtonsoft.Json.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\net472\PlayFabAllSDK.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\net472\System.Buffers.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\net472\System.Memory.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\net472\System.Numerics.Vectors.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\net472\System.Runtime.CompilerServices.Unsafe.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\bin\Debug\net472\System.Threading.Tasks.Extensions.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\obj\Debug\net472\SourceShare.csprojAssemblyReference.cache
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\obj\Debug\net472\SourceShare.csproj.CoreCompileInputs.cache
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\obj\Debug\net472\SourceShare.csproj.CopyComplete
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\obj\Debug\net472\SourceShare.dll
+D:\projects\suga_iah\PlayFabTest\Server\IAHNetCoreServer\SourceShare\obj\Debug\net472\SourceShare.pdb

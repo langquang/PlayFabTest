@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using PlayFab.ClientModels;
-using PlayFabShare.Models;
+using Share.PlayFabShare.Models;
 
 namespace PlayFabCustom
 {

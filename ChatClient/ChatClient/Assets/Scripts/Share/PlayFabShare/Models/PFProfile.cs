@@ -1,10 +1,11 @@
 #if SERVER_SIDE
 using PlayFab.ServerModels;
+
 #else
 using PlayFab.ClientModels;
 #endif
 
-namespace PlayFabShare.Models
+namespace Share.PlayFabShare.Models
 {
     public class PFProfile
     {

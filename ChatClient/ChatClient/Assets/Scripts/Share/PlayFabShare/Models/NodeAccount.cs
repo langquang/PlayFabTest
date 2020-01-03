@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using MessagePack;
 using Newtonsoft.Json;
 
-namespace PlayFabShare.Models
+namespace Share.PlayFabShare.Models
 {
     [MessagePackObject]
     public class NodeAccount

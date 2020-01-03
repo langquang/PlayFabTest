@@ -1,9 +1,10 @@
 using Newtonsoft.Json;
-using PlayFabShare.Models.Base;
-using SourceShare.Share.APIServer.Data;
-using SourceShare.Share.NetworkV2.Utils;
+using Share.APIServer.Data;
+using Share.APIServer.Data.Entities;
+using Share.NetworkV2.Utils;
+using Share.PlayFabShare.Models.Base;
 
-namespace PlayFabShare.Models
+namespace Share.PlayFabShare.Models
 {
     public class PFData : ISyncEntity
     {

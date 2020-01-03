@@ -1,8 +1,8 @@
 using LiteNetLib;
-using SourceShare.Share.NetworkV2.Base;
-using SourceShare.Share.NetworkV2.TransportData.Misc;
+using Share.NetworkV2.Base;
+using Share.NetworkV2.TransportData.Misc;
 
-namespace SourceShare.Share.NetworkV2.Client
+namespace Share.NetworkV2.Client
 {
     public abstract class ClientReceiveNetDataHandler : IReceiveNetDataHandler
     {

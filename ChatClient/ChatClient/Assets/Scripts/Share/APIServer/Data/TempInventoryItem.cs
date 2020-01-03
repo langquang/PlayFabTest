@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using MessagePack;
 
-namespace SourceShare.Share.APIServer.Data
+namespace Share.APIServer.Data
 {
     [MessagePackObject]
     public class TempInventoryItem

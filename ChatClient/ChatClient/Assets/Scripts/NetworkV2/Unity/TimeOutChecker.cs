@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using SourceShare.Share.NetworkV2.Base;
-using SourceShare.Share.NetworkV2.TransportData.Base;
-using SourceShare.Share.NetworkV2.TransportData.Misc;
+using Share.NetworkV2.Base;
+using Share.NetworkV2.TransportData.Base;
+using Share.NetworkV2.TransportData.Misc;
 
 namespace UnityClientLib.NetworkV2
 {

@@ -1,6 +1,6 @@
-using SourceShare.Share.NetworkV2.TransportData.Misc;
+using Share.NetworkV2.TransportData.Misc;
 
-namespace SourceShare.Share.NetworkV2.Base
+namespace Share.NetworkV2.Base
 {
     public interface IReceiveNetDataHandler
     {

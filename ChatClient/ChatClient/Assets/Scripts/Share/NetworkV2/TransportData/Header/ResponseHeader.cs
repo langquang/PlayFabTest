@@ -1,7 +1,7 @@
 using LiteNetLib.Utils;
-using SourceShare.Share.NetworkV2.TransportData.Define;
+using Share.NetworkV2.TransportData.Define;
 
-namespace SourceShare.Share.NetworkV2.TransportData.Header
+namespace Share.NetworkV2.TransportData.Header
 {
     public class ResponseHeader : INetDataHeader
     {

@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using MessagePack;
-using Newtonsoft.Json;
+
 #if SERVER_SIDE
 using PlayFab.ServerModels;
-
+using Newtonsoft.Json;
+using Share.APIServer.Data.Entities;
 #endif
 
-namespace SourceShare.Share.APIServer.Data
+namespace Share.APIServer.Data
 {
     [MessagePackObject]
     public class SyncPlayerDataReceipt

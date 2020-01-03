@@ -1,19 +1,19 @@
 using System.Collections.Generic;
-using LiteNetLib;
 using Newtonsoft.Json;
-using PlayFabShare.Models;
-using SourceShare.Share.APIServer.Data;
-using SourceShare.Share.NetworkV2;
-using SourceShare.Share.NetworkV2.Utils;
+using Share.APIServer.Data;
+using LiteNetLib;
+using Share.NetworkV2;
+using Share.NetworkV2.Utils;
+using Share.PlayFabShare.Models;
+
 #if SERVER_SIDE
 using PlayFab.ServerModels;
-
 #else
 using PlayFab.ClientModels;
 
 #endif
 
-namespace PlayFabShare
+namespace Share.PlayFabShare
 {
     public class ClientDataPlayer : NetPlayer
     {

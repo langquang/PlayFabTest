@@ -1,44 +1,42 @@
 using System.Collections.Generic;
 using MessagePack;
 
-namespace SourceShare.Share.APIServer.Data
+namespace Share.APIServer.Data.Entities
 {
     [MessagePackObject]
     public class GiftPack : IEntity
     {
         //----------------------------------------------------------------------
-        //  Virtual Currencies
+        //  Virtual Currencies, Statistic
         //----------------------------------------------------------------------
-        [Key(0)] private Dictionary<string, int> _primitiveInts; // currency code, statistic name -> value
-        
+        [Key(0)] public Dictionary<string, int> PrimitiveInts; // currency code, statistic name -> value
+
         //----------------------------------------------------------------------
         //  Items
         //----------------------------------------------------------------------
-        [Key(1)] private List<string> _items; // itemId
-
-        [IgnoreMember]
-        public Dictionary<string, int> PrimitiveInts => _primitiveInts;
-
-        [IgnoreMember]
-        public List<string> Items => _items;
+        [Key(1)] public List<string> Items; // itemId
 
         public GiftPack()
         {
-            _primitiveInts = new Dictionary<string, int>();
-            _items = new List<string>();
         }
-        
+
         public void IncPrimitiveInt(string name, int incValue)
         {
-            if (_primitiveInts.ContainsKey(name))
-                _primitiveInts[name] += incValue;
+            if (PrimitiveInts == null)
+                PrimitiveInts = new Dictionary<string, int>();
+
+            if (PrimitiveInts.ContainsKey(name))
+                PrimitiveInts[name] += incValue;
             else
-                _primitiveInts[name] = incValue;
+                PrimitiveInts[name] = incValue;
         }
 
         public void AddItem(string itemId)
         {
-            _items.Add(itemId);
+            if (Items == null)
+                Items = new List<string>();
+
+            Items.Add(itemId);
         }
     }
 }

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace PlayFabShare
+namespace Share.PlayFabShare
 {
     public class PFPlayerDataFlag
     {

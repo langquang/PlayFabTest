@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
-using PlayFabShare.Models.Base;
-using SourceShare.Share.APIServer.Data;
-using SourceShare.Share.NetworkV2.Utils;
+using Share.APIServer.Data;
+using Share.NetworkV2.Utils;
+using Share.PlayFabShare.Models.Base;
 #if SERVER_SIDE
 using PlayFab.ServerModels;
 
@@ -11,7 +11,7 @@ using PlayFab.ServerModels;
 using PlayFab.ClientModels;
 #endif
 
-namespace PlayFabShare.Models
+namespace Share.PlayFabShare.Models
 {
     public class PFInventory : ISyncEntity
     {
@@ -72,7 +72,6 @@ namespace PlayFabShare.Models
         public void Sync(SyncPlayerDataReceipt syncReceipt)
         {
 #if DEBUG_SYNC_DATA
-            Debugger.Write("Sync Inventory");
             Debugger.Write(syncReceipt.RevokeItems, "RevokeItems");
             Debugger.Write(syncReceipt.JsonUpdateItems, "UpdateItems");
 #endif

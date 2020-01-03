@@ -1,4 +1,4 @@
-using PlayFabShare.Models;
+using Share.PlayFabShare.Models;
 
 namespace PlayFabCustom.Models
 {

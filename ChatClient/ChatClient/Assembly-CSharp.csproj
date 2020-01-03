@@ -57,24 +57,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_PlayFabShare_Models_ClusterAccountFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_PlayFabShare_Models_NodeAccountFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_APIServer_Data_GiftPackFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_APIServer_Data_OnlineRewardFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_APIServer_Data_SyncPlayerDataReceiptFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_APIServer_Data_TempInventoryItemFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CheckCreateNodeAccountRequestFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CheckCreateNodeAccountResponseFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CommonErrorResponseFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountRequestFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountResponseFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CreateNodeAccountRequestFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_CreateNodeAccountResponseFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_LoginRequestFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_LoginResponseFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_SyncDataMessageFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_TestRequestFormatter.cs" />
-    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_SourceShare_Share_NetRequest_TestResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Data_Entities_GiftPackFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Data_Entities_OnlineRewardFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Data_SyncPlayerDataReceiptFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Data_TempInventoryItemFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_CheckCreateNodeAccountRequestFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_CheckCreateNodeAccountResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_CommonErrorResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_CreateMasterAccountRequestFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_CreateMasterAccountResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_CreateNodeAccountRequestFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_CreateNodeAccountResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_LoginRequestFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_LoginResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_SyncDataMessageFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_TestRequestFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_APIServer_Request_TestResponseFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_PlayFabShare_Models_ClusterAccountFormatter.cs" />
+    <Compile Include="Assets\Scripts\AutoGen\MessagePack_Formatters_Share_PlayFabShare_Models_NodeAccountFormatter.cs" />
     <Compile Include="Assets\Scripts\AutoGen\MessagePack_Resolvers_GeneratedResolver.cs" />
     <Compile Include="Assets\Scripts\Client\ResponseHandler\APINetworkHandler.cs" />
     <Compile Include="Assets\Scripts\Demo\StartUp.cs" />

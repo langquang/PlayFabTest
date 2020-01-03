@@ -3,17 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="4ba6c7bc-5434-46d7-b785-75c4638eaff9" name="Default Changelist" comment="bo generic">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IAHNetCoreServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CheckCreateNodeAccountHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/CheckCreateNodeAccountHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetRouter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetRouter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetServer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/OnlinePlayers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/SimplePoolWriter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.runtimeconfig.dev.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/IAHNetCoreServer.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/LiteNetLib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/MessagePack.Annotations.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/MessagePack.UnityShims.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/MessagePack.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IAHNetCoreServer/bin/Debug/netcoreapp3.1/PlayFabAllSDK.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/net472/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/Debug/netcoreapp2.2/SourceShare.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/SourceShare.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceShare/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SourceShare/obj/project.assets.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +57,12 @@
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/APIServer/Data/SyncEntityName.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/ResponseHeader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Header/INetDataHeader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/TransportData/Misc/RequestTimeOut.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/NetPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/02/6a6fcc80/NetManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/TimeOutChecker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F9C85F2C-72AD-4F68-BF12-9AEBDF9A570B/ef/14030283/NetManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/nlog.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/ServerReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/Utils/Debuger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetServer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -70,7 +78,6 @@
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/NetworkV2/Base/IReceiveNetDataHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SourceShare/obj/project.packagespec.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/86/e23dc346/GrantItemsToUserResult.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/a1/6732428a/GrantedItemInstance.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9E1F3F01-F466-4923-9083-D9637D00C952/7/MessagePackSerializer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/14/e2129114/ItemInstance.cs" root0="SKIP_HIGHLIGHTING" />
@@ -87,9 +94,7 @@
     <setting file="file://$PROJECT_DIR$/SourceShare/Share/PlayFabShare/ClientDataPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5B87C38-F95C-452D-9A11-643E9915815A/46/9e904961/GetPlayerCombinedInfoResultPayload.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5B87C38-F95C-452D-9A11-643E9915815A/1e/c9545d50/PlayerProfileModel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56C02F65-7F8E-4DE0-B35F-CD26C3C2693D/3DC/List.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/GroupPlayers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/387E967F-1074-4C9B-8961-C392A6EAC99A/fe/352c5c89/PlayFabServerAPI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetDataRequestHeaderInfo.cs" root0="FORCE_HIGHLIGHTING" />
@@ -122,7 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetServer.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/APIServer/Data/InventoryItem.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/APIServer/Data/PlayerDataUpdateReceipt.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/APIServer/Data/SyncDataName.cs" />
@@ -144,7 +148,6 @@
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/ServerModels/SGPlayFabCustomModel.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFHelper.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/SGPlayFab/PFCatalog.cs" />
-        <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/RequestHandlers/EntryHandler.cs" />
         <option value="$PROJECT_DIR$/UnityClientLib/NetworkV2/Unity/NetRouter.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/Logic/Server/Setting/GameSetting.cs" />
@@ -173,6 +176,8 @@
         <option value="$PROJECT_DIR$/SourceShare/Share/PlayFabShare/Models/PFInventory.cs" />
         <option value="$PROJECT_DIR$/SourceShare/Share/APIServer/Data/Entities/GiftPack.cs" />
         <option value="$PROJECT_DIR$/IAHNetCoreServer/NetworkV2/Server/NetRouter.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/Program.cs" />
+        <option value="$PROJECT_DIR$/IAHNetCoreServer/nlog.config" />
       </list>
     </option>
   </component>
@@ -207,7 +212,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RunManager" selected=".NET Project.Server">
     <configuration name="Server" type="DotNetProject" factoryName=".NET Project">
@@ -286,6 +291,7 @@
       <workItem from="1577630121473" duration="8530000" />
       <workItem from="1577673299932" duration="27280000" />
       <workItem from="1577761143234" duration="26354000" />
+      <workItem from="1577932383998" duration="10046000" />
     </task>
     <task id="LOCAL-00001" summary="Request - response">
       <created>1576752828936</created>
@@ -348,6 +354,10 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="445" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1577372911609" />
+    <state x="1060" y="375" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1577932500738">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="1060" y="375" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/62.0.2498.1080@62.0.2498.1080" timestamp="1577932500738" />
     <state x="1146" y="242" width="1101" height="596" key="#xdebugger.evaluate" timestamp="1577770561758">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
@@ -367,26 +377,30 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="154" y="92" width="1674" height="896" key="DiffContextDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1577632799208" />
-    <state width="2455" height="291" key="GridCell.Tab.0.bottom" timestamp="1577792037775">
+    <state x="841" y="193" key="EditorConfigExporter" timestamp="1577932663383">
+      <screen x="62" y="0" width="2498" height="1080" />
+    </state>
+    <state x="841" y="193" key="EditorConfigExporter/62.0.2498.1080@62.0.2498.1080" timestamp="1577932663383" />
+    <state width="1140" height="273" key="GridCell.Tab.0.bottom" timestamp="1577964853829">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="326" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1577608875337" />
-    <state width="2455" height="291" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577792037775" />
-    <state width="2455" height="291" key="GridCell.Tab.0.center" timestamp="1577792037775">
+    <state width="1140" height="273" key="GridCell.Tab.0.bottom/62.0.2498.1080@62.0.2498.1080" timestamp="1577964853829" />
+    <state width="1140" height="273" key="GridCell.Tab.0.center" timestamp="1577964853829">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="326" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1577608875337" />
-    <state width="2455" height="291" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577792037775" />
-    <state width="2455" height="291" key="GridCell.Tab.0.left" timestamp="1577792037775">
+    <state width="1140" height="273" key="GridCell.Tab.0.center/62.0.2498.1080@62.0.2498.1080" timestamp="1577964853829" />
+    <state width="1140" height="273" key="GridCell.Tab.0.left" timestamp="1577964853829">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="326" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1577608875337" />
-    <state width="2455" height="291" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577792037775" />
-    <state width="2455" height="291" key="GridCell.Tab.0.right" timestamp="1577792037775">
+    <state width="1140" height="273" key="GridCell.Tab.0.left/62.0.2498.1080@62.0.2498.1080" timestamp="1577964853829" />
+    <state width="1140" height="273" key="GridCell.Tab.0.right" timestamp="1577964853829">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state width="1815" height="326" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1577608875337" />
-    <state width="2455" height="291" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577792037775" />
+    <state width="1140" height="273" key="GridCell.Tab.0.right/62.0.2498.1080@62.0.2498.1080" timestamp="1577964853829" />
     <state width="2455" height="291" key="GridCell.Tab.1.bottom" timestamp="1577792037776">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
@@ -471,21 +485,21 @@
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="883" y="353" width="216" height="218" key="LayersDialog/62.0.2498.1080@62.0.2498.1080" timestamp="1577272556264" />
-    <state x="762" y="271" key="Rider.ProjectTemplateDialog.Size" timestamp="1577673850598">
+    <state x="762" y="271" key="Rider.ProjectTemplateDialog.Size" timestamp="1577958572548">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="583" y="271" key="Rider.ProjectTemplateDialog.Size/62.0.1858.1080@62.0.1858.1080" timestamp="1577291566316" />
-    <state x="762" y="271" key="Rider.ProjectTemplateDialog.Size/62.0.2498.1080@62.0.2498.1080" timestamp="1577673850598" />
+    <state x="762" y="271" key="Rider.ProjectTemplateDialog.Size/62.0.2498.1080@62.0.2498.1080" timestamp="1577958572548" />
     <state x="1021" y="219" key="RiderGenerateDialog" timestamp="1577766187433">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="775" y="219" key="RiderGenerateDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1577636742975" />
     <state x="1021" y="219" key="RiderGenerateDialog/62.0.2498.1080@62.0.2498.1080" timestamp="1577766187433" />
-    <state x="812" y="181" key="SettingsEditor" timestamp="1577695719315">
+    <state x="812" y="181" key="SettingsEditor" timestamp="1577932678001">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="620" y="181" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1577372915250" />
-    <state x="812" y="181" key="SettingsEditor/62.0.2498.1080@62.0.2498.1080" timestamp="1577695719315" />
+    <state x="812" y="181" key="SettingsEditor/62.0.2498.1080@62.0.2498.1080" timestamp="1577932678001" />
     <state x="903" y="272" key="Vcs.Push.Dialog.v2" timestamp="1576752832186">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
@@ -507,11 +521,11 @@
     </state>
     <state x="751" y="277" width="632" height="526" key="find.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1577369156907" />
     <state x="989" y="277" width="644" height="526" key="find.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1577780018341" />
-    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1577787685890">
+    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1577955986847">
       <screen x="62" y="0" width="2498" height="1080" />
     </state>
     <state x="740" y="235" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1577638326487" />
-    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1577787685890" />
+    <state x="974" y="235" width="672" height="678" key="search.everywhere.popup/62.0.2498.1080@62.0.2498.1080" timestamp="1577955986847" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

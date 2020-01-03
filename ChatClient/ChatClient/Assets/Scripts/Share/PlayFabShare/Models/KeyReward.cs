@@ -1,6 +1,6 @@
-using SourceShare.Share.APIServer.Data;
+using Share.APIServer.Data.Entities;
 
-namespace PlayFabShare.Models
+namespace Share.PlayFabShare.Models
 {
     public class KeyReward
     {

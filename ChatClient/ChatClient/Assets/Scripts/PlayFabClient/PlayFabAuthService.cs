@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using PlayFab;
 using PlayFab.ClientModels;
 using PlayFab.SharedModels;
-using PlayFabShare.Models;
+using Share.PlayFabShare.Models;
 using UnityEngine;
 
 namespace PlayFabCustom

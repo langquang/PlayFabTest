@@ -241,24 +241,24 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AutoGen" t="Include">
-            <e p="MessagePack_Formatters_PlayFabShare_Models_ClusterAccountFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_PlayFabShare_Models_NodeAccountFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_APIServer_Data_GiftPackFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_APIServer_Data_OnlineRewardFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_APIServer_Data_SyncPlayerDataReceiptFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_APIServer_Data_TempInventoryItemFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CheckCreateNodeAccountRequestFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CheckCreateNodeAccountResponseFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CommonErrorResponseFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountRequestFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CreateMasterAccountResponseFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CreateNodeAccountRequestFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_CreateNodeAccountResponseFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_LoginRequestFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_LoginResponseFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_SyncDataMessageFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_TestRequestFormatter.cs" t="Include" />
-            <e p="MessagePack_Formatters_SourceShare_Share_NetRequest_TestResponseFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Data_Entities_GiftPackFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Data_Entities_OnlineRewardFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Data_SyncPlayerDataReceiptFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Data_TempInventoryItemFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_CheckCreateNodeAccountRequestFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_CheckCreateNodeAccountResponseFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_CommonErrorResponseFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_CreateMasterAccountRequestFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_CreateMasterAccountResponseFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_CreateNodeAccountRequestFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_CreateNodeAccountResponseFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_LoginRequestFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_LoginResponseFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_SyncDataMessageFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_TestRequestFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_APIServer_Request_TestResponseFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_PlayFabShare_Models_ClusterAccountFormatter.cs" t="Include" />
+            <e p="MessagePack_Formatters_Share_PlayFabShare_Models_NodeAccountFormatter.cs" t="Include" />
             <e p="MessagePack_Resolvers_GeneratedResolver.cs" t="Include" />
           </e>
           <e p="Client" t="Include">

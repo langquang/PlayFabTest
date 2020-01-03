@@ -1,15 +1,15 @@
 using System;
 using LiteNetLib;
 using PlayFabCustom;
-using PlayFabShare;
-using SourceShare.Share.NetRequest;
-using SourceShare.Share.NetRequest.Config;
-using SourceShare.Share.NetworkV2;
-using SourceShare.Share.NetworkV2.Client;
-using SourceShare.Share.NetworkV2.TransportData.Base;
-using SourceShare.Share.NetworkV2.TransportData.Header;
-using SourceShare.Share.NetworkV2.TransportData.Misc;
-using SourceShare.Share.NetworkV2.Utils;
+using Share.APIServer.Request;
+using Share.APIServer.Request.Config;
+using Share.NetworkV2;
+using Share.NetworkV2.Client;
+using Share.NetworkV2.TransportData.Base;
+using Share.NetworkV2.TransportData.Header;
+using Share.NetworkV2.TransportData.Misc;
+using Share.NetworkV2.Utils;
+using Share.PlayFabShare;
 using UnityClientLib.NetworkV2;
 using UnityEngine;
 

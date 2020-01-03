@@ -1,4 +1,4 @@
-namespace PlayFabShare
+namespace Share.PlayFabShare
 {
     public class PFPlayerDataKey
     {

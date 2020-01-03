@@ -1,10 +1,9 @@
-using LiteNetLib.Utils;
 using MessagePack;
-using SourceShare.Share.NetRequest;
-using SourceShare.Share.NetworkV2.Router;
-using SourceShare.Share.NetworkV2.TransportData.Header;
+using LiteNetLib.Utils;
+using Share.NetworkV2.TransportData.Header;
+using Share.NetworkV2.Utils;
 
-namespace SourceShare.Share.NetworkV2.TransportData.Base
+namespace Share.NetworkV2.TransportData.Base
 {
     public abstract class INetData
     {

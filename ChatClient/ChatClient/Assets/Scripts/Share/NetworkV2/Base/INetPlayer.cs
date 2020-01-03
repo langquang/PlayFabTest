@@ -1,4 +1,4 @@
-namespace SourceShare.Share.NetworkV2
+namespace Share.NetworkV2.Base
 {
     public interface INetPlayer
     {
